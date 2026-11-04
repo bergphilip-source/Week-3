@@ -1,0 +1,1150 @@
+Delivered-To: bergphilip885@gmail.com
+Received: by 2002:a2e:b52b:0:b0:3a9:a739:e8cf with SMTP id z11csp4220475ljm;
+        Sun, 11 Oct 2026 14:02:13 -0700 (PDT)
+X-Received: by 2002:a05:622a:410a:b0:531:36:e381 with SMTP id d75a77b69052e-5359dcc41b7mr133727191cf.23.1791752533177;
+        Sun, 11 Oct 2026 14:02:13 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1791752533; cv=none;
+        d=google.com; s=arc-20260327;
+        b=SWZwMEF/lbT6c769s9E4Bom6x3g4O5MsNIYSdPNvF3umAlnTQwqH73mCGPFlt2KA68
+         KKpDZBiSirObg9opx4LQa9Trt5H+Txoey/FwWmxzdfW5bRZnyb0NXu+axJc+c/whXgkt
+         PJ+McRvLD7hfhrAtetOCdkGx80rM9rge8dKT/f+ygleNkjTc58GI5tilr+d9uDdC1fIR
+         5+JNZiVqqW+VCd/FAr1Qa62Mi2h43sPg7pSpjjjhl9/rENYTK1CQaUIZ0AO85TYRxjJ1
+         PANDZpEqwivp2hR3s1vbjfjpe1IxOCNV+vXVYaIbct4Yv0MQalup8cSokvHrGdOj9Ujk
+         yocQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=feedback-id:message-id:reply-to:mime-version:list-help:date:subject
+         :to:from:dkim-signature:dkim-signature;
+        bh=3XxUqDuhae+ln90wZo5B9jaoW7tHIgAWPyCId86cQ2A=;
+        fh=tFpzkixoPn3wnfjPXeIv3SekB9jOduWMOffsNrzcKlU=;
+        b=Q66baP0A7/rzdmKvOYCNeR6g2IBNzxaCTNu14kkx77j2PgCsUALaDO9OYI+UN7MbP9
+         eFDwh6dRkvEoqtXAwp8t0Pv2yFVPLVBprSiCxGoJoPVQ9QNcoSFPWlLFrsbvPMAkIWI9
+         UIammfbmsyKLdfPdpL2ioVXjVbuHpQqPGzr/h+znK3vRybza4K2VhnriY6rElv86ncsp
+         M19/rDC5GZndnhdrFWI9hCBrpGpPesIIHsyzBilMoL3kGePIup3IS0YRNJJDdX0ZVDSv
+         rA4meLoXZiRpXVbyD+r9Dvv2x9LVbstkguIuQzsnSQsWrPgp+QI35wVczJB28IqSlujr
+         cz6g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@online.wingstop.com header.s=200608 header.b=s5D7GKrd;
+       dkim=pass header.i=@s1.y.mc.salesforce.com header.s=fbldkim1 header.b=kQML2dgX;
+       spf=pass (google.com: domain of bounce-qgyilengc4de3dubljbal3v4fe.10201@bounce.eclub.wingstop.com designates 136.147.181.30 as permitted sender) smtp.mailfrom=bounce-QGYILENGC4DE3DUBLJBAL3V4FE.10201@bounce.eclub.wingstop.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=online.wingstop.com
+Return-Path: <bounce-QGYILENGC4DE3DUBLJBAL3V4FE.10201@bounce.eclub.wingstop.com>
+Received: from mta2.eclub.wingstop.com (mta2.eclub.wingstop.com. [136.147.181.30])
+        by mx.google.com with ESMTPS id 6a1803df08f44-91b55103beesi89022436d6.199.2026.10.11.14.02.12
+        for <bergphilip885@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 11 Oct 2026 14:02:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-qgyilengc4de3dubljbal3v4fe.10201@bounce.eclub.wingstop.com designates 136.147.181.30 as permitted sender) client-ip=136.147.181.30;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@online.wingstop.com header.s=200608 header.b=s5D7GKrd;
+       dkim=pass header.i=@s1.y.mc.salesforce.com header.s=fbldkim1 header.b=kQML2dgX;
+       spf=pass (google.com: domain of bounce-qgyilengc4de3dubljbal3v4fe.10201@bounce.eclub.wingstop.com designates 136.147.181.30 as permitted sender) smtp.mailfrom=bounce-QGYILENGC4DE3DUBLJBAL3V4FE.10201@bounce.eclub.wingstop.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=online.wingstop.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=200608; d=online.wingstop.com;
+ h=From:To:Subject:Date:List-Help:MIME-Version:Reply-To:Message-ID:Content-Type;
+ i=noreply@online.wingstop.com;
+ bh=3XxUqDuhae+ln90wZo5B9jaoW7tHIgAWPyCId86cQ2A=;
+ b=s5D7GKrd0TjQluS8MhkvH50cOcMP2V5lhf6JF8KQ6Gpq43rnbmRbvxz13VfsLQlH97cFiBhC6X8h
+   GfPeZ5eP/i8S2Nq5LKpXvnNnMATL7VWSpILHNhAXHhTnyFmnAOnGxFkowAXmkzlHiMv/cACjJo8c
+   4nYIa+qe4VTYYaNpYdE=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim1; d=s1.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Help:MIME-Version:Reply-To:Message-ID:Content-Type;
+ bh=3XxUqDuhae+ln90wZo5B9jaoW7tHIgAWPyCId86cQ2A=;
+ b=kQML2dgXOpfLcqstf5X8k3J61qAo9oU36/PaXxOIP2yqRCqjO5CYjHm0bk7NXft1PvoR2iE0N708
+   Xm9x+F4T8TP5N74E/DWPfM1VrTiWYykKwOMhoklz8feVK6Iz3T2qLNsWY53m03OKNqVb/RVTBLa1
+   6Wh5RgW9MGZoiWJ8oaSJzGZ1Emsx9HUmElKOft1wjV6eqiY+/k8l8WXDYDCPtHZKNW4kn7C5MJ3T
+   h3CNl1zPsP2Nzp7eefKcp999pn1f95dW1jU/yTSZT1B0Ppsb3UhHV8h9WSsMwfqzk5g8BxadL2Ut
+   qv9ZUWE/+9qEh5Hg9dGjobz9M9guIqs/EfHUbg==
+Received: by mta2.eclub.wingstop.com id hpfsl839mjc5 for <bergphilip885@gmail.com>; Sun, 11 Oct 2026 21:02:12 +0000 (envelope-from <bounce-QGYILENGC4DE3DUBLJBAL3V4FE.10201@bounce.eclub.wingstop.com>)
+From: "Wingstop" <noreply@online.wingstop.com>
+To: <bergphilip885@gmail.com>
+Subject: Your order confirmation is #1771431897
+Date: Sun, 11 Oct 2026 15:02:12 -0600
+List-Help: <https://click.eclub.wingstop.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiIxMDc4NzM3OCIsInMiOiIxMTQ4NTQ4MDE3IiwibGlkIjoiNDcwNTYxMiIsImoiOiIzMTQzNTEyOCIsImpiIjoiNDMyMzg1MyIsImQiOiIxMDIwMSJ9.nWE796wnUZHiBWSubhlUgFZhhrDPfqjj_lqgDSAncn0>
+MIME-Version: 1.0
+Reply-To: "Wingstop" <reply-RND2H5XDOSSUHIZKMN7RIERLCU.10201@eclub.wingstop.com>
+x-messageKey: sfmc-OrderPlaced-5241c6a6-81a3-43c6-bd67-73f1031c6929
+X-Delivery: Transactional
+X-SFMC-Stack: 1
+x-job: 10787378_31435128
+Message-ID: <1d16febc-2509-4fdf-bf91-edd481953068@ind1s01mta0012.xt.local>
+Feedback-ID: 10787378:31435128:136.147.181.30:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="6ytbRpsR14Pq=_?:"
+
+This is a multi-part message in MIME format.
+
+--6ytbRpsR14Pq=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+
+
+Wingstop Order Confirmation
+ 
+ 
+ 
+
+ 
+ THANK YOU, Philip
+ 
+
+
+
+ 
+ 
+
+ 
+ 
+
+ 
+https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOMhqls6LzV_vKlfnuEpgQvLVygz_7mPCMquuQuekQ1rCSZxcwBvCGgU5B5kSFg4nrigeWY7NGLMu_XeUIkh9suWXOYWlK246c6QaxmqbCS 
+
+
+
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Delivery in about
+ 
+
+ 30-45 MINUTES
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+
+ 
+ 
+https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxONmwEhTo8MyhwkTXMf23qIj_i4ud2g9NCDz0Jw71P2dnMOhjbzwucgPuo6dCw8-p31NOju6BlZFr9LVFSnfmJlHMEzZ3u-LtgONiDE5NnA 
+TRACK ORDER 
+
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ Order Information
+ 
+
+ Order Number
+ 
+
+ 1771431897
+ 
+
+ Guest Name
+ 
+
+ Philip Berg
+ 
+
+ Guest Contact #
+ 
+
+tel:(701) 200-2474 
+(701) 200-2474 
+
+ Payment Method
+ 
+
+ 
+ PayPal
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ Restaurant Information
+ 
+
+ Wingstop Fargo University Dr. South (#3219)
+ 
+
+ 2301 University Dr. South, Suite 115 
+
+
+ Fargo, ND 58103
+
+ 
+
+tel:+1 (701) 394-9464 
++1 (701) 394-9464 
+
+ Need to Change or Cancel Your Order?
+ 
+
+ Please call your local restaurant listed above.
+ 
+
+
+ 
+
+ 
+
+ 
+ Order Details
+ 
+
+ 
+ Order for Delivery
+ 
+ 
+ 
+ 
+ Delivery
+ 
+ in about 30-45 minutes
+ 
+ 
+
+
+ 
+ 
+
+ 
+ 
+ <tr><td width="400" valign="top" style="padding:15px 0px 5px 15px; font-weight:700; font-size:14px;" colspan="2">Boneless Meal Deal</td></tr><tr><td width="100%" valign="top" style="padding:0px 0px 5px 40px; font-size:14px;">Large Seasoned Fries</td></tr><tr><td width="100%" valign="top" style="padding:0px 0px 5px 65px; font-size:14px;">Fry Seasoning</td></tr><tr><td width="100%" valign="top" style="padding:0px 0px 5px 40px; font-size:14px;">Ranch x 2</td></tr><tr><td width="100%" valign="top" style="padding:0px 0px 5px 40px; font-size:14px;">Lemon Pepper Chili Glaze x 5</td></tr><tr><td width="100%" valign="top" style="padding:0px 0px 5px 40px; font-size:14px;">Hickory Smoked BBQ x 5</td></tr><tr><td width="100%" valign="top" style="padding:0px 0px 5px 40px; font-size:14px;">Mild x 10</td></tr><tr><td class="itm-qty" style="display: flex;justify-content: space-between;width: 118%;padding: 15px 0px 5px 15px; font-size: 14px;">
+<span style="align-self: start;">Qty: 1</span></td><td width="110" valign="top" style="padding:15px 15px 5px 25px; font-weight:700; font-size:14px; text-align:right; min-width:110px;">$20.99</td></tr>
+ 
+
+
+
+ 
+ 
+ 
+ 
+ Subtotal
+ 
+ $20.99
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ Delivery Charge
+ 
+ 
+ 
+ $2.99
+  
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ Tax and Fees
+ 
+ $3.63
+ 
+
+ Tax
+ 
+ $1.63
+ 
+
+ 
+ 
+
+ 
+ Service Fee
+ 
+ $2.00
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ Tip
+ 
+ $0.00
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+
+ 
+ 
+
+ 
+ Total
+ 
+ $27.61
+ 
+
+
+
+
+ 
+ 
+
+
+ 
+
+ 
+ 
+ 
+ 
+https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOR0dJy1lUml4RG7pXBKVjjypMvzRppmvaXUWsvSStKAeH5ImVCmy_GV7xSENdqE1oSE0AaEW30ufyBjCupYHTx4O0uhEWHQ6b1fXsEw3RC 
+
+
+ HELP US ROUND&#8209;UP CHANGE
+ 
+
+ Join us in making a difference when you Round&#8209;Up your order!
+ 
+
+https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOTHO9sVZ0GhLHr21ql9FeeKYIn7QhnJO8QT_oKlJ0AFhHk_YgI1A_CkZ7fFRpCVSKg4RK4eU_UYhjsqCOCLfRv2F9dtGvhNUMKoUaxEqbO 
+SEE THE IMPACT 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOWeDT5CA6DzQaN6IDBxcJkXBiqoFg2SQi5Ur2lbU7k933WQdIZRcvuRO0mosk0s3XvGaTLav-hpyHKZfdodgJEGw3ZXOlr6p_Rw7FmpTLV 
+
+https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOYO7o1xuytv0ohnrr9rjsTCLI84oZ7W-QQV0ve3J6rjniVrKWAPmRpZu6P9OHQpaFIAkEX00i7tozMvkXTlEqVKw1MMbHRak2GgQToH986 
+
+https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOa0H3z4C1o966qAhakHFoqKZPxYt8ufIbY5SytED9eLBXOO0u38VhN9bfYBONu8iu9TffnlZcLI9FiA-_aIxzZ5cNUh9iScq7CRSkWybi9 
+
+https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOcZiyasDrNgt8nqDn2D5OpAyKch_1hcZAhNEBIVZuBYXs4R_g5FgL4S2a-Ftv3Q4Yza9xAyH-XBjxYVEUpTN3Y4j9u6eaRyAP2pqihc0EU 
+
+
+
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+ FOR CLUB WINGSTOP:  
+ See the 
+https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOgLLxPc9oN62P5Y3xyrv2yrg1ouPx-Y4fszoycOaTy1xgmT-qO7PEil_W0yvMXhiEAq47X13AaUzUenfNoYGJ74Zl9QOEYxqieISE 
+Club Wingstop Terms & Conditions  for full details. (c) 2026 WF LLC.
+ 
+ 
+
+ 
+ See Wingstop.&zwnj;com for full details. (c) 2026 WF LLC.
+
+
+ This email was sent to: 
+mailto:bergphilip885@gmail.com 
+bergphilip885@gmail.com
+
+ This email was sent by:
+
+ Wingstop Restaurants Inc.
+
+ 2801 N Central Expressway
+
+ Dallas, TX 75204
+
+https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOhfNNmOVNRiU00Xzd_yAyjuIQwb9vcjLESIxyEqfjif3vkjm-JQknKIgT40LnZGw-1dNalsMYpTW1pNrmh-qLbEIa60C7ia_vemEs-d4FB 
+VISIT US ONLINE
+ |
+ 
+https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOiI5u3bAfE7EMqkHg4LcF3TCdW_g8wvuzA6I0kPcz5e3raN_IhjrwjENO0FS4kRv8YCIk1tP4yHtaLoyAmkVLmA-XXY-dyNa3uGUoPCjiL 
+FIND A LOCATION
+ |
+ 
+https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOjaYCO4HrYHYDGFhqRErccNvkQl7hZ152Hxn1Ty6k2XG2pDcFQ6UZFMsaHNKYxttt9QdY4s7m7Me2MeJoyk0I1ZT0ArJf0Dsihzshd6NgS 
+ORDER ONLINE
+
+
+
+--6ytbRpsR14Pq=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+ <head>
+  <!--[if gte mso]>   <xml>   <o:OfficeDocumentSettings>   <o:AllowPNG />   <o:PixelsPerInch>96</o:PixelsPerInch>   </o:OfficeDocumentSettings>   </xml>   <![endif]-->
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="x-apple-disable-message-reformatting">
+  <!--[if !mso]><!-->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!--<![endif]-->
+  <title>Wingstop Order Confirmation</title>
+  <style type="text/css">
+  @font-face {
+    font-family: 'Impact';
+    src: url('https://s3.us-east-2.amazonaws.com/wingstoppr.com/assets/CRM+campaign+/Impact.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    mso-font-alt: 'Arial Black';
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/opensans/v44/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    mso-font-alt: 'Arial';
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/opensans/v44/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    mso-font-alt: 'Arial';
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/opensans/v44/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    mso-font-alt: 'Arial';
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/opensans/v44/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    mso-font-alt: 'Arial';
+  }
+  body {
+    background-color: #ffffff;
+    font-family: 'Open Sans', Arial, sans-serif;
+  }
+  p {
+    margin: 10px 0;
+    padding: 0;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+  }
+  img, a img {
+    border: 0;
+    height: auto;
+    outline: none;
+    text-decoration: none;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto !important;
+    padding: 0px;
+  }
+  .previewText {
+    display: none !important;
+  }
+  #outlook a {
+    padding: 0px;
+  }
+  img {
+    -ms-interpolation-mode: bicubic;
+  }
+  table {
+    mso-table-lspace: 0px;
+    mso-table-rspace: 0px;
+  }
+  table, td {
+    border-collapse: collapse;
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+  }
+  .borderedBox { border-collapse: separate; }
+  p, a, li, td, blockquote {
+    mso-line-height-rule: exactly;
+  }
+  a[href^=tel],
+  a[href^=sms] {
+    color: inherit;
+    cursor: default;
+    text-decoration: none;
+  }
+  p, a, li, td, body, table, blockquote {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  .ExternalClass p,
+  .ExternalClass td,
+  .ExternalClass div,
+  .ExternalClass span,
+  .ExternalClass font {
+    line-height: 100%;
+  }
+  a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+  /* Custom Styles */
+  .qty, .qxp, .det-st {
+    font-size: 15px;
+  }
+  .item-qxp, .qxp {
+    text-align: right;
+  }
+  .qxp {
+    min-width: 130px;
+  }
+  .det-st {
+    padding-right: 15px;
+    padding-left: 50px;
+    text-align: right;
+  }
+  .item-qxp {
+    padding: 15px 0px 5px 0px;
+  }
+  .itm-st {
+    padding: 15px 15px 5px 0px;
+    text-align: right;
+    min-width: 100px;
+  }
+  .item-qxp, .itm-st {
+    font-weight: 800;
+    font-size: 16px;
+  }
+  /* Media Queries */
+  @media only screen and (min-width: 768px) {
+    .contentContainer {
+      width: 600px !important;
+    }
+  }
+    
+  @media only screen and (max-width: 480px) {
+    .delivery-section-title {
+      font-size:20px !important;
+      line-height:24px !important;
+      text-align:right !important;
+      display:block !important;
+      margin-top:10px !important;
+      padding-right:20px;
+    }
+    
+  @media only screen and (max-width: 480px) {
+    body, table, td, p, a, li, blockquote {
+      -webkit-text-size-adjust: none !important;
+    }
+    body {
+      width: 100% !important;
+      min-width: 100% !important;
+    }
+    .contentContainer {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    .s-icons{
+      width:25% !important;
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+    }
+    .s-icons-img{
+      width: 36px !important;
+      height: 36px !important;
+    }
+    .s-icons-mpr {
+      padding-right:10px !important ;
+    }
+    .t-icons {
+      width:75% !important;
+    } 
+  }
+  
+  </style>
+ </head>
+ <body style="margin:0; padding:0; min-width:100%; background-color:#ffffff; font-family:'Open Sans', Arial, sans-serif; font-weight:400; font-size:15px;"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Your order will be ready for Delivery at about Sunday, October 11 at 4:46 PM</div>
+  <div class="previewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;"></div>
+  <!--[if mso]>   <style type="text/css">   p, span { font-family:'Open Sans', Arial, sans-serif !important; }   td { font-family:'Open Sans', Arial, sans-serif !important; }   .msoImpactAlt {font-family:Impact, 'Arial Black', Arial, sans-serif !important;}   </style>   <![endif]-->
+  <center>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="height:100%;" role="presentation">
+      <tr>
+        <td align="center" valign="top">
+        
+          <!-- BEGIN TEMPLATE // -->
+          <table border="0" cellpadding="0" cellspacing="0" width="600" style="width:600px;" role="presentation">
+            <tr>
+              <td align="center" valign="top">
+
+                <!--[if (gte mso 9)|(IE)]>                 <table align="center" border="0" cellpadding="0" cellspacing="0" width="600"><tr><td valign="top" width="600">                 <![endif]-->
+         
+                
+                
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                  <tr>
+                    <td style="padding:15px 0;">
+                      <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                          <td width="168" align="left" valign="middle" style="padding-left:16px;">
+                            <img src="https://image.eclub.wingstop.com/lib/fe561570726c037e721c/m/1/18aa5f1f-8f66-4e54-b23d-e2b03603d099.png" alt="wingstop" width="152" style="display:block; width:152px;">
+                          </td>
+                          <td width="432" align="right" valign="middle" style="padding-right:20px; color:#000001; font-family:Impact, 'Arial Black', sans-serif; font-size:25px; line-height:25px; text-transform:uppercase;">
+                              THANK YOU, Philip
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                
+                
+
+                
+                
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" >
+                  <tr>
+                    <td align="center">
+                      <a href="https://click.eclub.wingstop.com/u/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxN0kmhUVbBlH6qmjmAzwoNNqQMQGa02AtKSbHXS3iOBtTq59yk_4tIlEqtTkNVE6ATrXlQD4zHzqohl_NsmIl4fDYCeeT_AgfQi-AImmCKFGyisne4"   ><img src="https://image.eclub.wingstop.com/lib/fe34117271640478741c72/m/1/0a13b00a-22aa-4022-9208-4973ac75211f.jpg" width="600" height="auto" alt="Bring the Flavor" style="display:block; width:600px; color:000000; text-decoration:none;"></a>
+                    </td>
+                  </tr>
+                </table>
+
+
+                
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                  <tr>
+                    <td align="center" valign="middle" width="50%"  style="padding:0 5px 0 10px;">
+                      <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                          <td class="msoImpactAlt" align="center" style="padding:30px 20px; font-family:Impact, 'Open Sans', Arial, sans-serif; text-align:center;">
+                                               
+                            
+                            
+                              <span class="msoImpactAlt" style="color:#000001; font-family:Impact, 'Open Sans', Arial, sans-serif; text-transform:uppercase; font-size:25px; line-height:25px;">
+                                Delivery in about
+                              </span>
+                              <br>
+                              <span class="msoImpactAlt" style="color:#000001; font-family: Impact, 'Open Sans', Arial, sans-serif; font-size:34px; line-height:38px;text-transform:uppercase;">
+                                30-45 MINUTES
+                              </span> 
+                              <br>
+                              
+                            
+                            
+                    
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    
+
+                    
+                    <td align="center" valign="middle" width="50%" style="padding:0 10px 0 5px;">
+                      <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                          <td align="center" style="padding:30px 20px;">
+                            <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" alias="PRI_CTA_TrackOrder" href="https://www.wingstop.com/order/track/5241c6a6-81a3-43c6-bd67-73f1031c6929?utm_medium=email&utm_campaign=OrderConfirmation_E_T01_T_T_OR_CON_OPS_Other_AG&utm_content=PRI_CTA_TrackOrder&utm_source=sfmc" mc-deep-link="false" style="height:60px;v-text-anchor:middle; width:210px;" arcsize="7%" strokecolor="#006938" fillcolor="#006938"><w:anchorlock/><center style="font-family: Impact, Arial,sans-serif; font-size:27px; color:#ffffff;">TRACK ORDER</center></v:roundrect><![endif]-->
+                            <div>
+                              <a   href="https://click.eclub.wingstop.com/u/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxN1jyAw_N9oFERUD-jVWDzCaXh7_CYSc1GyW4Iedo2qltnuRdeiR7XfvKGeMA-mCNcYp9BFccEs1lSbJ16D83Z_wBLVwoFiMTFm9h3SXWGKOMdlXNw"   style="background-color: #006938; font-family: 'Impact', Arial, sans-serif; font-size: 27px; color: #ffffff; line-height:22px; text-decoration: none; padding: 19px 0; border-radius: 5px; display: inline-block; mso-padding-alt: 0; width:210px; mso-hide:all; text-transform: uppercase;">TRACK ORDER</a>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    
+
+                  </tr>
+                </table>
+            
+
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                  <tr>
+                    <td style="padding:0px 10px 10px 10px;">
+                      <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                    
+                          
+                          
+                          <td width="285" valign="top" style="width:285px;">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                              <tr>
+                                <th scope="col" bgcolor="#006938" style="background-color:#006938; font-family:'Open Sans', 'Arial Black', sans-serif; font-size:16px; font-weight:800; line-height:25px; color:#fff; text-transform:uppercase; text-align:left; padding:8px 0 7px 15px; mso-padding-alt:6px 0 9px 15px;">
+                                  Order Information
+                                </th>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" height="275" valign="top" headers="order-information order-number" style="height:275px; background-color:#eeeeee; padding: 17px 15px 0 15px;">
+                                  <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                    <tr>
+                                      <td style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:19px; font-weight:700;">
+                                        Order Number
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:19px; font-weight:400;">
+                                        1771431897
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:19px; font-weight:700; padding-top:19px;">
+                                        Guest Name
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:19px; font-weight:400;">
+                                        Philip&nbsp;Berg
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:19px; font-weight:700; padding-top:19px;">
+                                        Guest Contact #
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:19px; font-weight:400;">
+                                        <a href="tel:(701) 200-2474" style="font-family:'Open Sans', Arial, sans-serif; color: #000; text-decoration:none;">(701) 200-2474</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:19px; font-weight:700; padding-top:19px;">
+                                        Payment Method
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:19px; font-weight:400;">
+                                        
+                                        PayPal
+                                        
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                  
+                          <td width="10" style="width:10px;">&nbsp;</td>
+                          
+                          
+
+                          <td width="285" valign="top" style="width:285px;">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                              <tr>
+                                <th scope="col" bgcolor="#006938" style="background-color:#006938; font-family:'Open Sans', 'Arial Black', sans-serif; font-size:16px; font-weight:800; line-height:25px; color:#fff; text-transform:uppercase; text-align:left; padding:8px 0 7px 15px;  mso-padding-alt:6px 0 9px 15px;">
+                                  Restaurant Information
+                                </th>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" height="275" valign="top" headers="order-information order-number" style="height:275px; background-color:#eeeeee; padding: 17px 15px 0 15px;">
+                                  <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                    <tr>
+                                      <td style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:19px; font-weight:700;">
+                                        Wingstop Fargo University Dr. South (#3219)
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:19px; font-weight:400;">
+                                        <a style="color:#313131; text-decoration:none">
+                                        2301 University Dr. South, Suite 115<br>
+                                        Fargo,&nbsp;ND&nbsp;58103<br>
+                                        </a><br>
+                                        <a href="tel:+1 (701) 394-9464" style="font-family:'Open Sans', Arial, sans-serif; color: #000; text-decoration:none;">+1 (701) 394-9464</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:19px; font-weight:700; padding-top:19px;">
+                                        Need to Change or Cancel Your Order?
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:19px; font-weight:400;">
+                                        Please call your local restaurant listed above.
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+            
+
+                
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                  <tr>
+                    <td style="padding:0px 10px 0px 10px;">
+                      <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                          <th colspan="2" scope="row" width="100%" bgcolor="#006938" align="left" valign="middle" style="background-color:#006938; font-family:'Open Sans', 'Arial Black', sans-serif; font-size:16px; font-weight:800; line-height:25px; color:#fff; text-transform:uppercase; text-align:left; padding:8px 0 7px 15px; mso-padding-alt:6px 0 9px 15px;">
+                            Order Details
+                          </th>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#eeeeee" style="background-color:#eeeeee; padding:14px; mso-padding-alt:13px 15px 17px 15px;">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                              <tr>
+                                <td width="40%" align="left" valign="middle" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:700; line-height:22px; color:#000000;">
+                                  
+                                    Order for Delivery
+                                  
+                                </td>
+                                <td width="60%" align="right" valign="middle" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:700; line-height:22px; color:#006938;">
+                                  
+                                    
+                                    Delivery
+                                    
+                                    in about 30-45 minutes
+                                  
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+            
+                
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                  <tr>
+                    <td style="padding:0px 10px 0px 10px;">
+                      <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                          <td valign="middle" style="font-family:'Open Sans', Arial, sans-serif; font-size:15px; font-weight:400; line-height:20px; padding:0 0 10px 0;">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                              
+                              <tr><td width="400" valign="top" style="padding:15px 0px 5px 15px; font-weight:700; font-size:14px;" colspan="2">Boneless Meal Deal</td></tr><tr><td width="100%" valign="top" style="padding:0px 0px 5px 40px; font-size:14px;">Large Seasoned Fries</td></tr><tr><td width="100%" valign="top" style="padding:0px 0px 5px 65px; font-size:14px;">Fry Seasoning</td></tr><tr><td width="100%" valign="top" style="padding:0px 0px 5px 40px; font-size:14px;">Ranch x 2</td></tr><tr><td width="100%" valign="top" style="padding:0px 0px 5px 40px; font-size:14px;">Lemon Pepper Chili Glaze x 5</td></tr><tr><td width="100%" valign="top" style="padding:0px 0px 5px 40px; font-size:14px;">Hickory Smoked BBQ x 5</td></tr><tr><td width="100%" valign="top" style="padding:0px 0px 5px 40px; font-size:14px;">Mild x 10</td></tr><tr><td class="itm-qty" style="display: flex;justify-content: space-between;width: 118%;padding: 15px 0px 5px 15px; font-size: 14px;">
+<span style="align-self: start;">Qty: 1</span></td><td width="110" valign="top" style="padding:15px 15px 5px 25px; font-weight:700; font-size:14px; text-align:right; min-width:110px;">$20.99</td></tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                
+                
+              
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                  <tr>
+                    <td style="padding:0 10px 8px 10px;">
+                      <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-top:1px solid #D8D8D8;">
+                        <tr>
+                          <td width="50%" align="left" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:400; line-height:22px; color:#000000; padding:10px 0 0 15px;">
+                            Subtotal
+                          </td>
+                          <td width="50%" align="right" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:400; line-height:22px; color:#000000; padding:10px 15px 0 0;">
+                            $20.99
+                          </td>
+                        </tr>
+                        
+                        
+                
+                        
+                        
+                        <tr>
+                          <td width="50%" align="left" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:400; line-height:22px; color:#000000; padding-left:15px;">
+                            Delivery Charge
+                          </td>
+                          <td width="50%" align="right" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:400; line-height:22px; color:#000000; padding-right:15px;">
+                            
+                            
+                              $2.99
+                             
+                          </td>
+                        </tr>
+
+                        
+                        
+                        
+                        
+                        <tr>
+                          <td width="50%" align="left" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:400; line-height:22px; color:#000000; padding-left:15px;">
+                            Tax and Fees
+                          </td>
+                          <td width="50%" align="right" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:400; line-height:22px; color:#000000; padding-right:15px;">
+                            $3.63
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="50%" align="left" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:400; line-height:22px; color:#000000; padding-left:30px; padding-right:15px;">
+                            Tax
+                          </td>
+                          <td width="50%" align="right" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:400; line-height:22px; color:#000000; padding-right:15px;">
+                            $1.63
+                          </td>
+                        </tr>
+                 
+                          
+
+                        <tr>
+                          <td width="50%" align="left" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:400; line-height:22px; color:#000000; padding-left:30px; padding-right:15px;">
+                            Service Fee
+                          </td>
+                          <td width="50%" align="right" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:400; line-height:22px; color:#000000; padding-right:15px;">
+                            $2.00
+                          </td>
+                        </tr>
+                        
+                                
+
+                        
+                
+                        <tr>
+                          <td width="50%" align="left" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:400; line-height:22px; color:#000000; padding-left:15px;">
+                            Tip
+                          </td>
+                          <td width="50%" align="right" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; font-weight:400; line-height:22px; color:#000000; padding-right:15px;">
+                            $0.00
+                          </td>
+                        </tr>
+                        
+                        
+                 
+                        
+                
+                        
+
+                        
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                
+                
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                  <tr>
+                    <td style="padding:0px 10px 0px 10px;">
+                      <table bgcolor="#000000" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                          <td width="50%" align="left" valign="middle" style="font-family:'Open Sans', Arial, sans-serif; font-size:16px; font-weight:800; line-height:1.2em; color:#ffffff; padding:11px 15px 11px 15px;">
+                            Total
+                          </td>
+                          <td width="50%" align="right" valign="middle" style="font-family:'Open Sans', Arial, sans-serif; font-size:16px; font-weight:800; line-height:1.2em; color:#ffffff; padding:11px 15px 11px 15px;">
+                            $27.61
+                          </td> 
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+
+                
+                
+
+
+                
+
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                  <tr>
+                    
+                    
+                    <td align="center" valign="top" style="padding:36px 0px 24px 0px;">
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="450">
+                        <tr> 
+                          <td valign="top" align="center">
+                            <a    href="https://click.eclub.wingstop.com/u/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxN2_wjVfF80k0qxVXVRdm8iMdIGJ1zMhU18NbNc3z8csQWFVs21Uf3Df7YesgRqLxhiSs5T3-uOSO8uG6eUPzQCItco7CguvNqJIs4Utl6UyCETYD8"><img alt="Wingstop Charities" src="https://image.eclub.wingstop.com/lib/fe561570726c037e721c/m/1/2c80af1d-de33-4c12-aa18-4b0b0e419a64.png" width="250" height="auto" style="width:250px; font-family:Impact,'Arial Black', Arial,sans-serif; font-size:18px; line-height:1.15; -ms-interpolation-mode:bicubic; border-width:0; outline-style:none; display:block; margin:0 auto; color:#3F3F3F; text-align: center;"></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="msoImpactAlt" align="center" style="padding:22px 12px 0px 12px; font-family: Impact, 'Arial Black', Arial, sans-serif; font-size:28px; line-height:32px; color:#000000; text-transform:uppercase;" valign="top">
+                            HELP US ROUND&#8209;UP CHANGE
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="center" style="padding:6px 18px 0px 18px; font-family:'Open Sans','Trebuchet MS',sans-serif; font-size:20px; line-height:30px; font-weight:normal; color:#3F3F3F;" valign="top">
+                            Join us in making a difference when you Round&#8209;Up your order!
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="center" style="padding:16px 18px 0px 18px; font-family:'Open Sans', Arial, sans-serif; font-size:20px; font-weight:800; line-height:30px; text-decoration:underline; color:#006938;" valign="top">
+                            <a href="https://click.eclub.wingstop.com/u/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxN4f27JJwho-ZXJAmOfDEzq1eA5fDQQZbERJaDrZgsMKcH6F5ACm90kizva4ZzK3aqkTr3WMr-W6KeS1JuYN7g92fMfyhlG-rpXQQPsntBf"   target="_blank" style="font-weight:bold; text-decoration:underline; color:#006938; text-transform:uppercase;">SEE THE IMPACT</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+        
+                  </tr>
+                </table>      
+     
+
+                
+                
+                <table bgcolor="#000000" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                  <tr>
+                    <td align="center" valign="top" style="padding:20px 200px 20px;">
+                      
+                      <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                          <td align="center" valign="top">
+                            <a   href="https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxN6ifhT77L4Bm70YuWZxME2fm98xQXIGwe3lXV2PxYE4lPXSZzNHuBAhOauD0rcKJ7JAwrAf_6alK0YR87AQgmVcMEzSvrX0osltpNlsOnrKpaSZLM" style="display:inline-block;text-decoration:none;"><img src="https://image.eclub.wingstop.com/lib/fe561570726c037e721c/m/1/69253249-de1f-44e3-a0ba-3f7882ab3e16.png" width="45" style="color:#1cc978; font-size:12px;" alt="Wingstop on Facebook"> </a>
+                          </td>
+                          <td align="center" valign="top">
+                            <a   href="https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxN8XjhqVVGRb_cu68uaeg0aYYG--VFVnQBV5oEFRn5uMX4RpUZCrIJVvoU6XVJKTnYc24_waaQDJ5ULjfy6uo1g6kSGtl7BZ7b3wLIMvsvTfGdWMZs" style="display:inline-block;text-decoration:none;"><img src="https://image.eclub.wingstop.com/lib/fe561570726c037e721c/m/1/42a84877-e2a1-4e44-9408-390714392702.png" width="45"style="color:#1cc978; font-size:12px;" alt="Wingstop on Instagram"> </a>
+                          </td>
+                          <td align="center" valign="top">
+                            <a   href="https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxN_C_-HvmyzptNnJ1D3oAil3vJr3aKgX1QmHkaFslPjx2pxfyeDZKb0PBdS4sqmT98f7dfRe-310ah6xz09YOaBtBLX6OJQ6W5BAQpdHTw0ckRGq2w" style="display:inline-block;text-decoration:none;"><img src="https://image.eclub.wingstop.com/lib/fe561570726c037e721c/m/1/74181fd1-f4c4-41b2-8e6c-9de699bbadc9.png" width="45"style="color:#1cc978; font-size:12px;" alt="Wingstop on X"> </a>
+                          </td>
+                          <td align="center" valign="top">
+                            <a   href="https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOCSCIVwaGD1ENIbl2P9UN9YnVVAObEe4MTRn3E8dVIkOwfLlcRXukFTHznwusPalJhGH-6jFgTLN6gPbTWuuiEgQIJAhDFNDIbZN6-xxhDaR4_f-k" style="display:inline-block;text-decoration:none;"><img src="https://image.eclub.wingstop.com/lib/fe561570726c037e721c/m/2/c2898c40-03f6-495a-b59e-0c05bbbe9836.png" width="43" style="color: #1CC978; font-size: 12px;" alt="Wingstop on TikTok"></a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" valign="top">
+
+                      
+                      
+
+                      
+                      
+
+                      <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+
+                        
+                        <tr>
+                          <td align="center" valign="top" style="font-family:'Open Sans', Arial, sans-serif; font-size:20px; line-height:22px; letter-spacing:-0.02px;  color:#ffffff; padding: 0 30px 22px;">
+                            <span style="font-family:'Open Sans', sans-serif; font-weight:700">FOR CLUB WINGSTOP: </span> 
+                            See the <a href="https://click.eclub.wingstop.com/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOIgY0YfAH6itai1JcI7Q87FP7hpAL3uRZmXfqChXdwRJ90RhkG-J6RCY6V3YokNMFpqNFF9vTg317VT640ecsUpMV184DpS1Zq418" target="_blank" class="green" style="color:#00DE55; text-decoration:none;">Club Wingstop Terms &amp; Conditions</a> for full details. <span style="white-space:nowrap">&copy; 2026 WF LLC.</span>
+                          </td>
+                        </tr> 
+                        
+
+                        <tr>
+                          <td align="center" valign="top" style="font-family:'Open Sans', Arial, sans-serif; font-size:20px; line-height:20px; letter-spacing:-0.02px; color:#ffffff; padding: 0 30px 22px 30px;">
+                            See Wingstop.&zwnj;com for full details. <span style="white-space:nowrap">&copy; 2026 WF LLC.</span>
+                            <br><br>
+                            This email was sent to: <a href="mailto:bergphilip885@gmail.com" style="color:#00DE55; text-decoration: none;"><span class="green" style="color:#00DE55;">bergphilip885@gmail.com</span></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="center" valign="top" style="font-family:'Open Sans', Arial, sans-serif; font-size:20px; line-height:22px; letter-spacing:0px; color:#ffffff; padding: 0 30px 22px 30px;">
+                            This email was sent by:<br>
+                            Wingstop Restaurants Inc.<br>
+                            2801 N Central Expressway<br>
+                            Dallas, TX 75204<br>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" valign="top" style="padding:0px 25px 40px;">
+                      <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                          <td align="center" valign="middle" style="font-family:Impact, 'Open Sans', Arial, sans-serif; font-size:18px; line-height:22px; letter-spacing:0.12px; color:#ffffff;">
+                            <a   href="https://click.eclub.wingstop.com/u/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOJbBo3N4YF3d-BCdL6fAtJwWvb87g3MrdHgxRI2mMIhBZowsiPC4YXomTI3WIetoo-LyX_f8of_WpV-wusSYEl9hyIOttywh9PLpiQWPv976cjKdc"  style="color:#ffffff; display:block; text-decoration:none;"><span class="msoImpactAlt">VISIT US ONLINE</span></a>
+                          </td>
+                          <td align="center" valign="middle" width="5" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:22px; letter-spacing:0.5px; color:#ffffff; padding:0 12px;">
+                            |
+                          </td>
+                          <td align="center" valign="middle" style="font-family:Impact, 'Open Sans', Arial, sans-serif; font-size: 18px; line-height:22px; letter-spacing:0.12px; color:#ffffff;">
+                            <a   href="https://click.eclub.wingstop.com/u/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOKrRjOflh5OGLMljKxySIHwqyUUmEihFzdLJpyE2cKUOEaYla6WTVgAgcRI1muAdLCyMvCHLQnHuP25eGSIr2CR0c8ruAOrmhpj6Rx0VAdB4Jpqfk"  style="color:#ffffff; display:block; text-decoration:none;"><span class="msoImpactAlt">FIND A LOCATION</span></a>
+                          </td>
+                          <td align="center" valign="middle" width="5" style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:22px; letter-spacing:0.5px; color:#ffffff; padding:0 12px;">
+                            |
+                          </td>
+                          <td align="center" valign="middle" style="font-family:Impact, 'Open Sans', Arial, sans-serif; font-size:18px; line-height:20px; letter-spacing:0.12px; color:#ffffff;">
+                            <a   href="https://click.eclub.wingstop.com/u/?qs=ABB7InYiOjEsImQiOjUwMjZ9AAEAAAAAAjT9CxOLC6W_WFoqFO4dAmhUDuQEaLHFY2vXJvTDJd0FlHCMcA7uD2YThK6HssV3nKsE3ezE9T365NKDB-RVWx0dI7KdDvhmTx-86vIzXTfkuIp124yiEa0"  style="color:#ffffff; display:block; text-decoration:none;"><span class="msoImpactAlt">ORDER ONLINE</span></a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                
+                <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+              </td>
+            </tr>
+          </table>
+          <!-- // END TEMPLATE -->
+
+        </td>
+      </tr>
+    </table>
+  </center>        
+  <div style="display:none; font-size:0px; line-height:0px; max-height:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">
+    <img src="https://click.eclub.wingstop.com/open.aspx?OJBAU5UKYPVU3DTLJSTN24JQ2I.10201&d=10201&bmt=0" width="1" height="1" alt="">
+    <img src="https://pxl.mon-trk.com/96382a82-040e-45e2-9de5-fd1e8e37baf0/OrderConfirmation/1148548017" height="1" width="1">
+  </div>
+</body> 
+</html>
+
+--6ytbRpsR14Pq=_?:--
+

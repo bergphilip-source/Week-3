@@ -1,0 +1,253 @@
+Delivered-To: bergphilip885@gmail.com
+Received: by 2002:a05:651c:2120:b0:3a9:a739:e8cf with SMTP id a32csp2439851ljq;
+        Fri, 16 Oct 2026 06:01:32 -0700 (PDT)
+X-Received: by 2002:a05:600c:3e07:b0:4a1:a009:9724 with SMTP id 5b1f17b1804b1-4a1a00997f1mr284996495e9.7.1792155692298;
+        Fri, 16 Oct 2026 06:01:32 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1792155692; cv=none;
+        d=google.com; s=arc-20260327;
+        b=V5BosKyCdjLowIK733IXFLsU0kl5qsVfg9CW0Vr/CpGjjtZCc7Q0Eip75ChzbJTHqZ
+         yadxNh8wh6gALOZM3uQQz9G7x7clpa4/MAz7UWWTw4sDiQ5BWR4DpO4rmKoj+vr9voEX
+         5xArW849sEcvxkHDbWV/MJmjPHGlVSUQb9Gm3dp/ZV1S4cP+o1g62j+heSxoX8GY22R4
+         M/hYOA41vLbdM+EopjnRk2IxdSTM+0vOCHZox5jQB9cJgSA1n2x4g8/wo+9kE5e6p/zP
+         GrqN8qbNrrO3oBcXpRTJ6b7BuCcqXHxpY1qeHY8ivDqBMqcgdiB8tsyrFWhR5RlqlCVS
+         F8hA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=content-transfer-encoding:message-id:reply-to:to:from:subject
+         :mime-version:date:sender:dkim-signature:dkim-signature;
+        bh=Qu3yzt9rbPoigeOeyGdDOT7qaLAO7W4+1qXuqdTEz7I=;
+        fh=PTuvxKzhMlw2RufZDYFFcbxz+H+/enVq7Z2wxjBf9k4=;
+        b=TqlT0SjcH0mDthQ8ui2yshW/xDEFd/PCx30ZhQemiIkAIInmTPFGiQo/Lt5CAhvIRa
+         9cV/0bEvlEfIi06U/LrruM3wnXu0DtlZjnrZzt9afmoJ4GRxbKQs0vIX3/D7OL8Z3U1X
+         OJEfM02xMIBc2Li49MBfl7XU5HF7qsX6eKgaoD+Ts+OsDCn0fn53tRem/xYijll3KV5B
+         AX0VUuN5rLpsf95SLBlBqhp/uiqtjKv9Ub1cSUf8F55yNiqAxhgMvY2ueT1sykBRGveo
+         Bko4gVxNjN9g6HCJ+jDkgXcIn/Bu1v189JhTqwRGQZifs5ZNISrjtCDcrXBiYYJFb9YP
+         KSlQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ebill.conservicemail.com header.s=pic header.b=Z0XThgsE;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=Y6nn8Vk8;
+       spf=pass (google.com: domain of bounce+af5156.fa919-bergphilip885=gmail.com@ebill.conservicemail.com designates 159.112.246.46 as permitted sender) smtp.mailfrom="bounce+af5156.fa919-bergphilip885=gmail.com@ebill.conservicemail.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=conservicemail.com
+Return-Path: <bounce+af5156.fa919-bergphilip885=gmail.com@ebill.conservicemail.com>
+Received: from v546.v5f246a16.use4.send.mailgun.net (v546.v5f246a16.use4.send.mailgun.net. [159.112.246.46])
+        by mx.google.com with UTF8SMTPS id 5b1f17b1804b1-4a1d3839f9asi20829285e9.4.2026.10.16.06.01.31
+        for <bergphilip885@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 16 Oct 2026 06:01:32 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+af5156.fa919-bergphilip885=gmail.com@ebill.conservicemail.com designates 159.112.246.46 as permitted sender) client-ip=159.112.246.46;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ebill.conservicemail.com header.s=pic header.b=Z0XThgsE;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=Y6nn8Vk8;
+       spf=pass (google.com: domain of bounce+af5156.fa919-bergphilip885=gmail.com@ebill.conservicemail.com designates 159.112.246.46 as permitted sender) smtp.mailfrom="bounce+af5156.fa919-bergphilip885=gmail.com@ebill.conservicemail.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=conservicemail.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=ebill.conservicemail.com; q=dns/txt; s=pic; t=1792155691; x=1792162891;
+ h=Content-Transfer-Encoding: Content-Type: Message-Id: Reply-To: To: To: From: From: Subject: Subject: Mime-Version: Date: Sender: Sender: X-Feedback-Id;
+ bh=Qu3yzt9rbPoigeOeyGdDOT7qaLAO7W4+1qXuqdTEz7I=;
+ b=Z0XThgsE9GwntZ5kL7XWFjeyYso1RhsYbT+4iuaGhGYWhNCZSyAyaRybwwy7qyd9aho26tL1zIRonXhKjXhcdw7BWJJ0UxVjpSKC1U4jdiSGN52Whfb2PZu5XXZdnJpYGOVT0y6s7zEAODKwan4HdXqdwT2TOlmymGGFXGPQjrM=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1792155691; x=1792162891;
+ h=Content-Transfer-Encoding: Content-Type: Message-Id: Reply-To: To: To: From: From: Subject: Subject: Mime-Version: Date: Sender: Sender: X-Feedback-Id;
+ bh=Qu3yzt9rbPoigeOeyGdDOT7qaLAO7W4+1qXuqdTEz7I=;
+ b=Y6nn8Vk8CMK+qag/ISfUYNKXmLX69bWXm3q/BGn875KkQREHGe+A58iT1Ivytsvrw09daz6jgbTtdiNegoYg00hsJVh1TzqqyuWbm6TbRb44XdMR70xMQKNnKEW9QtMCWVYxGepoou7Rnim30PAGvg6qfembHd+KKNUN3jmvE+I=
+X-Mailgun-Sid: WyI1Zjg4MyIsImJlcmdwaGlsaXA4ODVAZ21haWwuY29tIiwiZmE5MTkiXQ==
+X-Feedback-Id: postmaster@ebill.conservicemail.com:li087-Conservice-Realty
+ Path:5bb4e4cbaa3de6000123d254:mailgun
+Received: by 1f32f1afa8e3ad84751a768f558040d988d279f44f6e6cb12fac87a45a7eb56b with HTTP
+ id 6ad2202b2a693f9b13598c78; Fri, 16 Oct 2026 13:01:31 GMT
+X-Mailgun-Sending-Ip: 159.112.246.46
+Sender: ebill=conservicemail.com@ebill.conservicemail.com
+Date: Fri, 16 Oct 2026 13:01:31 +0000
+Mime-Version: 1.0
+Subject: Monthly Conservice Statement for Liberty Lights Apartments
+From: Conservice <ebill@conservicemail.com>
+To: bergphilip885@gmail.com
+X-Mailgun-Tag: li087
+X-Mailgun-Tag: Conservice
+X-Mailgun-Tag: Realty Path
+X-Mailgun-Track-Opens: true
+X-Mailgun-Track-Clicks: true
+X-Mailgun-Track: true
+Reply-To: service@conservice.com
+Message-Id: <20261016130131.243bd8b0ea25a52f@ebill.conservicemail.com>
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=3D"UTF-8" />
+	<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1=
+=2E0" />
+</head>
+<body style=3D"font-family: 'Roboto Condensed', 'Arial', sans-serif">
+	<div id=3D"wrap">
+		<div style=3D"background-color: #263746; text-align: center">
+			<img src=3D"https://imagemanager.conservice.com/Media/Billing/white-gree=
+n-logo.png" width=3D"300" alt=3D"Conservice" style=3D"width: 300px; padding=
+: 5px" />
+		</div>
+		<div style=3D"text-align: center; margin-top: 25px; margin-bottom: 25px; =
+width: 100%; margin-left: auto; margin-right: auto;">
+			<h3 style=3D"font-weight: 100; color: #555759;">
+				&nbsp; Your utility statement due on <span style=3D"color: #77BC1F;"><s=
+pan style=3D"font-weight: 600 !important">11/1/2026</span></span> is ready.=
+ A summary of your charges is below, for the account number ending in
+				<span style=3D"color: #77bc1f"><span style=3D"font-weight: 600 !importa=
+nt">5152</span></span>. To view the bill or see payment options, please cli=
+ck below. Payment options may vary by Community.
+			</h3>
+		</div>
+		<div style=3D"text-align: center; margin-top: 25px; margin-bottom: 50px; =
+width: 100%; margin-left: auto; margin-right: auto;">
+    <h3 style=3D"font-weight: 100; color: #555759;">
+        We see that you have not logged in to our site. Before you can acce=
+ss your utility information, please click 'View Statement' and register you=
+r account using the pin: <span style=3D"color: #77BC1F;"><span style=3D"fon=
+t-weight: 600 !important">9544</span></span>.
+    </h3>
+</div>
+
+	</div>
+	<div style=3D"color: #009BDE;">
+	<p style=3D"font-size: 18px; font-weight: bold">Current Utility Charges</p=
+>
+</div>
+<table style=3D"width: 100%; margin-bottom: 8px; border-collapse: collapse;=
+">
+	<thead>
+		<tr>
+			<th style=3D"text-align: left; padding: 5px;">SERVICE TYPE</th>
+			<th style=3D"text-align: center; padding: 5px;">SERVICE PERIOD</th>
+			<th style=3D"text-align: right; padding: 5px;">CHARGES</th>
+		</tr>
+	</thead>
+	<tr>
+	<td style=3D"text-align: left; color: #555759; padding: 5px; border-bottom=
+: 1pt solid #c3c6c8;">Electricity</td>
+	<td style=3D"text-align: center; color: #555759; width: 60%; padding: 5px;=
+ border-bottom: 1pt solid #c3c6c8;">09/01/2026 - 09/30/2026</td>
+	<td style=3D"text-align: right; color: #555759; padding: 5px; border-botto=
+m: 1pt solid #c3c6c8;">$114.76</td>
+</tr>
+<tr>
+	<td style=3D"text-align: left; color: #555759; padding: 5px; border-bottom=
+: 1pt solid #c3c6c8;">Service Fee</td>
+	<td style=3D"text-align: center; color: #555759; width: 60%; padding: 5px;=
+ border-bottom: 1pt solid #c3c6c8;">Conservice is a service provider contra=
+cted to prepare monthly statements and provide conservation resources.</td>
+	<td style=3D"text-align: right; color: #555759; padding: 5px; border-botto=
+m: 1pt solid #c3c6c8;">$10.00</td>
+</tr>
+
+	<tr>
+		<td style=3D"color: #555759; text-align: left; font-weight: bold; width: =
+28.5%; padding: 5px; border-top: 2pt solid #009bde;">Current Charges due 11=
+/01/2026</td>
+		<td style=3D"color: #555759; text-align: left; font-weight: bold; padding=
+: 5px; border-top: 2pt solid #009bde;"></td>
+		<td style=3D"text-align: right; color: #555759; font-weight: bold; paddin=
+g: 5px; border-top: 2pt solid #009bde;">$124.76</td>
+	</tr>
+</table>
+
+<table style=3D"width: 100%; margin-bottom: 25px; border-collapse: collapse=
+;">
+=09
+</table>
+	<div style=3D"text-align: center; margin-top: 35px; margin-bottom: 15px">
+		<a href=3D"https://email.ebill.conservicemail.com/c/eJxMzTFr8zAQgOFfIy0fB=
+N2dZVmDhq8Nbkk7lGboLMVnWyA7iqwGml9fsoSOL7zwDG70FqxkB8YiaN1akLNjbUm1CnTnTaOG=
+MQQyYCz7oRkpmFFGhwpbUNACKSDYYUNh6IJij9prHEWjOMSUdqfzunG5xhMvPt5zkcnNteZN0H-=
+BvcC-8BS3yuXPe_8E9keu31lg_8XpdF5YUJ8F7S9we1svZj6-r9vh5XDLXJ5eJ0F7QXtZXOAy5T=
+mmmLtOi0ZND7i6FFVnZHXPD0lW98k-1Z9_H77O8urwNwAA__8xZlZ6" class=3D"btn-view" =
+style=3D"width: 350px; margin-top: 15px; background-color: #c3c6c8; border:=
+ none; color: #555759; padding: 7px; text-align: center; text-decoration: n=
+one; display: inline-block; margin-top: 25px; margin-bottom: 5px; border-ra=
+dius: 8px; font-size: 18px">
+			<strong>VIEW STATEMENT</strong>
+		</a>
+	</div>
+=09
+	<div style=3D"color: #bbb; background-color: #263746; text-align: center">
+		<table role=3D"presentation" align=3D"center" cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" style=3D"margin: 5px auto 0 auto">
+			<tr>
+				<td style=3D"padding: 10px 15px">
+					<a href=3D"https://email.ebill.conservicemail.com/c/eJw8zTFvszAQgOFfYy=
+-fgu4ODPbgAeUrQ7uklarOtjmCVYdQMKH591WWjK_e4ent4AwayRYbQ6hUbVCOFoKuet0P2gVG1=
+s4rpbSBOlQGuW9ARktANQLWWAKWWFBV-l57YEfKKRpEBexjSkW4Tisvtxj44uIjLzLZMed5FWUr=
+qBPU7fte3K9b3jw_vqAujG6aOAnqPo-v_v_L1zu8qW86reln-z2E9tDKxXpezvMYU5y1VqKC8xP=
+INkXQjcz2-NRlth_sUr7_O7k8ypulvwAAAP__fSZORQ" title=3D"Youtube">
+						<img src=3D"https://imagemanager.conservice.com/Media/youtube.png" wi=
+dth=3D"32" height=3D"32" alt=3D"YouTube" />
+					</a>
+				</td>
+				<td style=3D"padding: 10px 15px">
+					<a href=3D"https://email.ebill.conservicemail.com/c/eJxMzEFqwzAQheHTSJ=
+tCmBl5bGkxi1LwuvQGkjyKRZXaOCKmty_ZhC4fvO9fpMSAwargFAiZx4B2FUclQ1AEdMlr9qyed=
+ZwyF7dA8GyrENCIgCM6QIcXGlxafAKNxJGpmAE01dYuefu56_GoWW-xPufNNll73-_GvRuaDc3n=
+eV5KzJq27ft5MDR_vJQ9JOlx3dfa6u49mwGur1KXVsFPtss_0OVLY-u_b5-xr_Yh9BcAAP__vvx=
+HIA" title=3D"FaceBook">
+						<img src=3D"https://imagemanager.conservice.com/Media/facebook.png" w=
+idth=3D"32" height=3D"32" alt=3D"Facebook" />
+					</a>
+				</td>
+				<td style=3D"padding: 10px 15px">
+					<a href=3D"https://email.ebill.conservicemail.com/c/eJxEzD1qxDAQxfHTSE=
+1g0Yw-LBVThIDrkBuMZNkWyBsjDwu5fdhmt3w8fv-FVk6QdCWYEoL3IYHeqTBXNFxccgGnlHBhD=
+zitBUJMma1uhAYDGAhgDVi4obN5idlURs8eV-VMza33W_m9X3U8WqkHt-c8dKdd5LyU_VQ4K5zb=
+_RLeBh_PV-H8JgpnPSjXsZ176-2M0StntldJqDcTJy309TJa6Kdyl7-Pb5ZdPwj_AwAA___Jk0b=
+2" title=3D"Instagram">
+						<img src=3D"https://imagemanager.conservice.com/Media/instagram.png" =
+width=3D"32" height=3D"32" alt=3D"Instagram" />
+					</a>
+				</td>
+				<td style=3D"padding: 10px 15px">
+					<a href=3D"https://email.ebill.conservicemail.com/c/eJxEzM1qwzAQBOCnkS=
+6FIK0tWXvYQyn4XPoGq794qewYV8Tk7UsKbW8zDN9kqowWdSE7IVjnPFq9EPpgHMQxB-YJ2WOuo=
+SbMMSFUD0YLgQFvjfV2MHawFxiHmEM0hcGxg6pGU6K0dkm37ascd0llZXnWVTdaet_V8KpgVjCf=
+53lpsn2WLNtzVzCn27rz9vhJv1wfFMtx3Rdpsofg1Giuf5edmpgw6U5v_6DTR-HWHy_v3Bd9J_g=
+OAAD__6mMSt4" title=3D"LinkedIn">
+						<img src=3D"https://imagemanager.conservice.com/Media/linkedin.png" w=
+idth=3D"32" height=3D"32" alt=3D"LinkedIn" />
+					</a>
+				</td>
+				<td style=3D"padding: 10px 15px">
+					<a href=3D"https://email.ebill.conservicemail.com/c/eJxMzMFqwzAMxvGnsS=
+-DIsmxYx90GIOcx95ATpTG4G4hFR17-9FL6PHj4_dfeJWCxSvjWAhjTAX9xgtqqTQTZhhmiJKEp=
+GiulPIalEbfmIASAiYMgAEvNIS65AoqFCXS6gbQ2nq_zD_fdz0ebdabtOe8-c6b2X534d3R5Giy=
+32amx_NzNH2cwB9c9bjuW-ttzzm6Aa5nxLg3yKM3fgHGXyrd_t4-xTb_YPoPAAD__3UpRYI" ti=
+tle=3D"Twitter">
+						<img src=3D"https://imagemanager.conservice.com/Media/twitter.png" wi=
+dth=3D"32" height=3D"32" alt=3D"Twitter" />
+					</a>
+				</td>
+			</tr>
+		</table>
+		<div>
+			<a href=3D"https://email.ebill.conservicemail.com/c/eJxMyz1qxDAQQOHTSE1g=
+mRn9WFNMEQJbh9xAksdrgTYxXrEmtw9JYVI-eN8sS2Zkq4ITE4YQGe0qnimir8SEZYpcQ-EJXNJ=
+lnrWqI9uEgCICRnSADi_kXZlTAc0UcqDFeNDSer_Ur8-H7s9W9Z7bb95tl3WM7WHcq6GroetxHP=
+-2v2WXovttW1tvW0rBeLidfEhvkCY75O1EdsiH5j6-X97zWO1T6CcAAP__v1hDZw" style=3D"=
+color: #bbb; text-decoration: none">www.conservice.com</a>
+			&nbsp; | &nbsp;
+			<a href=3D"https://email.ebill.conservicemail.com/c/eJxMzc1qwzAQBOCnkS6F=
+IK0sRzroEAo-l6YvoJ-1vSDLxl4H8vYlPYQeB2bmK2GMXnuJQV89aGt7r-UcrgZsjrZzoy19yca=
+nNLrofXFOl16jpAAKeq10r43SRl-gM6m4pDCCjRZG0SlMVOslr-3A_UEZl0ivuMgaZubtEOYmYB=
+AwnEyVmPCgNq7_Bq-ygOEHW2wsYLjlvJ6N7-eyxP0pwPwJd2SmNh1yDwn3aZup0uacFZ2a3iSHS=
+spdJYfP973k8I2x8vPjK_IsHwF-AwAA__9HUlc3" style=3D"font-size: 11px; color: #=
+bbb; text-decoration: none">opt out</a>
+		</div>
+		<div style=3D"text-align: center; padding: 5px">If you need to contact Co=
+nservice, please visit <a href=3D"https://email.ebill.conservicemail.com/c/=
+eJxMzMFqwzAMxvGnsS-DYsl2ah90GIOex95ATpRG4LYh0Qp7-7EdQo8ffL__RDNXqF4IzhUh56G=
+CXyhObayRI2OpOUSc2lBllsgVUhpz8EoYcIAAA8QAEU6YYptKC8KYOePsUpCmvZ_Gx32X7amj3F=
+j_5s13WszW3cV3hxeHl2_Trqay631-vID_80ZNtuu6aNe1lOxSuB4ho66hnL3Rx4G80Zdwt5-3T=
+7bFPwl_AwAA___Skkeq" style=3D"color: #bbb; text-decoration: none">utilities=
+info.conservice.com</a></div>
+	</div>
+<img width=3D"1" height=3D"1" alt=3D"" src=3D"https://email.ebill.conservic=
+email.com/o/eJw8y0GKhDAQQNHTmM2AVFUskyxqNRcY5gapmGggdosdhL590xuXn89bpMSAwWR=
+BFwiZ54Bmk2RTccTWavAcbCreqXNpUcDC6sFUIaAZAWe0gBZHmqwuXiFH4shUhgmy1tbG9Hy88n=
+nVlPdYv7mbUzSf67HVVg_veZhgvV-XVsE70-X3hqbLf46tv3_-Yt_MJfQJAAD__4G6N5I"></bo=
+dy>
+</html>

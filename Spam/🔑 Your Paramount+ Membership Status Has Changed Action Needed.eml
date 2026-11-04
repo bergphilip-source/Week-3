@@ -1,0 +1,623 @@
+Delivered-To: bergphilip885@gmail.com
+Received: by 2002:a2e:9c01:0:b0:3ac:686b:7cf with SMTP id s1csp1985629lji;
+        Fri, 30 Oct 2026 14:23:29 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AKwUvBwS9pZvWFdcIp2bCZou+RbtErZKLdxqNIMRNxjyZba+ejDf0bYrS5CrwwgDicwipaNac3hE0cLCvRPuXBWL@gmail.com
+X-Received: by 2002:a05:6000:1acb:b0:48b:a7:6396 with SMTP id ffacd0b85a97d-48e6e4f56dbmr8224259f8f.41.1793395409407;
+        Fri, 30 Oct 2026 14:23:29 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1793395409; cv=none;
+        d=google.com; s=arc-20260327;
+        b=WGQMrFnwvAtez7XTGDFiRT6AqmeIQhqEbriYqJ+z974zbIKgY/JfPz8k4bdw3ET2PG
+         o+jc+0eVimCs+AcnNQJhM6QFMYh14ZUlvwbWEP82kaxBWSRatESHVQVV0BYnwAC3f6F1
+         VEaZCKoTh1/OxXjL65vSALkDGiuB6Ii6th2IurEi5ar4yeCKqgsLcIouYNr/0+g9DKNK
+         pXYpIp9E5M6CGeiicr4GT4yaJXrKuxH8qzlFamtDJHl9459JrgMqT34mfj3p68vBzvbj
+         pJahitKPrZxBpSk3zHjn1B9AMg98dbM2EP6Yuyv9MzrhfTrlSARUj+mXzrRuRzNtsqRd
+         RGDg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=content-transfer-encoding:list-unsubscribe:list-unsubscribe-post
+         :subject:to:from:feedback-id:origin-messageid:date:dkim-signature
+         :delivered-to:message-id;
+        bh=pmt/CQvDxWWMa6j1ybRO1KwJFwtorrdg7+tP7xFsgOE=;
+        fh=zMHXCkfNQi545PU4DRxY2eesxRvfpmpH4F8M7O8NMv8=;
+        b=pNn+qXA6CZDT+XGRG8UBXUPOc25IFdAHye768Sbmo+EizMFhg6biC7E4AqVBJCvKXx
+         w8HSKSn3UZtTaHjt+fkDgYSr4eXadR6mvBpQONNIQmMat6ahr2pkQJB6+R4x6HasVY8f
+         HN11r8oYXxxmg8Ph6FtPkGJHQfA6YLepE+qUvmiOju4WubMzxgmwkaV9W/IjVgRxjj9y
+         7Cg4n+9jqduE+6npvV4d3wx/X/KWoIAtegGNcxYAz0pEZybMpqKjf26w4VKqW1DcIaru
+         7RKYdqPVROgs12Ux6ZGpfAg5dcfq2K21M8vK8h1lCjYxCTicO5A+CwTu9bTDYZ/VBFqN
+         tykQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@brevosend.com header.s=brevo1 header.b=ALGAgIPX;
+       spf=pass (google.com: domain of return@zvtpgmlbtxcaxrgjjyxcns.camdvr.org designates 195.154.34.131 as permitted sender) smtp.mailfrom=return@zvtpgmlbtxcaxrgjjyxcns.camdvr.org
+Return-Path: <return@zvtpgmlbtxcaxrgjjyxcns.camdvr.org>
+Received: from ibm.com (riofokrysa.acralam.info. [195.154.34.131])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-48e71bc5f70si5520589f8f.336.2026.10.30.14.23.29
+        for <bergphilip885@gmail.com>
+        (version=TLS1 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Fri, 30 Oct 2026 14:23:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of return@zvtpgmlbtxcaxrgjjyxcns.camdvr.org designates 195.154.34.131 as permitted sender) client-ip=195.154.34.131;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@brevosend.com header.s=brevo1 header.b=ALGAgIPX;
+       spf=pass (google.com: domain of return@zvtpgmlbtxcaxrgjjyxcns.camdvr.org designates 195.154.34.131 as permitted sender) smtp.mailfrom=return@zvtpgmlbtxcaxrgjjyxcns.camdvr.org
+Message-ID: <6ae50ad1.b1d0692d.377340.f6d7SMTPIN_ADDED_BROKEN@mx.google.com>
+X-Google-Original-Message-ID: <61962.61962.61962>
+X-PM-ID:64.444593
+Return-Path: <bounces-515877226-2816894415@ha.d.sender-sib.com>
+Delivered-To: alejandro@namesearch.club
+Received: from pe-dovecot-director-ce-1.pe-dovecot-director-ce-headless.pe-shard-1.svc.cluster.local ([10.42.119.128])
+	by pe-dovecot-backend-ce-8.pe-dovecot-backend-ce-headless.pe-shard-1.svc.cluster.local with LMTP
+	id W9BUFWeJ1GpToQ0AsnZ3Aw:P1:P1
+	(envelope-from <bounces-515877226-2816894415@ha.d.sender-sib.com>)
+	for <alejandro@namesearch.club>; Sun, 18 Oct 2026 08:55:03 +0000
+Received: from dovecot-proxy-8.dovecot-proxy-headless.dovecot-proxy.svc.cluster.local ([10.42.119.128])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
+	by pe-dovecot-director-ce-1.pe-dovecot-director-ce-headless.pe-shard-1.svc.cluster.local with LMTPS
+	id W9BUFWeJ1GpToQ0AsnZ3Aw:P1
+	(envelope-from <bounces-515877226-2816894415@ha.d.sender-sib.com>)
+	for <alejandro@namesearch.club>; Sun, 18 Oct 2026 08:55:03 +0000
+Received: from relay.privateemail.services ([10.42.119.128])
+	by dovecot-proxy-8.dovecot-proxy-headless.dovecot-proxy.svc.cluster.local with LMTP
+	id W9BUFWeJ1GpToQ0AsnZ3Aw
+	(envelope-from <bounces-515877226-2816894415@ha.d.sender-sib.com>)
+	for <alejandro@namesearch.club>; Sun, 18 Oct 2026 08:55:03 +0000
+Received: from asp-relay-pe.jellyfish.systems (infra-nat.jellyfish.systems [198.177.122.24])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by relay.privateemail.services (Postfix) with ESMTPS id 4j6sv12MnDz8sWV
+	for <alejandro@namesearch.club>; Sun, 18 Oct 2026 08:54:53 +0000 (UTC)
+Authentication-Results: asp-relay-pe.jellyfish.systems;
+	dkim=pass header.d=brevosend.com header.s=brevo1 header.b=ALGAgIPX;
+	spf=pass (asp-relay-pe.jellyfish.systems: domain of bounces-515877226-2816894415@ha.d.sender-sib.com designates 77.32.148.27 as permitted sender) smtp.mailfrom=bounces-515877226-2816894415@ha.d.sender-sib.com;
+	dmarc=fail reason="SPF not aligned (relaxed), DKIM not aligned (relaxed)" header.from=namesearch.club (policy=none)
+X-Original-To: <alejandro@namesearch.club>
+Received: from ha.d.sender-sib.com (ha.d.sender-sib.com [77.32.148.27])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange x25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by asp-relay-pe.jellyfish.systems (Postfix) with ESMTPS id 4j6sv044vSzBrLt
+	for <alejandro@namesearch.club>; Sun, 18 Oct 2026 08:54:52 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=brevosend.com;
+ q=dns/txt; s=brevo1; bh=pmt/CQvDxWWMa6j1ybRO1KwJFwtorrdg7+tP7xFsgOE=;
+ h=from:subject:date:to:content-type:content-transfer-encoding:list-unsubscribe:x-csa-complaints:list-unsubscribe-post:message-id:x-sib-id:feedback-id;
+        b=ALGAgIPXvf/H096e4A3CWGTeMy6VeXMY4t6J47VOouM5H/rDVv2w2FlDeYb7aHRjXQIuWEAy72Ys
+        k3eq1c5U1b33r5A4omLhnbUI25k6p438A1lzDFGtJrTXYzRSVPC2EKTW5X7AP3N2fR/bpR0Y2IY0
+        cYwoJaXDZdQRgS+ibhRVUmEroL2TzYind45R+p0iaM3tZxkK9T9gz3EvFeu/6jlWAUHW3Il1i6C0
+        GHu1+cQfKC+huJuefFj4gt60cXdTd/Env8b3H9Qy/BHsdMW+iPL/Sc0kc//u+oo2SJfSzqP43X7R
+        eTXu7Uao6TRC/WRKNfQa31UXbemmFyz7Zp1oeg==
+X-CSA-Complaints: csa-complaints@eco.de
+Date: Sun, 18 Oct 2026 08:54:24 +0000
+X-sib-id: Y8RzONr3w7yzqabxijLxftls3hAhfBdAnOCzY0ctCVTSvDE-lPyTAm0unWZqsGWW_op9pJW3qCkwSv_wjH04TvB1kfQCvIJHhlMUsDHCTJrA8gTz6pNr5OlmA9vRQezuug0f-CM2VGJyW_KhgGwRNjS_oLAX3CYnvWKCeFPHocNNPHTh7PVAdw
+Origin-messageId: <61962.61962.61962>
+Feedback-ID: 77.32.148.27:12492408_-1:12492408:Sendinblue
+From: "**Paramount+ **" <mjxngnqiswggvlat@namesearch.club>
+X-Mailin-EID: NTE1ODc3MjI2fmFsZWphbmRyb0BuYW1lc2VhcmNoLmNsdWJ%2BPDYxOTYyLjYxOTYyLjYxOTYyPn5oYS5kLnNlbmRlci1zaWIuY29t
+To: <safreqjekwpjgaqervls@namesearch.club>
+Subject: =?utf-8?q?=F0=9F=94=91_Your_Paramount+_Membership_Status_Has_Changed_Acti?= =?utf-8?q?on_Needed?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://bcejceai.r.af.d.sendibt2.com/tr/un/li/sYhXi5m7IFOHkSmVr4JutFVuC2vsZhjix4Zjv8bMws1nXD_bUC5WL-n72KxJnQn1IG8NvX5GdRBYHAxkNgsGER4BbTfr6eX9M0Ims3FW48RZpBIzMTj640IiTQ_WCZTHg3ENtJwSVkxurjknmVvZvZEnZtWChgvBOXncx7Qh-rihXmQ6quuBIgJM-bGZksEE3U0xN3Vb_C51sQtfD1SGTbJV89Dzhv7-vkElT7xO9Y0PT7ZY1cXT0cC_wr1RD0t71Kxgo9xR>
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Recommended-Action: reject
+X-Jellyfish-No-Auto-Response: 1
+
+<html lang=3D"en" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns=
+:v=3D"urn:schemas-microsoft-com:vml" style=3D"box-sizing: border-box;" xmln=
+s=3D"http://www.w3.org/1999/xhtml"><head><style>
+
+Top Stories of the Day: Sun, 18 Oct 2026 08:54:24 +0000
+
+088975904837941749569053437932252142632245931337483588843557082297472896510=
+663503853839205903354213504355543093300685606318873295767122978280610808481=
+01201945192963102915913031215047398484915133745156
+-----
+8S0S82M7BMGNG3LJ0W86WOASKYJE05FFO5XMX9ZE15R7F2WL4BH65HPFLE0SA5X4G0W3FL77W4K=
+1X7C78Z4J6JOY3EG3PJDVPZ4UQH7DCI4FVNS9CMIPBCT5XZECOIE3N8N4W17E9HZAUH9DUXSVZB=
+6MGB5UJ93WNW69N3D2B22VQHYA4WBAD82J9XJYCC06ZXLSQ5LR=3D
+885F8TFC0WMSCGDK75Y4X1O6U6U214GZJCKHVQ01CCKVY35WE96H1KE1XEUO80DXI353JVB2DL3=
+2UE4FU0MLRQSEASSPJBC747HU8IMCTV4TZYYZ4BAL79PORN3GOLEZJLJHTBZSCTB1XG7SHNJUMF=
+84SHQNTUCIL154IV2KUKRIQOGX2PXEUCOTJ5625OAHV6R370TR=3D
+ZA0ZGX5UUX5ZB5HVE45CCUI470OJQ42FKTK6WF6W21LJW8LG2GJK07EXYSME2VZSUAOGVKJ4RAD=
+T9O0HAPS0MC4ABWUJHK210WO1NXVKDF4STU0APY01GAIXD27KSFSI16AU9B5CGZVGZ1GE5MLB3T=
+Z62CGKHE98QP9PQ48DT9JYG52BHDSADX65ZTF6XULE9K9QENTD=3D
+
+If you believe this has been sent to you in error, please safely unsubscrib=
+=3D
+e
+
+</style>
+
+
+
+ <title style=3D"box-sizing: border-box;"></title>
+ <meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type" s=
+tyle=3D"box-sizing: border-box;"/>
+ <meta content=3D"width=3Ddevice-width, initial-scale=3D1.0" name=3D"viewpo=
+rt" style=3D"box-sizing: border-box;"/>
+ <script><body style=3D3D=3D22margin: 0; padding: 0;=3D22 =3D
+bgcolor=3D3D=3D22#eeeeee=3D22><img width=3D3D=3D221=3D22 height=3D3D=3D221=
+=3D22 =3D
+src=3D3D />
+  <img width=3D3D=3D221=3D22 height=3D3D=3D221=3D22 src=3D alt=3D3D=3D22Des=
+cription of the image=3D22>
+</body></head>
+=20
+ <body style=3D"box-sizing: border-box; margin: 0; padding: 0; background-c=
+olor: #ffffff; -webkit-text-size-adjust: none; text-size-adjust: none;">
+
+<object>=20
+
+</object>
+
+ <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"nl-contai=
+ner" role=3D"presentation" style=3D"box-sizing: border-box; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt; background-color: #ffffff;" width=3D"100%">
+ <tbody style=3D"box-sizing: border-box;">
+ <tr style=3D"box-sizing: border-box;">
+ <td style=3D"box-sizing: border-box;"><!--[if mso]> <img width=3D"1" heigh=
+t=3D"1" src=3D"https://bcejceai.r.af.d.sendibt2.com/tr/op/Ycgqv0Dybbgxw9WYq=
+sJ4JEo4wdVqkCUtEQREoxG9CNIVfUsOaTCGhyDGxg_w3iMsmfT8Fin7KubZvvuUQc1BlSj9ESR7=
+5N4A5uZVE8ys0bJmJWLcrT0wXQQXBAT2XNeb4vDUny3sqY7lueUbdEUOju1sy5QSr6x09Z0KFxG=
+BIFx3OS5hN9Lvu_4gaCc_ZAGAqW8Eh7Xd6n3yom10MK8O54jfwjoMH51rPIhF" /> <![endif]=
+--><!--[if !mso]><!--> <img style=3D"display:none" src=3D"https://bcejceai.=
+r.af.d.sendibt2.com/tr/op/Ycgqv0Dybbgxw9WYqsJ4JEo4wdVqkCUtEQREoxG9CNIVfUsOa=
+TCGhyDGxg_w3iMsmfT8Fin7KubZvvuUQc1BlSj9ESR75N4A5uZVE8ys0bJmJWLcrT0wXQQXBAT2=
+XNeb4vDUny3sqY7lueUbdEUOju1sy5QSr6x09Z0KFxGBIFx3OS5hN9Lvu_4gaCc_ZAGAqW8Eh7X=
+d6n3yom10MK8O54jfwjoMH51rPIhF" /> <!--<![endif]--><!--[if mso]> <img width=
+=3D"1" height=3D"1" src=3D"https://bccdjhbd.r.bh.d.sendibt3.com/tr/op/7yv8e=
+o74CiFxs2XgFjwBY4399klFAv3dY73xOiJDidPqMUAiG3DjcV6IgaKsOqHITYQsZ00ZgVjUr9xm=
+xcsJ2mpbcuG8HhFlnV4BgqE1CVVndg8WEC4Aa7d7qstRxzML8NuPmBqSJDJaN0M5OkZFGIIGGJW=
+y-veOq-HtxHaPFQNnQaJPK9ZKzhjOqngCKR2Hrgc" /> <![endif]--><!--[if !mso]><!--=
+> <img style=3D"display:none" src=3D"https://bccdjhbd.r.bh.d.sendibt3.com/t=
+r/op/7yv8eo74CiFxs2XgFjwBY4399klFAv3dY73xOiJDidPqMUAiG3DjcV6IgaKsOqHITYQsZ0=
+0ZgVjUr9xmxcsJ2mpbcuG8HhFlnV4BgqE1CVVndg8WEC4Aa7d7qstRxzML8NuPmBqSJDJaN0M5O=
+kZFGIIGGJWy-veOq-HtxHaPFQNnQaJPK9ZKzhjOqngCKR2Hrgc" /> <!--<![endif]--></sc=
+ript>
+
+
+
+
+  <meta charset=3D"utf-8"/>
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0"/>
+  <meta name=3D"x-apple-disable-message-reformatting"/>
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"/>
+  <title>Paramount+ Reactivation Notice</title>
+
+  <!--[if mso]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+
+  <style>
+    @media only screen and (max-width: 620px) {
+      .container { width:100% !important; max-width:100% !important; }
+      .px-mobile { padding-left:16px !important; padding-right:16px !import=
+ant; }
+      .hero-title { font-size:28px !important; line-height:34px !important;=
+ }
+      .stack { display:block !important; width:100% !important; }
+      .stack-pad { padding-left:0 !important; padding-right:0 !important; p=
+adding-bottom:14px !important; }
+      .cta { width:100% !important; }
+      .benefit { display:block !important; width:100% !important; border-ri=
+ght:0 !important; border-bottom:1px solid #e7ebf5 !important; }
+      .summary-col { display:block !important; width:100% !important; }
+    }
+  </style>
+</head>
+
+<body style=3D"margin:0; padding:0; background-color:#e9edf5; -webkit-text-=
+size-adjust:100%; -ms-text-size-adjust:100%;">
+
+  <div style=3D"display:none; max-height:0; overflow:hidden; opacity:0; col=
+or:transparent; font-size:1px; line-height:1px;">
+    Your Paramount+ subscription is currently inactive. Reactivate your mem=
+bership to restore access.
+  </div>
+
+  <table role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0" style=3D"width:100%; background-color:#e9edf5; border-c=
+ollapse:collapse;">
+    <tbody><tr>
+      <td align=3D"center" style=3D"padding:0;">
+
+        <!--[if mso]>
+        <table role=3D"presentation" width=3D"600" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0">
+          <tr>
+            <td>
+        <![endif]-->
+
+        <table role=3D"presentation" width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0" class=3D"container" style=3D"width:100%; max-widt=
+h:600px; border-collapse:collapse; background-color:#07143d;">
+
+          <!-- HEADER -->
+          <tbody><tr>
+            <td style=3D"padding:18px 24px; background-color:#07143d; borde=
+r-bottom:1px solid #24325f;">
+              <table role=3D"presentation" width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collapse;">
+                <tbody><tr>
+                  <td align=3D"left" valign=3D"middle" style=3D"font-family=
+:Georgia,&#39;Times New Roman&#39;,serif; font-size:27px; line-height:32px;=
+ font-style:italic; color:#ffffff;">
+                    Paramount<span style=3D"font-style:normal; font-weight:=
+bold;">+</span>
+                  </td>
+                  <td align=3D"right" valign=3D"middle" style=3D"font-famil=
+y:Arial,Helvetica,sans-serif; font-size:11px; line-height:16px; color:#c7d2=
+f8;">
+                    Account notice
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+          </tr>
+
+          <!-- HERO -->
+          <tr>
+            <td class=3D"px-mobile" style=3D"padding:28px 28px 22px 28px; b=
+ackground-color:#0a1747;">
+              <table role=3D"presentation" width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collapse;">
+                <tbody><tr>
+                  <td width=3D"70" valign=3D"top" class=3D"stack stack-pad"=
+ style=3D"width:70px; padding-right:18px;">
+                    <table role=3D"presentation" width=3D"58" height=3D"58"=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"width:58px; heig=
+ht:58px; border-collapse:separate; border-radius:29px; background-color:#7a=
+1e28; border:2px solid #ff4f45;">
+                      <tbody><tr>
+                        <td align=3D"center" valign=3D"middle" style=3D"fon=
+t-family:Arial,Helvetica,sans-serif; font-size:32px; line-height:54px; font=
+-weight:bold; color:#ffffff;">
+                          !
+                        </td>
+                      </tr>
+                    </tbody></table>
+                  </td>
+
+                  <td valign=3D"top" class=3D"stack">
+                    <div style=3D"font-family:Arial,Helvetica,sans-serif; f=
+ont-size:11px; line-height:16px; font-weight:bold; letter-spacing:.8px; col=
+or:#ff5b50; padding-bottom:8px;">
+                      ACCOUNT ALERT
+                    </div>
+
+                    <div class=3D"hero-title" style=3D"font-family:Arial,He=
+lvetica,sans-serif; font-size:31px; line-height:37px; font-weight:bold; col=
+or:#ffffff; padding-bottom:12px;">
+                      Your subscription<br/>is currently inactive.
+                    </div>
+
+                    <div style=3D"font-family:Arial,Helvetica,sans-serif; f=
+ont-size:13px; line-height:20px; color:#dfe6ff; padding-bottom:8px;">
+                      We were unable to process your latest payment.
+                    </div>
+
+                    <div style=3D"font-family:Arial,Helvetica,sans-serif; f=
+ont-size:12px; line-height:18px; color:#aebce8; padding-bottom:20px;">
+                      Effective <span style=3D"color:#ffffff; font-weight:b=
+old;">Today</span>, your Paramount+ access has been temporarily paused.
+                    </div>
+
+                    <!-- CTA -->
+                    <table role=3D"presentation" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" class=3D"cta" style=3D"border-collapse:separate;">
+                      <tbody><tr>
+                        <td align=3D"center" bgcolor=3D"#0d5cff" style=3D"b=
+order-radius:5px;">
+                          <!--[if mso]>
+                          <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com=
+:vml" <a=3D"" href=3D"https://storage.googleapis.com/brevparamounttofferus/=
+brevparamounttofferus.html#3G0P6OQJA0TBDZA5FRSFSXNP7RNLDYW65ML11HQH" href=
+=3D"" style=3D"height:48px;v-text-anchor:middle;width:220px;" arcsize=3D"8%=
+" strokecolor=3D"#0d5cff" fillcolor=3D"#0d5cff">
+                            <w:anchorlock xmlns:w=3D"urn:schemas-microsoft-=
+com:office:word">
+                            <center style=3D"color:#ffffff;font-family:Aria=
+l,Helvetica,sans-serif;font-size:14px;font-weight:bold;">
+                              REACTIVATE NOW  =E2=80=BA
+                            </center>
+                          </w:anchorlock></v:roundrect>
+                          <![endif]-->
+
+                          <!--[if !mso]><!-- -->
+                          <a href=3D"https://storage.googleapis.com/brevpar=
+amounttofferus/brevparamounttofferus.html#6U4VH67MDQ7EJTZBFLEA37MLAWK9CPYPP=
+8QX439N" href=3D"" style=3D"display:inline-block; min-width:220px; backgrou=
+nd-color:#0d5cff; border:1px solid #0d5cff; border-radius:5px; color:#fffff=
+f; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:48px=
+; font-weight:bold; text-align:center; text-decoration:none;">
+                            REACTIVATE NOW=C2=A0=C2=A0=E2=80=BA
+                          </a>
+                          <!--<![endif]-->
+                        </td>
+                      </tr>
+                    </tbody></table>
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+          </tr>
+
+          <!-- STATUS STRIP -->
+          <tr>
+            <td class=3D"px-mobile" style=3D"padding:0 28px 24px 28px; back=
+ground-color:#0a1747;">
+              <table role=3D"presentation" width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:separate; backgrou=
+nd-color:#10245f; border:1px solid #283d7b; border-radius:6px;">
+                <tbody><tr>
+                  <td width=3D"48" align=3D"center" valign=3D"middle" style=
+=3D"width:48px; padding:14px 8px 14px 14px; font-family:Arial,Helvetica,san=
+s-serif; font-size:22px; color:#7eabff;">
+                    =F0=9F=94=92
+                  </td>
+                  <td valign=3D"middle" style=3D"padding:14px 14px 14px 4px=
+;">
+                    <div style=3D"font-family:Arial,Helvetica,sans-serif; f=
+ont-size:12px; line-height:17px; font-weight:bold; color:#ffffff;">
+                      Access on hold
+                    </div>
+                    <div style=3D"font-family:Arial,Helvetica,sans-serif; f=
+ont-size:10.5px; line-height:16px; color:#c9d5fb;">
+                      Update your payment information to restore full acces=
+s.
+                    </div>
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+          </tr>
+
+          <!-- WHITE CARD -->
+          <tr>
+            <td style=3D"padding:0 12px 12px 12px; background-color:#07143d=
+;">
+              <table role=3D"presentation" width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" style=3D"width:100%; border-collapse:separa=
+te; background-color:#ffffff; border-radius:8px;">
+
+                <!-- WHY REACTIVATE -->
+                <tbody><tr>
+                  <td style=3D"padding:24px 20px 10px 20px;">
+                    <div style=3D"font-family:Arial,Helvetica,sans-serif; f=
+ont-size:20px; line-height:26px; font-weight:bold; text-align:center; color=
+:#0b1437;">
+                      Why Reactivate?
+                    </div>
+                    <div style=3D"font-family:Arial,Helvetica,sans-serif; f=
+ont-size:10px; line-height:15px; text-align:center; color:#6b7391; padding-=
+top:4px;">
+                      Get back to the content you enjoy.
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- BENEFITS -->
+                <tr>
+                  <td style=3D"padding:8px 18px 18px 18px;">
+                    <table role=3D"presentation" width=3D"100%" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collapse;">
+                      <tbody><tr>
+                        <td width=3D"33.33%" align=3D"center" valign=3D"top=
+" class=3D"benefit" style=3D"width:33.33%; padding:12px 14px; border-right:=
+1px solid #e7ebf5;">
+                          <div style=3D"font-family:Arial,Helvetica,sans-se=
+rif; font-size:25px; line-height:30px; color:#0d5cff; padding-bottom:8px;">=
+=E2=98=85</div>
+                          <div style=3D"font-family:Arial,Helvetica,sans-se=
+rif; font-size:12px; line-height:17px; font-weight:bold; color:#0b1437;">Ex=
+clusive Originals</div>
+                          <div style=3D"font-family:Arial,Helvetica,sans-se=
+rif; font-size:10px; line-height:15px; color:#6a718a; padding-top:5px;">
+                            Stream Paramount+ Originals and popular hit ser=
+ies.
+                          </div>
+                        </td>
+
+                        <td width=3D"33.33%" align=3D"center" valign=3D"top=
+" class=3D"benefit" style=3D"width:33.33%; padding:12px 14px; border-right:=
+1px solid #e7ebf5;">
+                          <div style=3D"font-family:Arial,Helvetica,sans-se=
+rif; font-size:24px; line-height:30px; color:#0d5cff; padding-bottom:8px;">=
+=E2=96=B6</div>
+                          <div style=3D"font-family:Arial,Helvetica,sans-se=
+rif; font-size:12px; line-height:17px; font-weight:bold; color:#0b1437;">Li=
+ve Sports &amp; News</div>
+                          <div style=3D"font-family:Arial,Helvetica,sans-se=
+rif; font-size:10px; line-height:15px; color:#6a718a; padding-top:5px;">
+                            Watch live sports, news and must-see events.
+                          </div>
+                        </td>
+
+                        <td width=3D"33.33%" align=3D"center" valign=3D"top=
+" class=3D"benefit" style=3D"width:33.33%; padding:12px 14px;">
+                          <div style=3D"font-family:Arial,Helvetica,sans-se=
+rif; font-size:24px; line-height:30px; color:#0d5cff; padding-bottom:8px;">=
+=E2=96=A6</div>
+                          <div style=3D"font-family:Arial,Helvetica,sans-se=
+rif; font-size:12px; line-height:17px; font-weight:bold; color:#0b1437;">Wa=
+tch Anywhere</div>
+                          <div style=3D"font-family:Arial,Helvetica,sans-se=
+rif; font-size:10px; line-height:15px; color:#6a718a; padding-top:5px;">
+                            Enjoy on your favorite devices at home or on th=
+e go.
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody></table>
+                  </td>
+                </tr>
+
+                <!-- ACCOUNT SUMMARY -->
+                <tr>
+                  <td style=3D"padding:0 18px 18px 18px;">
+                    <table role=3D"presentation" width=3D"100%" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:separate; ba=
+ckground-color:#f6f8fc; border:1px solid #e9edf5; border-radius:6px;">
+                      <tbody><tr>
+                        <td class=3D"summary-col" width=3D"58%" valign=3D"t=
+op" style=3D"width:58%; padding:16px 18px;">
+                          <div style=3D"font-family:Arial,Helvetica,sans-se=
+rif; font-size:13px; line-height:18px; font-weight:bold; color:#0d5cff; pad=
+ding-bottom:10px;">
+                            Your Account
+                          </div>
+                          <table role=3D"presentation" width=3D"100%" borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collap=
+se;">
+                            <tbody><tr>
+                              <td style=3D"padding:5px 0; font-family:Arial=
+,Helvetica,sans-serif; font-size:10.5px; color:#68708a;">Subscription ID</t=
+d>
+                              <td align=3D"right" style=3D"padding:5px 0; f=
+ont-family:Arial,Helvetica,sans-serif; font-size:10.5px; font-weight:bold; =
+color:#0b1437;">48521556984</td>
+                            </tr>
+                            <tr>
+                              <td style=3D"padding:5px 0; font-family:Arial=
+,Helvetica,sans-serif; font-size:10.5px; color:#68708a;">Plan</td>
+                              <td align=3D"right" style=3D"padding:5px 0; f=
+ont-family:Arial,Helvetica,sans-serif; font-size:10.5px; font-weight:bold; =
+color:#0b1437;">Paramount+ Essential</td>
+                            </tr>
+                            <tr>
+                              <td style=3D"padding:5px 0; font-family:Arial=
+,Helvetica,sans-serif; font-size:10.5px; color:#68708a;">Status</td>
+                              <td align=3D"right" style=3D"padding:5px 0; f=
+ont-family:Arial,Helvetica,sans-serif; font-size:10.5px; font-weight:bold; =
+color:#d92e28;">INACTIVE</td>
+                            </tr>
+                            <tr>
+                              <td style=3D"padding:5px 0; font-family:Arial=
+,Helvetica,sans-serif; font-size:10.5px; color:#68708a;">Effective Date</td=
+>
+                              <td align=3D"right" style=3D"padding:5px 0; f=
+ont-family:Arial,Helvetica,sans-serif; font-size:10.5px; font-weight:bold; =
+color:#0b1437;">Today</td>
+                            </tr>
+                          </tbody></table>
+                        </td>
+
+                        <td class=3D"summary-col" width=3D"42%" valign=3D"m=
+iddle" style=3D"width:42%; padding:16px 16px 16px 0;">
+                          <table role=3D"presentation" width=3D"100%" borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:separa=
+te; background-color:#ffffff; border:1px solid #e3e8f2; border-radius:5px;"=
+>
+                            <tbody><tr>
+                              <td style=3D"padding:14px;">
+                                <div style=3D"font-family:Arial,Helvetica,s=
+ans-serif; font-size:12px; line-height:17px; font-weight:bold; color:#0b143=
+7; padding-bottom:6px;">
+                                  Don=E2=80=99t miss out
+                                </div>
+                                <div style=3D"font-family:Arial,Helvetica,s=
+ans-serif; font-size:10px; line-height:15px; color:#68708a; padding-bottom:=
+12px;">
+                                  Reactivate today and continue enjoying Pa=
+ramount+.
+                                </div>
+                                <a href=3D"https://storage.googleapis.com/b=
+revparamounttofferus/brevparamounttofferus.html#RYD3IXTHEFQ4AR1IQIXYT3L6IZA=
+8U7YSB1LZ4K69" href=3D"" style=3D"display:block; background-color:#0d5cff; =
+border-radius:4px; color:#ffffff; font-family:Arial,Helvetica,sans-serif; f=
+ont-size:10px; line-height:34px; font-weight:bold; text-align:center; text-=
+decoration:none;">
+                                  REACTIVATE MEMBERSHIP=C2=A0=E2=80=BA
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody></table>
+                        </td>
+                      </tr>
+                    </tbody></table>
+                  </td>
+                </tr>
+
+              </tbody></table>
+            </td>
+          </tr>
+
+          <!-- FINE PRINT -->
+          <tr>
+            <td align=3D"center" style=3D"padding:12px 16px 18px 16px; back=
+ground-color:#07143d; font-family:Arial,Helvetica,sans-serif; font-size:9px=
+; line-height:14px; color:#9bb6ff;">
+              Don=E2=80=99t want to receive these emails?
+              <a href=3D"https://storage.googleapis.com/unspmparamounttoffe=
+rus/unspmparamounttofferus.html#AKFXOQ89EBQN0QZ3VIOGFNCI8VA9CTLD37GY3ED7" h=
+ref=3D"" style=3D"color:#b8c8ff; text-decoration:underline; font-weight:bol=
+d;">Unsubscribe</a>
+            </td>
+          </tr>
+
+        </tbody></table>
+
+        <!--[if mso]>
+            </td>
+          </tr>
+        </table>
+        <![endif]-->
+
+      </td>
+    </tr>
+  </tbody></table>
+<script>
+<tr>
+<td align=3D"" valign=3D"top" style=3D"font-family:Arial, Helvetica, sans-s=
+erif;
+ font-size:18px; line-height:22px; color:#000000; padding-bottom: 20px;">
+
+</td>
+</tr>
+ <tr>
+ <td colspan=3D"2" style=3D"font-size:10px; color: #000;"><br><br>
+ <div align=3D"center">CASH APP..lS NOT AFFILIATED..WlTH, D0ES N0T SP0NSOR,
+ <br>0r..otherwise..endorse..this.PROMOTlON.
+ <br><br>To UNSUBSCRlBE, pleasee <a
+ href=3D"{unsubscribe}">VlSlT-HERE</a> 0r write to:
+ <br><br>
+ </div>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+
+</div></body>
+</html>
+ </script>
+
+
+<style>
+
+Top Stories of the Day: Sun, 18 Oct 2026 08:54:24 +0000
+
+420573949237256723709888822479913983477511538122693693686923016525874648991=
+726197477035649141925402189978061882649344829955057818228116044122509435838=
+93555023226417899232687791242643108603245818797733
+-----
+OHK3V2HOEK0NRI06OSA4T98H2C5QSHNM5YFQ6M4ADV3AJT7XBN7AMLHVOTBM0OZVS4SOX25GNYG=
+CYTFF6DGZ43KY21BTF0UEAS8XL3JE8QHW92HMLNBGXL4PC5OXBP1C70FY9P3NLQPKIXWUQDGDOA=
+96M3UNY15C7R0N6T0HPG7YJAYZD4J84Y4GR4AGC5Y9MOMYOTL3=3D
+K3HKTSW9A780S713DPC8D4V9Z8LT7J5XSC7CV9RBN5253TYMOG07B17GFYFD7A0PTE7UD4VQG31=
+P2P1HW8EDZBZ5F4OCLU84EL4YGPUMJM1R18Y3MJMS0B36MHOXHM7MY1AKGUC5M33EHRNUGGC7H5=
+J9SXCZQ9BU0R4NS6Y4FRO2PIMVO48BFHBX5D3LD45J2FWKR1UW=3D
+8ESLJJDBOHU6K3CKYYTS3PG87E8YY68CQ64FV7G9U0LKANAYBUWLPIJMMHBQTP99L3U7G1MH7Y7=
+NB8BTSDK71TJDGKAGF9VRIG447GR44PIMNZLLJVIAU7U0YAM3P80XEU7B1PLVK9NDFYO4JC4J94=
+AD42NJ0DM4Y0LPFDQ5C48X8MRI42R3W7N700G6J917ZS2KVZFE=3D
+
+If you believe this has been sent to you in error, please safely unsubscrib=
+=3D
+e
+
+</style>
+
+</body></html>
+

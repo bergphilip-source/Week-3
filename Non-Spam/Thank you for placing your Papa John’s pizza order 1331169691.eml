@@ -1,0 +1,1510 @@
+Delivered-To: bergphilip885@gmail.com
+Received: by 2002:a05:651c:2120:b0:3a9:a739:e8cf with SMTP id a32csp2830922ljq;
+        Fri, 16 Oct 2026 12:43:48 -0700 (PDT)
+X-Received: by 2002:a05:693c:6395:10b0:35d:b44:a52 with SMTP id 5a478bee46e88-361a23528d5mr970713eec.24.1792179828273;
+        Fri, 16 Oct 2026 12:43:48 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1792179828; cv=none;
+        d=google.com; s=arc-20260327;
+        b=n1XdE//rrj0e2Cl9/fC61Sa2DWNhivwp6PvQHCj/b/prrpIqohIwwQATd/OvxyTPX/
+         wV+C9qDfAruR8tORluo/qzpx47FJhLzlBbltk4zUO9SAvENp6HsjNnn9DreXIJ66fctA
+         xy0CKrEv/wAY0O9SE4+6OIEvqirTDRxwhZkfrls49BjPrBHHw9Jyf3IOgxyotEESwFi+
+         MqKOl0cpYCbN935d8NNidbExC5iRDxVe4qN7FvrP4clZ1NBRg0dZ99nDGsn7n4sopM6P
+         8nLk7w2eqm3xGH4k8PMcJ2giKFNxCTS93QJtYtCtLFwo9cOQoDWZJGP8hSxo7EqObBUP
+         yuVA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=from:subject:mime-version:date:message-id:to:dkim-signature;
+        bh=JSh+gwPSELoYLs8RCAXPUYEHeT7pAGzyn87O04efgxk=;
+        fh=PTuvxKzhMlw2RufZDYFFcbxz+H+/enVq7Z2wxjBf9k4=;
+        b=Va9o+oGQAoMwRv3mgm9b/jQnVj0FtvwMYOMwffk38QX26566M+IMz+p6eXeo4H9mue
+         LZ3ZXI+EjoQwl4/P1NrFGUrEJ0ww6CG3povbnQsz5rvJzDhbn5azQyHLetDidyFpmzBE
+         XZUPY5Y2bViRQUN45aYOlOeYEMiOFTqONGT6mTnvC+FUXMgQ0r9fMLKY1eUiCdsxCdf0
+         fJQRl2vl7Fb8KnZ/t5moMFUpH0tII4kzP3LwoSiB3riAgcqW6uKgE2mXCTlpVRuwh0DD
+         NTWKY9XIZeOeytrIhplQLre0IIICX0ChZxn0MPaI1IVOd1WUsodJgO+B7j9R1baj7Ej1
+         8X6A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@email.papajohns.com header.s=scph0823 header.b=P+hTMYE7;
+       spf=pass (google.com: domain of msprvs1=20749t4iuc5fd=bounces-266693-994@email.papajohns.com designates 137.22.227.61 as permitted sender) smtp.mailfrom="msprvs1=20749t4IuC5fd=bounces-266693-994@email.papajohns.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=papajohns.com
+Return-Path: <msprvs1=20749t4IuC5fd=bounces-266693-994@email.papajohns.com>
+Received: from etzw8frv.dough.papajohns.com (etzw8frv.dough.papajohns.com. [137.22.227.61])
+        by mx.google.com with ESMTPS id 5a478bee46e88-360833818f2si7804177eec.47.2026.10.16.12.43.47
+        for <bergphilip885@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Fri, 16 Oct 2026 12:43:48 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20749t4iuc5fd=bounces-266693-994@email.papajohns.com designates 137.22.227.61 as permitted sender) client-ip=137.22.227.61;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.papajohns.com header.s=scph0823 header.b=P+hTMYE7;
+       spf=pass (google.com: domain of msprvs1=20749t4iuc5fd=bounces-266693-994@email.papajohns.com designates 137.22.227.61 as permitted sender) smtp.mailfrom="msprvs1=20749t4IuC5fd=bounces-266693-994@email.papajohns.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=papajohns.com
+X-MSFBL: S6Osg+r+mA3Tu3ItUpzHPHl1hrsIEFD00oriGPm9EqE=|eyJzdWJhY2NvdW50X2l
+	kIjoiOTk0IiwibWVzc2FnZV9pZCI6IjZhZDA3MzdlZDI2YWZlYmIyYjFmIiwiY3V
+	zdG9tZXJfaWQiOiIyNjY2OTMiLCJ0ZW5hbnRfaWQiOiJzcGMiLCJyIjoiYmVyZ3B
+	oaWxpcDg4NUBnbWFpbC5jb20ifQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=email.papajohns.com;
+	s=scph0823; t=1792179827; i=@email.papajohns.com;
+	bh=JSh+gwPSELoYLs8RCAXPUYEHeT7pAGzyn87O04efgxk=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:From:To:Cc:Subject:
+	 Feedback-Id;
+	b=P+hTMYE7UmrPUJSawzRy4/231nHYJLeCN2CPOkNZMTNZrkgsVJmdT4+8GYgMa5OqZ
+	 GhujpgWJAPBnu8zE9+Q0GmrTN6MaITU9ne3lXwTUGabNbben2E/7HSw3+pLMVQD85J
+	 IbWLjten+0WkBl95LGC+QgWWt6O5CNag2LGT3mcs=
+Received: from [10.90.30.251] ([10.90.30.251])
+	by i-0ef1a37690c913f62.mta1vrest.sd.prd.sparkpost (ecelerity 5.3.0.76471 r(msys-ecelerity:tags/5.3.0.24)) with REST
+	id F1/BA-01325-37E72DA6; Fri, 16 Oct 2026 19:43:47 +0000
+To: bergphilip885@gmail.com
+Message-ID: <F1.BA.01325.37E72DA6@i-0ef1a37690c913f62.mta1vrest.sd.prd.sparkpost>
+Date: Fri, 16 Oct 2026 19:43:47 +0000
+Content-Type: multipart/alternative; boundary="_----Z1hHLmbz56IN0nZxtaLQtw===_71/BA-01325-37E72DA6"
+MIME-Version: 1.0
+Subject: =?utf-8?B?VGhhbmsgeW91IGZvciBwbGFjaW5nIHlvdXIgUGFwYSBKb2hu4oCZ?=
+	=?utf-8?B?cyBwaXp6YSBvcmRlciAxMzMxMTY5Njkx?=
+From: "Papa Johns" <service@email.papajohns.com>
+
+--_----Z1hHLmbz56IN0nZxtaLQtw===_71/BA-01325-37E72DA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Papa Johns=C2=AE ( https://clicks.papajohns.com/f/a/7vwidMdaXviQ4iO9nte-4w~=
+~/AAQRxRA~/UJ-xkDqPxfO_uolKVUlw_sTIqyROM6dmt_LHg7GX4iHx933L5ZgJme_orG1x25Oa=
+SajkvcAj8rzosVlXMw2nMgG8-lPdODhEpJZyhYZd3541gDlawfYCoBMoFJedLNX4 )=0ATHANK =
+YOU FOR YOUR ORDER, PHILIP BERG=0A=0A=0A=0A=0ATrack your pizza with Papa Tr=
+ack=0A=0AAccess Papa Track to check the status of your order.=0A=0ATrack yo=
+ur pizza with Papa Track=0A=0AAccess Papa Track to check the status of your=
+ order.=0A=0ATRACK NOW ( https://clicks.papajohns.com/f/a/rw1Bl5tJgYXsvkC06=
+ASPdw~~/AAQRxRA~/LBmhmxLxh7szOm5z0zGVke3XsTcjkF28FVRi7qFEZp0QTHp4HuktZplaqR=
+68Q7Aty_sCfrlhd5QLb3HJcBk8CVVuMk8tzwHCuuDRmca2JY5cqnEB8U9mweo0fs6B9slAgxagj=
+qkTOHG9NBsqtC2BaIwZ-YZ0eaa8qS4oAiz_STYDhfQ9LLKldj2ZhJf8l_wq0vXDAga8oNgwu-xj=
+RHzoUsLQbE0--3YMZLJTQrQX9Upf6ub9aqpTNcKcyYPhRXaAQnoGvOPXin0iz5mfnx9lWD1o1SV=
+LezI1U_hiOkbIjtpeoZhP3xYPWfUxteUtfEDrdWJigx420s6zNS2gXTaLzpCYrdwlNElU6vZ_vt=
+EydjC5PGR7740gxMov79GqDeEY )=0A=0ATRACK NOW ( https://clicks.papajohns.com/=
+f/a/rw1Bl5tJgYXsvkC06ASPdw~~/AAQRxRA~/LBmhmxLxh7szOm5z0zGVke3XsTcjkF28FVRi7=
+qFEZp0QTHp4HuktZplaqR68Q7Aty_sCfrlhd5QLb3HJcBk8CVVuMk8tzwHCuuDRmca2JY5cqnEB=
+8U9mweo0fs6B9slAgxagjqkTOHG9NBsqtC2BaIwZ-YZ0eaa8qS4oAiz_STYDhfQ9LLKldj2ZhJf=
+8l_wq0vXDAga8oNgwu-xjRHzoUsLQbE0--3YMZLJTQrQX9Upf6ub9aqpTNcKcyYPhRXaAQnoGvO=
+PXin0iz5mfnx9lWD1o1SVLezI1U_hiOkbIjtpeoZhP3xYPWfUxteUtfEDrdWJigx420s6zNS2gX=
+TaLzpCYrdwlNElU6vZ_vtEydjC5PGR7740gxMov79GqDeEY )=0A=0A=0A=0A=0AEstimated R=
+eady Time:=0A=0ATODAY BETWEEN 3:27 PM - 3:37 PM=0A=0A=0A=0AOrder Type:=0ADE=
+LIVERY=0A=0AOrder Number:=0A1331169691=0A=0AMethod of Payment=0A=0APAYPAL=
+=0A=0A=0A=0A=0ADon't Miss Papa Rewards=C2=AE Updates and Exclusives - Sign =
+Up Now =0A( https://clicks.papajohns.com/f/a/QbnSB4nmTJgkcQYtu44I9g~~/AAQRx=
+RA~/B7Gc6aknlia0x-Jt2laQMbRmnLzMR9WWscY03erdTbxd93l8dKvRkwtqPFNr-mV9H0qOU7d=
+ilP7OQRohxgPovq8tuu6P_XP210ZFyjpaeBgYpRX5NkEOprnwzZIoqAzdczswwGwqKCOuKWquUy=
+DlHZcoeJ6aARFpkqPGexLhKugLPnQMIhyVTEYcnEVldO9kLbJEXpx6bhv1SATipvHlFJxMTH_BS=
+NuMklv_pusThO0OWva97UAWJyocaGDvZgcqcRWMx1_-MGyMODXJsBDPmjUKuJUCvaaoUw2SDOMj=
+ZTsOjjSbcsY9Jrlz8CuAkI47 )=0A=0A=0A=0A=0AOrder Detail:=0A=0A=0A=0A=0A1=0A=
+=0APapa Pairings=0AToppings: =0ASauce: =0AInstructions: =0A$22.29=0A=0A=0A1=
+=0A=0AMedium Original Crust Cheese Pizza=0AToppings: Pepperoni=0ASauce: Ori=
+ginal Sauce=0AInstructions: Original Pizza Sauce=0A$=0A=0A=0A1=0A=0A10 inch=
+ Cheesesticks=0AToppings: =0ASauce: =0AInstructions: =0A$=0A=0A=0A=0A=0ATot=
+al before discounts=0A=0A$14.98=0A=0A=0A=0A=0APapa Dough=0A=0A-$1.00=0A=0A=
+=0A=0A=0AOffer Discount=0A=0A-$0.00=0A=0A=0A=0A=0A=0ASpecials=0A=0A-$8.31=
+=0A=0A=0A=0A=0ATotal Discounts=0A=0A-$2.00=0A=0A=0A=0ASubtotal=0A=0A$12.98=
+=0A=0A=0A=0ATip=0A=0A$0.00=0A=0A=0A=0A=0ADelivery Fee=0A=0A$4.99=0A=0A=0A=
+=0A=0A=0ATax=0A=0A$1.34=0A=0ATotal=0A=0A$19.31=0A=0A=0A=0ARestaurant:=0A=0A=
+Papa John=E2=80=99s Store #1586=0A=0A1100 19th Avenue North Unit N=0A=0AFar=
+go,=0AND=0AUSA=0A=0A(701)237-9999=0A=0AAny delivery fee charged is not a ti=
+p for the delivery=0Adriver. Please reward your driver with a tip for=0Aout=
+standing service.=0A=0AFresh Never Frozen Original Dough =0A( https://click=
+s.papajohns.com/f/a/6OgaycWm7HF4hI8DRgS13Q~~/AAQRxRA~/akW_t9ftNQXR5O1tundhr=
+7_Pxbvh2v4-0rguiVVtB3JgZFokh9l9BQ-WdlOufhGr8SfIon-h8Lfa1pAd0O9_iTVdUU8BAqgT=
+sX_xrMdsU1uttAYOaeb4rn91KM-4mUxZSos-dUdPhJVgUFIE1oVicdQtCX1eCUQETh3G_p9Sdlt=
+JG6fjk18xwpDARc6y3H5G2cv7sFGzGVfdJPtperyYSnBzPbxXKVor_RSYqEtAnXjz8nzBjJvzOS=
+KySiUdg4G31vENazC7uUBsCNnhGG4wwK6gcbbgd4xXuuTdF2aBIRU~ )=0A=0A=0A=0APapa Jo=
+hns=C2=AE ( https://clicks.papajohns.com/f/a/VPROZpxCtybuLF3ygt2l9A~~/AAQRx=
+RA~/UJ-xkDqPxfO_uolKVUlw_sTIqyROM6dmt_LHg7GX4iGk5hB0zhXLiuUjQAZ3vQPjJ4YP18-=
+m4j_1nSUgfS2ByT4nVasQ1j3lf1yeAfqApzWol_uukn6OwyI_6_GGBq4T )=0A=0AThank you =
+for choosing to order online with Papa Johns pizza.=0AFor questions regardi=
+ng your order, please call your=0Alocal restaurant=0A=0A=0AIn the event tha=
+t the restaurant has a question about your=0Aorder, or requires confirmatio=
+n before your order is prepared, we=0Awill attempt to contact you by teleph=
+one. If we are unable to=0Areach you by telephone, you will receive an e-ma=
+il notification=0Afrom a Papa Johns Online Support Representative.=0A=0ACon=
+tact our Customer Care Team at=0Ahttps://clicks.papajohns.com/f/a/OdSykp_RI=
+DM399MlAogV-g~~/AAQRxRA~/jlXULuOyXC4P3_LjD5bEAo6yhSSLiblKv1fw_tU-4DSvXU0Ov2=
+1ZfRAkq0hA_xBv2qnN-snMdM049_W8GL_BJeN-Z6bv_31SvXaEsnFslzn9VfaPgR10uzWVfqQg6=
+1HpDjf-EcuEuI8r0HhSrz_vLw~~ =0A( https://clicks.papajohns.com/f/a/4V5gSNAtN=
+XBp0agJnlDDEg~~/AAQRxRA~/NHOF53mVfMSgJ4l8nH2xvhUs-5r47_QgTPXUJz6DkdUjKyzuxK=
+pEJy1dbP_n0BuxVRBxX7yj6q7hYZ1grA1jHN-lnx-T5FIom2V37-U3ZFk3_A2VyOKyKvAv5a_j_=
+jUaP0amZCPcUtizeoe2R_svf_LAbTeeXQvmvmHBRP-UAcc~ )=0A=0AVisit our privacy po=
+licy at=0Ahttps://clicks.papajohns.com/f/a/GmNvtptWsDGSD6d-ZBsc4Q~~/AAQRxRA=
+~/tsfTkdUnRhMK15103Q7b93AyKppcQOHCnbN8vGeiufeT4akVcYI_5hGfUdOVKZY84mJ1dal0T=
+fAnCyGuTOUnBPcBw9-KPpFC-apiWr3fVgw4i5QNuyWnLpFUbZOVUokGwJAjREPCw3x_bj469cLz=
+rg~~ =0A( https://clicks.papajohns.com/f/a/1cqBTWMz_VHz7QYoW5qYiA~~/AAQRxRA=
+~/atmZ8UNO9ouj902NNCGenbP0JrvZE9Pl-XLMy3NjQctnH8vlyxU3I7PegPrO5IaO_O-5hKgv5=
+XN-NUp2ZjcXEkGaQcU2rNfLpZiaFl1ZQlaKsqYvr9kH7VUoqoLAVpJY2i9wt8RXsRUCnJiunm9O=
+pR55qRRfkl3RmCSOjL4mJos~ )=0A=0ACompany Address:=0A=0APapa Johns=0A=0A2002 =
+Papa Johns Blvd=0A=0ALouisville, KY, 40299=0A=0A=C2=A92026 Papa John=E2=80=
+=99s International,=0AInc. All Rights Reserved.
+--_----Z1hHLmbz56IN0nZxtaLQtw===_71/BA-01325-37E72DA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"u=
+rn:schemas-microsoft-com:office:office" lang=3D"en"><head><title></title><m=
+eta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><met=
+a name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"><!--=
+[if mso]>=0A<xml><w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:offic=
+e:word"><w:DontUseAdvancedTypographyReadingMail/></w:WordDocument>=0A<o:Off=
+iceDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:O=
+fficeDocumentSettings></xml>=0A<![endif]--><!--[if !mso]><!--><!--<![endif]=
+--><style>=0A*{box-sizing:border-box}body{margin:0;padding:0}a[x-apple-data=
+-detectors]{color:inherit!important;text-decoration:inherit!important}#Mess=
+ageViewBody a{color:inherit;text-decoration:none}p{line-height:inherit}.des=
+ktop_hide,.desktop_hide table{mso-hide:all;display:none;max-height:0;overfl=
+ow:hidden}.image_block img+div{display:none}sub,sup{font-size:75%;line-heig=
+ht:0} @media (max-width:620px){.row-content{width:100%!important}.stack .co=
+lumn{width:100%;display:block}.mobile_hide{min-height:0;max-height:0;max-wi=
+dth:0;display:none;overflow:hidden;font-size:0}.desktop_hide,.desktop_hide =
+table{display:table!important;max-height:none!important}.row-6 .column-2{pa=
+dding:20px 20px 36px 20px!important}.row-8 .column-1{padding:36px 0 10px 0!=
+important}.row-8 .column-2{padding:10px 20px 36px 20px!important}.row-10 .c=
+olumn-2{padding:20px!important}.row-16 .column-1{padding:20px 20px 0 20px!i=
+mportant}.row-12 .column-1,.row-17 .column-1,.row-18 .column-1,.row-19 .col=
+umn-1,.row-4 .column-1{padding:0 20px!important}.row-10 .column-1,.row-6 .c=
+olumn-1{padding:36px 0 0 0!important}.row-13 .column-1,.row-13 .column-2,.r=
+ow-13 .column-3{padding:0!important}}=0A</style><!--[if mso ]><style>sup, s=
+ub { font-size: 100% !important; } sup { mso-text-raise:10% } sub { mso-tex=
+t-raise:-10% }</style> <![endif]--></head><body class=3D"body" style=3D"mar=
+gin:0;padding:0;-webkit-text-size-adjust:none;text-size-adjust:none;backgro=
+und-color:#fff"><table class=3D"nl-container" width=3D"100%" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table=
+-lspace:0;mso-table-rspace:0;background-color:#fff"><tbody><tr><td><table c=
+lass=3D"row row-1" align=3D"center" =0Awidth=3D"100%" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace=
+:0;mso-table-rspace:0"><tbody><tr><td><table class=3D"row-content stack" al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;background-color:=
+#fff;color:#000;width:600px;margin:0 auto" width=3D"600"><tbody><tr><td cla=
+ss=3D"column column-1" width=3D"100%" =0Astyle=3D"mso-table-lspace:0;mso-ta=
+ble-rspace:0;font-weight:400;text-align:left;vertical-align:top"><table cla=
+ss=3D"html_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-=
+rspace:0"><tr><td class=3D"pad"><div style=3D"font-family:Arial,Arial,Sans-=
+serif;text-align:center" align=3D"center">=0A=0A=0A=0A=0A</div></td></tr></=
+table></td></tr></tbody></table></td></tr></tbody></table><table class=3D"r=
+ow row-2" align=3D"center" =0Awidth=3D"100%" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-ta=
+ble-rspace:0"><tbody><tr><td><table class=3D"row-content stack" align=3D"ce=
+nter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation=
+" style=3D"mso-table-lspace:0;mso-table-rspace:0;background-color:#fff;bord=
+er-radius:0;color:#000;width:600px;margin:0 auto" width=3D"600"><tbody><tr>=
+<td class=3D"column column-1" width=3D"100%" =0Astyle=3D"mso-table-lspace:0=
+;mso-table-rspace:0;font-weight:400;text-align:left;vertical-align:top"><ta=
+ble class=3D"html_block block-1" width=3D"100%" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso=
+-table-rspace:0"><tr><td class=3D"pad"><div style=3D"font-family:Arial,Aria=
+l,Sans-serif;text-align:center" align=3D"center"><style>=0A  @font-face {=
+=0A    font-family: PapaSans;=0A    src: url("https://www.papajohns.com/sta=
+tic-assets/ltc/fonts/PapaSans-Regular-202303011605.woff2") format("woff2"),=
+ url("https://www.papajohns.com/static-assets/ltc/fonts/PapaSans-Regular-20=
+2303011605.woff") format("woff");=0A    font-weight: normal;=0A    font-sty=
+le: normal;=0A    font-display: swap;=0A  }=0A=0A  @font-face {=0A    font-=
+family: PapaSans-MediumCondensed;=0A    src: url("https://www.papajohns.com=
+/static-assets/ltc/fonts/PapaSans-MediumCondensed-202303011605.woff2") form=
+at("woff2"), url("https://www.papajohns.com/static-assets/ltc/fonts/PapaSan=
+s-MediumCondensed-202303011605.woff") format("woff");=0A    font-weight: bo=
+ld;=0A    font-style: normal;=0A    font-display: swap;=0A  }=0A=0A  @font-=
+face {=0A    font-family: PapaSans-Bold;=0A    src: url("https://www.papajo=
+hns.com/static-assets/ltc/fonts/PapaSans-Bold-202303011605.woff2") format("=
+woff2"), url("https://www.papajohns.com/static-assets/ltc/fonts/PapaSans-Bo=
+ld-202303011605.woff") format("woff");=0A    font-weight: bold;=0A    font-=
+style: normal;=0A    font-display: swap;=0A  }=0A=0A=0A  @media only screen=
+ and (max-width: 580px) {=0A    .pad15mobile {=0A      padding-left: 15px !=
+important;=0A      padding-right: 15px !important;=0A    }=0A=0A    .center=
+Mobile {=0A      text-align: center !important;=0A    }=0A=0A  =0A    =0A  =
+   .btnCenterMobile table {=0A                width: 100% !important;=0A   =
+             margin: 0 auto !important;=0A                text-align: cente=
+r !important;=0A            }=0A=0A            .btnCenterMobile td a {=0A  =
+              font-size: 20px !important;=0A                padding-top: 8p=
+x !important;=0A                padding-bottom: 8px !important;=0A         =
+       max-width: 180px;=0A                margin: 0 auto !important;=0A=0A=
+            }=0A    =0A    =0A    =0A</style></div></td></tr></table></td><=
+/tr></tbody></table></td></tr></tbody></table><table class=3D"row row-3" al=
+ign=3D"center" =0Awidth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0=
+;background-color:#f3f3f3"><tbody><tr><td><table class=3D"row-content stack=
+" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D=
+"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;background-co=
+lor:#fff;color:#000;width:600px;margin:0 auto" width=3D"600"><tbody><tr><td=
+ class=3D"column column-1" width=3D"100%" =0Astyle=3D"mso-table-lspace:0;ms=
+o-table-rspace:0;font-weight:400;text-align:left;padding-bottom:20px;paddin=
+g-top:40px;vertical-align:top"><table class=3D"image_block block-1" width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" style=3D"mso-table-lspace:0;mso-table-rspace:0"><tr><td class=3D"pad"=
+ style=3D"width:100%" align=3D"center"><div style=3D"max-width:210px"><a hr=
+ef=3D"https://clicks.papajohns.com/f/a/7vwidMdaXviQ4iO9nte-4w~~/AAQRxRA~/UJ=
+-xkDqPxfO_uolKVUlw_sTIqyROM6dmt_LHg7GX4iHx933L5ZgJme_orG1x25OaSajkvcAj8rzos=
+VlXMw2nMgG8-lPdODhEpJZyhYZd3541gDlawfYCoBMoFJedLNX4" target=3D"_blank"><img=
+ =0Asrc=3D"https://braze-images.com/appboy/communication/assets/image_asset=
+s/images/65170ed261e8e4004bfa3586/original.png=3F1696009938" style=3D"displ=
+ay:block;height:auto;border:0;width:100%" width=3D"210" alt=3D"Papa Johns=
+=C2=AE" title=3D"Papa Johns=C2=AE" height=3D"auto"></a></div></td></tr></ta=
+ble></td></tr></tbody></table></td></tr></tbody></table><table class=3D"row=
+ row-4" align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" =0Astyle=3D"mso-table-lspace:0;mso-tabl=
+e-rspace:0;background-color:#f3f3f3"><tbody><tr><td><table class=3D"row-con=
+tent stack" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;bac=
+kground-color:#fff;border-radius:0;color:#000;width:600px;margin:0 auto" wi=
+dth=3D"600"><tbody><tr><td class=3D"column column-1" width=3D"100%" =0Astyl=
+e=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight:400;text-align:left;=
+padding-left:40px;padding-right:40px;vertical-align:top"><table class=3D"ht=
+ml_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0=
+"><tr><td class=3D"pad"><div style=3D"font-family:Arial,Arial,Sans-serif;te=
+xt-align:center" align=3D"center"><table class=3D"paragraph_block block-1" =
+width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;word-break:break-=
+word">=0A  <tr>=0A    <td class=3D"pad pad15mobile" style=3D"padding-bottom=
+:0px;padding-left:0px;padding-right:0px;padding-top:10px">=0A      <div sty=
+le=3D"color:#000;direction:ltr;font-family:PapaSans-MediumCondensed,'Helvet=
+ica Neue',Helvetica,Arial,sans-serif;font-size:38px;font-weight:bold;line-h=
+eight:normal;text-align:center;mso-line-height-alt:NaNpx">=0A        <p sty=
+le=3D"margin:0">THANK YOU FOR YOUR ORDER, PHILIP BERG</p>=0A      </div>=0A=
+    </td>=0A  </tr>=0A</table></div></td></tr></table></td></tr></tbody></t=
+able></td></tr></tbody></table><table =0Aclass=3D"row row-5" align=3D"cente=
+r" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"=
+presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;background-col=
+or:#f3f3f3"><tbody><tr><td><table class=3D"row-content stack" align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =
+style=3D"mso-table-lspace:0;mso-table-rspace:0;background-color:#fff;border=
+-radius:0;color:#000;width:600px;margin:0 auto" width=3D"600"><tbody><tr><t=
+d class=3D"column column-1" width=3D"100%" =0Astyle=3D"mso-table-lspace:0;m=
+so-table-rspace:0;font-weight:400;text-align:left;vertical-align:top"><tabl=
+e class=3D"html_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-t=
+able-rspace:0"><tr><td class=3D"pad"><div style=3D"font-family:Arial,Arial,=
+Sans-serif;text-align:center" align=3D"center"> </div></td></tr></table></t=
+d></tr></tbody></table></td></tr></tbody></table><table class=3D"row row-10=
+" align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"presentation" =0Astyle=3D"mso-table-lspace:0;mso-table-rspa=
+ce:0;background-color:#f3f3f3"><tbody><tr><td><table class=3D"row-content s=
+tack" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;backgroun=
+d-color:#fff;border-radius:0;color:#000;width:600px;margin:0 auto" width=3D=
+"600"><tbody><tr><td class=3D"column column-1" width=3D"33.333333333333336%=
+" =0Astyle=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight:400;text-al=
+ign:left;padding-bottom:36px;padding-top:36px;vertical-align:top"><table cl=
+ass=3D"image_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-tabl=
+e-rspace:0"><tr><td class=3D"pad" style=3D"width:100%" align=3D"center"><di=
+v style=3D"max-width:60px"><img =0Asrc=3D"https://braze-images.com/appboy/c=
+ommunication/assets/image_assets/images/65ccfc2a9b7b73004d0952f7/original.p=
+ng=3F1707932713" style=3D"display:block;height:auto;border:0;width:100%" wi=
+dth=3D"60" alt=3D"" title=3D"" height=3D"auto"></div></td></tr></table></td=
+><td class=3D"column column-2" width=3D"66.66666666666667%" style=3D"mso-ta=
+ble-lspace:0;mso-table-rspace:0;font-weight:400;text-align:left;padding-bot=
+tom:36px;padding-right:40px;padding-top:36px;vertical-align:top"><table =0A=
+class=3D"html_block mobile_hide block-1" width=3D"100%" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspa=
+ce:0;mso-table-rspace:0"><tr><td class=3D"pad"><div style=3D"font-family:Ar=
+ial,Arial,Sans-serif;text-align:center" align=3D"center"><table class=3D"pa=
+ragraph_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rsp=
+ace:0;word-break:break-word">=0A  <tr>=0A    <td class=3D"pad" style=3D"pad=
+ding-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px">=0A   =
+   <div style=3D"color:#000;direction:ltr;font-family: PapaSans,'Helvetica =
+Neue',Helvetica,Arial,sans-serif;font-size:18px;font-weight:400;letter-spac=
+ing:0;line-height:normal;text-align:left;mso-line-height-alt:NaNpx">=0A    =
+    <p style=3D"margin:0" class=3D"centerMobile">=0A          <strong> Trac=
+k your pizza with Papa Track</strong>=0A        </p>=0A      </div>=0A    <=
+/td>=0A=0A  </tr>=0A  <tr>=0A    <td class=3D"pad" style=3D"padding-bottom:=
+10px;padding-left:0px;padding-right:0px;padding-top:0px">=0A      <div styl=
+e=3D"color:#000;direction:ltr;font-family: PapaSans,'Helvetica Neue',Helvet=
+ica,Arial,sans-serif;font-size:16px;font-weight:400;letter-spacing:0;line-h=
+eight:normal;text-align:left;mso-line-height-alt:NaNpx">=0A        <p style=
+=3D"margin:0" class=3D"centerMobile">=0A          Access Papa Track to chec=
+k the status of your&nbsp;order. </p>=0A      </div>=0A    </td>=0A=0A  </t=
+r>=0A</table></div></td></tr></table><table class=3D"html_block desktop_hid=
+e block-2" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+role=3D"presentation" =0Astyle=3D"mso-table-lspace:0;mso-table-rspace:0;mso=
+-hide:all;display:none;max-height:0;overflow:hidden"><tr><td class=3D"pad">=
+<div style=3D"font-family:Arial,Arial,Sans-serif;text-align:center" align=
+=3D"center"><!--[if false]><!--><table class=3D"paragraph_block block-1" wi=
+dth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"mso-table-lspace:0;mso-table-rspace:0;word-break:break-wo=
+rd">=0A  <tr>=0A    <td class=3D"pad" style=3D"padding-bottom:10px;padding-=
+left:0px;padding-right:0px;padding-top:0px">=0A      <div style=3D"color:#0=
+00;direction:ltr;font-family: PapaSans,'Helvetica Neue',Helvetica,Arial,san=
+s-serif;font-size:18px;font-weight:400;letter-spacing:0;line-height:normal;=
+text-align:center;mso-line-height-alt:NaNpx">=0A        <p style=3D"margin:=
+0" class=3D"centerMobile">=0A          <strong> Track your pizza with Papa =
+Track</strong>=0A        </p>=0A      </div>=0A    </td>=0A=0A  </tr>=0A  <=
+tr>=0A    <td class=3D"pad" style=3D"padding-bottom:10px;padding-left:0px;p=
+adding-right:0px;padding-top:0px">=0A      <div style=3D"color:#000;directi=
+on:ltr;font-family: PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;fo=
+nt-size:16px;font-weight:400;letter-spacing:0;line-height:normal;text-align=
+:center;mso-line-height-alt:NaNpx">=0A        <p style=3D"margin:0" class=
+=3D"centerMobile">=0A          Access Papa Track to check the status of you=
+r&nbsp;order. </p>=0A      </div>=0A    </td>=0A=0A  </tr>=0A</table><!--<!=
+[endif]--></div></td></tr></table><table class=3D"html_block mobile_hide bl=
+ock-3" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0"><tr><td c=
+lass=3D"pad"><div =0Astyle=3D"font-family:Arial,Arial,Sans-serif;text-align=
+:center" align=3D"center"><table class=3D"button_block block-2" width=3D"10=
+0%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =
+style=3D"mso-table-lspace:0;mso-table-rspace:0">=0A  <tr>=0A    <td class=
+=3D"pad" align=3D"left">=0A         <div class=3D"alignment" align=3D"left"=
+><!--[if mso]>=0A<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xml=
+ns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"https://clicks.papaj=
+ohns.com/f/a/rw1Bl5tJgYXsvkC06ASPdw~~/AAQRxRA~/LBmhmxLxh7szOm5z0zGVke3XsTcj=
+kF28FVRi7qFEZp0QTHp4HuktZplaqR68Q7Aty_sCfrlhd5QLb3HJcBk8CVVuMk8tzwHCuuDRmca=
+2JY5cqnEB8U9mweo0fs6B9slAgxagjqkTOHG9NBsqtC2BaIwZ-YZ0eaa8qS4oAiz_STYDhfQ9LL=
+Kldj2ZhJf8l_wq0vXDAga8oNgwu-xjRHzoUsLQbE0--3YMZLJTQrQX9Upf6ub9aqpTNcKcyYPhR=
+XaAQnoGvOPXin0iz5mfnx9lWD1o1SVLezI1U_hiOkbIjtpeoZhP3xYPWfUxteUtfEDrdWJigx42=
+0s6zNS2gXTaLzpCYrdwlNElU6vZ_vtEydjC5PGR7740gxMov79GqDeEY" style=3D"height:4=
+2px;width:190px;v-text-anchor:middle;" arcsize=3D"52%" strokeweight=3D"0.75=
+pt" strokecolor=3D"#ffffff" fillcolor=3D"#2D5D2A">=0A<w:anchorlock/>=0A<v:t=
+extbox inset=3D"0px,0px,0px,0px">=0A<center style=3D"color:#000000; font-fa=
+mily:sans-serif; font-size:20px">=0A<![endif]-->=0A        <a href=3D"https=
+://clicks.papajohns.com/f/a/rw1Bl5tJgYXsvkC06ASPdw~~/AAQRxRA~/LBmhmxLxh7szO=
+m5z0zGVke3XsTcjkF28FVRi7qFEZp0QTHp4HuktZplaqR68Q7Aty_sCfrlhd5QLb3HJcBk8CVVu=
+Mk8tzwHCuuDRmca2JY5cqnEB8U9mweo0fs6B9slAgxagjqkTOHG9NBsqtC2BaIwZ-YZ0eaa8qS4=
+oAiz_STYDhfQ9LLKldj2ZhJf8l_wq0vXDAga8oNgwu-xjRHzoUsLQbE0--3YMZLJTQrQX9Upf6u=
+b9aqpTNcKcyYPhRXaAQnoGvOPXin0iz5mfnx9lWD1o1SVLezI1U_hiOkbIjtpeoZhP3xYPWfUxt=
+eUtfEDrdWJigx420s6zNS2gXTaLzpCYrdwlNElU6vZ_vtEydjC5PGR7740gxMov79GqDeEY" ta=
+rget=3D"_blank" style=3D"text-decoration:none;display:inline-block;color:#f=
+fffff;background-color:#2D5D2A;border-radius:30px;width:auto;border-top:1px=
+ solid #ffffff;font-weight:400;border-right:1px solid #ffffff;border-bottom=
+:1px solid #ffffff;border-left:1px solid #ffffff;padding-top:8px;padding-bo=
+ttom:8px;font-family:PapaSans-MediumCondensed,'Helvetica Neue',Helvetica,Ar=
+ial,sans-serif;font-size:20px;text-align:center;mso-border-alt:none;word-br=
+eak:keep-all;"><span style=3D"padding-left:26px;padding-right:26px;font-siz=
+e:20px;display:inline-block;letter-spacing:normal;"><span style=3D"word-bre=
+ak: break-word; line-height: 25px;">TRACK NOW</span></span></a>=0A        <=
+!--[if mso]></center></v:textbox></v:roundrect><![endif]-->=0A      </div>=
+=0A    </td>=0A  </tr>=0A</table></div></td></tr></table><table class=3D"ht=
+ml_block desktop_hide block-4" width=3D"100%" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-t=
+able-rspace:0;mso-hide:all;display:none;max-height:0;overflow:hidden"><tr><=
+td class=3D"pad"><div style=3D"font-family:Arial,Arial,Sans-serif;text-alig=
+n:center" align=3D"center"><!--[if false]><!--><table class=3D"button_block=
+ block-2" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0">=0A  <=
+tr>=0A    <td class=3D"pad" align=3D"center">=0A      <div class=3D"alignme=
+nt" align=3D"center"><!--[if mso]>=0A<v:roundrect xmlns:v=3D"urn:schemas-mi=
+crosoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"=
+https://clicks.papajohns.com/f/a/rw1Bl5tJgYXsvkC06ASPdw~~/AAQRxRA~/LBmhmxLx=
+h7szOm5z0zGVke3XsTcjkF28FVRi7qFEZp0QTHp4HuktZplaqR68Q7Aty_sCfrlhd5QLb3HJcBk=
+8CVVuMk8tzwHCuuDRmca2JY5cqnEB8U9mweo0fs6B9slAgxagjqkTOHG9NBsqtC2BaIwZ-YZ0ea=
+a8qS4oAiz_STYDhfQ9LLKldj2ZhJf8l_wq0vXDAga8oNgwu-xjRHzoUsLQbE0--3YMZLJTQrQX9=
+Upf6ub9aqpTNcKcyYPhRXaAQnoGvOPXin0iz5mfnx9lWD1o1SVLezI1U_hiOkbIjtpeoZhP3xYP=
+WfUxteUtfEDrdWJigx420s6zNS2gXTaLzpCYrdwlNElU6vZ_vtEydjC5PGR7740gxMov79GqDeE=
+Y" style=3D"height:42px;width:190px;v-text-anchor:middle;" arcsize=3D"52%" =
+strokeweight=3D"0.75pt" strokecolor=3D"#ffffff" fillcolor=3D"#2D5D2A">=0A<w=
+:anchorlock/>=0A<v:textbox inset=3D"0px,0px,0px,0px">=0A<center style=3D"co=
+lor:#000000; font-family:sans-serif; font-size:20px">=0A<![endif]-->=0A    =
+    <a href=3D"https://clicks.papajohns.com/f/a/rw1Bl5tJgYXsvkC06ASPdw~~/AA=
+QRxRA~/LBmhmxLxh7szOm5z0zGVke3XsTcjkF28FVRi7qFEZp0QTHp4HuktZplaqR68Q7Aty_sC=
+frlhd5QLb3HJcBk8CVVuMk8tzwHCuuDRmca2JY5cqnEB8U9mweo0fs6B9slAgxagjqkTOHG9NBs=
+qtC2BaIwZ-YZ0eaa8qS4oAiz_STYDhfQ9LLKldj2ZhJf8l_wq0vXDAga8oNgwu-xjRHzoUsLQbE=
+0--3YMZLJTQrQX9Upf6ub9aqpTNcKcyYPhRXaAQnoGvOPXin0iz5mfnx9lWD1o1SVLezI1U_hiO=
+kbIjtpeoZhP3xYPWfUxteUtfEDrdWJigx420s6zNS2gXTaLzpCYrdwlNElU6vZ_vtEydjC5PGR7=
+740gxMov79GqDeEY" target=3D"_blank" style=3D"text-decoration:none;display:i=
+nline-block;color:#ffffff;background-color:#2D5D2A;border-radius:30px;width=
+:auto;border-top:1px solid #ffffff;font-weight:400;border-right:1px solid #=
+ffffff;border-bottom:1px solid #ffffff;border-left:1px solid #ffffff;paddin=
+g-top:8px;padding-bottom:8px;font-family:PapaSans-MediumCondensed,'Helvetic=
+a Neue',Helvetica,Arial,sans-serif;font-size:20px;text-align:center;mso-bor=
+der-alt:none;word-break:keep-all;"><span style=3D"padding-left:26px;padding=
+-right:26px;font-size:20px;display:inline-block;letter-spacing:normal;"><sp=
+an style=3D"word-break: break-word; line-height: 25px;">TRACK NOW</span></s=
+pan></a>=0A        <!--[if mso]></center></v:textbox></v:roundrect><![endif=
+]-->=0A      </div>=0A    </td>=0A  </tr>=0A</table><!--<![endif]-->=0A</di=
+v></td></tr></table></td></tr></tbody></table></td></tr></tbody></table><ta=
+ble class=3D"row row-11" align=3D"center" width=3D"100%" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lsp=
+ace:0;mso-table-rspace:0;background-color:#f3f3f3"><tbody><tr><td><table cl=
+ass=3D"row-content stack" align=3D"center" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" =0Astyle=3D"mso-table-lspace:0;mso-t=
+able-rspace:0;background-color:#fff;border-radius:0;color:#000;width:600px;=
+margin:0 auto" width=3D"600"><tbody><tr><td class=3D"column column-1" width=
+=3D"100%" style=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight:400;te=
+xt-align:left;vertical-align:top"><table class=3D"html_block block-1" width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" style=3D"mso-table-lspace:0;mso-table-rspace:0"><tr><td class=3D"pad"=
+><div =0Astyle=3D"font-family:Arial,Arial,Sans-serif;text-align:center" ali=
+gn=3D"center"></div></td></tr></table></td></tr></tbody></table></td></tr><=
+/tbody></table><table class=3D"row row-12" align=3D"center" width=3D"100%" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" styl=
+e=3D"mso-table-lspace:0;mso-table-rspace:0;background-color:#f3f3f3"><tbody=
+><tr><td><table class=3D"row-content stack" align=3D"center" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =0Astyle=3D"mso-ta=
+ble-lspace:0;mso-table-rspace:0;background-color:#fff;border-radius:0;color=
+:#000;width:600px;margin:0 auto" width=3D"600"><tbody><tr><td class=3D"colu=
+mn column-1" width=3D"100%" style=3D"mso-table-lspace:0;mso-table-rspace:0;=
+font-weight:400;text-align:left;vertical-align:top"><table class=3D"html_bl=
+ock block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0"><tr=
+><td class=3D"pad"><div =0Astyle=3D"font-family:Arial,Arial,Sans-serif;text=
+-align:center" align=3D"center"></div></td></tr></table><table class=3D"htm=
+l_block block-4" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0=
+"><tr><td class=3D"pad"><div style=3D"font-family:Arial,Arial,Sans-serif;te=
+xt-align:center" align=3D"center">=0A<table class=3D"paragraph_block block-=
+1" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"=
+presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;word-break:bre=
+ak-word">=0A  <tr>=0A    <td class=3D"pad" style=3D"padding-bottom:0px;padd=
+ing-left:0px;padding-right:0px;padding-top:10px">=0A      <div style=3D"col=
+or:#000;direction:ltr;font-family: PapaSans,'Helvetica Neue',Helvetica,Aria=
+l,sans-serif;font-size:16px;font-weight:400;letter-spacing:0;line-height:no=
+rmal;text-align:center;mso-line-height-alt:NaNpx">=0A        <p style=3D"ma=
+rgin:0">=0A          <strong>Estimated Ready Time:</strong><br>=0A=0A      =
+  </p>=0A      </div>=0A    </td>=0A=0A  </tr>=0A  <tr>=0A    <td class=3D"=
+pad" style=3D"padding-bottom:10px;padding-left:0px;padding-right:0px;paddin=
+g-top:0px">=0A      <div style=3D"color:#000;direction:ltr;font-family: Pap=
+aSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:24px;font-weigh=
+t:bold;letter-spacing:0;line-height:normal;text-align:center;mso-line-heigh=
+t-alt:NaNpx">=0A        <p style=3D"margin:0">=0A=0A          TODAY BETWEEN=
+ 3:27 PM - 3:37 PM=0A        </p>=0A      </div>=0A    </td>=0A=0A  </tr>=
+=0A</table></div></td></tr></table><table class=3D"html_block block-5" widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"present=
+ation" style=3D"mso-table-lspace:0;mso-table-rspace:0"><tr><td class=3D"pad=
+"><div style=3D"font-family:Arial,Arial,Sans-serif;text-align:center" align=
+=3D"center"></div></td></tr></table></td></tr></tbody></table></td></tr></t=
+body></table><table class=3D"row row-13" align=3D"center" width=3D"100%" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" =0Arole=3D"presentation" sty=
+le=3D"mso-table-lspace:0;mso-table-rspace:0;background-color:#f3f3f3"><tbod=
+y><tr><td><table class=3D"row-content stack" align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-tabl=
+e-lspace:0;mso-table-rspace:0;background-color:#fff;border-radius:0;color:#=
+000;width:600px;margin:0 auto" width=3D"600"><tbody><tr><td class=3D"column=
+ column-1" width=3D"33.333333333333336%" =0Astyle=3D"mso-table-lspace:0;mso=
+-table-rspace:0;font-weight:400;text-align:left;padding-bottom:30px;vertica=
+l-align:top"><table class=3D"html_block block-1" width=3D"100%" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-ta=
+ble-lspace:0;mso-table-rspace:0"><tr><td class=3D"pad"><div style=3D"font-f=
+amily:Arial,Arial,Sans-serif;text-align:center" align=3D"center"><table cla=
+ss=3D"paragraph_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-t=
+able-rspace:0;word-break:break-word">=0A  <tr>=0A    <td class=3D"pad" styl=
+e=3D"padding-bottom:10px;padding-left:0px;padding-right:0px;padding-top:10p=
+x">=0A      <div style=3D"color:#000;direction:ltr;font-family: PapaSans,'H=
+elvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;le=
+tter-spacing:0;line-height:24px;text-align:center;mso-line-height-alt:NaNpx=
+">=0A        <p style=3D"margin:0">=0A          <strong> Order Type:</stron=
+g><br>=0A          DELIVERY=0A        </p>=0A      </div>=0A    </td>=0A=0A=
+  </tr>=0A</table></div></td></tr></table></td><td class=3D"column column-2=
+" width=3D"33.333333333333336%" =0Astyle=3D"mso-table-lspace:0;mso-table-rs=
+pace:0;font-weight:400;text-align:left;padding-bottom:30px;vertical-align:t=
+op"><table class=3D"html_block block-1" width=3D"100%" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspac=
+e:0;mso-table-rspace:0"><tr><td class=3D"pad"><div style=3D"font-family:Ari=
+al,Arial,Sans-serif;text-align:center" align=3D"center"><table class=3D"par=
+agraph_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspa=
+ce:0;word-break:break-word">=0A  <tr>=0A    <td class=3D"pad" style=3D"padd=
+ing-bottom:10px;padding-left:0px;padding-right:0px;padding-top:10px">=0A   =
+   <div style=3D"color:#000;direction:ltr;font-family: PapaSans,'Helvetica =
+Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;letter-spac=
+ing:0;line-height:24px;text-align:center;mso-line-height-alt:NaNpx">=0A    =
+    <p style=3D"margin:0">=0A          <strong>Order Number:</strong><br>=
+=0A          1331169691=0A        </p>=0A      </div>=0A    </td>=0A=0A  </=
+tr>=0A</table></div></td></tr></table></td><td class=3D"column column-3" wi=
+dth=3D"33.333333333333336%" =0Astyle=3D"mso-table-lspace:0;mso-table-rspace=
+:0;font-weight:400;text-align:left;padding-bottom:30px;vertical-align:top">=
+<table class=3D"html_block block-1" width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;=
+mso-table-rspace:0"><tr><td class=3D"pad"><div style=3D"font-family:Arial,A=
+rial,Sans-serif;text-align:center" align=3D"center"><table class=3D"paragra=
+ph_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0=
+;word-break:break-word">=0A  <tr>=0A    <td class=3D"pad" style=3D"padding-=
+bottom:10px;padding-left:0px;padding-right:0px;padding-top:10px">=0A      <=
+div style=3D"color:#000;direction:ltr;font-family: PapaSans,'Helvetica Neue=
+',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;letter-spacing:=
+0;line-height:24px;text-align:center;mso-line-height-alt:NaNpx">=0A        =
+<p style=3D"margin:0">=0A          <strong>Method of Payment</strong><br>=
+=0A          =0A          PAYPAL=0A          =0A        </p>=0A      </div>=
+=0A    </td>=0A=0A  </tr>=0A</table></div></td></tr></table></td></tr></tbo=
+dy></table></td></tr></tbody></table><table class=3D"row row-14" =0Aalign=
+=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;backg=
+round-color:#f3f3f3"><tbody><tr><td><table class=3D"row-content stack" alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"mso-table-lspace:0;mso-table-rspace:0;background-color:#f=
+ff;border-radius:0;color:#000;width:600px;margin:0 auto" width=3D"600"><tbo=
+dy><tr><td class=3D"column column-1" width=3D"100%" =0Astyle=3D"mso-table-l=
+space:0;mso-table-rspace:0;font-weight:400;text-align:left;vertical-align:t=
+op"><table class=3D"paragraph_block block-1" width=3D"100%" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-=
+lspace:0;mso-table-rspace:0;word-break:break-word"><tr><td class=3D"pad"><d=
+iv style=3D"color:#000;direction:ltr;font-family:Arial,Arial,Sans-serif;fon=
+t-size:16px;font-weight:400;letter-spacing:0;line-height:NaN;text-align:lef=
+t;mso-line-height-alt:NaNpx"><p id=3D"10-0-2" =0Atabindex=3D"0" role=3D"gro=
+up" aria-roledescription=3D"stage module" aria-label=3D"module 3 of row 1 c=
+olumn 1, type HTML" style=3D"margin:0;margin-bottom:0"></p><p style=3D"marg=
+in:0;margin-bottom:0"></p><p id=3D"10-0-3" tabindex=3D"-1" role=3D"group" a=
+ria-roledescription=3D"stage module" aria-label=3D"module 4 of row 1 column=
+ 1, type Image" style=3D"margin:0"></p></div></td></tr></table><table =0Acl=
+ass=3D"image_block block-2" width=3D"100%" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-tabl=
+e-rspace:0"><tr><td class=3D"pad" style=3D"width:100%" align=3D"center"><di=
+v style=3D"max-width:600px"><a href=3D"https://clicks.papajohns.com/f/a/Qbn=
+SB4nmTJgkcQYtu44I9g~~/AAQRxRA~/B7Gc6aknlia0x-Jt2laQMbRmnLzMR9WWscY03erdTbxd=
+93l8dKvRkwtqPFNr-mV9H0qOU7dilP7OQRohxgPovq8tuu6P_XP210ZFyjpaeBgYpRX5NkEOprn=
+wzZIoqAzdczswwGwqKCOuKWquUyDlHZcoeJ6aARFpkqPGexLhKugLPnQMIhyVTEYcnEVldO9kLb=
+JEXpx6bhv1SATipvHlFJxMTH_BSNuMklv_pusThO0OWva97UAWJyocaGDvZgcqcRWMx1_-MGyMO=
+DXJsBDPmjUKuJUCvaaoUw2SDOMjZTsOjjSbcsY9Jrlz8CuAkI47" target=3D"_blank"><img=
+ src=3D"https://braze-images.com/appboy/communication/assets/image_assets/i=
+mages/68dc0628a6240000639d77fc/original.png=3F1759249960" style=3D"display:=
+block;height:auto;border:0;width:100%" =0Awidth=3D"600" alt=3D"Don't Miss P=
+apa Rewards=C2=AE Updates and Exclusives - Sign Up Now" title=3D"Don't Miss=
+ Papa Rewards=C2=AE Updates and Exclusives - Sign Up Now" height=3D"auto"><=
+/a></div></td></tr></table></td></tr></tbody></table></td></tr></tbody></ta=
+ble><table class=3D"row row-15" align=3D"center" width=3D"100%" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-ta=
+ble-lspace:0;mso-table-rspace:0;background-color:#f3f3f3"><tbody><tr><td><t=
+able class=3D"row-content stack" align=3D"center" =0Aborder=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:=
+0;mso-table-rspace:0;background-color:#fff;border-radius:0;color:#000;width=
+:600px;margin:0 auto" width=3D"600"><tbody><tr><td class=3D"column column-1=
+" width=3D"100%" style=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight=
+:400;text-align:left;vertical-align:top"><table class=3D"paragraph_block bl=
+ock-1" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" =0Astyle=3D"mso-table-lspace:0;mso-table-rspace:0;word-br=
+eak:break-word"><tr><td class=3D"pad"><div style=3D"color:#000;direction:lt=
+r;font-family:Arial,Arial,Sans-serif;font-size:16px;font-weight:400;letter-=
+spacing:0;line-height:NaN;text-align:left;mso-line-height-alt:NaNpx"><p id=
+=3D"10-0-2" tabindex=3D"0" role=3D"group" aria-roledescription=3D"stage mod=
+ule" aria-label=3D"module 3 of row 1 column 1, type HTML" style=3D"margin:0=
+;margin-bottom:0"></p><p id=3D"10-0-0" tabindex=3D"0" role=3D"group" =0Aari=
+a-roledescription=3D"stage module" aria-label=3D"module 1 of row 1 column 1=
+, type HTML" style=3D"margin:0;margin-bottom:0"></p><p style=3D"margin:0;ma=
+rgin-bottom:0"></p><p id=3D"10-0-1" tabindex=3D"-1" role=3D"group" aria-rol=
+edescription=3D"stage module" aria-label=3D"module 2 of row 1 column 1, typ=
+e Image" style=3D"margin:0;margin-bottom:0"></p><p id=3D"10-0-3" tabindex=
+=3D"-1" role=3D"group" aria-roledescription=3D"stage module" aria-label=3D"=
+module 4 of row 1 column 1, type Image" style=3D"margin:0"></p></div></td><=
+/tr></table></td></tr></tbody></table></td></tr></tbody></table><table clas=
+s=3D"row row-16" align=3D"center" =0Awidth=3D"100%" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0=
+;mso-table-rspace:0;background-color:#f3f3f3"><tbody><tr><td><table class=
+=3D"row-content stack" align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-r=
+space:0;background-color:#fff;border-radius:0;color:#000;width:600px;margin=
+:0 auto" width=3D"600"><tbody><tr><td class=3D"column column-1" width=3D"10=
+0%" =0Astyle=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight:400;text-=
+align:left;padding-bottom:10px;padding-left:40px;padding-right:40px;padding=
+-top:40px;vertical-align:top"><table class=3D"html_block block-1" width=3D"=
+100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation=
+" style=3D"mso-table-lspace:0;mso-table-rspace:0"><tr><td class=3D"pad"><di=
+v style=3D"font-family:Arial,Arial,Sans-serif;text-align:center" align=3D"c=
+enter">  <table class=3D"paragraph_block block-5" width=3D"100%" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-t=
+able-lspace:0;mso-table-rspace:0;word-break:break-word">=0A    <tr>=0A     =
+ <td class=3D"pad " >=0A        <div style=3D"color:#000;direction:ltr;font=
+-family: PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14p=
+x;font-weight:400;letter-spacing:0;line-height:normal;text-align:left;mso-l=
+ine-height-alt:NaNpx">=0A          <p style=3D"margin:0">=0A            <st=
+rong>Order Detail:</strong>=0A          </p>=0A        </div>=0A      </td>=
+=0A    </tr>=0A  </table></div></td></tr></table></td></tr></tbody></table>=
+=0A</td></tr></tbody></table><table class=3D"row row-17" align=3D"center" w=
+idth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pres=
+entation" style=3D"mso-table-lspace:0;mso-table-rspace:0;background-color:#=
+f3f3f3"><tbody><tr><td><table class=3D"row-content stack" align=3D"center" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" styl=
+e=3D"mso-table-lspace:0;mso-table-rspace:0;background-color:#fff;border-rad=
+ius:0;color:#000;width:600px;margin:0 auto" width=3D"600"><tbody><tr><td =
+=0Aclass=3D"column column-1" width=3D"100%" style=3D"mso-table-lspace:0;mso=
+-table-rspace:0;font-weight:400;text-align:left;padding-left:40px;padding-r=
+ight:40px;vertical-align:top"><table class=3D"html_block block-1" width=3D"=
+100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation=
+" style=3D"mso-table-lspace:0;mso-table-rspace:0"><tr><td class=3D"pad"><di=
+v style=3D"font-family:Arial,Arial,Sans-serif;text-align:center" align=3D"c=
+enter">=0A=0A=0A=0A=0A<th style=3D"Margin:0;color:#333;font-family: PapaSan=
+s,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:40=
+0;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top">=
+=0A  <table style=3D"border-collapse:collapse;border-spacing:0;mso-table-ls=
+pace:0;mso-table-rspace:0;padding:0;table-layout:auto;text-align:left;verti=
+cal-align:top;width:100%">=0A    <tbody>=0A      =0A      <!-- Items List -=
+->=0A      <tr style=3D"padding:0;text-align:left;vertical-align:top">=0A=
+=0A=0A        <!-- Quantity -->=0A        <td width=3D"10%" style=3D"-moz-h=
+yphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse=
+!important;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial=
+,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;mar=
+gin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">=
+=0A          <p class=3D"MsoNormal" style=3D"Margin:0;Margin-bottom:0px;col=
+or:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;fo=
+nt-size:16px;font-weight:400;hyphens:none!important;line-height:1.3;margin:=
+0;margin-bottom:0px;padding:10px!important;padding-left:0px!important;paddi=
+ng-right:10px!important;text-align:left">=0A            1=0A          </p>=
+=0A        </td>=0A        <!-- /Quantity -->=0A=0A        <!-- Products --=
+>=0A        <td width=3D"60%" style=3D"-moz-hyphens:auto;-webkit-hyphens:au=
+to;Margin:0;border:0;border-collapse:collapse!important;color:#333;font-fam=
+ily:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;fon=
+t-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:lef=
+t;vertical-align:top;word-wrap:break-word">=0A          <table style=3D"bor=
+der-collapse:collapse;border-spacing:0;mso-table-lspace:0;mso-table-rspace:=
+0;padding:0;table-layout:auto;text-align:left;vertical-align:top;width:100%=
+">=0A            <tbody>=0A              <tr style=3D"padding:0;text-align:=
+left;vertical-align:top">=0A                <td style=3D"-moz-hyphens:auto;=
+-webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important;c=
+olor:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;=
+font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;paddin=
+g:0;text-align:left;vertical-align:top;word-wrap:break-word">=0A           =
+       <span style=3D"display:block;Margin:0;Margin-bottom:0px;color:#333;f=
+ont-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1=
+6px;font-weight:400;line-height:1.3;margin:0;margin-bottom:0px;padding:10px=
+!important;padding-left:15px!important;padding-right:10px!important;text-al=
+ign:left">=0A                  Papa Pairings=0A                  <br>=0A   =
+               Toppings: =0A                  <br>=0A                  Sauc=
+e: =0A                  <br>=0A                  Instructions: =0A         =
+         </span>=0A                </td>=0A              </tr>=0A          =
+  </tbody>=0A          </table>=0A        </td>=0A        <!-- /Products --=
+>=0A=0A        <!-- Price -->=0A        <td width=3D"20%" style=3D"-moz-hyp=
+hens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!i=
+mportant;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,s=
+ans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margi=
+n:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">=0A =
+         <table style=3D"border-collapse:collapse;border-spacing:0;mso-tabl=
+e-lspace:0;mso-table-rspace:0;padding:0;table-layout:auto;text-align:left;v=
+ertical-align:top;width:100%">=0A            <tbody>=0A              <tr st=
+yle=3D"padding:0;text-align:left;vertical-align:top">=0A                <td=
+ style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-c=
+ollapse:collapse!important;color:#333;font-family:PapaSans,'Helvetica Neue'=
+,Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;lin=
+e-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wra=
+p:break-word">=0A                  <p class=3D"MsoNormal" style=3D"Margin:0=
+;Margin-bottom:0px;color:#333;font-family:PapaSans,'Helvetica Neue',Helveti=
+ca,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:none!important;l=
+ine-height:1.3;margin:0;margin-bottom:0px;padding:10px!important;padding-le=
+ft:15px!important;padding-right:10px!important;text-align:left">=0A        =
+            $22.29=0A                  </p>=0A                </td>=0A     =
+         </tr>=0A            </tbody>=0A          </table>=0A        </td>=
+=0A        <!-- /Price -->=0A      </tr>=0A      =0A      <!-- Items List -=
+->=0A      <tr style=3D"padding:0;text-align:left;vertical-align:top">=0A=
+=0A=0A        <!-- Quantity -->=0A        <td width=3D"10%" style=3D"-moz-h=
+yphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse=
+!important;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial=
+,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;mar=
+gin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">=
+=0A          <p class=3D"MsoNormal" style=3D"Margin:0;Margin-bottom:0px;col=
+or:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;fo=
+nt-size:16px;font-weight:400;hyphens:none!important;line-height:1.3;margin:=
+0;margin-bottom:0px;padding:10px!important;padding-left:0px!important;paddi=
+ng-right:10px!important;text-align:left">=0A            1=0A          </p>=
+=0A        </td>=0A        <!-- /Quantity -->=0A=0A        <!-- Products --=
+>=0A        <td width=3D"60%" style=3D"-moz-hyphens:auto;-webkit-hyphens:au=
+to;Margin:0;border:0;border-collapse:collapse!important;color:#333;font-fam=
+ily:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;fon=
+t-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:lef=
+t;vertical-align:top;word-wrap:break-word">=0A          <table style=3D"bor=
+der-collapse:collapse;border-spacing:0;mso-table-lspace:0;mso-table-rspace:=
+0;padding:0;table-layout:auto;text-align:left;vertical-align:top;width:100%=
+">=0A            <tbody>=0A              <tr style=3D"padding:0;text-align:=
+left;vertical-align:top">=0A                <td style=3D"-moz-hyphens:auto;=
+-webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important;c=
+olor:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;=
+font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;paddin=
+g:0;text-align:left;vertical-align:top;word-wrap:break-word">=0A           =
+       <span style=3D"display:block;Margin:0;Margin-bottom:0px;color:#333;f=
+ont-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1=
+6px;font-weight:400;line-height:1.3;margin:0;margin-bottom:0px;padding:10px=
+!important;padding-left:15px!important;padding-right:10px!important;text-al=
+ign:left">=0A                  Medium Original Crust Cheese Pizza=0A       =
+           <br>=0A                  Toppings: Pepperoni=0A                 =
+ <br>=0A                  Sauce: Original Sauce=0A                  <br>=0A=
+                  Instructions: Original Pizza Sauce=0A                  </=
+span>=0A                </td>=0A              </tr>=0A            </tbody>=
+=0A          </table>=0A        </td>=0A        <!-- /Products -->=0A=0A   =
+     <!-- Price -->=0A        <td width=3D"20%" style=3D"-moz-hyphens:auto;=
+-webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important;c=
+olor:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;=
+font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;paddin=
+g:0;text-align:left;vertical-align:top;word-wrap:break-word">=0A          <=
+table style=3D"border-collapse:collapse;border-spacing:0;mso-table-lspace:0=
+;mso-table-rspace:0;padding:0;table-layout:auto;text-align:left;vertical-al=
+ign:top;width:100%">=0A            <tbody>=0A              <tr style=3D"pad=
+ding:0;text-align:left;vertical-align:top">=0A                <td style=3D"=
+-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:co=
+llapse!important;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica=
+,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1=
+.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-w=
+ord">=0A                  <p class=3D"MsoNormal" style=3D"Margin:0;Margin-b=
+ottom:0px;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,=
+sans-serif;font-size:16px;font-weight:400;hyphens:none!important;line-heigh=
+t:1.3;margin:0;margin-bottom:0px;padding:10px!important;padding-left:15px!i=
+mportant;padding-right:10px!important;text-align:left">=0A                 =
+   $=0A                  </p>=0A                </td>=0A              </tr>=
+=0A            </tbody>=0A          </table>=0A        </td>=0A        <!--=
+ /Price -->=0A      </tr>=0A      =0A      <!-- Items List -->=0A      <tr =
+style=3D"padding:0;text-align:left;vertical-align:top">=0A=0A=0A        <!-=
+- Quantity -->=0A        <td width=3D"10%" style=3D"-moz-hyphens:auto;-webk=
+it-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important;color:=
+#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-=
+size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;t=
+ext-align:left;vertical-align:top;word-wrap:break-word">=0A          <p cla=
+ss=3D"MsoNormal" style=3D"Margin:0;Margin-bottom:0px;color:#333;font-family=
+:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-w=
+eight:400;hyphens:none!important;line-height:1.3;margin:0;margin-bottom:0px=
+;padding:10px!important;padding-left:0px!important;padding-right:10px!impor=
+tant;text-align:left">=0A            1=0A          </p>=0A        </td>=0A =
+       <!-- /Quantity -->=0A=0A        <!-- Products -->=0A        <td widt=
+h=3D"60%" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0=
+;border-collapse:collapse!important;color:#333;font-family:PapaSans,'Helvet=
+ica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens=
+:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top=
+;word-wrap:break-word">=0A          <table style=3D"border-collapse:collaps=
+e;border-spacing:0;mso-table-lspace:0;mso-table-rspace:0;padding:0;table-la=
+yout:auto;text-align:left;vertical-align:top;width:100%">=0A            <tb=
+ody>=0A              <tr style=3D"padding:0;text-align:left;vertical-align:=
+top">=0A                <td style=3D"-moz-hyphens:auto;-webkit-hyphens:auto=
+;Margin:0;border:0;border-collapse:collapse!important;color:#333;font-famil=
+y:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-=
+weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;=
+vertical-align:top;word-wrap:break-word">=0A                  <span style=
+=3D"display:block;Margin:0;Margin-bottom:0px;color:#333;font-family:PapaSan=
+s,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:40=
+0;line-height:1.3;margin:0;margin-bottom:0px;padding:10px!important;padding=
+-left:15px!important;padding-right:10px!important;text-align:left">=0A     =
+             10 inch Cheesesticks=0A                  <br>=0A              =
+    Toppings: =0A                  <br>=0A                  Sauce: =0A     =
+             <br>=0A                  Instructions: =0A                  </=
+span>=0A                </td>=0A              </tr>=0A            </tbody>=
+=0A          </table>=0A        </td>=0A        <!-- /Products -->=0A=0A   =
+     <!-- Price -->=0A        <td width=3D"20%" style=3D"-moz-hyphens:auto;=
+-webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important;c=
+olor:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;=
+font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;paddin=
+g:0;text-align:left;vertical-align:top;word-wrap:break-word">=0A          <=
+table style=3D"border-collapse:collapse;border-spacing:0;mso-table-lspace:0=
+;mso-table-rspace:0;padding:0;table-layout:auto;text-align:left;vertical-al=
+ign:top;width:100%">=0A            <tbody>=0A              <tr style=3D"pad=
+ding:0;text-align:left;vertical-align:top">=0A                <td style=3D"=
+-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:co=
+llapse!important;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica=
+,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1=
+.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-w=
+ord">=0A                  <p class=3D"MsoNormal" style=3D"Margin:0;Margin-b=
+ottom:0px;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,=
+sans-serif;font-size:16px;font-weight:400;hyphens:none!important;line-heigh=
+t:1.3;margin:0;margin-bottom:0px;padding:10px!important;padding-left:15px!i=
+mportant;padding-right:10px!important;text-align:left">=0A                 =
+   $=0A                  </p>=0A                </td>=0A              </tr>=
+=0A            </tbody>=0A          </table>=0A        </td>=0A        <!--=
+ /Price -->=0A      </tr>=0A      =0A      <!-- /Items List -->=0A=0A      =
+<!-- TOTALS -->=0A      =0A      <!-- Total Before Discounts -->=0A      <t=
+r style=3D"padding:0;text-align:left;vertical-align:top">=0A        <td wid=
+th=3D"10%" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:=
+0;border-collapse:collapse!important;color:#333;font-family:PapaSans,'Helve=
+tica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphen=
+s:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:to=
+p;word-wrap:break-word">=0A          <table style=3D"border-collapse:collap=
+se;border-spacing:0;mso-table-lspace:0;mso-table-rspace:0;padding:0;table-l=
+ayout:auto;text-align:left;vertical-align:top;width:100%">=0A            <t=
+body>=0A              <tr style=3D"padding:0;text-align:left;vertical-align=
+:top">=0A                <td style=3D"-moz-hyphens:auto;-webkit-hyphens:aut=
+o;Margin:0;border:0;border-collapse:collapse!important;color:#333;font-fami=
+ly:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font=
+-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left=
+;vertical-align:top;word-wrap:break-word">=0A                  <p class=3D"=
+MsoNormal" style=3D"Margin:0;Margin-bottom:0px;color:#333;font-family:PapaS=
+ans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:=
+400;hyphens:none!important;line-height:1.3;margin:0;margin-bottom:0px;paddi=
+ng:10px!important;padding-left:15px!important;padding-right:10px!important;=
+padding-bottom:0px!important;text-align:left">=0A                    &nbsp;=
+=0A                  </p>=0A                </td>=0A              </tr>=0A =
+           </tbody>=0A          </table>=0A        </td>=0A        <td widt=
+h=3D"60%" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0=
+;border-collapse:collapse!important;color:#333;font-family:PapaSans,'Helvet=
+ica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens=
+:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top=
+;word-wrap:break-word">=0A          <p class=3D"MsoNormal" style=3D"Margin:=
+0;Margin-bottom:0px;color:#333;font-family:PapaSans,'Helvetica Neue',Helvet=
+ica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:none!important;=
+line-height:1.3;margin:0;margin-bottom:0px;padding:10px!important;padding-l=
+eft:15px!important;padding-right:10px!important;padding-bottom:0px!importan=
+t;text-align:left">=0A            <b>Total before discounts</b>=0A         =
+ </p>=0A        </td>=0A        <td width=3D"20%" style=3D"-moz-hyphens:aut=
+o;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important=
+;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-seri=
+f;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padd=
+ing:0;text-align:left;vertical-align:top;word-wrap:break-word">=0A         =
+ <p id=3D"total_before_discount" class=3D"MsoNormal" style=3D"Margin:0;Marg=
+in-bottom:0px;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Ar=
+ial,sans-serif;font-size:16px;font-weight:400;hyphens:none!important;line-h=
+eight:1.3;margin:0;margin-bottom:0px;padding:10px!important;padding-left:15=
+px!important;padding-right:10px!important;padding-bottom:0px!important;text=
+-align:left">=0A            $14.98=0A          </p>=0A        </td>=0A=0A  =
+    </tr>=0A      <!-- /Total Before Discounts -->=0A      =0A=0A      =0A =
+     <!-- Papa Dough -->=0A      <tr style=3D"padding:0;text-align:left;ver=
+tical-align:top">=0A        <td width=3D"10%" style=3D"-moz-hyphens:auto;-w=
+ebkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important;col=
+or:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;fo=
+nt-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:=
+0;text-align:left;vertical-align:top;word-wrap:break-word">=0A          <ta=
+ble style=3D"border-collapse:collapse;border-spacing:0;mso-table-lspace:0;m=
+so-table-rspace:0;padding:0;table-layout:auto;text-align:left;vertical-alig=
+n:top;width:100%">=0A            <tbody>=0A              <tr style=3D"paddi=
+ng:0;text-align:left;vertical-align:top">=0A                <td style=3D"-m=
+oz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:coll=
+apse!important;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,A=
+rial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3=
+;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word=
+">=0A                  <p class=3D"MsoNormal" style=3D"Margin:0;Margin-bott=
+om:0px;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:400;hyphens:none!important;line-height:1=
+.3;margin:0;margin-bottom:0px;padding:10px!important;padding-left:15px!imp=
+ortant;padding-right:10px!important;padding-bottom:0px!important;text-align=
+:left">=0A                    &nbsp;=0A                  </p>=0A           =
+     </td>=0A              </tr>=0A            </tbody>=0A          </table=
+>=0A        </td>=0A=0A        <td width=3D"60%" style=3D"-moz-hyphens:auto=
+;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important;=
+color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif=
+;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;paddi=
+ng:0;text-align:left;vertical-align:top;word-wrap:break-word">=0A          =
+<p class=3D"MsoNormal" style=3D"Margin:0;Margin-bottom:0px;color:#333;font-=
+family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;=
+font-weight:400;hyphens:none!important;line-height:1.3;margin:0;margin-bott=
+om:0px;padding:10px!important;padding-left:15px!important;padding-right:10p=
+x!important;padding-bottom:0px!important;text-align:left">=0A            Pa=
+pa Dough=0A          </p>=0A        </td>=0A=0A        <td width=3D"20%" st=
+yle=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-coll=
+apse:collapse!important;color:#333;font-family:PapaSans,'Helvetica Neue',He=
+lvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-h=
+eight:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:b=
+reak-word">=0A          <p id=3D"papa_dough" class=3D"MsoNormal" style=3D"M=
+argin:0;Margin-bottom:0px;color:#333;font-family:PapaSans,'Helvetica Neue',=
+Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:none!impo=
+rtant;line-height:1.3;margin:0;margin-bottom:0px;padding:10px!important;pad=
+ding-left:15px!important;padding-right:10px!important;padding-bottom:0px!im=
+portant;text-align:left">=0A            -$1.00=0A          </p>=0A        <=
+/td>=0A      </tr>=0A      <!-- /Papa Dough -->=0A      =0A=0A      =0A    =
+  <!-- Loyalty Reward -->=0A      <tr style=3D"padding:0;text-align:left;ve=
+rtical-align:top">=0A        <td width=3D"10%" style=3D"-moz-hyphens:auto;-=
+webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important;co=
+lor:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;f=
+ont-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding=
+:0;text-align:left;vertical-align:top;word-wrap:break-word">=0A          <t=
+able style=3D"border-collapse:collapse;border-spacing:0;mso-table-lspace:0;=
+mso-table-rspace:0;padding:0;table-layout:auto;text-align:left;vertical-ali=
+gn:top;width:100%">=0A            <tbody>=0A              <tr style=3D"padd=
+ing:0;text-align:left;vertical-align:top">=0A                <td style=3D"-=
+moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:col=
+lapse!important;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,=
+Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.=
+3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-wor=
+d">=0A                  <p class=3D"MsoNormal" style=3D"Margin:0;Margin-bot=
+tom:0px;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sa=
+ns-serif;font-size:16px;font-weight:400;hyphens:none!important;line-height:=
+1.3;margin:0;margin-bottom:0px;padding:10px!important;padding-left:15px!imp=
+ortant;padding-right:10px!important;padding-bottom:0px!important;text-align=
+:left">=0A                    &nbsp;=0A                  </p>=0A           =
+     </td>=0A              </tr>=0A            </tbody>=0A          </table=
+>=0A        </td>=0A=0A        <td width=3D"60%" style=3D"-moz-hyphens:auto=
+;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important;=
+color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif=
+;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;paddi=
+ng:0;text-align:left;vertical-align:top;word-wrap:break-word">=0A          =
+<p class=3D"MsoNormal" style=3D"Margin:0;Margin-bottom:0px;color:#333;font-=
+family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;=
+font-weight:400;hyphens:none!important;line-height:1.3;margin:0;margin-bott=
+om:0px;padding:10px!important;padding-left:15px!important;padding-right:10p=
+x!important;padding-bottom:0px!important;text-align:left">=0A            Of=
+fer Discount=0A          </p>=0A        </td>=0A=0A        <td width=3D"20%=
+" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-=
+collapse:collapse!important;color:#333;font-family:PapaSans,'Helvetica Neue=
+',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;li=
+ne-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wr=
+ap:break-word">=0A          <p id=3D"offer_discount" class=3D"MsoNormal" st=
+yle=3D"Margin:0;Margin-bottom:0px;color:#333;font-family:PapaSans,'Helvetic=
+a Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:n=
+one!important;line-height:1.3;margin:0;margin-bottom:0px;padding:10px!impor=
+tant;padding-left:15px!important;padding-right:10px!important;padding-botto=
+m:0px!important;text-align:left">=0A            -$0.00=0A          </p>=0A =
+       </td>=0A      </tr>=0A      <!-- /Loyalty Reward -->=0A      =0A=0A =
+     =0A=0A      =0A      <!-- Specials Discount -->=0A      <tr style=3D"p=
+adding:0;text-align:left;vertical-align:top">=0A        <td width=3D"10%" s=
+tyle=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-col=
+lapse:collapse!important;color:#333;font-family:'Helvetica Neue',Helvetica,=
+Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.=
+3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-wor=
+d">=0A          <table style=3D"border-collapse:collapse;border-spacing:0;m=
+so-table-lspace:0;mso-table-rspace:0;padding:0;table-layout:auto;text-align=
+:left;vertical-align:top;width:100%">=0A            <tbody>=0A             =
+ <tr style=3D"padding:0;text-align:left;vertical-align:top">=0A            =
+    <td style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;b=
+order-collapse:collapse!important;color:#333;font-family:'Helvetica Neue',H=
+elvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-=
+height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:=
+break-word">=0A                  <p class=3D"MsoNormal" style=3D"Margin:0;M=
+argin-bottom:0px;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica=
+,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:none!important;lin=
+e-height:1.3;margin:0;margin-bottom:0px;padding:10px!important;padding-left=
+:15px!important;padding-right:10px!important;padding-bottom:0px!important;t=
+ext-align:left">=0A                    &nbsp;=0A                  </p>=0A  =
+              </td>=0A              </tr>=0A            </tbody>=0A        =
+  </table>=0A        </td>=0A=0A        <td width=3D"60%" style=3D"-moz-hyp=
+hens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!i=
+mportant;color:#333;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif=
+;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;paddi=
+ng:0;text-align:left;vertical-align:top;word-wrap:break-word">=0A          =
+<p class=3D"MsoNormal" style=3D"Margin:0;Margin-bottom:0px;color:#333;font-=
+family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;=
+font-weight:400;hyphens:none!important;line-height:1.3;margin:0;margin-bott=
+om:0px;padding:10px!important;padding-left:15px!important;padding-right:10p=
+x!important;padding-bottom:0px!important;text-align:left">=0A            Sp=
+ecials=0A          </p>=0A        </td>=0A=0A        <td width=3D"20%" styl=
+e=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-collap=
+se:collapse!important;color:#333;font-family:'Helvetica Neue',Helvetica,Ari=
+al,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;m=
+argin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">=
+=0A          <p id=3D"specials_discount" class=3D"MsoNormal" style=3D"Margi=
+n:0;Margin-bottom:0px;color:#333;font-family:PapaSans,'Helvetica Neue',Helv=
+etica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:none!importan=
+t;line-height:1.3;margin:0;margin-bottom:0px;padding:10px!important;padding=
+-left:15px!important;padding-right:10px!important;padding-bottom:0px!import=
+ant;text-align:left">=0A            -$8.31=0A          </p>=0A        </td>=
+=0A      </tr>=0A      <!-- /Specials Discount -->=0A      =0A=0A      =0A =
+     <!-- Discounts -->=0A      <tr style=3D"padding:0;text-align:left;vert=
+ical-align:top">=0A        <td width=3D"10%" style=3D"-moz-hyphens:auto;-we=
+bkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important;colo=
+r:#333;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16=
+px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-ali=
+gn:left;vertical-align:top;word-wrap:break-word">=0A          <table style=
+=3D"border-collapse:collapse;border-spacing:0;mso-table-lspace:0;mso-table-=
+rspace:0;padding:0;table-layout:auto;text-align:left;vertical-align:top;wid=
+th:100%">=0A            <tbody>=0A              <tr style=3D"padding:0;text=
+-align:left;vertical-align:top">=0A                <td style=3D"-moz-hyphen=
+s:auto;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!impo=
+rtant;color:#333;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fo=
+nt-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:=
+0;text-align:left;vertical-align:top;word-wrap:break-word">=0A             =
+     <p class=3D"MsoNormal" style=3D"Margin:0;Margin-bottom:0px;color:#333;=
+font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:=
+16px;font-weight:400;hyphens:none!important;line-height:1.3;margin:0;margin=
+-bottom:0px;padding:10px!important;padding-left:15px!important;padding-righ=
+t:10px!important;padding-bottom:0px!important;text-align:left">=0A         =
+           &nbsp;=0A                  </p>=0A                </td>=0A      =
+        </tr>=0A            </tbody>=0A          </table>=0A        </td>=
+=0A=0A        <td width=3D"60%" style=3D"-moz-hyphens:auto;-webkit-hyphens:=
+auto;Margin:0;border:0;border-collapse:collapse!important;color:#333;font-f=
+amily:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weigh=
+t:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;verti=
+cal-align:top;word-wrap:break-word">=0A          <p class=3D"MsoNormal" sty=
+le=3D"Margin:0;Margin-bottom:0px;color:#333;font-family:PapaSans,'Helvetica=
+ Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:no=
+ne!important;line-height:1.3;margin:0;margin-bottom:0px;padding:10px!import=
+ant;padding-left:15px!important;padding-right:10px!important;padding-bottom=
+:0px!important;text-align:left">=0A            Total Discounts=0A          =
+</p>=0A        </td>=0A=0A        <td width=3D"20%" style=3D"-moz-hyphens:a=
+uto;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!importa=
+nt;color:#333;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-=
+size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;t=
+ext-align:left;vertical-align:top;word-wrap:break-word">=0A          <p id=
+=3D"total_discount" class=3D"MsoNormal" style=3D"Margin:0;Margin-bottom:0px=
+;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-seri=
+f;font-size:16px;font-weight:400;hyphens:none!important;line-height:1.3;mar=
+gin:0;margin-bottom:0px;padding:10px!important;padding-left:15px!important;=
+padding-right:10px!important;padding-bottom:0px!important;text-align:left">=
+=0A            -$2.00=0A          </p>=0A        </td>=0A      </tr>=0A    =
+  =0A      <!-- /Discounts -->=0A=0A      <!-- Subtotal -->=0A      <tr sty=
+le=3D"padding:0;text-align:left;vertical-align:top">=0A        <td width=3D=
+"10%" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;bor=
+der-collapse:collapse!important;color:#333;font-family:'Helvetica Neue',Hel=
+vetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-he=
+ight:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:br=
+eak-word">=0A          <table style=3D"border-collapse:collapse;border-spac=
+ing:0;mso-table-lspace:0;mso-table-rspace:0;padding:0;table-layout:auto;tex=
+t-align:left;vertical-align:top;width:100%">=0A            <tbody>=0A      =
+        <tr style=3D"padding:0;text-align:left;vertical-align:top">=0A     =
+           <td style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;bor=
+der:0;border-collapse:collapse!important;color:#333;font-family:'Helvetica =
+Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:aut=
+o;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;wor=
+d-wrap:break-word">=0A                  <p class=3D"MsoNormal" style=3D"Mar=
+gin:0;Margin-bottom:0px;color:#333;font-family:PapaSans,'Helvetica Neue',He=
+lvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:none!import=
+ant;line-height:1.3;margin:0;margin-bottom:0px;padding:10px!important;paddi=
+ng-left:15px!important;padding-right:10px!important;padding-bottom:0px!impo=
+rtant;text-align:left">=0A                    &nbsp;=0A                  </=
+p>=0A                </td>=0A              </tr>=0A            </tbody>=0A =
+         </table>=0A        </td>=0A=0A        <td width=3D"60%" style=3D"-=
+moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-collapse:col=
+lapse!important;color:#333;font-family:'Helvetica Neue',Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:=
+0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">=0A   =
+       <p class=3D"MsoNormal" style=3D"Margin:0;Margin-bottom:0px;color:#33=
+3;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-siz=
+e:16px;font-weight:400;hyphens:none!important;line-height:1.3;margin:0;marg=
+in-bottom:0px;padding:10px!important;padding-left:15px!important;padding-ri=
+ght:10px!important;padding-bottom:0px!important;text-align:left">=0A       =
+     Subtotal=0A          </p>=0A        </td>=0A=0A        <td width=3D"20=
+%" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border=
+-collapse:collapse!important;color:#333;font-family:'Helvetica Neue',Helvet=
+ica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-heigh=
+t:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break=
+-word">=0A          <p id=3D"subtotal" class=3D"MsoNormal" style=3D"Margin:=
+0;Margin-bottom:0px;color:#333;font-family:PapaSans,'Helvetica Neue',Helvet=
+ica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:none!important;=
+line-height:1.3;margin:0;margin-bottom:0px;padding:10px!important;padding-l=
+eft:15px!important;padding-right:10px!important;padding-bottom:0px!importan=
+t;text-align:left">=0A            $12.98=0A          </p>=0A        </td>=
+=0A      </tr>=0A      <!-- /Subtotal -->=0A=0A      =0A      <!-- Tip -->=
+=0A      <tr style=3D"padding:0;text-align:left;vertical-align:top">=0A    =
+    <td width=3D"10%" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margi=
+n:0;border:0;border-collapse:collapse!important;color:#333;font-family:'Hel=
+vetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyph=
+ens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:=
+top;word-wrap:break-word">=0A          <table style=3D"border-collapse:coll=
+apse;border-spacing:0;mso-table-lspace:0;mso-table-rspace:0;padding:0;table=
+-layout:auto;text-align:left;vertical-align:top;width:100%">=0A            =
+<tbody>=0A              <tr style=3D"padding:0;text-align:left;vertical-ali=
+gn:top">=0A                <td style=3D"-moz-hyphens:auto;-webkit-hyphens:a=
+uto;Margin:0;border:0;border-collapse:collapse!important;color:#333;font-fa=
+mily:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertic=
+al-align:top;word-wrap:break-word">=0A                  <p class=3D"MsoNorm=
+al" style=3D"Margin:0;Margin-bottom:0px;color:#333;font-family:PapaSans,'He=
+lvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyp=
+hens:none!important;line-height:1.3;margin:0;margin-bottom:0px;padding:10px=
+!important;padding-left:15px!important;padding-right:10px!important;padding=
+-bottom:0px!important;text-align:left">=0A                    &nbsp;=0A    =
+              </p>=0A                </td>=0A              </tr>=0A        =
+    </tbody>=0A          </table>=0A        </td>=0A=0A        <td width=3D=
+"60%" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;bor=
+der-collapse:collapse!important;color:#333;font-family:'Helvetica Neue',Hel=
+vetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-he=
+ight:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:br=
+eak-word">=0A          <p class=3D"MsoNormal" style=3D"Margin:0;Margin-bott=
+om:0px;color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:400;hyphens:none!important;line-height:1=
+.3;margin:0;margin-bottom:0px;padding:10px!important;padding-left:15px!imp=
+ortant;padding-right:10px!important;padding-bottom:0px!important;text-align=
+:left">=0A            Tip=0A          </p>=0A        </td>=0A=0A        <td=
+ width=3D"20%" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;bor=
+der:0;border-collapse:collapse!important;color:#333;font-family:'Helvetica =
+Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:aut=
+o;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;wor=
+d-wrap:break-word">=0A          <p id=3D"tip" class=3D"MsoNormal" style=3D"=
+Margin:0;Margin-bottom:0px;color:#333;font-family:PapaSans,'Helvetica Neue'=
+,Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:none!imp=
+ortant;line-height:1.3;margin:0;margin-bottom:0px;padding:10px!important;pa=
+dding-left:15px!important;padding-right:10px!important;padding-bottom:0px!i=
+mportant;text-align:left">=0A            $0.00=0A          </p>=0A        <=
+/td>=0A      </tr>=0A      <!-- /Tip -->=0A      =0A=0A      =0A      <!-- =
+Delivery Fee -->=0A      <tr style=3D"padding:0;text-align:left;vertical-al=
+ign:top">=0A        <td width=3D"10%" style=3D"-moz-hyphens:auto;-webkit-hy=
+phens:auto;Margin:0;border:0;border-collapse:collapse!important;color:#333;=
+font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font=
+-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left=
+;vertical-align:top;word-wrap:break-word">=0A          <table style=3D"bord=
+er-collapse:collapse;border-spacing:0;mso-table-lspace:0;mso-table-rspace:0=
+;padding:0;table-layout:auto;text-align:left;vertical-align:top;width:100%"=
+>=0A            <tbody>=0A              <tr style=3D"padding:0;text-align:l=
+eft;vertical-align:top">=0A                <td style=3D"-moz-hyphens:auto;-=
+webkit-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important;co=
+lor:#333;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:=
+16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-a=
+lign:left;vertical-align:top;word-wrap:break-word">=0A                  <p =
+class=3D"MsoNormal" style=3D"Margin:0;Margin-bottom:0px;color:#333;font-fam=
+ily:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;fon=
+t-weight:400;hyphens:none!important;line-height:1.3;margin:0;margin-bottom:=
+0px;padding:10px!important;padding-left:15px!important;padding-right:10px!i=
+mportant;padding-bottom:0px!important;text-align:left">=0A                 =
+   &nbsp;=0A                  </p>=0A                </td>=0A              =
+</tr>=0A            </tbody>=0A          </table>=0A        </td>=0A=0A    =
+    <td width=3D"60%" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margi=
+n:0;border:0;border-collapse:collapse!important;color:#333;font-family:'Hel=
+vetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyph=
+ens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:=
+top;word-wrap:break-word">=0A          <p class=3D"MsoNormal" style=3D"Marg=
+in:0;Margin-bottom:0px;color:#333;font-family:PapaSans,'Helvetica Neue',Hel=
+vetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:none!importa=
+nt;line-height:1.3;margin:0;margin-bottom:0px;padding:10px!important;paddin=
+g-left:15px!important;padding-right:10px!important;padding-bottom:0px!impor=
+tant;text-align:left">=0A            Delivery Fee=0A          </p>=0A      =
+  </td>=0A=0A        <td width=3D"20%" style=3D"-moz-hyphens:auto;-webkit-h=
+yphens:auto;Margin:0;border:0;border-collapse:collapse!important;color:#333=
+;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;fon=
+t-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:lef=
+t;vertical-align:top;word-wrap:break-word">=0A          <p id=3D"delivery_f=
+ee" class=3D"MsoNormal" style=3D"Margin:0;Margin-bottom:0px;color:#333;font=
+-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px=
+;font-weight:400;hyphens:none!important;line-height:1.3;margin:0;margin-bot=
+tom:0px;padding:10px!important;padding-left:15px!important;padding-right:10=
+px!important;padding-bottom:0px!important;text-align:left">=0A            $=
+4.99=0A          </p>=0A        </td>=0A      </tr>=0A      <!-- /Delivery =
+Fee -->=0A      =0A=0A      =0A=0A=0A      =0A=0A      <!-- Tax -->=0A     =
+ <tr style=3D"padding:0;text-align:left;vertical-align:top">=0A        <td =
+width=3D"10%" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;bord=
+er:0;border-collapse:collapse!important;color:#333;font-family:'Helvetica N=
+eue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto=
+;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word=
+-wrap:break-word">=0A          <table style=3D"border-collapse:collapse;bor=
+der-spacing:0;mso-table-lspace:0;mso-table-rspace:0;padding:0;table-layout:=
+auto;text-align:left;vertical-align:top;width:100%">=0A            <tbody>=
+=0A              <tr style=3D"padding:0;text-align:left;vertical-align:top"=
+>=0A                <td style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Mar=
+gin:0;border:0;border-collapse:collapse!important;color:#333;font-family:'H=
+elvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hy=
+phens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-alig=
+n:top;word-wrap:break-word">=0A                  <p class=3D"MsoNormal" sty=
+le=3D"Margin:0;Margin-bottom:0px;color:#333;font-family:PapaSans,'Helvetica=
+ Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:no=
+ne!important;line-height:1.3;margin:0;margin-bottom:0px;padding:10px!import=
+ant;padding-left:15px!important;padding-right:10px!important;padding-bottom=
+:0px!important;text-align:left">=0A                    &nbsp;=0A           =
+       </p>=0A                </td>=0A              </tr>=0A            </t=
+body>=0A          </table>=0A        </td>=0A=0A        <td width=3D"60%" s=
+tyle=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;border-col=
+lapse:collapse!important;color:#333;font-family:'Helvetica Neue',Helvetica,=
+Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.=
+3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-wor=
+d">=0A          <p class=3D"MsoNormal" style=3D"Margin:0;Margin-bottom:0px;=
+color:#333;font-family:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif=
+;font-size:16px;font-weight:400;hyphens:none!important;line-height:1.3;marg=
+in:0;margin-bottom:0px;padding:10px!important;padding-left:15px!important;p=
+adding-right:10px!important;padding-bottom:0px!important;text-align:left">=
+=0A            Tax=0A          </p>=0A        </td>=0A=0A        <td width=
+=3D"20%" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;=
+border-collapse:collapse!important;color:#333;font-family:'Helvetica Neue',=
+Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line=
+-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap=
+:break-word">=0A          <p id=3D"tax" class=3D"MsoNormal" style=3D"Margin=
+:0;Margin-bottom:0px;color:#333;font-family:PapaSans,'Helvetica Neue',Helve=
+tica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:none!important=
+;line-height:1.3;margin:0;margin-bottom:0px;padding:10px!important;padding-=
+left:15px!important;padding-right:10px!important;padding-bottom:0px!importa=
+nt;text-align:left">=0A            $1.34=0A          </p>=0A        </td>=
+=0A      </tr>=0A      <!-- /Tax -->=0A=0A      <!-- Total -->=0A      <tr =
+style=3D"padding:0;text-align:left;vertical-align:top">=0A        <td width=
+=3D"10%" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border:0;=
+border-collapse:collapse!important;color:#333;font-family:'Helvetica Neue',=
+Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line=
+-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap=
+:break-word">=0A          <table style=3D"border-collapse:collapse;border-s=
+pacing:0;mso-table-lspace:0;mso-table-rspace:0;padding:0;table-layout:auto;=
+text-align:left;vertical-align:top;width:100%">=0A            <tbody>=0A   =
+           <tr style=3D"padding:0;text-align:left;vertical-align:top">=0A  =
+              <td style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;=
+border:0;border-collapse:collapse!important;color:#333;font-family:'Helveti=
+ca Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:=
+auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;=
+word-wrap:break-word">=0A                  <p class=3D"MsoNormal" style=3D"=
+Margin:0;Margin-bottom:10px;color:#333;font-family:PapaSans,'Helvetica Neue=
+',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:none!im=
+portant;line-height:1.3;margin:0;margin-bottom:10px;padding:10px!important;=
+padding-left:15px!important;padding-right:10px!important;text-align:left">=
+=0A                    &nbsp;=0A                  </p>=0A                </=
+td>=0A              </tr>=0A            </tbody>=0A          </table>=0A   =
+     </td>=0A=0A        <td width=3D"60%" style=3D"-moz-hyphens:auto;-webki=
+t-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important;color:#=
+333;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;=
+font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:=
+left;vertical-align:top;word-wrap:break-word">=0A          <p class=3D"MsoN=
+ormal" style=3D"Margin:0;Margin-bottom:10px;color:#333;font-family:PapaSans=
+,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;font-weight:400=
+;hyphens:none!important;line-height:1.3;margin:0;margin-bottom:10px;padding=
+:10px!important;padding-left:15px!important;padding-right:10px!important;te=
+xt-align:left">=0A            <strong>Total</strong>=0A          </p>=0A   =
+     </td>=0A=0A        <td width=3D"20%" style=3D"-moz-hyphens:auto;-webki=
+t-hyphens:auto;Margin:0;border:0;border-collapse:collapse!important;color:#=
+333;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;=
+font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:=
+left;vertical-align:top;word-wrap:break-word">=0A          <p id=3D"total" =
+class=3D"MsoNormal" style=3D"Margin:0;Margin-bottom:10px;color:#333;font-fa=
+mily:PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;fo=
+nt-weight:400;hyphens:none!important;line-height:1.3;margin:0;margin-bottom=
+:10px;padding:10px!important;padding-left:15px!important;padding-right:10px=
+!important;text-align:left">=0A            <strong>$19.31</strong>=0A      =
+    </p>=0A        </td>=0A      </tr>=0A      <!-- /Total -->=0A=0A    </t=
+body>=0A  </table>=0A  <!-- /ORDER TOTALS -->=0A=0A</th>=0A</div></td></tr>=
+</table></td></tr></tbody></table>=0A</td></tr></tbody></table><table class=
+=3D"row row-18" align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso=
+-table-rspace:0;background-color:#f3f3f3"><tbody><tr><td><table class=3D"ro=
+w-content stack" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:=
+0;background-color:#fff;border-radius:0;color:#000;width:600px;margin:0 aut=
+o" width=3D"600"><tbody><tr><td =0Aclass=3D"column column-1" width=3D"100%"=
+ style=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight:400;text-align:=
+left;padding-left:40px;padding-right:40px;vertical-align:top"><table class=
+=3D"html_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rs=
+pace:0"><tr><td class=3D"pad"><div style=3D"font-family:Arial,Arial,Sans-se=
+rif;text-align:center" align=3D"center">  <table class=3D"paragraph_block b=
+lock-5" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;word-brea=
+k:break-word">=0A    <tr>=0A      <td class=3D"pad " style=3D"padding-botto=
+m:20px;">=0A        <div style=3D"color:#000;direction:ltr;font-family: Pap=
+aSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weigh=
+t:400;letter-spacing:0;line-height:normal;text-align:left;mso-line-height-a=
+lt:NaNpx">=0A          <p style=3D"margin:0">=0A            <strong>Restaur=
+ant:</strong>=0A          </p>=0A          <p style=3D"margin:0;margin-bott=
+om:0"><br>Papa John=E2=80=99s Store #1586 </p>=0A          <p style=3D"marg=
+in:0;margin-bottom:0">1100 19th Avenue North Unit N</p>=0A          <p styl=
+e=3D"margin:0;margin-bottom:0">Fargo, ND USA</p>=0A          <p style=3D"ma=
+rgin:0;margin-bottom:0"><span style=3D"color:#2D5D2A;text-decoration:underl=
+ine;">(701)237-9999</span></p>=0A=0A=0A        </div>=0A      </td>=0A    <=
+/tr>=0A  </table></div></td></tr></table></td></tr></tbody></table>=0A</td>=
+</tr></tbody></table><table class=3D"row row-19" align=3D"center" width=3D"=
+100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation=
+" style=3D"mso-table-lspace:0;mso-table-rspace:0;background-color:#f3f3f3">=
+<tbody><tr><td><table class=3D"row-content stack" align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"m=
+so-table-lspace:0;mso-table-rspace:0;background-color:#fff;border-radius:0;=
+color:#000;width:600px;margin:0 auto" width=3D"600"><tbody><tr><td =0Aclass=
+=3D"column column-1" width=3D"100%" style=3D"mso-table-lspace:0;mso-table-r=
+space:0;font-weight:400;text-align:left;padding-left:40px;padding-right:40p=
+x;vertical-align:top"><table class=3D"html_block block-1" width=3D"100%" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"mso-table-lspace:0;mso-table-rspace:0"><tr><td class=3D"pad"><div style=
+=3D"font-family:Arial,Arial,Sans-serif;text-align:center" align=3D"center">=
+<table class=3D"paragraph_block block-1" width=3D"100%" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspa=
+ce:0;mso-table-rspace:0;word-break:break-word">=0A=0A  <tr>=0A    <td class=
+=3D"pad " style=3D"padding-bottom:30px;padding-left:0px;padding-right:0px;p=
+adding-top:10px" width=3D"100%">=0A      <div style=3D"color:#000;direction=
+:ltr;font-family: PapaSans,'Helvetica Neue',Helvetica,Arial,sans-serif;font=
+-size:16px;font-weight:400;letter-spacing:0;line-height:normal;text-align:l=
+eft;mso-line-height-alt:NaNpx">=0A        <p style=3D"margin:0">=0A        =
+  Any delivery fee charged is not a tip for the delivery driver. Please rew=
+ard your driver with a tip for outstanding&nbsp;service. </p>=0A      </div=
+>=0A    </td>=0A  </tr>=0A</table></div></td></tr></table></td></tr></tbody=
+></table>=0A</td></tr></tbody></table><table class=3D"row row-20" align=3D"=
+center" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;backgroun=
+d-color:#f3f3f3"><tbody><tr><td><table class=3D"row-content stack" align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"mso-table-lspace:0;mso-table-rspace:0;background-color:#fff;b=
+order-radius:0;color:#000;width:600px;margin:0 auto" width=3D"600"><tbody><=
+tr><td =0Aclass=3D"column column-1" width=3D"100%" style=3D"mso-table-lspac=
+e:0;mso-table-rspace:0;font-weight:400;text-align:left;vertical-align:top">=
+<table class=3D"image_block block-1" width=3D"100%" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0=
+;mso-table-rspace:0"><tr><td class=3D"pad" style=3D"width:100%" align=3D"ce=
+nter"><div style=3D"max-width:600px"><a href=3D"https://clicks.papajohns.co=
+m/f/a/6OgaycWm7HF4hI8DRgS13Q~~/AAQRxRA~/akW_t9ftNQXR5O1tundhr7_Pxbvh2v4-0rg=
+uiVVtB3JgZFokh9l9BQ-WdlOufhGr8SfIon-h8Lfa1pAd0O9_iTVdUU8BAqgTsX_xrMdsU1uttA=
+YOaeb4rn91KM-4mUxZSos-dUdPhJVgUFIE1oVicdQtCX1eCUQETh3G_p9SdltJG6fjk18xwpDAR=
+c6y3H5G2cv7sFGzGVfdJPtperyYSnBzPbxXKVor_RSYqEtAnXjz8nzBjJvzOSKySiUdg4G31vEN=
+azC7uUBsCNnhGG4wwK6gcbbgd4xXuuTdF2aBIRU~" target=3D"_blank"><img =0Asrc=3D"=
+https://braze-images.com/appboy/communication/assets/image_assets/images/68=
+9cabecfb5bcc00660e264b/original.jpg=3F1755098092" style=3D"display:block;he=
+ight:auto;border:0;width:100%" width=3D"600" alt=3D"Fresh Never Frozen Orig=
+inal Dough" title=3D"Fresh Never Frozen Original Dough" height=3D"auto"></a=
+></div></td></tr></table></td></tr></tbody></table></td></tr></tbody></tabl=
+e><table class=3D"row row-21" align=3D"center" width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =0Astyle=3D"mso-t=
+able-lspace:0;mso-table-rspace:0;background-color:#f3f3f3"><tbody><tr><td><=
+table class=3D"row-content stack" align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;=
+mso-table-rspace:0;background-color:#fff;border-radius:0;color:#000;width:6=
+00px;margin:0 auto" width=3D"600"><tbody><tr><td class=3D"column column-1" =
+width=3D"100%" style=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight:4=
+00;text-align:left;vertical-align:top"><table =0Aclass=3D"html_block block-=
+1" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"=
+presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0"><tr><td class=
+=3D"pad"><div style=3D"font-family:Arial,Arial,Sans-serif;text-align:center=
+" align=3D"center"><table width=3D"100%" border=3D"0" align=3D"center" cell=
+padding=3D"0" cellspacing=3D"0">=0D=0A  <tr>=0D=0A    <td align=3D"center" =
+style=3D"min-width:600px;">=0D=0A      <table width=3D"600" align=3D"center=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">=0D=0A        <tr>=0D=0A=
+          <td width=3D"600" align=3D"left" valign=3D"top" background=3D"htt=
+ps://braze-images.com/appboy/communication/assets/image_assets/images/677e0=
+cea0b66c20066ee0bd6/original.png=3F1736314090" bgcolor=3D"#FF0000" style=3D=
+"background-image:url(https://braze-images.com/appboy/communication/assets/=
+image_assets/images/677e0cea0b66c20066ee0bd6/original.png=3F1736314090); ba=
+ckground-repeat:no-repeat; background-color:#FF0000; width:600px; height:17=
+5px; display:block">=0D=0A            <!--[if gte mso 9]>=0D=0A            =
+   <v:image xmlns:v=3D"urn:schemas-microsoft-com:vml" id=3D"theImage" style=
+=3D"behavior: url(%23default%23vml); display: inline-block; position: absol=
+ute; width: 600px; height: 175px; top: 0; left: 0; border: 0; z-index: 1;" =
+src=3D"https://braze-images.com/appboy/communication/assets/image_assets/im=
+ages/677e0cea0b66c20066ee0bd6/original.png=3F1736314090" />                =
+             =0D=0A                <v:rect xmlns:v=3D"urn:schemas-microsoft=
+-com:vml" fill=3D"true" stroke=3D"false" style=3D"display: inline-block; po=
+sition: absolute; width:600px; height: 175px; top: 0; left: 0; border: 0; z=
+-index: 2;">=0D=0A                <v:fill opacity=3D"0%" style=3D"z-index: =
+1;"/> =0D=0A                <div>                       =0D=0A             =
+   <![endif]-->=0D=0A            <table width=3D"100%" border=3D"0" align=
+=3D"center" cellpadding=3D"0" cellspacing=3D"0">=0D=0A              <tr>=0D=
+=0A                <td height=3D"114" align=3D"center" valign=3D"bottom" st=
+yle=3D"font-family: Impact, Arial Black, sans-serif; font-size: 38px; color=
+: #ffffff;"><img src=3D"https://braze-images.com/appboy/communication/asset=
+s/image_assets/images/677e0a1e0864010064af94c0/original.png=3F1736313374" w=
+idth=3D"600" height=3D"114" border=3D"0" style=3D"display:block;" alt=3D"">=
+</td>=0D=0A              </tr>=0D=0A              <tr>=0D=0A               =
+ <td height=3D"35" align=3D"center" valign=3D"top">=0D=0A              <tab=
+le width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0" cellspaci=
+ng=3D"0">=0D=0A              <tr>=0D=0A                <td height=3D"35" al=
+ign=3D"center" valign=3D"bottom" style=3D"font-family: Impact, Arial Black,=
+ sans-serif; font-size: 38px; color: #ffffff;"><img src=3D"https://braze-im=
+ages.com/appboy/communication/assets/image_assets/images/6764618c6c420c0065=
+e175cc/original.png=3F1734631819" width=3D"70" height=3D"35" border=3D"0" s=
+tyle=3D"display:block;" alt=3D""></td>=0D=0A                <td height=3D"3=
+5" align=3D"center" valign=3D"bottom" style=3D"font-family: Impact, Arial B=
+lack, sans-serif; font-size: 38px; color: #ffffff;"><a href=3D"https://clic=
+ks.papajohns.com/f/a/UXWkttAmwEeeJIaGorueaA~~/AAQRxRA~/PWabJDkg_TxHDOwgqzuT=
+hYam2ydyNrEpRnrZ2C-qubEZ2BN461bpQYhNuuMWxfJ2COtV9gU7C5oNjOLUzCq2vaBUs3aDoM7=
+es86SxjlyuO3GT8aO3rD8hBw7vT5LxazwS-9QueoG2jQcWj0vi8Q8BS2-VxouUugDxT_urvGOan=
+fd57z8pQu_nLp6ZULekW3gTrMYV__uaVoTsB2MamQB-ckHAF6JiYohKDvv4Cw_ChY9dUH6GSndk=
+Kh_41SEIgOYRk06ijaDVcZnF6XGw0bKC_ECOZ8qpiRS27uz3vH4CcsVl0pfugNJbppXwoKaTM8-=
+Dyc-9CWFnyvBnoy7z6VmVw~~" target=3D"_blank"><img src=3D"https://braze-image=
+s.com/appboy/communication/assets/image_assets/images/677e0b62b58638006680d=
+c35/original.png=3F1736313698" width=3D"116" height=3D"35" border=3D"0" sty=
+le=3D"display:block;" alt=3D""></a></td>=0D=0A                <td width=3D"=
+5" height=3D"35"></td>=0D=0A                <td height=3D"35" align=3D"cent=
+er" valign=3D"bottom" style=3D"font-family: Impact, Arial Black, sans-serif=
+; font-size: 38px; color: #ffffff;"><a href=3D"https://clicks.papajohns.com=
+/f/a/OulY7pHxFGGNB1vnwJeaAw~~/AAQRxRA~/PWabJDkg_TxHDOwgqzuThY-9m4WqefDpG5wm=
+ZDh7OmOfqZXFIrcNt8TJD6Fqr_xmmQbXjPekTiCNMf78fhypmHF0RSVr8Q0dU0OrxgWK-HI6-gG=
+TymYixlII8kH1kJsSCrVPOMo__x_mztiDbTQ-nJpICu4T_oEVKJ2s6OO80y4-TidjF51uyUt3p1=
+8iWj-yQpXWaQ089FzGnFjgaqAM08ykO3JEe1qCZRUAVlajjUFFLGZ_PCoAkIPizNJzbI-tFwPv8=
+FjyiNdcEGpRojSRuWPA0U7ndOr_tPHE8r3VH1DvStSy3bi-lXsD9obqtDiXnQvXm7DJcXJLHtLo=
+c8n25Q~~" target=3D"_blank"><img src=3D"https://braze-images.com/appboy/com=
+munication/assets/image_assets/images/677e0b62824dd30066244b7d/original.png=
+=3F1736313698" width=3D"116" height=3D"35" border=3D"0" style=3D"display:bl=
+ock;" alt=3D""></a></td>=0D=0A                <td height=3D"35" align=3D"ce=
+nter" valign=3D"bottom" style=3D"font-family: Impact, Arial Black, sans-ser=
+if; font-size: 38px; color: #ffffff;"><img src=3D"https://braze-images.com/=
+appboy/communication/assets/image_assets/images/6764618b4e8c0a0066af3fde/or=
+iginal.png=3F1734631819" width=3D"293" height=3D"35" border=3D"0" style=3D"=
+display:block;" alt=3D""></td>=0D=0A              </tr>=0D=0A              =
+</table>=0D=0A                </td>=0D=0A              </tr>=0D=0A         =
+   </table>=0D=0A            <!--[if gte mso 9]>   =0D=0A          </div></=
+v:fill></v:rect><![endif]-->=0D=0A          </td>=0D=0A        </tr>=0D=0A =
+     </table>=0D=0A    </td>=0D=0A  </tr>=0D=0A</table></div></td></tr></ta=
+ble></td></tr></tbody></table></td></tr></tbody></table><table class=3D"row=
+ row-22" align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" role=3D"presentation" =0Astyle=3D"mso-table-lspace:0;mso-tab=
+le-rspace:0;background-color:#f3f3f3"><tbody><tr><td><table class=3D"row-co=
+ntent stack" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;ba=
+ckground-color:#fff;border-radius:0;color:#000;width:600px;margin:0 auto" w=
+idth=3D"600"><tbody><tr><td class=3D"column column-1" width=3D"100%" style=
+=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight:400;text-align:left;v=
+ertical-align:top"><table =0Aclass=3D"paragraph_block block-1" width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" s=
+tyle=3D"mso-table-lspace:0;mso-table-rspace:0;word-break:break-word"><tr><t=
+d class=3D"pad"><div style=3D"color:#000;direction:ltr;font-family:Arial,Ar=
+ial,Sans-serif;font-size:16px;font-weight:400;letter-spacing:0;line-height:=
+NaN;text-align:left;mso-line-height-alt:NaNpx"><p id=3D"10-0-2" tabindex=3D=
+"0" role=3D"group" aria-roledescription=3D"stage module" =0Aaria-label=3D"m=
+odule 3 of row 1 column 1, type HTML" style=3D"margin:0;margin-bottom:0"></=
+p><p id=3D"10-0-14" tabindex=3D"0" role=3D"group" aria-roledescription=3D"s=
+tage module" aria-label=3D"module 15 of row 1 column 1, type HTML" style=3D=
+"margin:0;margin-bottom:0"></p><p style=3D"margin:0;margin-bottom:0"></p><p=
+ id=3D"10-0-1" tabindex=3D"-1" role=3D"group" aria-roledescription=3D"stage=
+ module" aria-label=3D"module 2 of row 1 column 1, type Image" style=3D"mar=
+gin:0;margin-bottom:0"></p><p id=3D"10-0-3" tabindex=3D"-1" role=3D"group" =
+aria-roledescription=3D"stage module" aria-label=3D"module 4 of row 1 colum=
+n 1, type Image" style=3D"margin:0"></p></div></td></tr></table></td></tr><=
+/tbody></table></td></tr></tbody></table><table class=3D"row row-23" align=
+=3D"center" =0Awidth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;ba=
+ckground-color:#f3f3f3"><tbody><tr><td><table class=3D"row-content stack" a=
+lign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pr=
+esentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;background-color=
+:#f3f3f3;border-radius:0;color:#000;width:600px;margin:0 auto" width=3D"600=
+"><tbody><tr><td class=3D"column column-1" width=3D"100%" =0Astyle=3D"mso-t=
+able-lspace:0;mso-table-rspace:0;font-weight:400;text-align:left;vertical-a=
+lign:top"><table class=3D"image_block block-1" width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-tabl=
+e-lspace:0;mso-table-rspace:0"><tr><td class=3D"pad" style=3D"width:100%;pa=
+dding-top:20px" align=3D"center"><div style=3D"max-width:210px"><a href=3D"=
+https://clicks.papajohns.com/f/a/VPROZpxCtybuLF3ygt2l9A~~/AAQRxRA~/UJ-xkDqP=
+xfO_uolKVUlw_sTIqyROM6dmt_LHg7GX4iGk5hB0zhXLiuUjQAZ3vQPjJ4YP18-m4j_1nSUgfS2=
+ByT4nVasQ1j3lf1yeAfqApzWol_uukn6OwyI_6_GGBq4T" target=3D"_blank"><img =0Asr=
+c=3D"https://braze-images.com/appboy/communication/assets/image_assets/imag=
+es/65170ed261e8e4004bfa3586/original.png=3F1696009938" style=3D"display:blo=
+ck;height:auto;border:0;width:100%" width=3D"210" alt=3D"Papa Johns=C2=AE" =
+title=3D"Papa Johns=C2=AE" height=3D"auto"></a></div></td></tr></table><tab=
+le class=3D"html_block block-2" width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-=
+table-rspace:0"><tr><td class=3D"pad"><div =0Astyle=3D"font-family:Arial,Ar=
+ial,Sans-serif;text-align:center" align=3D"center"></div></td></tr></table>=
+<table class=3D"html_block block-3" width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;=
+mso-table-rspace:0"><tr><td class=3D"pad"><div style=3D"font-family:Arial,A=
+rial,Sans-serif;text-align:center" align=3D"center"><table class=3D"paragra=
+ph_block block-2" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0=
+;word-break:break-word">=0A  <tr>=0A    <td class=3D"pad pad15mobile" style=
+=3D"padding-bottom:0px;padding-left:30px;padding-right:30px;padding-top:20p=
+x">=0A      <div style=3D"color:#626262;direction:ltr;font-family: PapaSans=
+,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:400=
+;letter-spacing:0;line-height:120%;text-align:center;mso-line-height-alt:18=
+px">=0A        <p style=3D"margin:0;margin-bottom:0">Thank you for choosing=
+ to order online with Papa Johns pizza. For questions regarding your order,=
+ please call your local&nbsp;restaurant</p>=0A=0A      </div>=0A    </td>=
+=0A  </tr>=0A</table></div></td></tr></table><table class=3D"html_block blo=
+ck-4" width=3D"100%" border=3D"0" cellpadding=3D"0" =0Acellspacing=3D"0" ro=
+le=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0"><tr><td=
+ class=3D"pad"><div style=3D"font-family:Arial,Arial,Sans-serif;text-align:=
+center" align=3D"center"></div></td></tr></table><table class=3D"html_block=
+ block-7" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0">=0A<tr=
+><td class=3D"pad"><div style=3D"font-family:Arial,Arial,Sans-serif;text-al=
+ign:center" align=3D"center"><table class=3D"paragraph_block block-2" width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" style=3D"mso-table-lspace:0;mso-table-rspace:0;word-break:break-word"=
+>=0A  <tr>=0A    <td class=3D"pad pad15mobile" style=3D"padding-bottom:0px;=
+padding-left:30px;padding-right:30px;padding-top:20px">=0A      <div style=
+=3D"color:#626262;direction:ltr;font-family: PapaSans,'Helvetica Neue',Helv=
+etica,Arial,sans-serif;font-size:15px;font-weight:400;letter-spacing:0;line=
+-height:120%;text-align:center;mso-line-height-alt:18px">=0A        <p styl=
+e=3D"margin:0;margin-bottom:0">In the event that the restaurant has a quest=
+ion about your order, or requires confirmation before your order is prepare=
+d, we will attempt to contact you by telephone. If we are unable to reach y=
+ou by telephone, you will receive an e-mail notification from a Papa Johns =
+Online Support&nbsp;Representative.</p>=0A        <p style=3D"margin:0;marg=
+in-bottom:0">&nbsp;</p>=0A        <p align=3D"center" style=3D"margin:0;mar=
+gin-bottom:0;padding-bottom:0px;">Contact our Customer Care Team at&nbsp;<s=
+pan style=3D"color:#2D5D2A">=0A          <a href=3D"https://clicks.papajohn=
+s.com/f/a/4V5gSNAtNXBp0agJnlDDEg~~/AAQRxRA~/NHOF53mVfMSgJ4l8nH2xvhUs-5r47_Q=
+gTPXUJz6DkdUjKyzuxKpEJy1dbP_n0BuxVRBxX7yj6q7hYZ1grA1jHN-lnx-T5FIom2V37-U3ZF=
+k3_A2VyOKyKvAv5a_j_jUaP0amZCPcUtizeoe2R_svf_LAbTeeXQvmvmHBRP-UAcc~" target=
+=3D"_blank" style=3D"text-decoration:underline;color:#2D5D2A" rel=3D"noopen=
+er">https://contactus.papatalksurvey.smg.com/</a></span></p>=0A        <p a=
+lign=3D"center" style=3D"margin:0;margin-bottom:0">&nbsp;</p>=0A=0A      </=
+div>=0A    </td>=0A  </tr>=0A</table></div></td></tr></table><table class=
+=3D"html_block block-8" width=3D"100%" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rs=
+pace:0"><tr><td class=3D"pad"><div style=3D"font-family:Arial,Arial,Sans-se=
+rif;text-align:center" align=3D"center"><style>=0A  @media only screen and =
+(max-width: 580px) {=0A    .padForMobile {=0A      padding-left: 25px !impo=
+rtant;=0A      padding-right: 25px !important;=0A      width: 135px;=0A    =
+}=0A</style>=0A=0A<table class=3D"paragraph_block block-2" align=3D"center"=
+ width=3D"355px" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;word-break:brea=
+k-word;">=0A  <tr>=0A    <td class=3D"pad padForMobile" style=3D"padding-bo=
+ttom:0px;padding-top:0px;border-top:solid 1px #E3E3E3;">=0A      &nbsp;=0A =
+   </td>=0A  </tr>=0A</table></div></td></tr></table><table class=3D"html_b=
+lock block-9" width=3D"100%" =0Aborder=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0=
+"><tr><td class=3D"pad"><div style=3D"font-family:Arial,Arial,Sans-serif;te=
+xt-align:center" align=3D"center"><table class=3D"paragraph_block block-2" =
+width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;word-break:break-=
+word">=0A  <tr>=0A    <td class=3D"pad pad15mobile" style=3D"padding-bottom=
+:15px;padding-left:30px;padding-right:30px;">=0A      <div style=3D"color:#=
+626262;direction:ltr;font-family: PapaSans,'Helvetica Neue',Helvetica,Arial=
+,sans-serif;font-size:15px;font-weight:400;letter-spacing:0;line-height:120=
+%;text-align:center;mso-line-height-alt:18px">=0A        <p align=3D"center=
+" style=3D"margin:0;margin-bottom:0">Visit our privacy policy at&nbsp;<span=
+ style=3D"color:#008764">=0A          <a href=3D"https://clicks.papajohns.c=
+om/f/a/1cqBTWMz_VHz7QYoW5qYiA~~/AAQRxRA~/atmZ8UNO9ouj902NNCGenbP0JrvZE9Pl-X=
+LMy3NjQctnH8vlyxU3I7PegPrO5IaO_O-5hKgv5XN-NUp2ZjcXEkGaQcU2rNfLpZiaFl1ZQlaKs=
+qYvr9kH7VUoqoLAVpJY2i9wt8RXsRUCnJiunm9OpR55qRRfkl3RmCSOjL4mJos~" target=3D"=
+_blank" style=3D"text-decoration:underline;color:#2D5D2A" rel=3D"noopener">=
+http://www.papajohns.com/privacy-policy.html</a>=0A          </span>=0A    =
+    </p>=0A        <p align=3D"center" style=3D"margin:0;margin-bottom:0"><=
+br>Company Address:</p>=0A        <p align=3D"center" style=3D"margin:0;mar=
+gin-bottom:0">Papa Johns</p>=0A        <p align=3D"center" style=3D"margin:=
+0;margin-bottom:0">2002 Papa Johns Blvd</p>=0A        <p align=3D"center" s=
+tyle=3D"margin:0;margin-bottom:0">Louisville, KY, 40299</p>=0A=0A=0A=0A    =
+    <p align=3D"center" style=3D"margin:0;margin-bottom:0">&nbsp;</p>=0A   =
+     <p align=3D"center" style=3D"margin:0">=C2=A92026 Papa John=E2=80=99s =
+International, Inc. All Rights&nbsp;Reserved.</p>=0A      </div>=0A    </td=
+>=0A  </tr>=0A</table></div></td></tr></table></td></tr></tbody></table></t=
+d></tr></tbody></table></td></tr></tbody></table><!-- End -->=0D=0A<img bor=
+der=3D"0" width=3D"1" height=3D"1" alt=3D"" src=3D"https://clicks.papajohns=
+.com/q/Q_mnw5KU65aUXi7xbZ-oeQ~~/AAQRxRA~/tun5dJ_L7hf0TOLWUOi2wFvrc-r_zMDuK=
+XMUSIIHvD6iTV_Iujg5UW34TNqRjaSTtyi5kUH_gISLZIFoVPmpUw~~">=0D=0A</body></htm=
+l>
+--_----Z1hHLmbz56IN0nZxtaLQtw===_71/BA-01325-37E72DA6--
+

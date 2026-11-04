@@ -1,0 +1,796 @@
+Delivered-To: bergphilip885@gmail.com
+Received: by 2002:a05:651c:485:b0:3ac:686b:7cf with SMTP id s5csp458275ljc;
+        Tue, 27 Oct 2026 10:53:19 -0700 (PDT)
+X-Received: by 2002:a05:600c:1c22:b0:4a7:9044:a87 with SMTP id 5b1f17b1804b1-4a790440cfdmr104723335e9.27.1793123598775;
+        Tue, 27 Oct 2026 10:53:18 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1793123598; cv=none;
+        d=google.com; s=arc-20260327;
+        b=lC34yFUeuwQnUVWU+ZqsQ478JtDrtSdYMFihsEKM8/JI9TW7uyKPW4rZE0apo0ptdN
+         w+KNccFt6wjwXuTSRRDsW9Vl6KnKm3ZiTnjouVWoGP8zIlBZWVR13mMC+Ct+BgB9bPM4
+         pswRf2dqxGPEVsyBRdDQBuWu9kwOqhZVATd29bUvwPXECIq51Cb6LOV/2kYR1lgmeR5r
+         LI/qn3fg1C8yl1+9DOa8ss9CfLpI83bOd8aozDe4H+ltkXUhKXbG+5iJfDr8vX/3QxCH
+         axUsHbGnERywiybOYvmQTOsObFhAV2VY7iqZmYnxrjE1+15FH6L2guo39OAb0SyaYs1j
+         fN0A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=reply-to:message-id:mime-version:list-unsubscribe-post
+         :list-unsubscribe:list-id:from:feedback-id:date:bimi-selector
+         :subject:to:dkim-signature:dkim-signature;
+        bh=VqSSXCL+i70+cbAzrT7ia7YagQgQzYe9LPYalPFv27o=;
+        fh=tFpzkixoPn3wnfjPXeIv3SekB9jOduWMOffsNrzcKlU=;
+        b=ARN2W/HhxOrbkoHv1gaLBbzog1P3JCWtU+jSnVbHCX4373mYZwINe0bTOTd5WtLhYP
+         WQhbV6gbPSoBSm6yypGTbBAYHgT3YrR7IEyD/F9rp0729sxu6zh+zHlDFICq8pQ7erfA
+         K57e68XHEDHPqdG7MbJhFY5vWQI0tq+hE5+XlFU1cP5snFXdGx4cJ7q3peHqix6uiXkQ
+         YbrE9E78/tSjEsP9lYGpWf+kyPl9Pf2RzMEIF0eci8gw+7uhTPKK2P+Mb/fNPXA+hVEm
+         Y9fM6prShGrkpE2TZ81iIZt0ZuZUFhXZDa7n/W4QUZTL26Q5Ead+8TTGSCe1AGZkX7Ka
+         kGTA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yuka.io header.s=mail header.b=TSlkReHl;
+       dkim=pass header.i=@sendib.com header.s=brevo1 header.b=SqYtNoXD;
+       spf=pass (google.com: domain of noreply@jc.yuka.io designates 172.246.3.246 as permitted sender) smtp.mailfrom=noreply@jc.yuka.io;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yuka.io
+Return-Path: <noreply@jc.yuka.io>
+Received: from jc.yuka.io (jc.yuka.io. [172.246.3.246])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-48e3eb9c5b4si19482863f8f.43.2026.10.27.10.53.18
+        for <bergphilip885@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 27 Oct 2026 10:53:18 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@jc.yuka.io designates 172.246.3.246 as permitted sender) client-ip=172.246.3.246;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yuka.io header.s=mail header.b=TSlkReHl;
+       dkim=pass header.i=@sendib.com header.s=brevo1 header.b=SqYtNoXD;
+       spf=pass (google.com: domain of noreply@jc.yuka.io designates 172.246.3.246 as permitted sender) smtp.mailfrom=noreply@jc.yuka.io;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yuka.io
+DKIM-Signature: a=rsa-sha256; bh=VqSSXCL+i70+cbAzrT7ia7YagQgQzYe9LPYalPFv27o=;
+ c=relaxed/relaxed; d=yuka.io;
+ h=to:cc:from:reply-to:subject:date:mime-version:content-type:list-id:list-unsubscribe:x-csa-complaints:list-unsubscribe-post:message-id:sender:x-sib-id:x-mailin-client:x-mailin-campaign:feedback-id:bimi-selector;
+ q=dns/txt; s=mail; t=1793123598; v=1;
+ b=TSlkReHlU+3niVF5ANdrvaDrGojyVdBcuQNmOtX/M6gZUVSQJ9adI2fCk+EGUOJrFL86y+2r
+ /e7azDQnL3UT27f9uUyodcUH/Qq0pKvLAMvEKFHvuf+yFsFoCuxKK6ENJ2WGBKp3xCqJOL94tG/
+ 8/N0I7v8c6gg4fbs/GiVxwhM=
+DKIM-Signature: a=rsa-sha256; bh=VqSSXCL+i70+cbAzrT7ia7YagQgQzYe9LPYalPFv27o=;
+ c=relaxed/relaxed; d=sendib.com;
+ h=to:cc:from:reply-to:subject:date:mime-version:content-type:list-id:list-unsubscribe:x-csa-complaints:list-unsubscribe-post:message-id:sender:x-sib-id:x-mailin-client:x-mailin-campaign:feedback-id:bimi-selector;
+ q=dns/txt; s=brevo1; t=1793123598; v=1;
+ b=SqYtNoXDlA5vMWzgEZFD867MW3q3487VZVnvE++hiY2zmLsBVQs3mX9ybQN4uuZmg8tlEEf6
+ 3jaD+nPeTmdwRwoVGL0q8LNPG3z3g8PndBrTWsT/ad+EF75+CCLhDNYxWBue0KS9CiPhp1ANGmt
+ hOKYh7jCxmfexum1olPzUa/zkhznDUKBmSH0mK8UIuUmvBARnwGKds9imefsQUpjwrPvbuM/wbS
+ aH6307tBZE+BmtUYQKOarf1jTTKWPvs64YKgzoJZVm/bEw9Ar6W+6E9Z3fF5kI2FKxHLCwth8Er
+ 6LWZbKCgS0O/i+dCSgZNJzMIwPixFaRIv+3YRTWZ3Awbw==
+To: <bergphilip885@gmail.com>
+Subject: =?utf-8?q?Your_4_favorite_recipes_=E2=9D=A4=EF=B8=8F?=
+Content-Type: multipart/alternative; boundary="-------?=_56020-2806817498549"
+Bimi-Selector: v=BIMI1; s=yuka
+Date: Tue, 27 Oct 2026 17:53:18 +0000
+Feedback-ID: 172.246.3.246:1813065_3051:1813065:Sendinblue
+From: Julie from Yuka <hello@yuka.io>
+List-Id: MTgxMzA2NS04NDY1Mjk4OC0w <MTgxMzA2NS04NDY1Mjk4OC0w.list-id.jc.yuka.io>
+List-Unsubscribe: <mailto:unsubscribe@jc.yuka.io?subject=unsub-7kwyar0u5i98w8nj&body=7kwyar0u5i98w8nj>,<https://r.jc.yuka.io/mk/un/li/sh/28xHBT2yvSJzuoAJKUu7uxTQj9EjCDZ5hx/pgyDrO1e-unZ>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Message-Id: <202627101753.7kwyar0u5i98w8nj@jc.yuka.io>
+Reply-To: <hello@yuka.io>
+X-Csa-Complaints: csa-complaints@eco.de
+X-Mailer: Sendinblue
+X-Mailin-Campaign: 3051
+X-Mailin-Client: 1813065
+X-sib-id: l0qrxicEPLgJ7pZxdeTInQmjtHNOHh2uxRgGX1fORCFnOQyRToJvQ20161IXQKH6r8aIBCkG7V9vUq8uL78SZ-BvZYymyIH1u_09L6TUYWUfUokeQysYfYLt-4GAB-WJHSBnYWSk_Tr66ybRz_C_H7ttflbcjy66BOzTgRyjvlOwEMcg_3AB5OC_wK006hUAW9j-SOBVXHejkYlMECox9gDFPkssM89xzEZa0ZSPYyWrgHGW39jjy9-vTtE
+
+---------?=_56020-2806817498549
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Hello Philip,
+=C2=A0
+
+What started as a small project during the pandemic has grown into a recipe=
+ blog read by more than 1 million people every month=C2=A0=F0=9F=A7=91=E2=
+=80=8D=F0=9F=8D=B3
+
+Six years ago, like so many of us, I found myself=C2=A0spending a lot more =
+time in the kitchen. That's when I decided to start sharing the recipes I w=
+as testing at home on the Yuka blog.
+
+
+I spent hours experimenting with healthier tweaks and taking photos - with =
+a few fails along the way=C2=A0=F0=9F=98=85
+
+The recipes quickly became a hit, and since then, the collection has grown =
+considerably. The blog offers a wide range of healthy and delicious recipes=
+, all available for free.
+
+
+Today, I'd like to share four of our most-loved recipes on the Yuka blog=C2=
+=A0=E2=9D=A4=EF=B8=8F
+
+Peanut Butter Bites
+
+
+[ **See recipe**](https://r.m.yuka.io/mk/cl/f/sh/28xHLtxYQ4yZ4BvwgKpNSo5dKr=
+GoiOn5ft/92D_MW8459aO "Peanut Butter Bites")
+
+White Bean Salad Jar
+
+
+[ **See recipe**](https://r.m.yuka.io/mk/cl/f/sh/28xHLtxYQ4zbPNGEDPEcVkMoCf=
+qXsITGXx/74mXInxyaXlM "White Bean Salad Jar")
+
+Curried Butternut Squash Soup
+
+
+[ **See recipe**](https://r.m.yuka.io/mk/cl/f/sh/28xHLtxYQ50dkYaVkTdrYgdz4U=
+QH2C9RQ1/b4Itd5-PmZn8 "Curried Butternut Squash Soup")
+
+Sheet Pan Apple Crisp
+
+
+[ **See recipe**](https://r.m.yuka.io/mk/cl/f/sh/28xHLtxYQ51g5junHY36bcv9wJ=
+00C5pcI5/3QRZTnvJUEvp "Sheet Pan Apple Crisp")
+
+I hope you will enjoy these recipes!
+
+=C2=A0
+
+Happy cooking =E2=9C=A8
+
+**Julie**
+Co-founder
+
+
+[LinkedIn](https://r.m.yuka.io/mk/cl/f/sh/28xHLtxYQ52iQvF4ocSLeZCKo7ZjLzVnA=
+9/9IhYZ1zCCMqN "LinkedIn") | [Instagram](https://r.m.yuka.io/mk/cl/f/sh/28x=
+HLtxYQ53EbVuDa9eyB2KvF1ravwLsbB/8Kr6njWz44XN "Instagram") | [Youtube](https=
+://r.m.yuka.io/mk/cl/f/sh/8qyleR3u7gYC13wB5UCUmSUlSK42x25W4kj/9Ul8AfKVyShE =
+"Youtube")
+
+Going bananas over too many emails?
+No problem. Unsubscribe [here](https://r.jc.yuka.io/mk/un/v2/sh/28xHBT2yvSJ=
+zuoAJKUu7uxTQj9EjCDZ5hx/pgyDrO1e-unZ "unsubscribe"). We=E2=80=99ll split.
+
+
+---------?=_56020-2806817498549
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office"><head><meta=
+ http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><meta h=
+ttp-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><meta name=3D"format-de=
+tection" content=3D"telephone=3Dno"><meta name=3D"viewport" content=3D"widt=
+h=3Ddevice-width, initial-scale=3D1.0"><title>Your 4 favorite recipes =E2=
+=9D=A4=EF=B8=8F</title><style type=3D"text/css" emogrify=3D"no">#outlook a =
+{ padding:0; } .ExternalClass { width:100%; } .ExternalClass, .ExternalClas=
+s p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .External=
+Class div { line-height: 100%; } table td { border-collapse: collapse; mso-=
+line-height-rule: exactly; } .editable.image { font-size: 0 !important; lin=
+e-height: 0 !important; } .nl2go_preheader { display: none !important; mso-=
+hide:all !important; mso-line-height-rule: exactly; visibility: hidden !imp=
+ortant; line-height: 0px !important; font-size: 0px !important; } body { wi=
+dth:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:10=
+0%; margin:0; padding:0; } img { outline:none; text-decoration:none; -ms-in=
+terpolation-mode: bicubic; } a img { border:none; } table { border-collapse=
+:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; } th { font-weight: =
+normal; text-align: left; } *[class=3D"gmail-fix"] { display: none !importa=
+nt; } </style><style type=3D"text/css" emogrify=3D"no"> @media (max-width: =
+600px) { .gmx-killpill { content: ' \03D1';} } </style><style type=3D"text/=
+css" emogrify=3D"no">@media (max-width: 600px) { .gmx-killpill { content: '=
+ \03D1';} .r0-o { border-style: solid !important; margin: 0 auto 0 auto !im=
+portant; width: 100% !important } .r1-i { background-color: #f9fafc !import=
+ant } .r2-c { box-sizing: border-box !important; text-align: center !import=
+ant; valign: top !important; width: 100% !important } .r3-i { color: #3b3f4=
+4 !important; padding-bottom: 15px !important; padding-left: 15px !importan=
+t; padding-right: 15px !important; padding-top: 15px !important } .r4-c { b=
+ox-sizing: border-box !important; display: block !important; valign: top !i=
+mportant; width: 100% !important } .r5-o { border-style: solid !important; =
+width: 100% !important } .r6-i { color: #3b3f44 !important; padding-left: 0=
+px !important; padding-right: 0px !important } .r7-c { box-sizing: border-b=
+ox !important; text-align: center !important; valign: top !important; width=
+: 80px !important } .r8-o { background-size: auto !important; border-style:=
+ solid !important; margin: 0 auto 0 auto !important; width: 80px !important=
+ } .r9-i { color: #3b3f44 !important; padding-bottom: 0px !important; paddi=
+ng-top: 0px !important } .r10-i { background-color: #ffffff !important } .r=
+11-i { padding-bottom: 20px !important; padding-left: 16px !important; padd=
+ing-right: 16px !important; padding-top: 20px !important } .r12-o { border-=
+style: solid !important; margin: 0 auto 0 0 !important; width: 100% !import=
+ant } .r13-i { text-align: left !important } .r14-i { color: #3b3f44 !impor=
+tant; padding-bottom: 0px !important; padding-left: 16px !important; paddin=
+g-right: 16px !important; padding-top: 0px !important } .r15-i { color: #3b=
+3f44 !important; padding-bottom: 0px !important; padding-left: 0px !importa=
+nt; padding-right: 0px !important; padding-top: 20px !important } .r16-c { =
+box-sizing: border-box !important; color: #3b3f44 !important; padding-botto=
+m: 0px !important; padding-left: 0px !important; padding-right: 0px !import=
+ant; padding-top: 0px !important; text-align: center !important; valign: to=
+p !important; width: 100% !important } .r17-i { color: #3b3f44 !important; =
+padding-bottom: 0px !important; padding-left: 0px !important; padding-right=
+: 0px !important; padding-top: 0px !important } .r18-c { box-sizing: border=
+-box !important; text-align: left !important; valign: top !important; width=
+: 100% !important } .r19-i { padding-bottom: 5px !important; padding-left: =
+16px !important; padding-right: 16px !important; padding-top: 20px !importa=
+nt } .r20-o { border-style: solid !important; margin: 0 auto 0 auto !import=
+ant; margin-bottom: 0px !important; margin-top: 0px !important; width: 100%=
+ !important } .r21-c { box-sizing: border-box !important; text-align: cente=
+r !important; valign: middle !important; width: 100% !important } .r22-i { =
+color: #3b3f44 !important; padding-bottom: 0px !important; padding-left: 15=
+px !important; padding-right: 15px !important; padding-top: 0px !important =
+} .r23-c { box-sizing: border-box !important; display: block !important; va=
+lign: middle !important; width: 100% !important } .r24-i { color: #3b3f44 !=
+important; padding-bottom: 10px !important; padding-left: 0px !important; p=
+adding-right: 0px !important; padding-top: 0px !important } .r25-o { backgr=
+ound-size: auto !important; border-style: solid !important; margin: 0 auto =
+0 0 !important; margin-bottom: 10px !important; margin-top: 10px !important=
+; width: 100% !important } .r26-o { border-style: solid !important; margin:=
+ 0 auto 0 0 !important; margin-bottom: 10px !important; width: 100% !import=
+ant } .r27-i { color: #3b3f44 !important; padding-left: 3px !important; pad=
+ding-right: 3px !important; text-align: center !important } .r28-c { box-si=
+zing: border-box !important; padding: 0 !important; text-align: center !imp=
+ortant; valign: top !important; width: 100% !important } .r29-o { border-st=
+yle: solid !important; margin: 0 auto 0 auto !important; margin-bottom: 10p=
+x !important; margin-top: 10px !important; width: 100% !important } .r30-i =
+{ padding: 0 !important; text-align: center !important } .r31-r { backgroun=
+d-color: #29cf6f !important; border-color: #000000 !important; border-radiu=
+s: 4px !important; border-width: 0px !important; box-sizing: border-box; he=
+ight: initial !important; padding: 0 !important; padding-bottom: 8px !impor=
+tant; padding-left: 5px !important; padding-right: 5px !important; padding-=
+top: 8px !important; text-align: center !important; width: 100% !important =
+} .r32-i { padding-bottom: 5px !important; padding-left: 20px !important; p=
+adding-right: 20px !important; padding-top: 10px !important } .r33-i { padd=
+ing-bottom: 20px !important; padding-left: 15px !important; padding-right: =
+15px !important; padding-top: 5px !important } .r34-i { padding-left: 0px !=
+important; padding-right: 0px !important } .r35-c { box-sizing: border-box =
+!important; color: #3b3f44 !important; padding-bottom: 15px !important; pad=
+ding-top: 15px !important; width: 100% !important } .r36-i { color: #3b3f44=
+ !important; padding-bottom: 10px !important; padding-left: 15px !important=
+; padding-right: 15px !important; padding-top: 10px !important } .r37-i { c=
+olor: #3b3f44 !important; text-align: center !important } body { -webkit-te=
+xt-size-adjust: none } .nl2go-responsive-hide { display: none } .nl2go-body=
+-table { min-width: unset !important } .mobshow { height: auto !important; =
+overflow: visible !important; max-height: unset !important; visibility: vis=
+ible !important } .resp-table { display: inline-table !important } .magic-r=
+esp { display: table-cell !important } .swapped-footer { display: table-foo=
+ter-group !important } .swapped-header { display: table-header-group !impor=
+tant } } </style><!--[if !mso]><!--><style type=3D"text/css" emogrify=3D"no=
+">@import url("https://fonts.googleapis.com/css2?family=3DMontserrat"); </s=
+tyle><!--<![endif]--><style type=3D"text/css">p, h1, h2, h3, h4, ol, ul, li=
+ { margin: 0; } .nl2go-default-textstyle { color: #3b3f44; font-family: ari=
+al,helvetica,sans-serif; font-size: 16px; word-break: break-word } .default=
+-button { color: #ffffff; font-family: arial,helvetica,sans-serif; font-siz=
+e: 16px; font-style: normal; font-weight: normal; line-height: 1.15; text-d=
+ecoration: none; word-break: break-word } a, a:link { color: #0092ff; text-=
+decoration: underline } .default-heading1 { color: #1F2D3D; font-family: ar=
+ial,helvetica,sans-serif; font-size: 36px; word-break: break-word } .defaul=
+t-heading2 { color: #1F2D3D; font-family: arial,helvetica,sans-serif; font-=
+size: 32px; word-break: break-word } .default-heading3 { color: #1F2D3D; fo=
+nt-family: arial,helvetica,sans-serif; font-size: 24px; word-break: break-w=
+ord } .default-heading4 { color: #1F2D3D; font-family: arial,helvetica,sans=
+-serif; font-size: 18px; word-break: break-word } a[x-apple-data-detectors]=
+ { color: inherit !important; text-decoration: inherit !important; font-siz=
+e: inherit !important; font-family: inherit !important; font-weight: inheri=
+t !important; line-height: inherit !important; } .no-show-for-you { border:=
+ none; display: none; float: none; font-size: 0; height: 0; line-height: 0;=
+ max-height: 0; mso-hide: all; overflow: hidden; table-layout: fixed; visib=
+ility: hidden; width: 0; } </style><!--[if mso]><xml> <o:OfficeDocumentSett=
+ings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumen=
+tSettings> </xml><![endif]--><style type=3D"text/css">a:link{color: #0092ff=
+; text-decoration: underline;}</style></head><body bgcolor=3D"#f9fafc" text=
+=3D"#3b3f44" link=3D"#0092ff" yahoo=3D"fix" style=3D"background-color: #f9f=
+afc; padding-bottom: 0px; padding-top: 0px;"> <table cellpadding=3D"0" bord=
+er=3D"0" cellspacing=3D"0" style=3D"mso-hide:all; display:none;">
+<tr><td>Today, I'd like to share four of the most-loved recipes on the Yuka=
+ blog.&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp=
+; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbs=
+p; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nb=
+sp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &n=
+bsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &=
+nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; =
+&nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj;=
+ &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj=
+; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwn=
+j; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zw=
+nj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&z=
+wnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&=
+zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;=
+&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy=
+;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &sh=
+y;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &s=
+hy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &=
+shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; =
+&shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp;=
+ &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp=
+; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbs=
+p; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nb=
+sp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &n=
+bsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &=
+nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; =
+&nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj;=
+ &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj=
+; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwn=
+j; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zw=
+nj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&z=
+wnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&=
+zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;=
+&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy=
+;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &sh=
+y;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &s=
+hy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &=
+shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; =
+&shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp;=
+ &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp=
+; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbs=
+p; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nb=
+sp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &n=
+bsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &=
+nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; =
+&nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj;=
+ &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj=
+; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwn=
+j; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zw=
+nj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&z=
+wnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&=
+zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;&zwnj; &nbsp; &shy;</td></tr></table> =
+<!--[if mso]> <img width=3D"1" height=3D"1" src=3D"https://r.jc.yuka.io/mk/=
+op/sh/28xHBT3ZS8YPOZCD79VnnOSg8Dqh8uXDiT/t_y94tup9M2j" /> <![endif]-->
+	<!--[if !mso]> <!----> <img style=3D"display:none" src=3D"https://r.jc.yuk=
+a.io/mk/op/sh/28xHBT3ZS8YPOZCD79VnnOSg8Dqh8uXDiT/t_y94tup9M2j" /> <!-- <![e=
+ndif]-->  <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"p=
+resentation" class=3D"nl2go-body-table" width=3D"100%" style=3D"background-=
+color: #f9fafc; width: 100%;"><tr><td> <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D"center" c=
+lass=3D"r0-o" style=3D"table-layout: fixed; width: 100%;"><tr><td valign=3D=
+"top" class=3D"r1-i" style=3D"background-color: #f9fafc;"> <table cellspaci=
+ng=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"590"=
+ align=3D"center" class=3D"r0-o" style=3D"table-layout: fixed; width: 590px=
+;"><tr><td class=3D"r3-i" style=3D"color: #3b3f44; font-family: arial,helve=
+tica,sans-serif; font-size: 16px; padding-bottom: 15px; padding-left: 20px;=
+ padding-right: 20px; padding-top: 15px;"> <table width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tr><th width=
+=3D"100%" valign=3D"top" class=3D"r4-c" style=3D"font-weight: normal;"> <ta=
+ble cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" =
+width=3D"100%" class=3D"r5-o" style=3D"table-layout: fixed; width: 100%;"><=
+tr><td valign=3D"top" class=3D"r6-i" style=3D"color: #3b3f44; font-family: =
+arial,helvetica,sans-serif; font-size: 16px; padding-left: 5px; padding-rig=
+ht: 5px;"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation"><tr><td class=3D"r7-c" align=3D"center"> <tabl=
+e cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" wi=
+dth=3D"100" class=3D"r8-o" style=3D"table-layout: fixed; width: 100px;"><tr=
+><td class=3D"r9-i" style=3D"color: #3b3f44; font-family: arial,helvetica,s=
+ans-serif; font-size: 16px;"> <img src=3D"https://img.jc.yuka.io/im/sh/vXJs=
+63wcT4XL.png?u=3DbLfru2eiMfsd33SQiPoFmdgaenr3TSpAbPTl" width=3D"100" alt=3D=
+"Yuka" border=3D"0" style=3D"display: block; width: 100%;" sib_img_id=3D"0"=
+></td> </tr></table></td> </tr></table></td> </tr></table></th> </tr></tabl=
+e></td> </tr></table></td> </tr></table><table cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D"center" =
+class=3D"r0-o" style=3D"table-layout: fixed; width: 100%;"><tr><td valign=
+=3D"top" class=3D"r10-i" style=3D"background-color: #ffffff;"> <table cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"=
+590" align=3D"center" class=3D"r0-o" style=3D"table-layout: fixed; width: 5=
+90px;"><tr><td class=3D"r11-i" style=3D"padding-bottom: 20px; padding-left:=
+ 20px; padding-right: 20px; padding-top: 20px;"> <table width=3D"100%" cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tr><th =
+width=3D"100%" valign=3D"top" class=3D"r4-c" style=3D"font-weight: normal;"=
+> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentat=
+ion" width=3D"100%" align=3D"left" class=3D"r12-o" style=3D"table-layout: f=
+ixed; width: 100%;"><tr><td align=3D"left" valign=3D"top" class=3D"r13-i nl=
+2go-default-textstyle" style=3D"color: #3b3f44; font-family: arial,helvetic=
+a,sans-serif; font-size: 16px; word-break: break-word; line-height: 1.5; te=
+xt-align: left;"> <div><p style=3D"margin: 0; color: #3c4858; font-family: =
+Arial,Helvetica,sans-serif; font-size: 14px;"><span style=3D"font-size: 16p=
+x;">Hello Philip,</span><br><span style=3D"font-size: 16px;">=C2=A0</span><=
+/p><p class=3D"default" style=3D"margin: 0;">What started as a small projec=
+t during the pandemic has grown into a recipe blog read by more than 1 mill=
+ion people every month=C2=A0=F0=9F=A7=91=E2=80=8D=F0=9F=8D=B3</p></div> </t=
+d> </tr></table></th> </tr></table></td> </tr></table></td> </tr></table><t=
+able cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"=
+ width=3D"100%" align=3D"center" class=3D"r0-o" style=3D"table-layout: fixe=
+d; width: 100%;"><tr><td valign=3D"top" class=3D"r10-i" style=3D"background=
+-color: #ffffff;"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+role=3D"presentation" width=3D"590" align=3D"center" class=3D"r0-o" style=
+=3D"table-layout: fixed; width: 590px;"><tr><td class=3D"r14-i" style=3D"co=
+lor: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; pad=
+ding-left: 20px; padding-right: 20px;"> <table width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tr><th width=
+=3D"33.33%" valign=3D"top" class=3D"r4-c swapped-footer" style=3D"font-weig=
+ht: normal;"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=
+=3D"presentation" width=3D"100%" class=3D"r5-o" style=3D"table-layout: fixe=
+d; width: 100%;"><tr><td valign=3D"top" class=3D"r15-i" style=3D"color: #3b=
+3f44; font-family: arial,helvetica,sans-serif; font-size: 16px;"> <table wi=
+dth=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"prese=
+ntation"><tr><td class=3D"r16-c" align=3D"center" style=3D"border-radius: 3=
+px; color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 0px=
+; line-height: 0px; valign: top;"> <img src=3D"https://img.jc.yuka.io/im/sh=
+/kuo6GhFwsVLI.png?u=3D2UDUsZOy7BcvZLA0L7vx0fWxZyMCZhYGIMVBWT" width=3D"183"=
+ border=3D"0" style=3D"display: block; width: 100%; border-radius: 3px;" si=
+b_img_id=3D"13"></td> </tr></table></td> </tr></table></th> <th width=3D"66=
+.67%" valign=3D"top" class=3D"r4-c swapped-header" style=3D"font-weight: no=
+rmal;"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"pre=
+sentation" width=3D"100%" class=3D"r5-o" style=3D"table-layout: fixed; widt=
+h: 100%;"><tr><td valign=3D"top" class=3D"r17-i" style=3D"color: #3b3f44; f=
+ont-family: arial,helvetica,sans-serif; font-size: 16px; padding-left: 25px=
+;"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+role=3D"presentation"><tr><td class=3D"r18-c nl2go-default-textstyle" align=
+=3D"left" style=3D"color: #3b3f44; font-family: arial,helvetica,sans-serif;=
+ font-size: 16px; word-break: break-word; line-height: 1.5; text-align: lef=
+t; valign: top;"> <div><p class=3D"default" id=3D"isPasted" style=3D"margin=
+: 0px; color: rgb(59, 63, 68); font-family: arial, helvetica, sans-serif; f=
+ont-size: 16px; font-style: normal; font-variant-ligatures: normal; font-va=
+riant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; t=
+ext-align: left; text-indent: 0px; text-transform: none; widows: 2; word-sp=
+acing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decor=
+ation-thickness: initial; text-decoration-style: initial; text-decoration-c=
+olor: initial; background-color: rgb(255, 255, 255);">Six years ago, like s=
+o many of us, <span style=3D"color: rgb(59, 63, 68); font-family: arial, he=
+lvetica, sans-serif; font-size: 16px; font-style: normal; font-variant-liga=
+tures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing:=
+ normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: no=
+ne; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-spa=
+ce: normal; background-color: rgb(255, 255, 255); text-decoration-thickness=
+: initial; text-decoration-style: initial; text-decoration-color: initial; =
+float: none; display: inline;">I found myself=C2=A0</span>spending a lot mo=
+re time in the kitchen. That's when I decided to start sharing the recipes =
+I was testing at home on the Yuka blog.</p><p class=3D"default" style=3D"ma=
+rgin: 0px; color: rgb(59, 63, 68); font-family: arial, helvetica, sans-seri=
+f; font-size: 16px; font-style: normal; font-variant-ligatures: normal; fon=
+t-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: =
+2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; wor=
+d-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-d=
+ecoration-thickness: initial; text-decoration-style: initial; text-decorati=
+on-color: initial; background-color: rgb(255, 255, 255);"><br></p><p class=
+=3D"default" style=3D"margin: 0px; color: rgb(59, 63, 68); font-family: ari=
+al, helvetica, sans-serif; font-size: 16px; font-style: normal; font-varian=
+t-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-sp=
+acing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transfo=
+rm: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; whi=
+te-space: normal; text-decoration-thickness: initial; text-decoration-style=
+: initial; text-decoration-color: initial; background-color: rgb(255, 255, =
+255);">I spent hours experimenting with healthier tweaks and taking photos =
+- with a few fails along the way=C2=A0=F0=9F=98=85</p></div> </td> </tr></t=
+able></td> </tr></table></th> </tr></table></td> </tr></table></td> </tr></=
+table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"prese=
+ntation" width=3D"100%" align=3D"center" class=3D"r0-o" style=3D"table-layo=
+ut: fixed; width: 100%;"><tr><td valign=3D"top" class=3D"r10-i" style=3D"ba=
+ckground-color: #ffffff;"> <table cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0" role=3D"presentation" width=3D"590" align=3D"center" class=3D"r0-o"=
+ style=3D"table-layout: fixed; width: 590px;"><tr><td class=3D"r19-i" style=
+=3D"padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-t=
+op: 20px;"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0" role=3D"presentation"><tr><th width=3D"100%" valign=3D"top" class=
+=3D"r4-c" style=3D"font-weight: normal;"> <table cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D"left" =
+class=3D"r12-o" style=3D"table-layout: fixed; width: 100%;"><tr><td align=
+=3D"left" valign=3D"top" class=3D"r13-i nl2go-default-textstyle" style=3D"c=
+olor: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; wo=
+rd-break: break-word; line-height: 1.5; text-align: left;"> <div><p class=
+=3D"default" id=3D"isPasted" style=3D"margin: 0px; color: rgb(59, 63, 68); =
+font-family: arial, helvetica, sans-serif; font-size: 16px; font-style: nor=
+mal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight=
+: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0=
+px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke=
+-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); tex=
+t-decoration-thickness: initial; text-decoration-style: initial; text-decor=
+ation-color: initial;">The recipes quickly became a hit, and since then, th=
+e collection has grown considerably. The blog offers a wide range of health=
+y and delicious recipes, all available for free.</p><p class=3D"default" st=
+yle=3D"margin: 0px; color: rgb(59, 63, 68); font-family: arial, helvetica, =
+sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: no=
+rmal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; =
+orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widow=
+s: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: norma=
+l; background-color: rgb(255, 255, 255); text-decoration-thickness: initial=
+; text-decoration-style: initial; text-decoration-color: initial;"><br></p>=
+<p class=3D"default" id=3D"isPasted" style=3D"margin: 0px; color: rgb(59, 6=
+3, 68); font-family: arial, helvetica, sans-serif; font-size: 16px; font-st=
+yle: normal; font-variant-ligatures: normal; font-variant-caps: normal; fon=
+t-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-i=
+ndent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-tex=
+t-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 2=
+55); text-decoration-thickness: initial; text-decoration-style: initial; te=
+xt-decoration-color: initial;">Today, I'd like to share four of our most-lo=
+ved recipes on the Yuka blog=C2=A0=E2=9D=A4=EF=B8=8F</p></div> </td> </tr><=
+/table></th> </tr></table></td> </tr></table></td> </tr></table><table cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D=
+"100%" align=3D"center" class=3D"r20-o" style=3D"table-layout: fixed; width=
+: 100%;"><tr><td valign=3D"top" class=3D"r10-i" style=3D"background-color: =
+#ffffff;"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"=
+presentation" width=3D"590" align=3D"center" class=3D"r0-o" style=3D"table-=
+layout: fixed; width: 590px;"><tr><td class=3D"r22-i" style=3D"color: #3b3f=
+44; font-family: arial,helvetica,sans-serif; font-size: 16px; padding-botto=
+m: 10px; padding-left: 10px; padding-right: 10px; padding-top: 20px;"> <tab=
+le width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"=
+presentation"><tr><th width=3D"50%" valign=3D"middle" class=3D"r23-c" style=
+=3D"font-weight: normal;"> <table cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0" role=3D"presentation" width=3D"100%" class=3D"r5-o" style=3D"table-=
+layout: fixed; width: 100%;"><tr><td valign=3D"top" class=3D"r24-i" style=
+=3D"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16p=
+x; padding-left: 10px; padding-right: 10px;"> <table width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tr><td cla=
+ss=3D"r18-c" align=3D"left"> <table cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0" role=3D"presentation" width=3D"265" class=3D"r25-o" style=3D"tabl=
+e-layout: fixed; width: 265px;"><tr><td class=3D"r9-i" style=3D"color: #3b3=
+f44; font-family: arial,helvetica,sans-serif; font-size: 0px; line-height: =
+0px;"> <a href=3D"https://r.m.yuka.io/mk/cl/f/sh/28xHLtxYQ4yZ4BvwgKpNSo5dKr=
+GoiOn5ft/92D_MW8459aO" target=3D"_blank" style=3D"color: #0092ff; text-deco=
+ration: underline;" sib_link_id=3D"0" templating=3D"n"> <img src=3D"https:/=
+/img.jc.yuka.io/im/sh/oJkTcwA3Qqrs.jpg?u=3D2UDUsZOy7BcvZNIq4Vo9Hle1eHodg7JU=
+jJZd8j" width=3D"265" title=3D"Peanut Butter Bites" border=3D"0" style=3D"d=
+isplay: block; width: 100%;" sib_img_id=3D"14"></a> </td> </tr><tr class=3D=
+"nl2go-responsive-hide"><td height=3D"10" style=3D"font-size: 10px; line-he=
+ight: 10px;">=C2=AD</td> </tr></table></td> </tr><tr><td class=3D"r18-c" al=
+ign=3D"left"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=
+=3D"presentation" width=3D"100%" class=3D"r26-o" style=3D"table-layout: fix=
+ed; width: 100%;"><tr><td align=3D"center" valign=3D"top" class=3D"r27-i nl=
+2go-default-textstyle" style=3D"word-break: break-word; color: #3b3f44; fon=
+t-family: arial,helvetica,sans-serif; font-size: 16px; padding-left: 3px; p=
+adding-right: 3px; text-align: center;"> <div><p style=3D"margin: 0; color:=
+ rgb(31, 45, 61); font-family: arial, helvetica, sans-serif; font-size: 16p=
+x;"><span style=3D"font-size: 15px;">Peanut Butter Bites</span></p></div> <=
+/td> </tr><tr class=3D"nl2go-responsive-hide"><td height=3D"10" style=3D"fo=
+nt-size: 10px; line-height: 10px;">=C2=AD</td> </tr></table></td> </tr><tr>=
+<td class=3D"r28-c" align=3D"center" style=3D"align: center; padding-bottom=
+: 10px; padding-top: 10px; valign: top;"> <table cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" role=3D"presentation" width=3D"132" class=3D"r29-o" =
+style=3D"background-color: #29cf6f; border-collapse: separate; border-color=
+: #000000; border-radius: 4px; border-style: solid; border-width: 0px; tabl=
+e-layout: fixed; width: 132px;"><tr><td height=3D"18" align=3D"center" vali=
+gn=3D"top" class=3D"r30-i nl2go-default-textstyle" style=3D"word-break: bre=
+ak-word; background-color: #29cf6f; border-radius: 4px; color: #ffffff; fon=
+t-family: arial,helvetica,sans-serif; font-size: 16px; font-style: normal; =
+line-height: 1.15; padding-bottom: 8px; padding-left: 5px; padding-right: 5=
+px; padding-top: 8px; text-align: center;"> <a href=3D"https://r.m.yuka.io/=
+mk/cl/f/sh/28xHLtxYQ4z5Emb5Rs1zzHEDllYgILdB6v/_V0cUES77e8Y" class=3D"r31-r =
+default-button" target=3D"_blank" title=3D"Peanut Butter Bites" data-btn=3D=
+"1" style=3D"font-style: normal; font-weight: normal; line-height: 1.15; te=
+xt-decoration: none; word-break: break-word; word-wrap: break-word; display=
+: block; -webkit-text-size-adjust: none; color: #ffffff; font-family: arial=
+,helvetica,sans-serif; font-size: 16px;" sib_link_id=3D"1" templating=3D"n"=
+> <span><span style=3D"color: #ffffff; font-family: Arial,Helvetica,sans-se=
+rif; font-size: 14px;"><strong>See recipe</strong></span></span></a> </td> =
+</tr></table></td> </tr></table></td> </tr></table></th> <th width=3D"50%" =
+valign=3D"middle" class=3D"r23-c" style=3D"font-weight: normal;"> <table ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=
+=3D"100%" class=3D"r5-o" style=3D"table-layout: fixed; width: 100%;"><tr><t=
+d valign=3D"top" class=3D"r24-i" style=3D"color: #3b3f44; font-family: aria=
+l,helvetica,sans-serif; font-size: 16px; padding-left: 10px; padding-right:=
+ 10px;"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation"><tr><td class=3D"r18-c" align=3D"left"> <table=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" wid=
+th=3D"265" class=3D"r25-o" style=3D"table-layout: fixed; width: 265px;"><tr=
+><td class=3D"r9-i" style=3D"color: #3b3f44; font-family: arial,helvetica,s=
+ans-serif; font-size: 0px; line-height: 0px;"> <a href=3D"https://r.m.yuka.=
+io/mk/cl/f/sh/28xHLtxYQ4zbPNGEDPEcVkMoCfqXsITGXx/74mXInxyaXlM" target=3D"_b=
+lank" style=3D"color: #0092ff; text-decoration: underline;" sib_link_id=3D"=
+2" templating=3D"n"> <img src=3D"https://img.jc.yuka.io/im/sh/Bdrau1hv6IE_.=
+jpeg?u=3D2UDUsZOy7BcvZGsKsMBYSTIpRLRKMs1nQSMIHx" width=3D"265" title=3D"Whi=
+te Bean Salad Jar" border=3D"0" style=3D"display: block; width: 100%;" sib_=
+img_id=3D"11"></a> </td> </tr><tr class=3D"nl2go-responsive-hide"><td heigh=
+t=3D"10" style=3D"font-size: 10px; line-height: 10px;">=C2=AD</td> </tr></t=
+able></td> </tr><tr><td class=3D"r18-c" align=3D"left"> <table cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" =
+class=3D"r26-o" style=3D"table-layout: fixed; width: 100%;"><tr><td align=
+=3D"center" valign=3D"top" class=3D"r27-i nl2go-default-textstyle" style=3D=
+"word-break: break-word; color: #3b3f44; font-family: arial,helvetica,sans-=
+serif; font-size: 16px; padding-left: 3px; padding-right: 3px; text-align: =
+center;"> <div><p style=3D"margin: 0; color: rgb(31, 45, 61); font-family: =
+arial, helvetica, sans-serif; font-size: 16px;"><span style=3D"font-size: 1=
+5px;">White Bean Salad Jar</span></p></div> </td> </tr><tr class=3D"nl2go-r=
+esponsive-hide"><td height=3D"10" style=3D"font-size: 10px; line-height: 10=
+px;">=C2=AD</td> </tr></table></td> </tr><tr><td class=3D"r28-c" align=3D"c=
+enter" style=3D"align: center; padding-bottom: 10px; padding-top: 10px; val=
+ign: top;"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D=
+"presentation" width=3D"132" class=3D"r29-o" style=3D"background-color: #29=
+cf6f; border-collapse: separate; border-color: #000000; border-radius: 4px;=
+ border-style: solid; border-width: 0px; table-layout: fixed; width: 132px;=
+"><tr><td height=3D"18" align=3D"center" valign=3D"top" class=3D"r30-i nl2g=
+o-default-textstyle" style=3D"word-break: break-word; background-color: #29=
+cf6f; border-radius: 4px; color: #ffffff; font-family: arial,helvetica,sans=
+-serif; font-size: 16px; font-style: normal; line-height: 1.15; padding-bot=
+tom: 8px; padding-left: 5px; padding-right: 5px; padding-top: 8px; text-ali=
+gn: center;"> <a href=3D"https://r.m.yuka.io/mk/cl/f/sh/28xHLtxYQ507ZxvMywR=
+F2DVOda8PSFJLyz/UpFN8OJtdDYq" class=3D"r31-r default-button" target=3D"_bla=
+nk" title=3D"White Bean Salad Jar" data-btn=3D"2" style=3D"font-style: norm=
+al; font-weight: normal; line-height: 1.15; text-decoration: none; word-bre=
+ak: break-word; word-wrap: break-word; display: block; -webkit-text-size-ad=
+just: none; color: #ffffff; font-family: arial,helvetica,sans-serif; font-s=
+ize: 16px;" sib_link_id=3D"3" templating=3D"n"> <span><span style=3D"color:=
+ #ffffff; font-family: Arial,Helvetica,sans-serif; font-size: 14px;"><stron=
+g>See recipe</strong></span></span></a> </td> </tr></table></td> </tr></tab=
+le></td> </tr></table></th> </tr></table></td> </tr></table></td> </tr></ta=
+ble><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"present=
+ation" width=3D"100%" align=3D"center" class=3D"r20-o" style=3D"table-layou=
+t: fixed; width: 100%;"><tr><td valign=3D"top" class=3D"r10-i" style=3D"bac=
+kground-color: #ffffff;"> <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation" width=3D"590" align=3D"center" class=3D"r0-o" =
+style=3D"table-layout: fixed; width: 590px;"><tr><td class=3D"r22-i" style=
+=3D"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16p=
+x; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; padding-t=
+op: 20px;"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0" role=3D"presentation"><tr><th width=3D"50%" valign=3D"middle" class=
+=3D"r23-c" style=3D"font-weight: normal;"> <table cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r5-o"=
+ style=3D"table-layout: fixed; width: 100%;"><tr><td valign=3D"top" class=
+=3D"r24-i" style=3D"color: #3b3f44; font-family: arial,helvetica,sans-serif=
+; font-size: 16px; padding-left: 10px; padding-right: 10px;"> <table width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presenta=
+tion"><tr><td class=3D"r18-c" align=3D"left"> <table cellspacing=3D"0" cell=
+padding=3D"0" border=3D"0" role=3D"presentation" width=3D"265" class=3D"r25=
+-o" style=3D"table-layout: fixed; width: 265px;"><tr><td class=3D"r9-i" sty=
+le=3D"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 0=
+px; line-height: 0px;"> <a href=3D"https://r.m.yuka.io/mk/cl/f/sh/28xHLtxYQ=
+50dkYaVkTdrYgdz4UQH2C9RQ1/b4Itd5-PmZn8" target=3D"_blank" style=3D"color: #=
+0092ff; text-decoration: underline;" sib_link_id=3D"4" templating=3D"n"> <i=
+mg src=3D"https://img.jc.yuka.io/im/sh/VAddVfUQWe7C.jpg?u=3DbLfru2eiMfsd7iz=
+kggi4cEOou5lE4F2iACP3" width=3D"265" title=3D"Curried Butternut Squash Soup=
+" border=3D"0" style=3D"display: block; width: 100%;" sib_img_id=3D"9"></a>=
+ </td> </tr><tr class=3D"nl2go-responsive-hide"><td height=3D"10" style=3D"=
+font-size: 10px; line-height: 10px;">=C2=AD</td> </tr></table></td> </tr><t=
+r><td class=3D"r18-c" align=3D"left"> <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r26-o" st=
+yle=3D"table-layout: fixed; width: 100%;"><tr><td align=3D"center" valign=
+=3D"top" class=3D"r27-i nl2go-default-textstyle" style=3D"word-break: break=
+-word; color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: =
+16px; padding-left: 3px; padding-right: 3px; text-align: center;"> <div><p =
+style=3D"margin: 0; color: rgb(31, 45, 61); font-family: arial, helvetica, =
+sans-serif; font-size: 16px;"><span style=3D"font-size: 15px;">Curried Butt=
+ernut Squash Soup</span></p></div> </td> </tr><tr class=3D"nl2go-responsive=
+-hide"><td height=3D"10" style=3D"font-size: 10px; line-height: 10px;">=C2=
+=AD</td> </tr></table></td> </tr><tr><td class=3D"r28-c" align=3D"center" s=
+tyle=3D"align: center; padding-bottom: 10px; padding-top: 10px; valign: top=
+;"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"present=
+ation" width=3D"132" class=3D"r29-o" style=3D"background-color: #29cf6f; bo=
+rder-collapse: separate; border-color: #000000; border-radius: 4px; border-=
+style: solid; border-width: 0px; table-layout: fixed; width: 132px;"><tr><t=
+d height=3D"18" align=3D"center" valign=3D"top" class=3D"r30-i nl2go-defaul=
+t-textstyle" style=3D"word-break: break-word; background-color: #29cf6f; bo=
+rder-radius: 4px; color: #ffffff; font-family: arial,helvetica,sans-serif; =
+font-size: 16px; font-style: normal; line-height: 1.15; padding-bottom: 8px=
+; padding-left: 5px; padding-right: 5px; padding-top: 8px; text-align: cent=
+er;"> <a href=3D"https://r.m.yuka.io/mk/cl/f/sh/28xHLtxYQ519v9FeW0qU59mZVOi=
+8c8zWr3/i_9Y9QmK7F1C" class=3D"r31-r default-button" target=3D"_blank" titl=
+e=3D"Curried Butternut Squash Soup" data-btn=3D"3" style=3D"font-style: nor=
+mal; font-weight: normal; line-height: 1.15; text-decoration: none; word-br=
+eak: break-word; word-wrap: break-word; display: block; -webkit-text-size-a=
+djust: none; color: #ffffff; font-family: arial,helvetica,sans-serif; font-=
+size: 16px;" sib_link_id=3D"5" templating=3D"n"> <span><span style=3D"color=
+: #ffffff; font-family: Arial,Helvetica,sans-serif; font-size: 14px;"><stro=
+ng>See recipe</strong></span></span></a> </td> </tr></table></td> </tr></ta=
+ble></td> </tr></table></th> <th width=3D"50%" valign=3D"middle" class=3D"r=
+23-c" style=3D"font-weight: normal;"> <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r5-o" sty=
+le=3D"table-layout: fixed; width: 100%;"><tr><td valign=3D"top" class=3D"r2=
+4-i" style=3D"color: #3b3f44; font-family: arial,helvetica,sans-serif; font=
+-size: 16px; padding-left: 10px; padding-right: 10px;"> <table width=3D"100=
+%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><=
+tr><td class=3D"r18-c" align=3D"left"> <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" role=3D"presentation" width=3D"265" class=3D"r25-o" sty=
+le=3D"table-layout: fixed; width: 265px;"><tr><td class=3D"r9-i" style=3D"c=
+olor: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 0px; lin=
+e-height: 0px;"> <a href=3D"https://r.m.yuka.io/mk/cl/f/sh/28xHLtxYQ51g5jun=
+HY36bcv9wJ00C5pcI5/3QRZTnvJUEvp" target=3D"_blank" style=3D"color: #0092ff;=
+ text-decoration: underline;" sib_link_id=3D"6" templating=3D"n"> <img src=
+=3D"https://img.jc.yuka.io/im/sh/wKLeXcNQztDe.jpg?u=3D2UDUsZOy7BcvZJ1Abk3kj=
+ZPtVetlTHn1rPQjuD" width=3D"265" title=3D"Sheet Pan Apple Crisp" border=3D"=
+0" style=3D"display: block; width: 100%;" sib_img_id=3D"12"></a> </td> </tr=
+><tr class=3D"nl2go-responsive-hide"><td height=3D"10" style=3D"font-size: =
+10px; line-height: 10px;">=C2=AD</td> </tr></table></td> </tr><tr><td class=
+=3D"r18-c" align=3D"left"> <table cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0" role=3D"presentation" width=3D"100%" class=3D"r26-o" style=3D"table=
+-layout: fixed; width: 100%;"><tr><td align=3D"center" valign=3D"top" class=
+=3D"r27-i nl2go-default-textstyle" style=3D"word-break: break-word; color: =
+#3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; padding-=
+left: 3px; padding-right: 3px; text-align: center;"> <div><p style=3D"margi=
+n: 0; color: rgb(31, 45, 61); font-family: arial, helvetica, sans-serif; fo=
+nt-size: 16px;"><span style=3D"font-size: 15px;">Sheet Pan Apple Crisp</spa=
+n></p></div> </td> </tr><tr class=3D"nl2go-responsive-hide"><td height=3D"1=
+0" style=3D"font-size: 10px; line-height: 10px;">=C2=AD</td> </tr></table><=
+/td> </tr><tr><td class=3D"r28-c" align=3D"center" style=3D"align: center; =
+padding-bottom: 10px; padding-top: 10px; valign: top;"> <table cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"132" c=
+lass=3D"r29-o" style=3D"background-color: #29cf6f; border-collapse: separat=
+e; border-color: #000000; border-radius: 4px; border-style: solid; border-w=
+idth: 0px; table-layout: fixed; width: 132px;"><tr><td height=3D"18" align=
+=3D"center" valign=3D"top" class=3D"r30-i nl2go-default-textstyle" style=3D=
+"word-break: break-word; background-color: #29cf6f; border-radius: 4px; col=
+or: #ffffff; font-family: arial,helvetica,sans-serif; font-size: 16px; font=
+-style: normal; line-height: 1.15; padding-bottom: 8px; padding-left: 5px; =
+padding-right: 5px; padding-top: 8px; text-align: center;"> <a href=3D"http=
+s://r.m.yuka.io/mk/cl/f/sh/28xHLtxYQ52CGKZw35Fj863kNDHrm2fhj7/OftF68OlV9z_"=
+ class=3D"r31-r default-button" target=3D"_blank" title=3D"Sheet Pan Apple =
+Crisp" data-btn=3D"4" style=3D"font-style: normal; font-weight: normal; lin=
+e-height: 1.15; text-decoration: none; word-break: break-word; word-wrap: b=
+reak-word; display: block; -webkit-text-size-adjust: none; color: #ffffff; =
+font-family: arial,helvetica,sans-serif; font-size: 16px;" sib_link_id=3D"7=
+" templating=3D"n"> <span><span style=3D"color: #ffffff; font-family: Arial=
+,Helvetica,sans-serif; font-size: 14px;"><strong>See recipe</strong></span>=
+</span></a> </td> </tr></table></td> </tr></table></td> </tr></table></th> =
+</tr></table></td> </tr></table></td> </tr></table><table cellspacing=3D"0"=
+ cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=
+=3D"center" class=3D"r0-o" style=3D"table-layout: fixed; width: 100%;"><tr>=
+<td valign=3D"top" class=3D"r10-i" style=3D"background-color: #ffffff;"> <t=
+able cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"=
+ width=3D"590" align=3D"center" class=3D"r0-o" style=3D"table-layout: fixed=
+; width: 590px;"><tr><td class=3D"r32-i" style=3D"padding-bottom: 5px; padd=
+ing-left: 20px; padding-right: 20px; padding-top: 10px;"> <table width=3D"1=
+00%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"=
+><tr><th width=3D"100%" valign=3D"top" class=3D"r4-c" style=3D"font-weight:=
+ normal;"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"=
+presentation" width=3D"100%" align=3D"left" class=3D"r12-o" style=3D"table-=
+layout: fixed; width: 100%;"><tr><td align=3D"left" valign=3D"top" class=3D=
+"r13-i nl2go-default-textstyle" style=3D"color: #3b3f44; font-family: arial=
+,helvetica,sans-serif; font-size: 16px; word-break: break-word; line-height=
+: 1.5; text-align: left;"> <div><p style=3D"margin: 0; font-style: normal; =
+font-weight: 400; text-decoration-style: initial; text-decoration-thickness=
+: initial;">I hope you will enjoy these recipes!</p><p style=3D"margin: 0;"=
+>=C2=A0</p><p style=3D"margin: 0;">Happy cooking =E2=9C=A8</p></div> </td> =
+</tr></table></th> </tr></table></td> </tr></table></td> </tr></table><tabl=
+e cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" wi=
+dth=3D"100%" align=3D"center" class=3D"r0-o" style=3D"table-layout: fixed; =
+width: 100%;"><tr><td valign=3D"top" class=3D"r10-i" style=3D"background-co=
+lor: #ffffff;"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" rol=
+e=3D"presentation" width=3D"590" align=3D"center" class=3D"r0-o" style=3D"t=
+able-layout: fixed; width: 590px;"><tr><td class=3D"r33-i" style=3D"padding=
+-bottom: 20px; padding-top: 5px;"> <table width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0" role=3D"presentation"><tr><th width=3D"100%"=
+ valign=3D"top" class=3D"r4-c" style=3D"font-weight: normal;"> <table cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"=
+100%" class=3D"r5-o" style=3D"table-layout: fixed; width: 100%;"><tr><td va=
+lign=3D"top" class=3D"r34-i" style=3D"padding-left: 15px; padding-right: 15=
+px;"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+" role=3D"presentation"><tr><td class=3D"r35-c nl2go-default-textstyle" sty=
+le=3D"word-break: break-word; color: #3b3f44; font-family: arial,helvetica,=
+sans-serif; font-size: 16px; padding-bottom: 15px; padding-top: 15px;"> <ta=
+ble cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" =
+width=3D"100%"><tbody><tr><td style=3D"width: 64px;"> <img src=3D"https://i=
+mg.jc.yuka.io/im/sh/a7UkBxVEoHbP.png?u=3DbLfru2eiMfsd6ATyhGPT0MpPUKSVCeIrdw=
+5x" width=3D"64" border=3D"0" style=3D"vertical-align: middle;" sib_img_id=
+=3D"6"></td> <td style=3D"font-size: 16px; text-align: left; font-family: a=
+rial,helvetica,sans-serif; padding-left: 16px; mso-line-height-rule: exactl=
+y; line-height: 22px;"> <strong>Julie</strong><br><span>Co-founder</span><b=
+r><p style=3D"font-size: 15px; color: #6E7681; margin: 0px;"> <a href=3D"ht=
+tps://r.m.yuka.io/mk/cl/f/sh/28xHLtxYQ52iQvF4ocSLeZCKo7ZjLzVnA9/9IhYZ1zCCMq=
+N" title=3D"LinkedIn" target=3D"_blank" style=3D"color: #0092ff; text-decor=
+ation: underline;" sib_link_id=3D"8" templating=3D"n"><span style=3D"color:=
+ #6E7681;"><u>LinkedIn</u></span></a> | <a href=3D"https://r.m.yuka.io/mk/c=
+l/f/sh/28xHLtxYQ53EbVuDa9eyB2KvF1ravwLsbB/8Kr6njWz44XN" title=3D"Instagram"=
+ target=3D"_blank" style=3D"color: #0092ff; text-decoration: underline;" si=
+b_link_id=3D"9" templating=3D"n"><span style=3D"color: #6E7681;"><u>Instagr=
+am</u></span></a> | <a href=3D"https://r.m.yuka.io/mk/cl/f/sh/8qyleR3u7gYC1=
+3wB5UCUmSUlSK42x25W4kj/9Ul8AfKVyShE" title=3D"Youtube" target=3D"_blank" st=
+yle=3D"color: #0092ff; text-decoration: underline;" sib_link_id=3D"10" temp=
+lating=3D"n"><span style=3D"color: #6E7681;"><u>Youtube</u></span></a> </p>=
+ </td> </tr></tbody></table></td> </tr></table></td> </tr></table></th> </t=
+r></table></td> </tr></table></td> </tr></table><table cellspacing=3D"0" ce=
+llpadding=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" align=3D"=
+center" class=3D"r0-o" style=3D"table-layout: fixed; width: 100%;"><tr><td =
+valign=3D"top" class=3D"r1-i" style=3D"background-color: #f9fafc;"> <table =
+cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" widt=
+h=3D"590" align=3D"center" class=3D"r0-o" style=3D"table-layout: fixed; wid=
+th: 590px;"><tr><td class=3D"r36-i" style=3D"color: #3b3f44; font-family: a=
+rial,helvetica,sans-serif; font-size: 16px; padding-bottom: 10px; padding-t=
+op: 10px;"> <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0" role=3D"presentation"><tr><th width=3D"100%" valign=3D"top" class=
+=3D"r4-c" style=3D"font-weight: normal;"> <table cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r5-o" =
+style=3D"table-layout: fixed; width: 100%;"><tr><td valign=3D"top" class=3D=
+"r6-i" style=3D"color: #3b3f44; font-family: arial,helvetica,sans-serif; fo=
+nt-size: 16px; padding-left: 15px; padding-right: 15px;"> <table width=3D"1=
+00%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"=
+><tr><td class=3D"r18-c" align=3D"left"> <table cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" role=3D"presentation" width=3D"100%" class=3D"r12-o" =
+style=3D"table-layout: fixed; width: 100%;"><tr><td align=3D"center" valign=
+=3D"top" class=3D"r37-i nl2go-default-textstyle" style=3D"word-break: break=
+-word; color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: =
+16px; text-align: center;"> <div><p style=3D"margin: 0; color: #888888; fon=
+t-family: Arial,Helvetica,sans-serif; font-size: 14px;"><span style=3D"font=
+-size: 11px;">Going bananas over too many emails?</span><br><span style=3D"=
+font-size: 11px;">No problem. Unsubscribe</span><span style=3D"color: #8484=
+84; font-size: 11px;"> </span><a href=3D"https://r.jc.yuka.io/mk/un/v2/sh/2=
+8xHBT2yvSJzuoAJKUu7uxTQj9EjCDZ5hx/pgyDrO1e-unZ" title=3D"unsubscribe" targe=
+t=3D"_blank" style=3D"color: #0092ff; text-decoration: underline;"><span st=
+yle=3D"color: #848484; font-size: 11px;"><u>here</u></span></a><span style=
+=3D"color: #848484; font-size: 11px;">.</span><span style=3D"font-size: 11p=
+x;"> We=E2=80=99ll split.</span></p></div> </td> </tr></table></td> </tr></=
+table></td> </tr></table></th> </tr></table></td> </tr></table></td> </tr><=
+/table></td> </tr></table>   </body></html>
+
+
+---------?=_56020-2806817498549--

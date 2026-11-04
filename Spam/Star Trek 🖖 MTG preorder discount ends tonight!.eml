@@ -1,0 +1,2457 @@
+Delivered-To: bergphilip885@gmail.com
+Received: by 2002:a2e:9c01:0:b0:3ac:686b:7cf with SMTP id s1csp1966228lji;
+        Fri, 30 Oct 2026 13:58:12 -0700 (PDT)
+X-Received: by 2002:a05:6214:3103:b0:91b:807b:de3f with SMTP id 6a1803df08f44-91ca4a0b55fmr55150046d6.8.1793393891829;
+        Fri, 30 Oct 2026 13:58:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1793393891; cv=none;
+        d=google.com; s=arc-20260327;
+        b=iHTMi3bmY6qdRbrwBq14MPpTiEcBiPPgxeVSOskbYbn8hohmNqmeplGyFi3m9P15A+
+         C6Qdp2cqGOj3+CTUUumFS5vhbWIxuJiWi/ULLRDKT3j1KS1es3Ug20pJQG8mb0BZcvTL
+         n631hBjjv23wNsWg3JndbY5ClgAM3NN151hp+58rUQbBkJueoET62layTmGLb2ndHY+6
+         6Vu782i7n+u3K1qX/bsugKdwu5Sq/ndr7FJV9EFpHTZVQHaPFQHQN1ESiZF3XHV97sAM
+         HZj0d5jcVbAso78ROHj52O8/taI2JyrmGmDHmn+I0cwSmMB3MUlJJKEx+I3uF6r/9FAe
+         wsFQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=message-id:o:list-unsubscribe-post:list-unsubscribe:feedback-id:to
+         :from:subject:mime-version:date:sender:dkim-signature:dkim-signature
+         :dkim-signature;
+        bh=pkWf7a81A0flJIyMntcD3qIC5ghaPQ3kl822cnKAS/U=;
+        fh=PTuvxKzhMlw2RufZDYFFcbxz+H+/enVq7Z2wxjBf9k4=;
+        b=R0CSHzXOBMXmfhw4ilzqoB3xE9ptM9MHseUIicgn7SHv/NxcHTEaQmdCNHhu1t96/6
+         85krP4jNAqr+RAw2sHr1dRz6VWlX7JAXUIXuMa6m0Vz+dtvvBUvSbUBJxz40KdkI91Zv
+         6sOJ+81wT7Is9R9YfAcWWYXvgxOeb9qr/gb6uZi80feKcsGs3VBODxfU8dqLf0AsSJ2u
+         1jI9OW6yugCodxktkrkVi37yx6jsgk9pnNigsHwBpMRraDXyBJKyIpvQS/Dpx0Mt4yB9
+         BANfJ60IsHm6v4f1WZgdIr8HecpLEWFYrOAInhBjxDpVOX/XBhoU3f1fbiXjj6X6Oqyw
+         dRjg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@dkim4.omnisend.email header.s=omni1 header.b=nKiZAKWV;
+       dkim=pass header.i=@crustygames.com header.s=k1 header.b=oIaITNnx;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=Mz3mBrfG;
+       spf=pass (google.com: domain of bounce+e7c35b.ea1c58-bergphilip885=gmail.com@crustygames.com designates 69.72.37.112 as permitted sender) smtp.mailfrom="bounce+e7c35b.ea1c58-bergphilip885=gmail.com@crustygames.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=crustygames.com
+Return-Path: <bounce+e7c35b.ea1c58-bergphilip885=gmail.com@crustygames.com>
+Received: from v5112.v5729ba63.use4.send.mailgun.net (v5112.v5729ba63.use4.send.mailgun.net. [69.72.37.112])
+        by mx.google.com with UTF8SMTPS id 6a1803df08f44-91ca8135eb3si28588536d6.634.2026.10.30.13.58.11
+        for <bergphilip885@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 30 Oct 2026 13:58:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+e7c35b.ea1c58-bergphilip885=gmail.com@crustygames.com designates 69.72.37.112 as permitted sender) client-ip=69.72.37.112;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@dkim4.omnisend.email header.s=omni1 header.b=nKiZAKWV;
+       dkim=pass header.i=@crustygames.com header.s=k1 header.b=oIaITNnx;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=Mz3mBrfG;
+       spf=pass (google.com: domain of bounce+e7c35b.ea1c58-bergphilip885=gmail.com@crustygames.com designates 69.72.37.112 as permitted sender) smtp.mailfrom="bounce+e7c35b.ea1c58-bergphilip885=gmail.com@crustygames.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=crustygames.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=dkim4.omnisend.email; q=dns/txt; s=omni1; t=1793393891; x=1793401091;
+ h=Message-Id: List-Unsubscribe-Post: List-Unsubscribe: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: Sender: Sender: X-Feedback-Id;
+ bh=pkWf7a81A0flJIyMntcD3qIC5ghaPQ3kl822cnKAS/U=;
+ b=nKiZAKWV2mPwS5mbM6sun9tvn95FMO2N51M14o47A80iRI/5meS0cosMZgSyjvbgmH/Tpa2pk94QxpC3YXJp2gMlpn8cL1u3KOX3tzu6rcz+z/8QQh80eIUJZm3gduNS5nxjtmOXbuwfMTua6enm2hx0VRvie5JESUBugEjc2hMEIu44bXYUto/R/nn6VGaytJbMSE6pmWlyG9uphf1NXW/Ks7ZTKVW3QsLBVgUtPO2y80NSdKJvQPLqx4jKJGxFbfIxQ5EQf8uppsWo0fCFY5o//UQd1hLr1+5YuQrtS1yYiwsZefSO/XfEooZ5ctKXITqCIRF2LL9NeKhuqy+IWA==
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=crustygames.com; q=dns/txt; s=k1; t=1793393891; x=1793401091;
+ h=Message-Id: List-Unsubscribe-Post: List-Unsubscribe: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: Sender: Sender: X-Feedback-Id;
+ bh=pkWf7a81A0flJIyMntcD3qIC5ghaPQ3kl822cnKAS/U=;
+ b=oIaITNnxBnLJhobutDhiLXVruT0kH2RR98K7vlQYBgIvacczeW3L2/ay8MQDr2DC3XTIogXGowLXZa3nto5uqCtS7GbvuwuCx3b/vsnSPqLWU4IxNAZjz3RM+OvnjozKJKzrM65F6CR+6UTuqCA+k5eXMHjx6c/KkYSFms8LsUc=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1793393891; x=1793401091;
+ h=Message-Id: List-Unsubscribe-Post: List-Unsubscribe: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: Sender: Sender: X-Feedback-Id;
+ bh=pkWf7a81A0flJIyMntcD3qIC5ghaPQ3kl822cnKAS/U=;
+ b=Mz3mBrfGT8mqZzQ4SHFniLqdfSOZ/ao6r1FbymYkvBVd3ZgqClrLnTwjSEcjzV7HenVKO1v5k5JnZfyM3jXLQaVX8yyedM2qBH1DOlVJbNZbX1wQYRn6fBw86LClALGgPg2+aK2TFArOXKUlBnaYKAHgVJeQTG1ASsfDgjG8+Yw=
+X-Mailgun-Sid: WyJmZGFhOCIsImJlcmdwaGlsaXA4ODVAZ21haWwuY29tIiwiZWExYzU4Il0=
+X-Feedback-Id: contact@crustygames.com::62968838f417f4918ca58a67:mailgun
+Received: by 70929246f63279615731ae8c290f5026f8411d0480921cce6a554e7722b9fa54 with HTTP
+ id 6ae504e19b9c56af9688555a; Fri, 30 Oct 2026 20:58:09 GMT
+X-Mailgun-Sending-Ip-Pool-Name: BS2
+X-Mailgun-Sending-Ip-Pool: 6655a30cd819c2ceb35f8412
+X-Mailgun-Sending-Ip: 69.72.37.112
+X-Mailgun-Batch-Id: 6ae504e19b9c56af9688555a
+Sender: contact@crustygames.com
+Date: Fri, 30 Oct 2026 20:58:09 +0000
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="95fbb0ab6968cd95c1714e3f1e002daedb9c7264343335dc728b67fd85a7"
+Subject: =?UTF-8?q?Star_Trek_=F0=9F=96=96_MTG_preorder_discount_ends_tonight!?=
+From: Crusty Games <contact@crustygames.com>
+To: bergphilip885@gmail.com
+X-Mailgun-Secondary-Dkim: dkim4.omnisend.email,omni1
+X-Mailgun-Track: false
+Feedback-Id: 6add1a9a5e1532e489f97db9:5fbe93d34c7fa41a08d6240a:campaign:omnisend
+List-Unsubscribe: <https://nmi.soundestlink.com/contactsPreferences/v2/unsubscribe/?b=5fbe93d34c7fa41a08d6240a&c=62d1e1ecd82666001c292146&payload=a9qP4e5MWUSzOfb-ifUEFnV7qVYw9xUAUn8yiWuS3oTS1Jt73WqckRbGD2yWOIXkE06_dM1_j8st8v7YKAPdqhk4bA89Etb9Mqd_xer29QKPNSEHHQrDuhnLNsfsyj9pk6FA&headerUnsub=true>
+X-Abuse-Reports-To: abuse@omnisend.com
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+O:secondary-Dkim: dkim4.omnisend.email,omni1
+X-Mailgun-Variables: {"brandID": "5fbe93d34c7fa41a08d6240a", "contactID":
+ "62d1e1ecd82666001c292146", "progressID": "6add1bc99387b89d8378e71b"}
+Message-Id: <20261030205809.334b5d98f02e5e51@crustygames.com>
+
+--95fbb0ab6968cd95c1714e3f1e002daedb9c7264343335dc728b67fd85a7
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Ships on Nov 6th
+
+This email was sent to you as HTML-only. To view it, please visit:=20
+https://nmi.soundestlink.com/ce/v/62d1e1ecd82666001c292146/6add1bc99387b89d=
+8378e71b?signature=3Dc7fb11996b566e451eef00598e04912f7e6791e69cc20a65289c77=
+6057a7813a
+
+**************************
+
+Make sure you keep getting our latest offers and add contact@crustygames.co=
+m to your address book.
+
+Unsubscribe=20
+https://nmi.soundestlink.com/contactsPreferences/v2/unsubscribe/?b=3D5fbe93=
+d34c7fa41a08d6240a&c=3D62d1e1ecd82666001c292146&payload=3Da9qP4e5MWUSzOfb-i=
+fUEFnV7qVYw9xUAUn8yiWuS3oTS1Jt73WqckRbGD2yWOIXkE06_dM1_j8st8v7YKAPdqhk4bA89=
+Etb9Mqd_xer29QKPNSEHHQrDuhnLNsfsyj9pk6FA
+
+Visit site
+http://crustygames.com
+
+=C2=96
+
+--95fbb0ab6968cd95c1714e3f1e002daedb9c7264343335dc728b67fd85a7
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head><!-- Used for outlook versions from 9 and greater -->
+<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPer=
+Inch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+<![endif]-->
+<title>Star Trek =F0=9F=96=96 MTG preorder discount ends tonight!</title>
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type"/>
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1" name=3D"viewport"=
+/>
+<meta content=3D"telephone=3Dno" name=3D"format-detection"/>
+<link rel=3D"icon" href=3D"data:,">
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"https://fonts.soundestli=
+nk.com/fonts/css/Lato"/>
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"https://fonts.soundestli=
+nk.com/fonts/css/Inter"/>
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"https://fonts.soundestli=
+nk.com/fonts/css/Quicksand"/>
+<style type=3D"text/css">
+html,body{width:100%!important;height:100%!important;margin:0 auto!importan=
+t;padding:0!important;-webkit-font-smoothing:antialiased;-webkit-text-size-=
+adjust:none;-ms-text-size-adjust:none;}body,table,td,a{-webkit-text-size-ad=
+just:100%;-ms-text-size-adjust:100%;}table{border-collapse:collapse;}table,=
+td{mso-table-lspace:0pt;mso-table-rspace:0pt;}th{font-weight:300;}img{-ms-i=
+nterpolation-mode:bicubic;}a[x-apple-data-detectors]{text-decoration:none!i=
+mportant;font-size:
+inherit!important;font-family:inherit!important;font-weight:inherit!importa=
+nt;line-height:inherit!important;color:inherit;}a:link,span.MsoHyperlink{te=
+xt-decoration:none;color:inherit;}u+#body a{text-decoration:none;font-size:=
+inherit;font-family:inherit;font-weight:inherit;line-height:inherit;color:i=
+nherit;}.appleFooterLinks a{text-decoration:none;color:inherit;}.desktop-wr=
+apper{display:table-cell;}.default-margin p{margin:0!important;}.centered-b=
+lock{display:block;margin:0 auto!important;}
+=2Emobile{display:none!important;}.side=
+-by-side{width:50%;max-width:50%;}.pro=
+duct-description-table th{mso-line-height-rule:exactly}.no-margin{margin:0;=
+}.margin-top{margin:4px 0 0 0;}p{word-spacing:normal;}
+@media screen and (max-width:600px){body{min-width:1px!important;}.desktop{=
+display:none!important;}.mobile{display:table!important;}.mobile-body-conta=
+iner{min-width:1px!important;}.mobile-container{width:100%!important;displa=
+y:table!important;height:auto!important;}.mobile-image{width:100%!important=
+;height:auto!important;}.mobile-bounded-image{max-width:100%!important;widt=
+h:auto!important;height:auto!important;}.mobile-image-stacked{max-width:100=
+%!important;width:auto!important;}
+=2Emobile-table{width:100%!important;}.=
+padding-left{padding-left:12px!importa=
+nt;}.padding-right{padding-right:12px!important;}.padding-top{padding-top:1=
+2px!important;}.padding-bottom{padding-bottom:12px!important;}.mobile-hidde=
+n{display:none!important;}.placeholder-image-block-table-cell{height:150px!=
+important;}/* STARTS Order confirmation */ .order-product-table-responsive-=
+cell{display:block!important;width:100%;}.order-product-image-responsive-el=
+ement{width:80px!important;height:auto;}
+=2Eplaceholder-image-block-table-cell.o=
+rder-product-image-responsive-element{=
+height:80px!important;}/* ENDS Order confirmation */ /* STARTS Order billin=
+g & shipping */ .order-billing-and-shipping-responsive-cell{display:table-r=
+ow!important;}/* ENDS Order billing & shipping */ .desktop-wrapper{display:=
+inline-block!important;}.menu-item-cell{width:auto!important;} }
+@media screen and (max-width:480px){.stack-column{display:block!important;w=
+idth:100%!important;min-width:100%!important;direction:ltr!important;paddin=
+g:12px 0px!important;box-sizing:border-box;} }
+</style>
+</head>
+<body id=3D"body"
+style=3D"padding:0px;margin:0px"><div
+style=3D"display:none;font-size:0;line-height:0;max-height:0;max-width:0;op=
+acity:0;overflow:hidden;mso-hide:all;"> Ships on Nov 6th &#847; &#847; &#84=
+7; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#=
+847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; =
+&#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847=
+; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#8=
+47; &#847; &#847; &#847; &#847; &#847; &#847; &#847;
+&#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847=
+; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#8=
+47; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &=
+#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;=
+ &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#84=
+7; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#=
+847; &#847; &#847; &#847; &#847; &#847; &#847;
+&#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847=
+; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#8=
+47; &#847; &#847; &#847; &#847; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &=
+shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy=
+; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &=
+shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy=
+; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+&shy; &shy; </div><p
+style=3D"max-height:0;font-size:0;line-height:0;margin:0;overflow:hidden;">=
+ <img alt=3D"" border=3D"0" src=3D"https://nmi.soundestlink.com/ce/o/62d1e1=
+ecd82666001c292146/6add1bc99387b89d8378e71b?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a" width=3D"1" height=3D"1"/> <=
+/p>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" heig=
+ht=3D"100%"
+style=3D"background-color:#ECECEC;" class=3D"mobile-body-container"><tr><td=
+>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"
+style=3D"min-width:290px"><tr><td>
+<table width=3D"600" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=
+=3D"center"
+style=3D"width:600px;margin:0px auto;background-color:#FFFFFF;" class=3D"mo=
+bile-container"><tr><td>
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr>=
+<td>
+<table id=3D"63451dfb2d20dd7ed7459335" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td background=3D""
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;background-color:#000;background-position:unset;background-repeat:no-re=
+peat;background-size:cover;">
+<table id=3D"63451dfb2d20dd7ed7459336" role=3D"presentation" background=3D"=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%"
+style=3D"width:100%;"><tr><td id=3D"63451dfb2d20dd7ed7459337" class=3D"mobi=
+le-container"
+style=3D"width:600px;vertical-align:top;">
+<table id=3D"63451e112d20dd7ed7459a6c" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"600" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%"><tr><td
+style=3D"text-align:center"> <a target=3D"_blank" href=3D"https://nmi.sound=
+estlink.com/ce/c/62d1e1ecd82666001c292146/6add1bc99387b89d8378e71b/6ae504d1=
+85a15bc932639e60?signature=3Dc7fb11996b566e451eef00598e04912f7e6791e69cc20a=
+65289c776057a7813a"> <img width=3D"528px" alt=3D"logo" height=3D"80" class=
+=3D"mobile-image" border=3D"0" src=3D"https://nmi.soundestlink.com/image/ne=
+wsletter/6203e0c2a2aca2001fea520f"
+style=3D"max-width:528px!important;height:auto;margin:0 0;vertical-align:mi=
+ddle;color:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:12px;line-height:1.5;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6786b5c59c887284e4631579" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"600" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6786b5c59=
+c887284e4631579" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e61?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"S=
+tar Trek Preorder"
+                                 class=3D"mobile-image centered-block"
+                                    width=3D"576" height=3D"576"
+                                 border=3D"0"
+                                 src=3D"https://nmi.soundestlink.com/image/=
+newsletter/6adce3006467289ff57cc189"
+style=3D"max-width:576px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:576px;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"672a881d1b28811cb91aa19b" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#383838;font-family:Lato,Helvetica Neue,Helvetica,Arial,sans=
+-serif;font-size:28px;line-height:1.5;mso-line-height-alt:150%;padding-bott=
+om:12px;padding-left:12px;padding-right:12px;padding-top:12px;" bgcolor=3D"=
+" class=3D"mobile-table"><p
+style=3D"margin:0px;text-align:center;"><strong><span
+style=3D"color:rgb(255,255,255);font-size:40px;">DISCOUNT ENDS TONIGHT!</sp=
+an></strong></p><p
+style=3D"margin:0px;text-align:center;"><span
+style=3D"color:rgb(255,255,255);"><strong><u>Ships November 6th</u></strong=
+></span></p><p
+style=3D"margin:0px;text-align:center;"><br></p><p
+style=3D"margin:0px;text-align:center;"><span
+style=3D"color:rgb(255,255,255);"><span
+style=3D"font-size:30px;"><strong><em>Get 15% <span
+style=3D"color:rgb(255,255,255);"><span
+style=3D"font-size:30px;"><strong><em>Off Automatically</em></strong></span=
+></span></em></strong></span></span></p><p
+style=3D"margin:0px;text-align:center;"><span
+style=3D"color:rgb(255,255,255);"><span
+style=3D"font-size:30px;"><strong><em><span
+style=3D"color:rgb(255,255,255);"><span
+style=3D"font-size:24px;"><strong><em>Discount on eligible items will show =
+at Checkout</em></strong></span></span></em></strong></span></span></p>
+</td></tr></table>
+<table id=3D"63ffa1334c7f345fb35722a1" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:30px;padding-left:12px;padding-right:12px;padding-t=
+op:30px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"63ffa1334c7f345fb35722a1=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e62?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop All </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"672a7e8cbc6a3f71a43c7798" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td class=3D"padding-left padding-right padding-top padding-=
+bottom" background=3D""
+style=3D"padding-bottom:24px;padding-left:24px;padding-right:24px;padding-t=
+op:24px;background-color:#000;background-position:unset;background-repeat:n=
+o-repeat;background-size:cover;">
+<table id=3D"6adce3a3fa8e729a1ccd2a37" role=3D"presentation" background=3D"=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%"
+style=3D"width:100%;height:100%;"><tr><td id=3D"6adce3a3fa8e729a1ccd2a3c" c=
+lass=3D"mobile-container" valign=3D"top" height=3D"100%"
+style=3D"width:552px;height:100%;font-size:0px;word-break:break-word;">
+<table id=3D"6adce351fa8e729a1ccd277d" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"desktop"><tr><td=
+ class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd2909" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd2909" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e63?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"C=
+ollector Booster Box - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/collector-booster-box-star-trek-magic-the-gathering-2793216.=
+png?v=3D1792710013"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+</td><td class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd2911" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Collector Booster Box</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd291c" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$509.99 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd2921" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$599.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd292b" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd292b=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e64?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+<!--[if !mso]><!-->
+<table id=3D"6adce351fa8e729a1ccd277d" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"mobile"><tr><td>
+<table id=3D"6adce351fa8e729a1ccd2909" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd2909" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e65?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"C=
+ollector Booster Box - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/collector-booster-box-star-trek-magic-the-gathering-2793216.=
+png?v=3D1792710013"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2911" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Collector Booster Box</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd291c" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$509.99 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd2921" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$599.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd292b" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd292b=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e66?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table><!--
+<![endif]-->
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce3a3fa8e729a1ccd2a39" role=3D"presentation" background=3D"=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%"
+style=3D"width:100%;height:100%;"><tr><td id=3D"6adce3a3fa8e729a1ccd2a44" c=
+lass=3D"mobile-container" valign=3D"top" height=3D"100%"
+style=3D"width:552px;height:100%;font-size:0px;word-break:break-word;">
+<table id=3D"6adce351fa8e729a1ccd2815" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"desktop"><tr><td=
+ class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd2995" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd2995" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e67?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"P=
+lay Booster Box - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/play-booster-box-star-trek-magic-the-gathering-5814281.png?v=
+=3D1792710015"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+</td><td class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd299d" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Play Booster Box</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29a8" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$152.99 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd29ad" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$179.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29b7" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd29b7=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e68?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+<!--[if !mso]><!-->
+<table id=3D"6adce351fa8e729a1ccd2815" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"mobile"><tr><td>
+<table id=3D"6adce351fa8e729a1ccd2995" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd2995" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e69?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"P=
+lay Booster Box - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/play-booster-box-star-trek-magic-the-gathering-5814281.png?v=
+=3D1792710015"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd299d" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Play Booster Box</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29a8" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$152.99 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd29ad" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$179.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29b7" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd29b7=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e6a?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table><!--
+<![endif]-->
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce3a3fa8e729a1ccd2a3b" role=3D"presentation" background=3D"=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%"
+style=3D"width:100%;height:100%;"><tr><td id=3D"6adce3a3fa8e729a1ccd2a42" c=
+lass=3D"mobile-container" valign=3D"top" height=3D"100%"
+style=3D"width:552px;height:100%;font-size:0px;word-break:break-word;">
+<table id=3D"6adce351fa8e729a1ccd27ef" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"desktop"><tr><td=
+ class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd2972" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd2972" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e6b?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"C=
+ommander Deck Collector&#39;s Edition - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/commander-deck-collectors-edition-star-trek-magic-the-gather=
+ing-6560989.png?v=3D1792710016"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+</td><td class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd297a" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Commander Deck COLLECTOR&#39;S EDITION</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2985" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$212.49 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd298a" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$249.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2994" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd2994=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e6c?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+<!--[if !mso]><!-->
+<table id=3D"6adce351fa8e729a1ccd27ef" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"mobile"><tr><td>
+<table id=3D"6adce351fa8e729a1ccd2972" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd2972" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e6d?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"C=
+ommander Deck Collector&#39;s Edition - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/commander-deck-collectors-edition-star-trek-magic-the-gather=
+ing-6560989.png?v=3D1792710016"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd297a" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Commander Deck COLLECTOR&#39;S EDITION</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2985" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$212.49 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd298a" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$249.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2994" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd2994=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e6e?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table><!--
+<![endif]-->
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce3a3fa8e729a1ccd2a3d" role=3D"presentation" background=3D"=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%"
+style=3D"width:100%;height:100%;"><tr><td id=3D"6adce3a3fa8e729a1ccd2a4a" c=
+lass=3D"mobile-container" valign=3D"top" height=3D"100%"
+style=3D"width:552px;height:100%;font-size:0px;word-break:break-word;">
+<table id=3D"6adce351fa8e729a1ccd2887" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"desktop"><tr><td=
+ class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd29fe" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd29fe" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e6f?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"D=
+raft Night - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/draft-night-star-trek-magic-the-gathering-4695868.png?v=3D17=
+92710014"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+</td><td class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd2a06" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Draft Night</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2a11" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$135.99 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd2a16" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$159.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2a20" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd2a20=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e70?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+<!--[if !mso]><!-->
+<table id=3D"6adce351fa8e729a1ccd2887" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"mobile"><tr><td>
+<table id=3D"6adce351fa8e729a1ccd29fe" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd29fe" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e71?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"D=
+raft Night - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/draft-night-star-trek-magic-the-gathering-4695868.png?v=3D17=
+92710014"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2a06" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Draft Night</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2a11" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$135.99 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd2a16" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$159.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2a20" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd2a20=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e72?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table><!--
+<![endif]-->
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce3a3fa8e729a1ccd2a3f" role=3D"presentation" background=3D"=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%"
+style=3D"width:100%;height:100%;"><tr><td id=3D"6adce3a3fa8e729a1ccd2a38" c=
+lass=3D"mobile-container" valign=3D"top" height=3D"100%"
+style=3D"width:552px;height:100%;font-size:0px;word-break:break-word;">
+<table id=3D"6adce351fa8e729a1ccd2731" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"desktop"><tr><td=
+ class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd28c3" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd28c3" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e73?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"B=
+eam Me Up Bundle - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/beam-me-up-bundle-star-trek-magic-the-gathering-1324446.png?=
+v=3D1792710015"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+</td><td class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd28cb" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Beam Me Up Bundle</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd28d6" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$140.24 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd28db" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$164.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd28e5" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd28e5=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e74?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+<!--[if !mso]><!-->
+<table id=3D"6adce351fa8e729a1ccd2731" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"mobile"><tr><td>
+<table id=3D"6adce351fa8e729a1ccd28c3" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd28c3" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e75?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"B=
+eam Me Up Bundle - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/beam-me-up-bundle-star-trek-magic-the-gathering-1324446.png?=
+v=3D1792710015"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd28cb" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Beam Me Up Bundle</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd28d6" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$140.24 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd28db" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$164.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd28e5" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd28e5=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e76?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table><!--
+<![endif]-->
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce3a3fa8e729a1ccd2a41" role=3D"presentation" background=3D"=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%"
+style=3D"width:100%;height:100%;"><tr><td id=3D"6adce3a3fa8e729a1ccd2a40" c=
+lass=3D"mobile-container" valign=3D"top" height=3D"100%"
+style=3D"width:552px;height:100%;font-size:0px;word-break:break-word;">
+<table id=3D"6adce351fa8e729a1ccd27c9" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"desktop"><tr><td=
+ class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd294f" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd294f" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e77?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"C=
+ommander Deck - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/commander-deck-star-trek-magic-the-gathering-1832889.png?v=
+=3D1792710012"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+</td><td class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd2957" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Commander Deck</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2962" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$72.24 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd2967" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$84.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2971" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd2971=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e78?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+<!--[if !mso]><!-->
+<table id=3D"6adce351fa8e729a1ccd27c9" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"mobile"><tr><td>
+<table id=3D"6adce351fa8e729a1ccd294f" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd294f" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e79?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"C=
+ommander Deck - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/commander-deck-star-trek-magic-the-gathering-1832889.png?v=
+=3D1792710012"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2957" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Commander Deck</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2962" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$72.24 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd2967" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$84.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2971" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd2971=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e7a?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table><!--
+<![endif]-->
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce3a3fa8e729a1ccd2a43" role=3D"presentation" background=3D"=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%"
+style=3D"width:100%;height:100%;"><tr><td id=3D"6adce3a3fa8e729a1ccd2a3a" c=
+lass=3D"mobile-container" valign=3D"top" height=3D"100%"
+style=3D"width:552px;height:100%;font-size:0px;word-break:break-word;">
+<table id=3D"6adce351fa8e729a1ccd2757" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"desktop"><tr><td=
+ class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd28e6" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd28e6" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e7b?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"B=
+undle - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/bundle-star-trek-magic-the-gathering-9116107.png?v=3D1792710=
+014"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+</td><td class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd28ee" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Bundle</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd28f9" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$76.49 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd28fe" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$89.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2908" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd2908=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e7c?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+<!--[if !mso]><!-->
+<table id=3D"6adce351fa8e729a1ccd2757" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"mobile"><tr><td>
+<table id=3D"6adce351fa8e729a1ccd28e6" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd28e6" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e7d?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"B=
+undle - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/bundle-star-trek-magic-the-gathering-9116107.png?v=3D1792710=
+014"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd28ee" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Bundle</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd28f9" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$76.49 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd28fe" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$89.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2908" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd2908=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e7e?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table><!--
+<![endif]-->
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce3a3fa8e729a1ccd2a45" role=3D"presentation" background=3D"=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%"
+style=3D"width:100%;height:100%;"><tr><td id=3D"6adce3a3fa8e729a1ccd2a3e" c=
+lass=3D"mobile-container" valign=3D"top" height=3D"100%"
+style=3D"width:552px;height:100%;font-size:0px;word-break:break-word;">
+<table id=3D"6adce351fa8e729a1ccd27a3" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"desktop"><tr><td=
+ class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd292c" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd292c" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e7f?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"C=
+ollector Booster Pack - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/collector-booster-pack-star-trek-magic-the-gathering-5464722=
+=2Epng?v=3D1792710013"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+</td><td class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd2934" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Collector Booster Pack</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd293f" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$55.24 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd2944" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$64.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd294e" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd294e=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e80?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+<!--[if !mso]><!-->
+<table id=3D"6adce351fa8e729a1ccd27a3" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"mobile"><tr><td>
+<table id=3D"6adce351fa8e729a1ccd292c" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd292c" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e81?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"C=
+ollector Booster Pack - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/collector-booster-pack-star-trek-magic-the-gathering-5464722=
+=2Epng?v=3D1792710013"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd2934" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Collector Booster Pack</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd293f" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$55.24 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd2944" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$64.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd294e" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd294e=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e82?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table><!--
+<![endif]-->
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce3a3fa8e729a1ccd2a47" role=3D"presentation" background=3D"=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%"
+style=3D"width:100%;height:100%;"><tr><td id=3D"6adce3a3fa8e729a1ccd2a48" c=
+lass=3D"mobile-container" valign=3D"top" height=3D"100%"
+style=3D"width:552px;height:100%;font-size:0px;word-break:break-word;">
+<table id=3D"6adce351fa8e729a1ccd2861" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"desktop"><tr><td=
+ class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd29db" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd29db" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e83?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"S=
+cene Box - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/scene-box-star-trek-magic-the-gathering-1488233.png?v=3D1792=
+710069"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+</td><td class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd29e3" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Scene Box</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29ee" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$42.49 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd29f3" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$49.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29fd" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd29fd=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e84?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+<!--[if !mso]><!-->
+<table id=3D"6adce351fa8e729a1ccd2861" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"mobile"><tr><td>
+<table id=3D"6adce351fa8e729a1ccd29db" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd29db" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e85?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"S=
+cene Box - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/scene-box-star-trek-magic-the-gathering-1488233.png?v=3D1792=
+710069"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29e3" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Scene Box</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29ee" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$42.49 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd29f3" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$49.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29fd" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd29fd=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e86?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table><!--
+<![endif]-->
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce3a3fa8e729a1ccd2a49" role=3D"presentation" background=3D"=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%"
+style=3D"width:100%;height:100%;"><tr><td id=3D"6adce3a3fa8e729a1ccd2a46" c=
+lass=3D"mobile-container" valign=3D"top" height=3D"100%"
+style=3D"width:552px;height:100%;font-size:0px;word-break:break-word;">
+<table id=3D"6adce351fa8e729a1ccd283b" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"desktop"><tr><td=
+ class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd29b8" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd29b8" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e87?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"P=
+rerelease Kit - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/prerelease-kit-star-trek-magic-the-gathering-8176697.png?v=
+=3D1792710013"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+</td><td class=3D"side-by-side">
+<table id=3D"6adce351fa8e729a1ccd29c0" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Prerelease Kit</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29cb" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$55.24 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd29d0" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$64.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29da" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd29da=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e88?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+<!--[if !mso]><!-->
+<table id=3D"6adce351fa8e729a1ccd283b" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=3D"mobile"><tr><td>
+<table id=3D"6adce351fa8e729a1ccd29b8" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"276" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"6adce351f=
+a8e729a1ccd29b8" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd8266600=
+1c292146/6add1bc99387b89d8378e71b/6ae504d185a15bc932639e89?signature=3Dc7fb=
+11996b566e451eef00598e04912f7e6791e69cc20a65289c776057a7813a"><img alt=3D"P=
+rerelease Kit - Star Trek - Magic The Gathering"
+                                 class=3D"mobile-image"
+                                    width=3D"276" height=3D"276"
+                                 border=3D"0"
+                                 src=3D"https://cdn.shopify.com/s/files/1/2=
+504/9054/files/prerelease-kit-star-trek-magic-the-gathering-8176697.png?v=
+=3D1792710013"
+style=3D"max-width:276px;height:auto;margin:0 0;vertical-align:middle;color=
+:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;line-height:1.5;width:276px;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29c0" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolo=
+r=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;color:rgb(255,255,255);text-align:cente=
+r;">Prerelease Kit</p>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29cb" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#FFFFFF;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:0px;padding-left:12px;padding-right:12px;padding-top:10px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;color:rgb(255,255,255=
+);">$55.24 after discount</p>
+</td></tr></table>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"><tr>=
+<td
+style=3D"padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:=
+0px;">
+<table cellpadding=3D"0" border=3D"0" align=3D"center"><tr><td align=3D"cen=
+ter">
+<table id=3D"6adce351fa8e729a1ccd29d0" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#ECECEC;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:1.5;mso-line-height-alt:150%;padding=
+-bottom:10px;padding-left:12px;padding-right:0px;padding-top:5px;" bgcolor=
+=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;color:rgb(236,236,236);font-weight:700;text-decoration:=
+line-through;">$64.99</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"6adce351fa8e729a1ccd29da" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:12px;padding-left:12px;padding-right:12px;padding-t=
+op:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"6adce351fa8e729a1ccd29da=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e8a?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table><!--
+<![endif]-->
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"661993459ed3dc3bf026e72e" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td class=3D"padding-left padding-right padding-top" backgro=
+und=3D""
+style=3D"padding-bottom:0px;padding-left:24px;padding-right:24px;padding-to=
+p:24px;background-color:#000;background-position:unset;background-repeat:no=
+-repeat;background-size:cover;">
+<table id=3D"661993459ed3dc3bf026e72f" role=3D"presentation" background=3D"=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%"
+style=3D"width:100%;"><tr><td id=3D"661993459ed3dc3bf026e730" class=3D"mobi=
+le-container"
+style=3D"width:552px;vertical-align:top;">
+<table id=3D"661993459ed3dc3bf026e731" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#383838;font-family:Lato,Helvetica Neue,Helvetica,Arial,sans=
+-serif;font-size:28px;line-height:1.5;mso-line-height-alt:150%;padding-bott=
+om:12px;padding-left:12px;padding-right:12px;padding-top:12px;" bgcolor=3D"=
+" class=3D"mobile-table"><p
+style=3D"margin:0px;text-align:center;"><span
+style=3D"color:rgb(255,255,255);"><strong><u>Exclusive Subscriber Discounts=
+</u></strong></span></p>
+</td></tr></table>
+<table id=3D"686829729e0a0f08c03e4a2f" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-bottom:30px;padding-left:12px;padding-right:12px;padding-t=
+op:30px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#E53309;border:1px solid #000000;border-radius:8p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"color:#FFFFFF;font-family:Inter,Helvetica Neue,Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:bold;padding-bottom:12px;padding-left:12=
+px;padding-right:12px;padding-top:12px;">
+<![endif]--> <a target=3D"_blank"  data-link-id=3D"686829729e0a0f08c03e4a2f=
+" href=3D"https://nmi.soundestlink.com/ce/c/62d1e1ecd82666001c292146/6add1b=
+c99387b89d8378e71b/6ae504d185a15bc932639e8c?signature=3Dc7fb11996b566e451ee=
+f00598e04912f7e6791e69cc20a65289c776057a7813a"
+style=3D"text-decoration:none;padding-bottom:12px;padding-left:12px;padding=
+-right:12px;padding-top:12px;display:inline-block;color:#FFFFFF;font-family=
+:Inter,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-weight=
+:bold;line-height:1.2;"> Shop All </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"63451da72d20dd7ed745932b" role=3D"presentation" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td class=3D"padding-left padding-right padding-top padding-=
+bottom" background=3D""
+style=3D"padding-bottom:24px;padding-left:24px;padding-right:24px;padding-t=
+op:24px;background-color:#000000;background-position:unset;background-repea=
+t:no-repeat;background-size:cover;">
+<table id=3D"63451da72d20dd7ed745932c" role=3D"presentation" background=3D"=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%"
+style=3D"width:100%;"><tr><td id=3D"63451da72d20dd7ed745932d" class=3D"mobi=
+le-container"
+style=3D"width:552px;vertical-align:top;">
+<table id=3D"63451dfb2d20dd7ed7459331" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"552" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left"
+style=3D"width:100%"><tr><td
+style=3D"text-align:left"> <a target=3D"_blank" href=3D"https://nmi.soundes=
+tlink.com/ce/c/62d1e1ecd82666001c292146/6add1bc99387b89d8378e71b/6ae504d185=
+a15bc932639e8d?signature=3Dc7fb11996b566e451eef00598e04912f7e6791e69cc20a65=
+289c776057a7813a"> <img width=3D"75px" alt=3D"logo" height=3D"11" class=3D"=
+mobile-image" border=3D"0" src=3D"https://nmi.soundestlink.com/image/newsle=
+tter/6203e0c2a2aca2001fea520f"
+style=3D"max-width:75px!important;height:auto;margin:0 0;vertical-align:mid=
+dle;color:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,sans=
+-serif;font-size:12px;line-height:1.5;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"63451dfb2d20dd7ed7459332" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#383838;font-family:Quicksand,Helvetica Neue,Helvetica,Arial=
+,sans-serif;font-size:12px;line-height:1.5;mso-line-height-alt:150%;padding=
+:12px;" bgcolor=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;"><span
+style=3D"color:rgb(236,236,236);">=C2=A9 Crusty Games</span></p><p
+style=3D"margin:0px;"><span
+style=3D"color:rgb(236,236,236);"><br/></span></p><p
+style=3D"margin:0px;"><span
+style=3D"color:rgb(236,236,236);">P.O. Box 110024, Trumbull, United States,=
+ 06611</span></p><p
+style=3D"margin:0px;"><span
+style=3D"color:rgb(236,236,236);"><br/></span></p><p
+style=3D"margin:0px;"><span
+style=3D"color:rgb(236,236,236);">This email was sent to bergphilip885@gmai=
+l.com because you&#39;ve subscribed on our site or made a purchase. </span>=
+</p><p
+style=3D"margin:0px;"><span
+style=3D"color:rgb(255,255,255);"><br/></span></p><p
+style=3D"text-align:left;margin:0px;"><span
+style=3D"color:rgb(255,255,255);"><a
+style=3D"color:#FFFFFF" data-translation-key=3D"preference" href=3D"https:/=
+/nmi.soundestlink.com/contactsPreferences/v2/?b=3D5fbe93d34c7fa41a08d6240a&=
+c=3D62d1e1ecd82666001c292146&payload=3DC4hPKxhyYBd74lVeUoG4jp9dFmRVPvhqplXZ=
+ANfgXt41gA7VBk0bPmM7kDuhTa2Su8M237JlG0yLOn476-Mv3oAoAAA0kJQLxiz6FKMVIr9vub8=
+UBlc37AfywYfIhRqbFbTE" target=3D"_blank">Edit preferences</a> | <a
+style=3D"color:#FFFFFF" data-translation-key=3D"unsubscribe" href=3D"https:=
+//nmi.soundestlink.com/contactsPreferences/v2/unsubscribe/?b=3D5fbe93d34c7f=
+a41a08d6240a&c=3D62d1e1ecd82666001c292146&payload=3Da9qP4e5MWUSzOfb-ifUEFnV=
+7qVYw9xUAUn8yiWuS3oTS1Jt73WqckRbGD2yWOIXkE06_dM1_j8st8v7YKAPdqhk4bA89Etb9Mq=
+d_xer29QKPNSEHHQrDuhnLNsfsyj9pk6FA" target=3D"_blank">Unsubscribe</a></span=
+></p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</body>
+</html>
+
+
+--95fbb0ab6968cd95c1714e3f1e002daedb9c7264343335dc728b67fd85a7--

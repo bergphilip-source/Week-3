@@ -1,0 +1,1259 @@
+Delivered-To: bergphilip885@gmail.com
+Received: by 2002:a2e:9c01:0:b0:3ac:686b:7cf with SMTP id s1csp392318lji;
+        Thu, 29 Oct 2026 06:15:42 -0700 (PDT)
+X-Received: by 2002:a05:622a:c15:b0:530:1b1:72be with SMTP id d75a77b69052e-53fcc9bbf0cmr89649821cf.40.1793279742532;
+        Thu, 29 Oct 2026 06:15:42 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1793279742; cv=none;
+        d=google.com; s=arc-20260327;
+        b=fSY/7S8l7wP8qwSSo6pJAZlVLju9JZTuYwEAGpGsEBfaoc/uY5pmZNyB/ZOhjV90qr
+         vIxcajQNCBgGoRMIZIoMbwXQjZ2Y+/Qf3XuaOKPo3xOeMlqCkE89iMdNE9YBA7/woZAM
+         H1pH0sOk0coWeHdwXz09LyA1DO/2HYN+RjlOPwlOiMyUPccYr2oeJ40ecN+wZyug46eG
+         dQ/Irim6TytpaoujLwrHL2VuYIX24Q+7J50CPesct2XU063/lS4SQxbWzPyZ7seHN6gP
+         ftu4H2v190lmBptXGZ1aY3cqGBmoz2+WkC3zQl1SoSBRHskqbVy9lWkmyOL+UYE8dIaV
+         2GfA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=message-id:list-unsubscribe-post:list-unsubscribe:feedback-id
+         :reply-to:to:from:subject:mime-version:date:dkim-signature
+         :dkim-signature;
+        bh=orTYFF3ZUIo0ULzFp4VlG5u6VntT9iK0J69bXzCN77o=;
+        fh=gdCJxhBYiMTViDF0AvedafljezBGekLe5z/q+9O0lqM=;
+        b=QDGP7m2d6a6baFQpVO20Qu+YhbUlgeV7mx7hqgwhrR1whu+sPIZ4SwJS9gpPa5PFfd
+         IeQ6c9xleU6/07PYsI6JBskni1GlwMZXDtCL1KnjPrbSmHcfAtcY3J9f7OX7PE30MYPB
+         SAIUKeEcYZCGlVC0cbNaN5hR/tcxi9kZnr9Ui+2hzfM+Wb4f8m1OAeFu0E/IS1yxQ2ky
+         pdHVkAbuxzqg0qpMKTlRMZ3z9kOOJmgqimGDmDVMPUikCEyxMpfi6+rkQJe2VHLzA56o
+         vPnBKpyh1IMKUK+UF4s8UE3OXeXm4Bs2fYp92forMNdtRC8TlWVjML4Ix5VLoMvv+pH/
+         46Yw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mails.familygokarts.com header.s=mailo header.b=aKHak0Zi;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=b3qCLSVe;
+       spf=pass (google.com: domain of bounce+cb7d1f.ef1174-bergphilip885=gmail.com@mails.familygokarts.com designates 159.112.242.191 as permitted sender) smtp.mailfrom="bounce+cb7d1f.ef1174-bergphilip885=gmail.com@mails.familygokarts.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mails.familygokarts.com
+Return-Path: <bounce+cb7d1f.ef1174-bergphilip885=gmail.com@mails.familygokarts.com>
+Received: from v5191.v5463bdc0.use4.send.mailgun.net (v5191.v5463bdc0.use4.send.mailgun.net. [159.112.242.191])
+        by mx.google.com with UTF8SMTPS id d75a77b69052e-5383972226fsi145976731cf.401.2026.10.29.06.15.42
+        for <bergphilip885@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Oct 2026 06:15:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+cb7d1f.ef1174-bergphilip885=gmail.com@mails.familygokarts.com designates 159.112.242.191 as permitted sender) client-ip=159.112.242.191;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mails.familygokarts.com header.s=mailo header.b=aKHak0Zi;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=b3qCLSVe;
+       spf=pass (google.com: domain of bounce+cb7d1f.ef1174-bergphilip885=gmail.com@mails.familygokarts.com designates 159.112.242.191 as permitted sender) smtp.mailfrom="bounce+cb7d1f.ef1174-bergphilip885=gmail.com@mails.familygokarts.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mails.familygokarts.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mails.familygokarts.com; q=dns/txt; s=mailo; t=1793279742; x=1793286942;
+ h=Message-Id: List-Unsubscribe-Post: List-Unsubscribe: Reply-To: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=orTYFF3ZUIo0ULzFp4VlG5u6VntT9iK0J69bXzCN77o=;
+ b=aKHak0Zi3OqK7TUqSB+MiQ1+66SNvoFOjMHJVFP5GgvPVYQk3+Rvi3P8zTW8OffzajWJW2IvnxsndfNKbPB3JTifHx0jRBL7q+yU+fLW6AEJVw9AyWdj+M4BXKfayKgCMApHPO7kt3yCxBiKVdWtAaNYRROYoksf1bjdg2o+/rM=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1793279742; x=1793286942;
+ h=Message-Id: List-Unsubscribe-Post: List-Unsubscribe: Reply-To: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=orTYFF3ZUIo0ULzFp4VlG5u6VntT9iK0J69bXzCN77o=;
+ b=b3qCLSVejFoAOCT4yy4X+cuSZXot7ZQZskOKB+PuuAZQYLp92HBzlXie4Ev9jRIAp9RqKT4ROFXXS6r/H/c0iKswxDP6tDJR5owj3ZE4vBCyK0hFS3ZXnPsRieJxbQJK6GIWfGJWnopd4//rbRPqkFJxYiYlBSijZkISJtKS8uM=
+X-Mailgun-Sid: WyJkNjg5YSIsImJlcmdwaGlsaXA4ODVAZ21haWwuY29tIiwiZWYxMTc0Il0=
+X-Feedback-Id: shop@mails.familygokarts.com:cmb_var_160591-tnt_19052-cmb_:69e770e0cf09e2d0175e6197:mailgun
+Received: by a643ddcefaa40e9d3dd62d0a125ad9176cf8257ee17d880b48b1afae574470d3 with HTTP
+ id 6ae346fe661076cda8826cf8; Thu, 29 Oct 2026 13:15:42 GMT
+X-Mailgun-Sending-Ip: 159.112.242.191
+Date: Thu, 29 Oct 2026 13:15:42 +0000
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="1a02ddc796edda894d89b2f636b4a01331e5869eb1753af12be1fe681f0f"
+Subject: Two Dirt Bikes Built for Young Riders
+From: FamilyGoKarts <shop@mails.familygokarts.com>
+To: Philip Berg <bergphilip885@gmail.com>
+X-Mailgun-Tag: cmb_var_160591
+X-Mailgun-Tag: tnt_19052
+X-Mailgun-Tag: cmb_
+X-Mailgun-Track-Opens: true
+X-Mailgun-Track-Clicks: true
+Reply-To: FamilyGoKarts <support@familygokarts.com>
+X-Mailgun-Rewrite-Sender-Header: false
+Feedback-Id: becmp_152805:19052
+List-Unsubscribe: <https://api.listmember.co/api/v1/email/unsub/aTFKKy96MGk1MHpIQmhkSy9TYmEyTTJOZGZsN0JRd2JJTGs2VFE1K09wd0tLSThweVJBN0xDKzByajNNcXh1U3g1SGhLVjZKT09tdStZRWVXMy9zdEs5MnU4UTdYRm5BdWUwSllUbHRWZTQ9>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Mailgun-Variables: {"store_ref": "19052", "store_uuid": "\"47b8e9ad2616\"", "trackable_id":
+ "160591", "trackable_type": "\"campaign\""}
+Message-Id: <20261029131542.c31bb12711ebc7e1@mails.familygokarts.com>
+
+--1a02ddc796edda894d89b2f636b4a01331e5869eb1753af12be1fe681f0f
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+=20
+
+ 		 [https://email.mails.familygokarts.com/c/eJxsjEFywyAMRU9jlhkkgwkLncUjQD=
+hM7NiDSTy5fcdN21WX-u_pJZIM4IwSAud7dN4ZVDfKCXqwLlifstHGSBTvMDvuLdjoWBVCjQNo9=
+Kdo8BJ7CAHQAUiITqAzeuEy75fMS5nf03rn2vZLXBc103Ec_-yVgtRpu5W5bNer7YyezsQ329ta=
+ZaySCby2-HM_nyVRh2hcuIrnhAMMHaJqFJcwvriOMGjrQTVqjzZ-Xj9QtcrxzmGWsST61f629t7=
+kLEdeNi7T46y-CL8CAAD__29PXtc logo] [https://email.mails.familygokarts.com/c=
+/eJxkzD2SqzAMwPHT2GXGkr9woeI1uQYjG0M8gcAYJ0xu_4bN7jZbSvrrN1AeAbyRmcAHjT54g_=
+JGDI6t114FZY014JRyjDG74MZOW5SFUKEDhQE0WIOXpCFGQA-QY_IZhFELl3m_jLyU-T2td65tv=
+6R1kTPdWtt2of8JvAq8HsfxtxJ4lZVirtN2K3PZus4Ko6bT_EL2ttbc1zwSBGXxe34-y0AC0fjY=
+5cADOnACUTZKS-xfXHtwygaQjdqj9Z_Xz1G2yunOcc59Gegn-92195ZPOfGycZkep_oi_B8AAP_=
+_9qdiUQ]=20
+
+DELIVERING FAMILY FUN SINCE 1990=C2=A0 |=C2=A0 800-250-5502
+
+Compare the Apollo DB-27 and DB-28, two 110cc dirt bikes designed for
+different riding experiences.
+
+		[Lifestyle banner image featuring the Apollo DB-27 110cc Kids Dirt
+Bike]
+[https://email.mails.familygokarts.com/c/eJxkjktuwyAQQE8DO0fMGIxZsOjG17D42U=
+bGwQKSKLev0rRVpS5n5s3T8zosAJLToEGqHqWSHOmmUYieWWacUFIa5xeuFmACesFx7B3QqJHhA=
+AwV9CA4XlwP1gJKgGCdDEA4O0xM9bKYI6bnmndTWr24fNCkt9bOSvoPghPB6fF4_KcITnXLJ8Hp=
+yC0X93Qp1M7H0job91AJTubMKeXO2w5lB8Cc6_bo_0AEJ1q0DWU9t5jiOY6CcLa-ur5CasslzCU=
+sGhQT-D3fbtFrgsilHYMyHgcYCCJt2h12vpsyw8CEAtp0u7b5_fo-0laM241NYY5e_2C_u_Y8w8=
+vszHGauF5f1rvGzwAAAP__FSl6Tg]
+
+TWO GREAT DIRT BIKES. ONE BIG CHOICE.
+
+Ready to get your young rider on two wheels? The Apollo DB-27 110cc
+Kids Dirt Bike
+[https://email.mails.familygokarts.com/c/eJxkjktuwyAQQE8DO0fMGIxZsOjG17D42U=
+bGwQKSKLev0rRVpS5n5s3T8zosAJLToEGqHqWSHOmmUYieWWacUFIa5xeuFmACesFx7B3QqJHhA=
+AwV9CA4XlwP1gJKgGCdDEA4O0xM9bKYI6bnmndTWr24fNCkt9bOSvoPghPB6fF4_KcITnXLJ8Hp=
+yC0X93Qp1M7H0job91AJTubMKeXO2w5lB8Cc6_bo_0AEJ1q0DWU9t5jiOY6CcLa-ur5CasslzCU=
+sGhQT-D3fbtFrgsilHYMyHgcYCCJt2h12vpsyw8CEAtp0u7b5_fo-0laM241NYY5e_2C_u_Y8w8=
+vszHGauF5f1rvGzwAAAP__FSl6Tg]
+and the Apollo DB-28 110cc Kids Dirt Bike
+[https://email.mails.familygokarts.com/c/eJxkjktuwyAQQE8DO0fMGIO9YNGNr2Hxs4=
+2MAwKSKLev0rRVpS5n5s3Tc8qvAJJTr0BOPcpJcqS7MkxCL1ByYdaVSTdyKXs-9FwYZ_QKNChkK=
+IDhBD0MHC-2B2MAJYA3VnognJ06xHpZ9Rnic0uHLq1ebDppVHtruZL-g-BMcH48Hv8pgnPdUyY4=
+n6mlYp82-tq5UFpnwuErwVnnFGPqnOlw7ACYtd0R3B-I4EyLMr5seQ8x5HEcCGfbq-srpLZU_FL=
+8qmBiA37Pt1twiiByaUY_aYcCBEGkTdnTLHddFhBsmIA21a5teb--j7QVbQ9tol-CUz_Y7649s3=
+-ZrT6zDtv1Zb0r_AwAAP__X3B6iw]
+are both built for off-road fun, with the same rugged 110cc engine,
+the same solid frame, and the same kid-proven design.
+
+The difference? The DB-27 gives developing riders more control with a
+4-speed semi-automatic transmission, while the DB-28 keeps it simple
+with fully automatic operation, great for beginners who just want to
+twist and go.
+
+		SHOP APOLLO DB-27
+[https://email.mails.familygokarts.com/c/eJxkjktuwyAQQE8DO0fMGIxZsOjG17D42U=
+bGwQKSKLev0rRVpS5n5s3T8zosAJLToEGqHqWSHOmmUYieWWacUFIa5xeuFmACesFx7B3QqJHhA=
+AwV9CA4XlwP1gJKgGCdDEA4O0xM9bKYI6bnmndTWr24fNCkt9bOSvoPghPB6fF4_KcITnXLJ8Hp=
+yC0X93Qp1M7H0job91AJTubMKeXO2w5lB8Cc6_bo_0AEJ1q0DWU9t5jiOY6CcLa-ur5CasslzCU=
+sGhQT-D3fbtFrgsilHYMyHgcYCCJt2h12vpsyw8CEAtp0u7b5_fo-0laM241NYY5e_2C_u_Y8w8=
+vszHGauF5f1rvGzwAAAP__FSl6Tg]
+
+		SHOP APOLLO DB-28
+[https://email.mails.familygokarts.com/c/eJxkjktuwyAQQE8DO0fMGIO9YNGNr2Hxs4=
+2MAwKSKLev0rRVpS5n5s3Tc8qvAJJTr0BOPcpJcqS7MkxCL1ByYdaVSTdyKXs-9FwYZ_QKNChkK=
+IDhBD0MHC-2B2MAJYA3VnognJ06xHpZ9Rnic0uHLq1ebDppVHtruZL-g-BMcH48Hv8pgnPdUyY4=
+n6mlYp82-tq5UFpnwuErwVnnFGPqnOlw7ACYtd0R3B-I4EyLMr5seQ8x5HEcCGfbq-srpLZU_FL=
+8qmBiA37Pt1twiiByaUY_aYcCBEGkTdnTLHddFhBsmIA21a5teb--j7QVbQ9tol-CUz_Y7649s3=
+-ZrT6zDtv1Zb0r_AwAAP__X3B6iw]
+
+		[Apollo DB-27 110cc Kids Dirt Bike]
+[https://email.mails.familygokarts.com/c/eJxkjktuwyAQQE8DO0fMGIxZsOjG17D42U=
+bGwQKSKLev0rRVpS5n5s3T8zosAJLToEGqHqWSHOmmUYieWWacUFIa5xeuFmACesFx7B3QqJHhA=
+AwV9CA4XlwP1gJKgGCdDEA4O0xM9bKYI6bnmndTWr24fNCkt9bOSvoPghPB6fF4_KcITnXLJ8Hp=
+yC0X93Qp1M7H0job91AJTubMKeXO2w5lB8Cc6_bo_0AEJ1q0DWU9t5jiOY6CcLa-ur5CasslzCU=
+sGhQT-D3fbtFrgsilHYMyHgcYCCJt2h12vpsyw8CEAtp0u7b5_fo-0laM241NYY5e_2C_u_Y8w8=
+vszHGauF5f1rvGzwAAAP__FSl6Tg]
+
+APOLLO DB-27 110CC KIDS DIRT BIKE
+[https://email.mails.familygokarts.com/c/eJxkjktuwyAQQE8DO0fMGIxZsOjG17D42U=
+bGwQKSKLev0rRVpS5n5s3T8zosAJLToEGqHqWSHOmmUYieWWacUFIa5xeuFmACesFx7B3QqJHhA=
+AwV9CA4XlwP1gJKgGCdDEA4O0xM9bKYI6bnmndTWr24fNCkt9bOSvoPghPB6fF4_KcITnXLJ8Hp=
+yC0X93Qp1M7H0job91AJTubMKeXO2w5lB8Cc6_bo_0AEJ1q0DWU9t5jiOY6CcLa-ur5CasslzCU=
+sGhQT-D3fbtFrgsilHYMyHgcYCCJt2h12vpsyw8CEAtp0u7b5_fo-0laM241NYY5e_2C_u_Y8w8=
+vszHGauF5f1rvGzwAAAP__FSl6Tg]
+
+GREAT FOR DEVELOPING RIDERS WHO ARE READY TO LEARN GEAR CONTROL,
+WITHOUT THE HASSLE OF A CLUTCH.
+
+	* 110cc 4-stroke, air-cooled engine
+	* 4-speed semi-automatic transmission (no clutch!)
+	* Front & rear hydraulic disc brakes
+	* Kick start
+	* Seat height: 25 inches | Max load: 132 lbs
+	* California compliant
+	* Starting at $1050.00=20
+
+BEST FOR: Riders with some experience who are ready to take the next
+step by learning to shift gears and manage power, without the
+challenge of a manual clutch. Ideal for those working toward a
+full-manual bike down the road.
+
+		SHOP APOLLO DB-27
+[https://email.mails.familygokarts.com/c/eJxkjktuwyAQQE8DO0fMGIxZsOjG17D42U=
+bGwQKSKLev0rRVpS5n5s3T8zosAJLToEGqHqWSHOmmUYieWWacUFIa5xeuFmACesFx7B3QqJHhA=
+AwV9CA4XlwP1gJKgGCdDEA4O0xM9bKYI6bnmndTWr24fNCkt9bOSvoPghPB6fF4_KcITnXLJ8Hp=
+yC0X93Qp1M7H0job91AJTubMKeXO2w5lB8Cc6_bo_0AEJ1q0DWU9t5jiOY6CcLa-ur5CasslzCU=
+sGhQT-D3fbtFrgsilHYMyHgcYCCJt2h12vpsyw8CEAtp0u7b5_fo-0laM241NYY5e_2C_u_Y8w8=
+vszHGauF5f1rvGzwAAAP__FSl6Tg]
+
+		[Apollo DB-28 110cc Kids Dirt Bike]
+[https://email.mails.familygokarts.com/c/eJxkjktuwyAQQE8DO0fMGIO9YNGNr2Hxs4=
+2MAwKSKLev0rRVpS5n5s3Tc8qvAJJTr0BOPcpJcqS7MkxCL1ByYdaVSTdyKXs-9FwYZ_QKNChkK=
+IDhBD0MHC-2B2MAJYA3VnognJ06xHpZ9Rnic0uHLq1ebDppVHtruZL-g-BMcH48Hv8pgnPdUyY4=
+n6mlYp82-tq5UFpnwuErwVnnFGPqnOlw7ACYtd0R3B-I4EyLMr5seQ8x5HEcCGfbq-srpLZU_FL=
+8qmBiA37Pt1twiiByaUY_aYcCBEGkTdnTLHddFhBsmIA21a5teb--j7QVbQ9tol-CUz_Y7649s3=
+-ZrT6zDtv1Zb0r_AwAAP__X3B6iw]
+
+APOLLO DB-28 110CC KIDS DIRT BIKE
+[https://email.mails.familygokarts.com/c/eJxkjktuwyAQQE8DO0fMGIO9YNGNr2Hxs4=
+2MAwKSKLev0rRVpS5n5s3Tc8qvAJJTr0BOPcpJcqS7MkxCL1ByYdaVSTdyKXs-9FwYZ_QKNChkK=
+IDhBD0MHC-2B2MAJYA3VnognJ06xHpZ9Rnic0uHLq1ebDppVHtruZL-g-BMcH48Hv8pgnPdUyY4=
+n6mlYp82-tq5UFpnwuErwVnnFGPqnOlw7ACYtd0R3B-I4EyLMr5seQ8x5HEcCGfbq-srpLZU_FL=
+8qmBiA37Pt1twiiByaUY_aYcCBEGkTdnTLHddFhBsmIA21a5teb--j7QVbQ9tol-CUz_Y7649s3=
+-ZrT6zDtv1Zb0r_AwAAP__X3B6iw]
+
+BUILT FOR BRAND-NEW RIDERS WHO WANT SIMPLICITY. JUST TWIST THE
+THROTTLE AND GO, NO SHIFTING REQUIRED.
+
+	* 110cc 4-stroke, air-cooled engine
+	* Fully automatic transmission
+	* Front & rear hydraulic disc brakes
+	* Electric start + kick start backup
+	* Seat height: 25 inches | Max load: 132 lbs
+	* California compliant
+	* Starting at $1065.00=20
+
+BEST FOR: First-time riders and beginners who are still building
+confidence. The automatic transmission lets younger kids focus 100% on
+steering, balance, and braking, not gear changes. Electric start makes
+it easy for little ones to fire it up on their own.
+
+		SHOP APOLLO DB-28
+[https://email.mails.familygokarts.com/c/eJxkjktuwyAQQE8DO0fMGIO9YNGNr2Hxs4=
+2MAwKSKLev0rRVpS5n5s3Tc8qvAJJTr0BOPcpJcqS7MkxCL1ByYdaVSTdyKXs-9FwYZ_QKNChkK=
+IDhBD0MHC-2B2MAJYA3VnognJ06xHpZ9Rnic0uHLq1ebDppVHtruZL-g-BMcH48Hv8pgnPdUyY4=
+n6mlYp82-tq5UFpnwuErwVnnFGPqnOlw7ACYtd0R3B-I4EyLMr5seQ8x5HEcCGfbq-srpLZU_FL=
+8qmBiA37Pt1twiiByaUY_aYcCBEGkTdnTLHddFhBsmIA21a5teb--j7QVbQ9tol-CUz_Y7649s3=
+-ZrT6zDtv1Zb0r_AwAAP__X3B6iw]
+
+ 		 =C2=A0=20
+
+Both Apollo dirt bikes share the same tough 110cc engine, rugged
+frame, and hydraulic disc brakes, so you can't go wrong either way.
+Pick the DB-28
+[https://email.mails.familygokarts.com/c/eJxkjktuwyAQQE8DO0fMGIO9YNGNr2Hxs4=
+2MAwKSKLev0rRVpS5n5s3Tc8qvAJJTr0BOPcpJcqS7MkxCL1ByYdaVSTdyKXs-9FwYZ_QKNChkK=
+IDhBD0MHC-2B2MAJYA3VnognJ06xHpZ9Rnic0uHLq1ebDppVHtruZL-g-BMcH48Hv8pgnPdUyY4=
+n6mlYp82-tq5UFpnwuErwVnnFGPqnOlw7ACYtd0R3B-I4EyLMr5seQ8x5HEcCGfbq-srpLZU_FL=
+8qmBiA37Pt1twiiByaUY_aYcCBEGkTdnTLHddFhBsmIA21a5teb--j7QVbQ9tol-CUz_Y7649s3=
+-ZrT6zDtv1Zb0r_AwAAP__X3B6iw]
+to start simple, or the DB-27
+[https://email.mails.familygokarts.com/c/eJxkjktuwyAQQE8DO0fMGIxZsOjG17D42U=
+bGwQKSKLev0rRVpS5n5s3T8zosAJLToEGqHqWSHOmmUYieWWacUFIa5xeuFmACesFx7B3QqJHhA=
+AwV9CA4XlwP1gJKgGCdDEA4O0xM9bKYI6bnmndTWr24fNCkt9bOSvoPghPB6fF4_KcITnXLJ8Hp=
+yC0X93Qp1M7H0job91AJTubMKeXO2w5lB8Cc6_bo_0AEJ1q0DWU9t5jiOY6CcLa-ur5CasslzCU=
+sGhQT-D3fbtFrgsilHYMyHgcYCCJt2h12vpsyw8CEAtp0u7b5_fo-0laM241NYY5e_2C_u_Y8w8=
+vszHGauF5f1rvGzwAAAP__FSl6Tg]
+to grow into gear control. Either way, your rider's going to have a
+blast! =F0=9F=8F=8D=EF=B8=8F And remember, every order ships free to the co=
+ntinental
+US, backed by our 60-day money-back guarantee.
+
+FOLLOW FAMILYGOKARTS
+
+		 [Facebook icon] [https://email.mails.familygokarts.com/c/eJw8jL2SqzAMRp_=
+GLhlLYIwLFbfhFvsQjH9k4gkExjjJ5O13SHa3lL5zTiROAKaTTGBsi8aaDuWFTDQDDJoRtYOYUo=
+qpB_ZDaz3rPiqZCRX2oNBCC7rDJrTgPaABYB8Mg-jU6vJyNMmteXnN29WVejRhW-VCl1r3Q7T_B=
+I4Cx-fz2SQX2G_b9QQEjuNb-r99nZLAURbyXOb9kpe8D4MWnZrP_Lt31K3wVDgRWKXx577fcySB=
+2Bk_sHURe-gFoqwUVj89XJmgV9qCrFRvdfqon1HW4sLV-YWnHOkX-_vV185nObh1d3m-ndUH4Xc=
+AAAD___hPZ1o]=20
+
+		 [Twitter icon] [https://email.mails.familygokarts.com/c/eJxUzMFuwyAMBuCn=
+gWOFHQLh4MMufY3IgJOiJm1EaLW-_ZR1m7Sjf___l0kmAG-1EPjQoQ_eor4Qum4wkYN4l3vDEmL=
+ynpP4yTqXQ9KF0KADgwE66C2eUgcxAnoAickLKGtWLst-mngty2u-X7m2_ZTuq17o0tq2q-5D4V=
+nh-fNIFZ7_NXWlKHXeLmUp2zD0ypr5AL-Fvd2rjFUmgmB6_Lkfj5JJIVofBwmc0YFTiLpRWuP45=
+DqCM30A3ajd2vievp-6VU5XjouMJdNv7S9rr00OOfG6cZlvh_ok_AoAAP__YUpiyg]=20
+
+		 [Instagram icon] [https://email.mails.familygokarts.com/c/eJxUzEGOszAMBe=
+DTJEuETSBk4cW_4RrISVwalbQopEW9_S-mMyPN0n7vfZHkAmCNFgLrOrTOGtRXYokiMSKYHtCjC=
+xj90KEx0oOzo-hE2OIALTrooDfYhA68B7QA4oMVUKbNnNa9uXBO63t53LjUvQmPrFe61rrtqvun=
+cFI4HcfRpPteeSmcz4bC6c9K4aQLeSnLdk1r2saxV6ZdTv8L3OujyFzkQuDaHr_v5zNFUojG-lE=
+cRxxgUIi6Ush-fnGZYWh7B7pSvdf5M_2EuhYON_arzCnST-33V9-bnHLgvHFa7qf6IvwfAAD__4=
+6jaAQ]=20
+
+800-250-5502 | 316 W. Broadway, Browns Valley, MN 56219
+
+=C2=A9 2003 - 2026 Backer Wencel, Incorporated. All Rights Reserved.
+
+{{unsub_link}}=C2=A0
+
+=20
+--1a02ddc796edda894d89b2f636b4a01331e5869eb1753af12be1fe681f0f
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+=2Ew3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:sch=
+emas-microsoft-com:office:office" xmlns:v=3D"urn:schemas-microsoft-com:vml"=
+ data-scribe-recorder-ready=3D"true">
+<head>
+<!--[if gte mso 9]>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type">
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1.0" name=3D"viewpor=
+t">
+<meta name=3D"x-apple-disable-message-reformatting">
+<!--[if !mso]><!--><meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatibl=
+e">
+<!--<![endif]-->
+<style type=3D"text/css">
+     =20
+      @media only screen and (min-width: 620px) {
+        .u-row {
+          width: 600px !important;
+        }
+
+        .u-row .u-col {
+          vertical-align: top;
+        }
+
+            .u-row .u-col-50 {
+              width: 300px !important;
+            }
+
+            .u-row .u-col-100 {
+              width: 600px !important;
+            }
+         =20
+      }
+
+      @media only screen and (max-width: 620px) {
+        .u-row-container {
+          max-width: 100% !important;
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+        }
+
+        .u-row {
+          width: 100% !important;
+        }
+
+        .u-row .u-col {
+          display: block !important;
+          width: 100% !important;
+          min-width: 320px !important;
+          max-width: 100% !important;
+        }
+
+        .u-row .u-col > div {
+          margin: 0 auto;
+        }
+
+}
+   =20
+body{margin:0;padding:0}table,td,tr{border-collapse:collapse;vertical-align=
+:top}p{margin:0}.ie-container table,.mso-container table{table-layout:fixed=
+}*{line-height:inherit}a[x-apple-data-detectors=3Dtrue]{color:inherit!impor=
+tant;text-decoration:none!important}
+
+table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: =
+underline; }
+    </style>
+</head>
+<body class=3D"clean-body u_body" data-gr-ext-active-mode=3D"grammarly" dat=
+a-new-gr-c-s-loaded=3D"14.1276.0" style=3D"color: rgb(0, 0, 0);">
+<table class=3D"tb-prev-txt" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" style=3D"background-color:transparent;width:100%;max-wi=
+dth:640px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" align=3D"c=
+enter">
+              <tr>
+                <td style=3D"color:transparent;font-size:8px;display:none">=
+Compare the Apollo DB-27 and DB-28, two 110cc dirt bikes designed for diffe=
+rent riding experiences.=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C</td>
+              </tr>
+            </table>
+<!--[if IE]><div class=3D"ie-container"><![endif]-->
+<!--[if mso]><div class=3D"mso-container"><![endif]-->
+<table cellpadding=3D"0" cellspacing=3D"0" id=3D"u_body" role=3D"presentati=
+on" style=3D"border-collapse: collapse; table-layout: fixed; border-spacing=
+: 0px; vertical-align: top; min-width: 320px; margin: 0px auto; background-=
+color: rgb(238, 243, 249); width: 100%;" data-block-id=3D"1">
+<tbody data-block-id=3D"2">
+<tr style=3D"vertical-align: top" data-block-id=3D"3">
+<td class=3D"" style=3D"word-break: break-word; border-collapse: collapse !=
+important; vertical-align: top;" data-block-id=3D"4">
+<!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0"><tr><td align=3D"center" style=3D"bac=
+kground-color: #F7F8F9;"><![endif]-->
+<div class=3D"u-row-container" style=3D"padding: 0px; background-color: tra=
+nsparent;" data-block-id=3D"5">
+<div class=3D"u-row" style=3D"margin: 0 auto;min-width: 320px;max-width: 60=
+0px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;=
+background-color: #ffffff;" data-block-id=3D"6">
+<div style=3D"border-collapse: collapse;display: table;width: 100%;height: =
+100%;background-color: transparent;" data-block-id=3D"7">
+<!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 30px 0px 0p=
+x;background-color: transparent;" align=3D"center"><table role=3D"presentat=
+ion" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;=
+"><tr style=3D"background-color: #ffffff;"><![endif]-->
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"width: 600p=
+x;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid tra=
+nsparent;border-right: 0px solid transparent;border-bottom: 0px solid trans=
+parent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0=
+px;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-100" style=3D"max-width: 600px; min-width: 320px;=
+ display: block; vertical-align: top; width: 100%" data-block-id=3D"8">
+<div style=3D"height: 100%;width: 100% !important;border-radius: 0px;-webki=
+t-border-radius: 0px; -moz-border-radius: 0px;" data-block-id=3D"9">
+<!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: 10=
+0%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid t=
+ransparent;border-right: 0px solid transparent;border-bottom: 0px solid tra=
+nsparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius:=
+ 0px;" data-block-id=3D"10">
+<!--<![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"font-family:arial,helvetica,sans-serif;" width=3D"100%" data-bl=
+ock-id=3D"11">
+<tbody class=3D"" data-block-id=3D"12">
+<tr data-block-id=3D"13">
+<td align=3D"left" class=3D"" data-user-bg-color=3D"#032D81" style=3D"overf=
+low-wrap: break-word; word-break: break-word; padding: 20px 10px; font-fami=
+ly: arial, helvetica, sans-serif; background-color: rgb(3, 45, 129) !import=
+ant;" data-block-id=3D"14">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%" data-block-id=3D"15">
+<tbody data-block-id=3D"16">
+<tr data-block-id=3D"17">
+<td align=3D"center" class=3D"" style=3D"padding-right: 0px; padding-left: =
+0px; text-align: center;" data-block-id=3D"18">
+<a href=3D"https://email.mails.familygokarts.com/c/eJxkj8HOozAMhJ8muVFhBwgc=
+clip6mugJBiImjQomL_q26_Ydnv5j55vPPZMhmYA3UgyoAeFetANytWA7am3XnedJaddg27WNPi=
+5RVKTd50MBmvsoMYBFLQNXrwC5wA1ADmvCURTJxvifpltCvG15LstvF98TjKalXnbhfoj8Cbw9n=
+w-f7tOpG4Hp3HPR_Ek1NXZFz0Wu5DA7gSJpnAkoa50XvqI3qbNhuUh1DV7zo5KhQOvld1yjLkCq=
+L2vplC4cuFO1b5ljmFZWRbjqCzbGmLY-r4VTb2csf8-3jkXGgvNBoa6xc98HGEyArHRrqfBTthB=
+JxAlG5_c-GPLCF3dDiDZ8IPH9-obSi7W362LNIbJ_Ld9NX5tdCZ_yyDKH4N_AwAA___Fy4ti" r=
+el=3D"noopener noreferrer" target=3D"_blank" class=3D"" style=3D"text-align=
+: center;" data-block-id=3D"19"><img align=3D"center" alt=3D"www.familygoka=
+rts.com logo" border=3D"0" class=3D"" src=3D"https://img.bayengage.com/47b8=
+e9ad2616/studio/126831/logo-fgk-trans.png" style=3D"outline: none; text-dec=
+oration: none; clear: both; display: block; height: auto; float: none; widt=
+h: 100%; max-width: 400px; margin-left: auto; margin-right: auto; max-heigh=
+t: none;" title=3D"FamilyGoKarts logo" width=3D"234" data-block-id=3D"20"><=
+/a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr data-block-id=3D"21"></tr>
+</tbody>
+</table>
+<!--[if (!mso)&(!IE)]><!-->
+</div>
+<!--<![endif]-->
+</div>
+</div>
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+</div>
+</div>
+</div>
+<div class=3D"u-row-container" style=3D"padding: 0px; background-color: tra=
+nsparent; scroll-margin-top: 40px;" data-block-id=3D"22">
+<div class=3D"u-row" style=3D"margin: 0 auto; min-width: 320px; max-width: =
+600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-=
+word; background-color: #C00000" data-block-id=3D"23">
+<div style=3D"border-collapse: collapse;display: table;width: 100%;height: =
+100%;background-color: transparent;" data-block-id=3D"24">
+<!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;backgro=
+und-color: transparent;" align=3D"center"><table role=3D"presentation" cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;"><tr sty=
+le=3D"background-color: #000000;"><![endif]-->
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"width: 600p=
+x;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid tra=
+nsparent;border-right: 0px solid transparent;border-bottom: 0px solid trans=
+parent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0=
+px;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-100" style=3D"max-width: 320px;min-width: 600px;d=
+isplay: table-cell;vertical-align: top;" data-block-id=3D"25">
+<div style=3D"height: 100%;width: 100% !important;border-radius: 0px;-webki=
+t-border-radius: 0px; -moz-border-radius: 0px;" data-block-id=3D"26">
+<!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: 10=
+0%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid t=
+ransparent;border-right: 0px solid transparent;border-bottom: 0px solid tra=
+nsparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius:=
+ 0px;" data-block-id=3D"27">
+<!--<![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"font-family:arial,helvetica,sans-serif;" width=3D"100%" data-bl=
+ock-id=3D"28">
+<tbody data-block-id=3D"29">
+<tr data-block-id=3D"30"></tr>
+<tr style=3D"scroll-margin-top: 40px;" data-block-id=3D"31">
+<td align=3D"left" class=3D"" data-user-bg-color=3D"#333333" style=3D"overf=
+low-wrap: break-word; word-break: break-word; padding: 12px 10px; font-fami=
+ly: arial, helvetica, sans-serif; background-color: rgb(192, 0, 0);" data-b=
+lock-id=3D"32">
+<div style=3D"font-size: 14px; color: #ffffff; line-height: 1.5; text-align=
+: center; word-wrap: break-word" data-block-id=3D"33"><p class=3D"" style=
+=3D"margin: 0px; text-align: center; font-size: 14px; user-select: text; po=
+inter-events: auto;" data-block-id=3D"34"><strong class=3D"" style=3D"color=
+: rgb(254, 191, 1); user-select: text; pointer-events: auto;" data-block-id=
+=3D"35">Delivering Family Fun Since 1990&nbsp; |&nbsp; 800-250-5502</strong=
+></p></div>
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if (!mso)&(!IE)]><!-->
+</div>
+<!--<![endif]-->
+</div>
+</div>
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+</div>
+</div>
+</div>
+<div style=3D"padding: 0px; background-color: transparent" class=3D"u-row-c=
+ontainer" data-block-id=3D"36"><div class=3D"u-row" style=3D"margin:0 auto;=
+min-width:320px;max-width:600px;overflow-wrap:break-word;word-wrap:break-wo=
+rd;word-break:break-word;background-color:transparent;" data-block-id=3D"37=
+"><div style=3D"border-collapse:collapse;display:table;width:100%;height:10=
+0%;background-color:transparent;" data-block-id=3D"38"><div class=3D"u-col =
+u-col-100" style=3D"max-width:320px;min-width:600px;display:table-cell;vert=
+ical-align:top;" data-block-id=3D"39"><div style=3D"height:100%;width:100% =
+!important;" data-block-id=3D"40"><div style=3D"box-sizing:border-box;heigh=
+t:100%;padding:0px;" data-block-id=3D"41"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"font=
+-family:arial,helvetica,sans-serif;" data-block-id=3D"42"><tbody data-block=
+-id=3D"43"><tr data-block-id=3D"44"><td style=3D"overflow-wrap:break-word;w=
+ord-break:break-word;padding:0px 10px 0px 10px;font-family:arial,helvetica,=
+sans-serif;" data-block-id=3D"45"><div style=3D"display:none;max-height:0px=
+;overflow:hidden;mso-hide:all;opacity:0;color:transparent;height:0;width:0;=
+" data-block-id=3D"46">Compare the Apollo DB-27 and DB-28, two 110cc dirt b=
+ikes designed for different riding experiences.</div></td></tr></tbody></ta=
+ble></div></div></div></div></div></div>
+<div style=3D"padding: 0px; background-color: transparent;" class=3D"u-row-=
+container" data-block-id=3D"47"><div class=3D"u-row" style=3D"margin: 0 aut=
+o; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap=
+: break-word; word-break: break-word; background-color: #ffffff;" data-bloc=
+k-id=3D"48"><div style=3D"border-collapse: collapse; display: table; width:=
+ 100%; height: 100%; background-color: transparent;" data-block-id=3D"49"><=
+div class=3D"u-col u-col-100" style=3D"max-width: 320px; min-width: 600px; =
+display: table-cell; vertical-align: top;" data-block-id=3D"50"><div style=
+=3D"height: 100%; width: 100% !important;" data-block-id=3D"51"><div style=
+=3D"box-sizing: border-box; height: 100%; padding: 0px;" data-block-id=3D"5=
+2"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" width=3D"100%" style=3D"font-family: arial, helvetica, sans-serif;" d=
+ata-block-id=3D"53"><tbody data-block-id=3D"54">
+<tr data-block-id=3D"55"></tr>
+<tr data-block-id=3D"56"><td align=3D"center" style=3D"overflow-wrap: break=
+-word; word-break: break-word; padding: 0px; font-family: arial, helvetica,=
+ sans-serif;" data-block-id=3D"57"><a href=3D"https://email.mails.familygok=
+arts.com/c/eJxkj93uoyAUxJ8G72w8B5VywcUmja9h-DgqKRQD-G_69hu33WaTvWRmmN8Zp2gB=
+EH1DCoTkKKTosdnUaK22AHIx_QJLzw1gJyWg5sK4gUTjFXY4QocSOAw9XiwHYwAFABkrCFjfRe1=
+DuSw6-vBa013nWi42xSaorda9MP6L4cRwej6f_6cYTmVLO8MpppqyfdlApXU-19b4OxWGk95TCK=
+l1pkXRAnTWtnfv_gmd9Xw6apxLOrIlxm9Gv-ix6pUYjqcRyfkjMn6j89qPaHXctV8fjN-SrclQb=
+lHWrf0A36gvpS17qsGvW22yMpTXffPB79frwPpuPWv_rC41ZZozLQpkN-DnfRzeKYbYC3MlqR2O=
+MDLEpiobzfyj8wxjN0hoqqqPOr-_vs2mZm3v2gSavVN_Y1-tvnY6m79jEJsfhb8DAAD__0JhogU=
+" target=3D"_blank" rel=3D"noopener noreferrer" title=3D"Apollo DB-27 110cc=
+ Kids Dirt Bike" style=3D"text-align: center;" data-block-id=3D"58"><img al=
+ign=3D"center" alt=3D"Lifestyle banner image featuring the Apollo DB-27 110=
+cc Kids Dirt Bike" border=3D"0" src=3D"https://img.bayengage.com/47b8e9ad26=
+16/studio/258946/url_6a9a7312d5ad4.jpg" title=3D"Apollo DB-27 110cc Kids Di=
+rt Bike lifestyle banner" width=3D"600" height=3D"600" style=3D"display: bl=
+ock; width: 600px; max-width: 100%; height: auto; margin: 0px auto; border:=
+ 0px; text-decoration: none;" class=3D"" data-block-id=3D"59"></a></td></tr=
+>
+</tbody></table></div></div></div></div></div></div>
+<div class=3D"u-row-container" style=3D"padding: 0px; background-color: tra=
+nsparent;" data-block-id=3D"60">
+<div class=3D"u-row" style=3D"margin: 0 auto;min-width: 320px;max-width: 60=
+0px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;=
+background-color: #ffffff;" data-block-id=3D"61">
+<div style=3D"border-collapse: collapse;display: table;width: 100%;height: =
+100%;background-color: transparent;" data-block-id=3D"62">
+<!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;backgro=
+und-color: transparent;" align=3D"center"><table role=3D"presentation" cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;"><tr sty=
+le=3D"background-color: #ffffff;"><![endif]-->
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"width: 600p=
+x;padding: 20px;border-top: 0px solid transparent;border-left: 0px solid tr=
+ansparent;border-right: 0px solid transparent;border-bottom: 0px solid tran=
+sparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: =
+0px;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-100" style=3D"max-width: 320px;min-width: 600px;d=
+isplay: table-cell;vertical-align: top;" data-block-id=3D"63">
+<div style=3D"height: 100%;width: 100% !important;border-radius: 0px;-webki=
+t-border-radius: 0px; -moz-border-radius: 0px;" data-block-id=3D"64">
+<!--[if (!mso)&(!IE)]><!--><div class=3D"" style=3D"box-sizing: border-box;=
+ height: 100%; padding: 20px; border-width: 0px; border-style: solid; borde=
+r-color: transparent; border-radius: 0px;" data-block-id=3D"65">
+<!--<![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"font-family:arial,helvetica,sans-serif;" width=3D"100%" data-bl=
+ock-id=3D"66">
+<tbody data-block-id=3D"67">
+<tr data-block-id=3D"68">
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"font-family:arial,helvetica,sans-serif;" width=3D"100%" data-bl=
+ock-id=3D"69">
+<tbody data-block-id=3D"70">
+<tr data-block-id=3D"71">
+<td align=3D"left" class=3D"" style=3D"overflow-wrap: break-word; word-brea=
+k: break-word; padding: 10px; font-family: arial, helvetica, sans-serif;" d=
+ata-block-id=3D"72">
+<h1 class=3D"" style=3D"font-size: 28px; line-height: 1.3; text-align: cent=
+er; color: rgb(3, 45, 129); font-family: arial, helvetica, sans-serif; padd=
+ing: 0px 0px 12px; margin: 0px; user-select: text; pointer-events: auto;" d=
+ata-block-id=3D"73">Two Great Dirt Bikes. One Big Choice.</h1>
+<div class=3D"" style=3D"font-size: 16px; line-height: 1.6; text-align: cen=
+ter; overflow-wrap: break-word; color: rgb(51, 65, 85);" data-block-id=3D"7=
+4">
+<p class=3D"" style=3D"font-size: 18px; font-weight: 400; margin-bottom: 15=
+px; color: rgb(0, 0, 0); user-select: text; pointer-events: auto;" data-blo=
+ck-id=3D"75">Ready to get your young rider on two wheels? The <a href=3D"ht=
+tps://email.mails.familygokarts.com/c/eJxkj93uoyAUxJ8G72w8B5VywcUmja9h-DgqK=
+RQD-G_69hu33WaTvWRmmN8Zp2gBEH1DCoTkKKTosdnUaK22AHIx_QJLzw1gJyWg5sK4gUTjFXY4=
+QocSOAw9XiwHYwAFABkrCFjfRe1DuSw6-vBa013nWi42xSaorda9MP6L4cRwej6f_6cYTmVLO8M=
+pppqyfdlApXU-19b4OxWGk95TCKl1pkXRAnTWtnfv_gmd9Xw6apxLOrIlxm9Gv-ix6pUYjqcRyf=
+kjMn6j89qPaHXctV8fjN-SrclQblHWrf0A36gvpS17qsGvW22yMpTXffPB79frwPpuPWv_rC41Z=
+ZozLQpkN-DnfRzeKYbYC3MlqR2OMDLEpiobzfyj8wxjN0hoqqqPOr-_vs2mZm3v2gSavVN_Y1-t=
+vnY6m79jEJsfhb8DAAD__0JhogU" target=3D"_blank" rel=3D"noopener noreferrer" =
+style=3D"color: rgb(0, 0, 0); text-decoration: underline; font-weight: 400;=
+" class=3D"" data-block-id=3D"76">Apollo DB-27 110cc Kids Dirt Bike</a> and=
+ the <a href=3D"https://email.mails.familygokarts.com/c/eJxkj0vO4yAQhE-Dd0R=
+04_ixYDFS5GtYPNo2CgQL8B_l9iNPMtFIs6SqqK_LKVoA-rYhBf0osR_7FptNLVJK4ewCiGQGIb=
+UjPdhOyyvaoSdsvEKBHQgcQcK1xYuVYAxgD0DG9gSsFVH7UC6Ljj681nTXuZaLTbEJaqt1L0z-Y=
+jgxnJ7P5_8phlPZ0s5wiqmmbF82UOHO58qNv1NhOOk9hZC4MxwHDiCs5Xfv_gmd9XI6apxLOrIl=
+Jm9Gv-ix6pUYdqcRyfkjMnmj89qPaHXctV8fTN6SrclQ5jjWjX-Ab9SXwsueavDrVpusDOV133z=
+w-zBcWSvWs_bP6lJTpjnTomAUV_y8j8M7xRDb3gw0aocddAyxqcpGM__oPEMnriM0VdVHnd9f32=
+ZTs7Z3bQLN3qm_sa9WXzudzd8xiM2Pwt8BAAD__45hojI" target=3D"_blank" rel=3D"noo=
+pener noreferrer" style=3D"color: rgb(0, 0, 0); text-decoration: underline;=
+ font-weight: 400;" class=3D"" data-block-id=3D"77">Apollo DB-28 110cc Kids=
+ Dirt Bike</a> are both built for off-road fun, with the same rugged 110cc =
+engine, the same solid frame, and the same kid-proven design.</p>
+<div class=3D"" style=3D"font-size: 18px; color: rgb(0, 0, 0);" data-user-f=
+ont-size=3D"18" data-block-id=3D"78">The difference? The DB-27 gives develo=
+ping riders more control with a 4-speed semi-automatic transmission, while =
+the DB-28 keeps it simple with fully automatic operation, great for beginne=
+rs who just want to twist and go.</div>
+<p data-block-id=3D"79"></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"font-family:arial,helvetica,sans-serif;" width=3D"100%" data-bl=
+ock-id=3D"80">
+<tbody data-block-id=3D"81">
+<tr data-block-id=3D"82">
+<td align=3D"left" class=3D"" style=3D"overflow-wrap: break-word; word-brea=
+k: break-word; padding: 10px; font-family: arial, helvetica, sans-serif;" d=
+ata-block-id=3D"83">
+<!--[if mso]><style>.v-button {background: transparent !important;}</style>=
+<![endif]--><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" style=3D"border-collapse: collapse;" width=
+=3D"100%" data-block-id=3D"84"><tbody data-block-id=3D"85">
+<tr data-block-id=3D"86"><td align=3D"center" style=3D"padding-bottom: 12px=
+;" data-block-id=3D"87"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"border-collapse: collapse;" data-bloc=
+k-id=3D"88"><tbody data-block-id=3D"89"><tr data-block-id=3D"90"><td align=
+=3D"center" bgcolor=3D"#FEBF01" style=3D"background-color: #FEBF01" data-bl=
+ock-id=3D"91"><a style=3D"display: inline-block; padding: 12px 24px; font-f=
+amily: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; li=
+ne-height: 20px; color: rgb(0, 0, 0); text-decoration: none;" target=3D"_bl=
+ank" title=3D"Shop Apollo DB-27 110cc Kids Dirt Bike" href=3D"https://email=
+=2Emails.familygokarts.com/c/eJxkj93uoy=
+AUxJ8G72w8B5VywcUmja9h-DgqKRQD-G_69hu3=
+3WaTvWRmmN8Zp2gBEH1DCoTkKKTosdnUaK22AHIx_QJLzw1gJyWg5sK4gUTjFXY4QocSOAw9Xiw=
+HYwAFABkrCFjfRe1DuSw6-vBa013nWi42xSaorda9MP6L4cRwej6f_6cYTmVLO8MpppqyfdlApX=
+U-19b4OxWGk95TCKl1pkXRAnTWtnfv_gmd9Xw6apxLOrIlxm9Gv-ix6pUYjqcRyfkjMn6j89qPa=
+HXctV8fjN-SrclQblHWrf0A36gvpS17qsGvW22yMpTXffPB79frwPpuPWv_rC41ZZozLQpkN-Dn=
+fRzeKYbYC3MlqR2OMDLEpiobzfyj8wxjN0hoqqqPOr-_vs2mZm3v2gSavVN_Y1-tvnY6m79jEJs=
+fhb8DAAD__0JhogU" class=3D"" data-block-id=3D"92">SHOP APOLLO DB-27</a></td=
+></tr></tbody></table></td></tr>
+<tr data-block-id=3D"93"><td align=3D"center" class=3D"" data-block-id=3D"9=
+4"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" style=3D"border-collapse: collapse;" data-block-id=3D"95"><tbody data=
+-block-id=3D"96"><tr data-block-id=3D"97"><td align=3D"center" bgcolor=3D"#=
+FEBF01" style=3D"background-color: #FEBF01" data-block-id=3D"98"><a style=
+=3D"display: inline-block; padding: 12px 24px; font-family: Arial, Helvetic=
+a, sans-serif; font-size: 14px; font-weight: bold; line-height: 20px; color=
+: rgb(0, 0, 0); text-decoration: none;" target=3D"_blank" title=3D"Shop Apo=
+llo DB-28 110cc Kids Dirt Bike" href=3D"https://email.mails.familygokarts.c=
+om/c/eJxkj0vO4yAQhE-Dd0R04_ixYDFS5GtYPNo2CgQL8B_l9iNPMtFIs6SqqK_LKVoA-rYhBf=
+0osR_7FptNLVJK4ewCiGQGIbUjPdhOyyvaoSdsvEKBHQgcQcK1xYuVYAxgD0DG9gSsFVH7UC6Lj=
+j681nTXuZaLTbEJaqt1L0z-YjgxnJ7P5_8phlPZ0s5wiqmmbF82UOHO58qNv1NhOOk9hZC4MxwH=
+DiCs5Xfv_gmd9XI6apxLOrIlJm9Gv-ix6pUYdqcRyfkjMnmj89qPaHXctV8fTN6SrclQ5jjWjX-=
+Ab9SXwsueavDrVpusDOV133zw-zBcWSvWs_bP6lJTpjnTomAUV_y8j8M7xRDb3gw0aocddAyxqc=
+pGM__oPEMnriM0VdVHnd9f32ZTs7Z3bQLN3qm_sa9WXzudzd8xiM2Pwt8BAAD__45hojI" clas=
+s=3D"" data-block-id=3D"99">SHOP APOLLO DB-28</a></td></tr></tbody></table>=
+</td></tr>
+</tbody></table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"font-family:arial,helvetica,sans-serif;" width=3D"100%" data-bl=
+ock-id=3D"100">
+<tbody data-block-id=3D"101">
+<tr data-block-id=3D"102">
+</tr>
+</tbody>
+</table>
+<!--[if (!mso)&(!IE)]><!-->
+</div>
+<!--<![endif]-->
+</div>
+</div>
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+</div>
+</div>
+</div>
+<div style=3D"padding: 0px; background-color: transparent; line-height: 1.4=
+; font-size: 16px;" class=3D"u-row-container" data-user-font-size=3D"16" da=
+ta-block-id=3D"103"><div class=3D"u-row" style=3D"margin:0px auto; min-widt=
+h:320px; max-width:600px; overflow-wrap:break-word; word-break:break-word; =
+background-color:#ffffff; line-height:1.4; font-size:16px;" data-block-id=
+=3D"104"><div style=3D"border-collapse:collapse; display:table; width:100%;=
+ height:100%; background-color:transparent;" data-block-id=3D"105"><div cla=
+ss=3D"u-col u-col-100" style=3D"max-width:320px; min-width:600px; display:t=
+able-cell; vertical-align:top; width:100%;" data-block-id=3D"106"><div styl=
+e=3D"height:100%; width:100% !important;" data-block-id=3D"107"><div style=
+=3D"box-sizing: border-box; height: 100%; padding: 30px 20px 20px; border-r=
+adius: 0px;" class=3D"" data-block-id=3D"108"><table border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"fo=
+nt-family:arial,helvetica,sans-serif;" data-block-id=3D"109"><tbody data-bl=
+ock-id=3D"110">
+<tr data-block-id=3D"111"><td align=3D"center" style=3D"padding: 0px 0px 20=
+px;" class=3D"" data-block-id=3D"112"><a href=3D"https://email.mails.family=
+gokarts.com/c/eJxkj93uoyAUxJ8G72w8B5VywcUmja9h-DgqKRQD-G_69hu33WaTvWRmmN8Zp=
+2gBEH1DCoTkKKTosdnUaK22AHIx_QJLzw1gJyWg5sK4gUTjFXY4QocSOAw9XiwHYwAFABkrCFjf=
+Re1DuSw6-vBa013nWi42xSaorda9MP6L4cRwej6f_6cYTmVLO8MpppqyfdlApXU-19b4OxWGk95=
+TCKl1pkXRAnTWtnfv_gmd9Xw6apxLOrIlxm9Gv-ix6pUYjqcRyfkjMn6j89qPaHXctV8fjN-Src=
+lQblHWrf0A36gvpS17qsGvW22yMpTXffPB79frwPpuPWv_rC41ZZozLQpkN-DnfRzeKYbYC3Mlq=
+R2OMDLEpiobzfyj8wxjN0hoqqqPOr-_vs2mZm3v2gSavVN_Y1-tvnY6m79jEJsfhb8DAAD__0Jh=
+ogU" target=3D"_blank" rel=3D"noopener noreferrer" style=3D"text-align: cen=
+ter;" data-block-id=3D"113"><img style=3D"display: block; width: 560px; hei=
+ght: auto; max-width: 100%; margin: 0px auto; object-fit: cover; text-decor=
+ation: none; border: 0px;" src=3D"https://img.bayengage.com/47b8e9ad2616/pr=
+oducts/22987.jpg" alt=3D"Apollo DB-27 110cc Kids Dirt Bike" title=3D"Apollo=
+ DB-27 110cc Kids Dirt Bike" width=3D"560" height=3D"560" border=3D"0" clas=
+s=3D"" data-block-id=3D"114"></a></td></tr>
+<tr data-block-id=3D"115"><td align=3D"left" style=3D"padding: 0px 10px; fo=
+nt-family: arial, helvetica, sans-serif; text-align: left;" class=3D"" data=
+-block-id=3D"116">
+<h1 style=3D"margin: 0px; padding: 0px 0px 10px; font-family: arial, helvet=
+ica, sans-serif; font-size: 20px; line-height: 1.4; color: rgb(3, 45, 129);=
+ text-align: left; font-weight: 700; user-select: text; pointer-events: aut=
+o;" class=3D"" data-block-id=3D"117"><a href=3D"https://email.mails.familyg=
+okarts.com/c/eJxkj93uoyAUxJ8G72w8B5VywcUmja9h-DgqKRQD-G_69hu33WaTvWRmmN8Zp2=
+gBEH1DCoTkKKTosdnUaK22AHIx_QJLzw1gJyWg5sK4gUTjFXY4QocSOAw9XiwHYwAFABkrCFjfR=
+e1DuSw6-vBa013nWi42xSaorda9MP6L4cRwej6f_6cYTmVLO8MpppqyfdlApXU-19b4OxWGk95T=
+CKl1pkXRAnTWtnfv_gmd9Xw6apxLOrIlxm9Gv-ix6pUYjqcRyfkjMn6j89qPaHXctV8fjN-Srcl=
+QblHWrf0A36gvpS17qsGvW22yMpTXffPB79frwPpuPWv_rC41ZZozLQpkN-DnfRzeKYbYC3MlqR=
+2OMDLEpiobzfyj8wxjN0hoqqqPOr-_vs2mZm3v2gSavVN_Y1-tvnY6m79jEJsfhb8DAAD__0Jho=
+gU" style=3D"text-decoration: none; color: rgb(3, 45, 129); text-align: lef=
+t;" class=3D"" data-block-id=3D"118">Apollo DB-27 110cc Kids Dirt Bike</a><=
+/h1>
+<div style=3D"font-size: 16px; line-height: 1.4; color: rgb(51, 65, 85); te=
+xt-align: left;" class=3D"" data-block-id=3D"119">
+<p style=3D"margin: 0px; line-height: 1.4; text-align: left;" data-block-id=
+=3D"120"><strong data-block-id=3D"121">Great for developing riders who are =
+ready to learn gear control, without the hassle of a clutch.</strong></p>
+<ul style=3D"padding-left:20px; margin-top:10px; margin-bottom:10px;" data-=
+block-id=3D"122">
+<li style=3D"margin-bottom:6px;" data-block-id=3D"123">110cc 4-stroke, air-=
+cooled engine</li>
+<li style=3D"margin-bottom:6px;" data-block-id=3D"124">4-speed semi-automat=
+ic transmission (no clutch!)</li>
+<li style=3D"margin-bottom:6px;" data-block-id=3D"125">Front &amp; rear hyd=
+raulic disc brakes</li>
+<li style=3D"margin-bottom:6px;" data-block-id=3D"126">Kick start</li>
+<li style=3D"margin-bottom:6px;" data-block-id=3D"127">Seat height: 25 inch=
+es | Max load: 132 lbs</li>
+<li style=3D"margin-bottom:6px;" data-block-id=3D"128">California compliant=
+</li>
+<li style=3D"margin-bottom:6px;" data-block-id=3D"129">Starting at $1050.00=
+ </li>
+</ul>
+<p style=3D"margin: 0px; line-height: 1.4; font-size: 14px; color: rgb(51, =
+65, 85);" class=3D"" data-block-id=3D"130"><strong data-block-id=3D"131">Be=
+st for:</strong> Riders with some experience who are ready to take the next=
+ step by learning to shift gears and manage power, without the challenge of=
+ a manual clutch. Ideal for those working toward a full-manual bike down th=
+e road.</p>
+</div>
+<div style=3D"margin-top: 15px; line-height: 1.4; text-align: left;" data-b=
+lock-id=3D"132"><table align=3D"left" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" style=3D"border-collapse:collapse; width:=
+auto;" data-block-id=3D"133"><tbody data-block-id=3D"134"><tr data-block-id=
+=3D"135"><td align=3D"center" bgcolor=3D"#FEBF01" style=3D"background-color=
+: rgb(254,191,1); text-align: left" data-block-id=3D"136"><a href=3D"https:=
+//email.mails.familygokarts.com/c/eJxkj93uoyAUxJ8G72w8B5VywcUmja9h-DgqKRQD-=
+G_69hu33WaTvWRmmN8Zp2gBEH1DCoTkKKTosdnUaK22AHIx_QJLzw1gJyWg5sK4gUTjFXY4QocS=
+OAw9XiwHYwAFABkrCFjfRe1DuSw6-vBa013nWi42xSaorda9MP6L4cRwej6f_6cYTmVLO8Mpppq=
+yfdlApXU-19b4OxWGk95TCKl1pkXRAnTWtnfv_gmd9Xw6apxLOrIlxm9Gv-ix6pUYjqcRyfkjMn=
+6j89qPaHXctV8fjN-SrclQblHWrf0A36gvpS17qsGvW22yMpTXffPB79frwPpuPWv_rC41ZZozL=
+QpkN-DnfRzeKYbYC3MlqR2OMDLEpiobzfyj8wxjN0hoqqqPOr-_vs2mZm3v2gSavVN_Y1-tvnY6=
+m79jEJsfhb8DAAD__0JhogU" target=3D"_blank" title=3D"Shop Apollo DB-27 110cc=
+ Kids Dirt Bike" style=3D"display: inline-block; padding: 12px 24px; font-f=
+amily: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; li=
+ne-height: 1.4; color: rgb(0, 0, 0); text-decoration: none; text-align: lef=
+t;" class=3D"" data-block-id=3D"137">SHOP APOLLO DB-27</a></td></tr></tbody=
+></table></div>
+</td></tr>
+</tbody></table></div></div></div></div></div></div>
+<div style=3D"padding: 0px; background-color: transparent;" class=3D"u-row-=
+container" data-block-id=3D"138"><div class=3D"u-row" style=3D"margin:0 aut=
+o; min-width:320px; max-width:600px; overflow-wrap:break-word; word-wrap:br=
+eak-word; word-break:break-word; background-color:#ffffff;" data-block-id=
+=3D"139"><div style=3D"border-collapse:collapse; display:table; width:100%;=
+ height:100%; background-color:transparent;" data-block-id=3D"140"><div cla=
+ss=3D"u-col u-col-100" style=3D"max-width:320px; min-width:600px; display:t=
+able-cell; vertical-align:top; width:100%;" data-block-id=3D"141"><div styl=
+e=3D"height:100%; width:100% !important;" data-block-id=3D"142"><div style=
+=3D"box-sizing: border-box; height: 100%; padding: 20px; border-radius: 0px=
+;" class=3D"" data-block-id=3D"143"><table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"font-family:=
+arial,helvetica,sans-serif;" data-block-id=3D"144"><tbody data-block-id=3D"=
+145">
+<tr data-block-id=3D"146"><td align=3D"center" style=3D"padding: 0px 0px 20=
+px;" class=3D"" data-block-id=3D"147"><a href=3D"https://email.mails.family=
+gokarts.com/c/eJxkj0vO4yAQhE-Dd0R04_ixYDFS5GtYPNo2CgQL8B_l9iNPMtFIs6SqqK_LK=
+VoA-rYhBf0osR_7FptNLVJK4ewCiGQGIbUjPdhOyyvaoSdsvEKBHQgcQcK1xYuVYAxgD0DG9gSs=
+FVH7UC6Ljj681nTXuZaLTbEJaqt1L0z-YjgxnJ7P5_8phlPZ0s5wiqmmbF82UOHO58qNv1NhOOk=
+9hZC4MxwHDiCs5Xfv_gmd9XI6apxLOrIlJm9Gv-ix6pUYdqcRyfkjMnmj89qPaHXctV8fTN6Src=
+lQ5jjWjX-Ab9SXwsueavDrVpusDOV133zw-zBcWSvWs_bP6lJTpjnTomAUV_y8j8M7xRDb3gw0a=
+ocddAyxqcpGM__oPEMnriM0VdVHnd9f32ZTs7Z3bQLN3qm_sa9WXzudzd8xiM2Pwt8BAAD__45h=
+ojI" target=3D"_blank" rel=3D"noopener noreferrer" style=3D"text-align: cen=
+ter;" data-block-id=3D"148"><img src=3D"https://img.bayengage.com/47b8e9ad2=
+616/products/29791.jpg" alt=3D"Apollo DB-28 110cc Kids Dirt Bike" title=3D"=
+Apollo DB-28 110cc Kids Dirt Bike" width=3D"560" style=3D"display: block; w=
+idth: 560px; max-width: 100%; height: auto; margin: 0px auto; border-width:=
+ medium; border-style: none; border-color: currentcolor; border-image: none=
+; text-decoration: none;" border=3D"0" class=3D"" height=3D"560" data-block=
+-id=3D"149"></a></td></tr>
+<tr data-block-id=3D"150"><td align=3D"left" style=3D"padding: 0px 10px; fo=
+nt-family: arial, helvetica, sans-serif; line-height: 1.4; text-align: left=
+;" class=3D"" data-block-id=3D"151">
+<h1 style=3D"margin: 0px; padding: 0px 0px 10px; font-family: arial, helvet=
+ica, sans-serif; font-size: 20px; line-height: 1.4; color: rgb(3, 45, 129);=
+ text-align: left; font-weight: 700;" class=3D"" data-block-id=3D"152"><a h=
+ref=3D"https://email.mails.familygokarts.com/c/eJxkj0vO4yAQhE-Dd0R04_ixYDFS=
+5GtYPNo2CgQL8B_l9iNPMtFIs6SqqK_LKVoA-rYhBf0osR_7FptNLVJK4ewCiGQGIbUjPdhOyyv=
+aoSdsvEKBHQgcQcK1xYuVYAxgD0DG9gSsFVH7UC6Ljj681nTXuZaLTbEJaqt1L0z-YjgxnJ7P5_=
+8phlPZ0s5wiqmmbF82UOHO58qNv1NhOOk9hZC4MxwHDiCs5Xfv_gmd9XI6apxLOrIlJm9Gv-ix6=
+pUYdqcRyfkjMnmj89qPaHXctV8fTN6SrclQ5jjWjX-Ab9SXwsueavDrVpusDOV133zw-zBcWSvW=
+s_bP6lJTpjnTomAUV_y8j8M7xRDb3gw0aocddAyxqcpGM__oPEMnriM0VdVHnd9f32ZTs7Z3bQL=
+N3qm_sa9WXzudzd8xiM2Pwt8BAAD__45hojI" style=3D"text-decoration: none; color=
+: rgb(3, 45, 129); text-align: left;" class=3D"" data-block-id=3D"153">Apol=
+lo DB-28 110cc Kids Dirt Bike</a></h1>
+<div style=3D"font-size: 16px; line-height: 1.4; color: rgb(51, 65, 85); te=
+xt-align: left;" class=3D"" data-block-id=3D"154">
+<p style=3D"margin: 0px; line-height: 1.4; text-align: left;" data-block-id=
+=3D"155"><strong data-block-id=3D"156">Built for brand-new riders who want =
+simplicity. Just twist the throttle and go, no shifting required.</strong><=
+/p>
+<ul style=3D"padding-left:20px; margin-top:10px; margin-bottom:10px;" data-=
+block-id=3D"157">
+<li style=3D"margin-bottom: 6px;" class=3D"" data-block-id=3D"158">110cc 4-=
+stroke, air-cooled engine</li>
+<li style=3D"margin-bottom: 6px;" class=3D"" data-block-id=3D"159">Fully au=
+tomatic transmission</li>
+<li style=3D"margin-bottom: 6px;" class=3D"" data-block-id=3D"160">Front &a=
+mp; rear hydraulic disc brakes</li>
+<li style=3D"margin-bottom: 6px;" class=3D"" data-block-id=3D"161">Electric=
+ start + kick start backup</li>
+<li style=3D"margin-bottom: 6px;" class=3D"" data-block-id=3D"162">Seat hei=
+ght: 25 inches | Max load: 132 lbs</li>
+<li style=3D"margin-bottom: 6px;" class=3D"" data-block-id=3D"163">Californ=
+ia compliant</li>
+<li style=3D"margin-bottom: 6px;" class=3D"" data-block-id=3D"164">Starting=
+ at $1065.00 </li>
+</ul>
+<p style=3D"margin: 0px; line-height: 1.4; font-size: 14px; color: rgb(51, =
+65, 85);" class=3D"" data-block-id=3D"165"><strong data-block-id=3D"166">Be=
+st for:</strong> First-time riders and beginners who are still building con=
+fidence. The automatic transmission lets younger kids focus 100% on steerin=
+g, balance, and braking, not gear changes. Electric start makes it easy for=
+ little ones to fire it up on their own.</p>
+</div>
+<div style=3D"margin-top: 15px; line-height: 1.4; text-align: left;" data-b=
+lock-id=3D"167"><table align=3D"left" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" style=3D"border-collapse:collapse; width:=
+auto;" data-block-id=3D"168"><tbody data-block-id=3D"169"><tr data-block-id=
+=3D"170"><td align=3D"center" bgcolor=3D"#FEBF01" style=3D"background-color=
+: rgb(254,191,1); text-align: left" data-block-id=3D"171"><a href=3D"https:=
+//email.mails.familygokarts.com/c/eJxkj0vO4yAQhE-Dd0R04_ixYDFS5GtYPNo2CgQL8=
+B_l9iNPMtFIs6SqqK_LKVoA-rYhBf0osR_7FptNLVJK4ewCiGQGIbUjPdhOyyvaoSdsvEKBHQgc=
+QcK1xYuVYAxgD0DG9gSsFVH7UC6Ljj681nTXuZaLTbEJaqt1L0z-YjgxnJ7P5_8phlPZ0s5wiqm=
+mbF82UOHO58qNv1NhOOk9hZC4MxwHDiCs5Xfv_gmd9XI6apxLOrIlJm9Gv-ix6pUYdqcRyfkjMn=
+mj89qPaHXctV8fTN6SrclQ5jjWjX-Ab9SXwsueavDrVpusDOV133zw-zBcWSvWs_bP6lJTpjnTo=
+mAUV_y8j8M7xRDb3gw0aocddAyxqcpGM__oPEMnriM0VdVHnd9f32ZTs7Z3bQLN3qm_sa9WXzud=
+zd8xiM2Pwt8BAAD__45hojI" target=3D"_blank" title=3D"Shop Apollo DB-28 110cc=
+ Kids Dirt Bike" style=3D"display: inline-block; padding: 12px 24px; font-f=
+amily: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; li=
+ne-height: 1.4; color: rgb(0, 0, 0); text-decoration: none; text-align: lef=
+t;" class=3D"" data-block-id=3D"172">SHOP APOLLO DB-28</a></td></tr></tbody=
+></table></div>
+</td></tr>
+</tbody></table></div></div></div></div></div></div>
+<div class=3D"u-row-container" style=3D"padding: 0px; background-color: tra=
+nsparent;" data-block-id=3D"173">
+<div class=3D"u-row" style=3D"margin: 0 auto;min-width: 320px;max-width: 60=
+0px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;=
+background-color: #ffffff;" data-block-id=3D"174">
+<div style=3D"border-collapse: collapse;display: table;width: 100%;height: =
+100%;background-color: transparent;" data-block-id=3D"175">
+<!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;backgro=
+und-color: transparent;" align=3D"center"><table role=3D"presentation" cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;"><tr sty=
+le=3D"background-color: #ffffff;"><![endif]-->
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"width: 600p=
+x;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid tra=
+nsparent;border-right: 0px solid transparent;border-bottom: 0px solid trans=
+parent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0=
+px;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-100" style=3D"max-width: 320px;min-width: 600px;d=
+isplay: table-cell;vertical-align: top;" data-block-id=3D"176">
+<div style=3D"height: 100%;width: 100% !important;border-radius: 0px;-webki=
+t-border-radius: 0px; -moz-border-radius: 0px;" data-block-id=3D"177">
+<!--[if (!mso)&(!IE)]><!--><div style=3D"box-sizing: border-box; height: 10=
+0%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid t=
+ransparent;border-right: 0px solid transparent;border-bottom: 0px solid tra=
+nsparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius:=
+ 0px;" data-block-id=3D"178">
+<!--<![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"font-family:arial,helvetica,sans-serif;" width=3D"100%" data-bl=
+ock-id=3D"179">
+<tbody data-block-id=3D"180">
+<tr data-block-id=3D"181">
+<td align=3D"left" style=3D"overflow-wrap: break-word; word-break: break-wo=
+rd; padding: 10px; font-family: arial, helvetica, sans-serif;" class=3D"" d=
+ata-block-id=3D"182">
+<table align=3D"center" aria-label=3D"divider" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" height=3D"0px" role=3D"presentation" style=3D"border-c=
+ollapse: collapse; table-layout: fixed; border-spacing: 0; mso-table-lspace=
+: 0pt; mso-table-rspace: 0pt; vertical-align: top; border-top: 1px dotted #=
+032D81; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%" width=
+=3D"94%" data-block-id=3D"183">
+<tbody data-block-id=3D"184">
+<tr style=3D"vertical-align: top" data-block-id=3D"185">
+<td class=3D"" style=3D"word-break: break-word; vertical-align: top; font-s=
+ize: 0px; line-height: 0px; border-collapse: collapse !important;" data-blo=
+ck-id=3D"186">
+<span data-block-id=3D"187">&nbsp;</span>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width: 100%; border-collapse: collapse" width=3D"100%" data-blo=
+ck-id=3D"188"><tbody data-block-id=3D"189"><tr class=3D"" data-block-id=3D"=
+190"><td align=3D"center" class=3D"" style=3D"padding: 30px 20px; text-alig=
+n: center; font-family: arial, helvetica, sans-serif; font-size: 16px; line=
+-height: 1.4; color: rgb(3, 45, 129);" data-block-id=3D"191"><p data-user-f=
+ont-size=3D"18" style=3D"margin: 0px; font-size: 18px; user-select: text; p=
+ointer-events: auto; color: rgb(0, 0, 0);" class=3D"" data-block-id=3D"192"=
+>Both Apollo dirt bikes share the same tough 110cc engine, rugged frame, an=
+d hydraulic disc brakes, so you can't go wrong either way. Pick the <a href=
+=3D"https://email.mails.familygokarts.com/c/eJxkj0vO4yAQhE-Dd0R04_ixYDFS5Gt=
+YPNo2CgQL8B_l9iNPMtFIs6SqqK_LKVoA-rYhBf0osR_7FptNLVJK4ewCiGQGIbUjPdhOyyvaoS=
+dsvEKBHQgcQcK1xYuVYAxgD0DG9gSsFVH7UC6Ljj681nTXuZaLTbEJaqt1L0z-YjgxnJ7P5_8ph=
+lPZ0s5wiqmmbF82UOHO58qNv1NhOOk9hZC4MxwHDiCs5Xfv_gmd9XI6apxLOrIlJm9Gv-ix6pUY=
+dqcRyfkjMnmj89qPaHXctV8fTN6SrclQ5jjWjX-Ab9SXwsueavDrVpusDOV133zw-zBcWSvWs_b=
+P6lJTpjnTomAUV_y8j8M7xRDb3gw0aocddAyxqcpGM__oPEMnriM0VdVHnd9f32ZTs7Z3bQLN3q=
+m_sa9WXzudzd8xiM2Pwt8BAAD__45hojI" target=3D"_blank" rel=3D"noopener norefe=
+rrer" style=3D"color: rgb(0, 0, 0); text-decoration: underline;" class=3D""=
+ data-block-id=3D"193">DB-28</a> to start simple, or the <a href=3D"https:/=
+/email.mails.familygokarts.com/c/eJxkj93uoyAUxJ8G72w8B5VywcUmja9h-DgqKRQD-G=
+_69hu33WaTvWRmmN8Zp2gBEH1DCoTkKKTosdnUaK22AHIx_QJLzw1gJyWg5sK4gUTjFXY4QocSO=
+Aw9XiwHYwAFABkrCFjfRe1DuSw6-vBa013nWi42xSaorda9MP6L4cRwej6f_6cYTmVLO8Mpppqy=
+fdlApXU-19b4OxWGk95TCKl1pkXRAnTWtnfv_gmd9Xw6apxLOrIlxm9Gv-ix6pUYjqcRyfkjMn6=
+j89qPaHXctV8fjN-SrclQblHWrf0A36gvpS17qsGvW22yMpTXffPB79frwPpuPWv_rC41ZZozLQ=
+pkN-DnfRzeKYbYC3MlqR2OMDLEpiobzfyj8wxjN0hoqqqPOr-_vs2mZm3v2gSavVN_Y1-tvnY6m=
+79jEJsfhb8DAAD__0JhogU" target=3D"_blank" rel=3D"noopener noreferrer" style=
+=3D"color: rgb(0, 0, 0); text-decoration: underline;" class=3D"" data-block=
+-id=3D"194">DB-27</a> to grow into gear control. Either way, your rider's g=
+oing to have a blast! =F0=9F=8F=8D=EF=B8=8F And remember, every order ships=
+ free to the continental US, backed by our 60-day money-back guarantee.</p>=
+</td></tr></tbody></table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"font-family:arial,helvetica,sans-serif;" width=3D"100%" data-bl=
+ock-id=3D"195">
+<tbody data-block-id=3D"196">
+<tr data-block-id=3D"197">
+</tr>
+</tbody>
+</table>
+<!--[if (!mso)&(!IE)]><!-->
+</div>
+<!--<![endif]-->
+</div>
+</div>
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+</div>
+</div>
+</div>
+
+<div class=3D"u-row-container" style=3D"padding: 0px; background-color: tra=
+nsparent;" data-block-id=3D"198">
+<div class=3D"u-row" style=3D"margin: 0 auto; min-width: 320px; max-width: =
+600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-=
+word; background-color: #333333" data-block-id=3D"199">
+<div style=3D"border-collapse: collapse;display: table;width: 100%;height: =
+100%;background-color: transparent;" data-block-id=3D"200">
+<!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding: 0px;backgro=
+und-color: transparent;" align=3D"center"><table role=3D"presentation" cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;"><tr sty=
+le=3D"background-color: #ffffff;"><![endif]-->
+<!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"width: 600p=
+x;padding: 20px;border-top: 0px solid transparent;border-left: 0px solid tr=
+ansparent;border-right: 0px solid transparent;border-bottom: 0px solid tran=
+sparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: =
+0px;" valign=3D"top"><![endif]-->
+<div class=3D"u-col u-col-100" style=3D"max-width: 320px;min-width: 600px;d=
+isplay: table-cell;vertical-align: top;" data-block-id=3D"201">
+<div style=3D"height: 100%;width: 100% !important;border-radius: 0px;-webki=
+t-border-radius: 0px; -moz-border-radius: 0px;" data-block-id=3D"202">
+<!--[if (!mso)&(!IE)]><!--><div class=3D"" style=3D"box-sizing: border-box;=
+ height: 100%; padding: 20px; border-width: 0px; border-style: solid; borde=
+r-color: transparent; border-radius: 0px;" data-block-id=3D"203">
+<!--<![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"font-family:arial,helvetica,sans-serif;" width=3D"100%" data-bl=
+ock-id=3D"204">
+<tbody data-block-id=3D"205">
+<tr data-block-id=3D"206">
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"font-family:arial,helvetica,sans-serif;" width=3D"100%" data-bl=
+ock-id=3D"207">
+<tbody data-block-id=3D"208">
+<tr data-block-id=3D"209">
+<td align=3D"left" class=3D"" style=3D"overflow-wrap: break-word; word-brea=
+k: break-word; padding: 10px; font-family: arial, helvetica, sans-serif;" d=
+ata-block-id=3D"210">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%; border-collapse:collapse;" width=3D"100%" data-bloc=
+k-id=3D"211"><tbody data-block-id=3D"212"><tr data-block-id=3D"213"><td ali=
+gn=3D"center" style=3D"padding-bottom: 10px;" class=3D"" data-block-id=3D"2=
+14"><h1 class=3D"" style=3D"margin: 0px; color: rgb(255, 255, 255); font-fa=
+mily: arial, helvetica, sans-serif; font-size: 22px; line-height: 28px; fon=
+t-weight: bold;" data-block-id=3D"215">Follow FamilyGoKarts</h1></td></tr><=
+/tbody></table>
+<div align=3D"center" aria-label=3D"social" class=3D"" style=3D"direction: =
+ltr;" data-block-id=3D"216">
+<div class=3D"" style=3D"display: table; max-width: 103px;" data-block-id=
+=3D"217">
+<!--[if (mso)|(IE)]><table role=3D"presentation" width=3D"103" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"border-collapse:coll=
+apse;" align=3D"center"><table role=3D"presentation" width=3D"100%" cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse=
+; mso-table-lspace: 0pt;mso-table-rspace: 0pt; width:103px;"><tr><![endif]-=
+->
+<!--[if (mso)|(IE)]><td width=3D"27" style=3D"width:27px; padding-right: 11=
+px;" valign=3D"top"><![endif]-->
+<table aria-label=3D"Facebook icon" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" height=3D"27" role=3D"presentation" style=3D"width: 27px !importa=
+nt;height: 27px !important;display: inline-block;border-collapse: collapse;=
+table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;vertical-align: top;margin-right: 11px" width=3D"27" data-block-id=
+=3D"218">
+<tbody data-block-id=3D"219">
+<tr style=3D"vertical-align: top" data-block-id=3D"220"><td style=3D"word-b=
+reak: break-word;border-collapse: collapse !important;vertical-align: top" =
+valign=3D"middle" data-block-id=3D"221">
+<a href=3D"https://email.mails.familygokarts.com/c/eJw8j02upDAMhE-T7GjFDhBY=
+ZDFSi1nMIVASDEQNHRTMa_XtR3l_S1fVV7YnSzOAqSVZML1G05sa5Wpr4zrCYMh7rcwc2oYanJV=
+DxKJ0MlpU2ILCHjQ0Nd6CBu8BDQD5YAhErXYXt_M2uz1u7yU9XObzFtIuN7syH6fQfwQOAofX63=
+WbXSCf0qMEBA7DJ_Q3_StQSenh4n0805UDCX337k3PxS0ksC3GTlO8dqHvVJZ-i8Hth4vLU-h7C=
+pw85Qp7Xit3pG1LFYAKoZpi5srHB1XnkXiLy8oyW095Oda4xaPrGlGrpdR-Hn9yyjRmmi30qsHv=
+-briZAVibXxHvZuwhVYgSrZh9-OHyyO0qulBsuUnj1_olyk5u_BwfqMxTvYn9qvx-6DS_PsMovy=
+w-D8AAP__R36OBA" style=3D"text-align: center;" target=3D"_blank" title=3D"F=
+acebook" data-block-id=3D"222">
+<img alt=3D"Facebook icon" class=3D"" src=3D"https://img.bayengage.com/soci=
+al/icons/circle-white/facebook.png" style=3D"outline: none; text-decoration=
+: none; clear: both; border-width: medium; border-style: none; border-color=
+: currentcolor; border-image: none; height: auto; float: none; margin-left:=
+ auto; margin-right: auto; display: block !important; max-width: 27px !impo=
+rtant;" title=3D"Facebook" width=3D"27" data-block-id=3D"223">
+</a>
+</td></tr>
+</tbody>
+</table>
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]><td width=3D"27" style=3D"width:27px; padding-right: 11=
+px;" valign=3D"top"><![endif]-->
+<table aria-label=3D"Twitter icon" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" height=3D"27" role=3D"presentation" style=3D"width: 27px !importan=
+t;height: 27px !important;display: inline-block;border-collapse: collapse;t=
+able-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace=
+: 0pt;vertical-align: top;margin-right: 11px" width=3D"27" data-block-id=3D=
+"224">
+<tbody data-block-id=3D"225">
+<tr style=3D"vertical-align: top" data-block-id=3D"226"><td style=3D"word-b=
+reak: break-word;border-collapse: collapse !important;vertical-align: top" =
+valign=3D"middle" data-block-id=3D"227">
+<a href=3D"https://email.mails.familygokarts.com/c/eJxUj82uozAMhZ8m2VFhh0JY=
+ZDFSxWug_BiImjQomKvp24-Ye6fSLP2d42OfYGgBGDpJBoZR4TAOHcrNjBq0gwWCCtgru-jeqeA=
+7rTurVYtBRoMt9tDiCAruHd68AucABwByfiAQXZttTMdtsTmm91qetvJx8yXLZDbm_RDql8BJ4P=
+T7ogKn_5xCTSfn-Shn9STUw9k3vVa7ksD-EjKFeGahHnSd-YHe5t3G9SXUo3gujmqDI2-N3UtKp=
+QFovW9CrNy4-KTm2AunuG4sq3FU132LKe5a30XXrlfs33cPLpXmSouBsb3jz3yeMRiB2A1O02gD=
+9tALRMnGZzd_2TpD395HkGz4xfP36rcouVr_tC7RHIP5Z_swfu90JX_KIMovg38CAAD__0baiSM=
+" style=3D"text-align: center;" target=3D"_blank" title=3D"Twitter" data-bl=
+ock-id=3D"228">
+<img alt=3D"Twitter icon" class=3D"" src=3D"https://img.bayengage.com/socia=
+l/icons/circle-white/twitter.png" style=3D"outline: none; text-decoration: =
+none; clear: both; border: medium; height: auto; float: none; display: bloc=
+k !important; max-width: 27px !important; margin-left: auto; margin-right: =
+auto;" title=3D"Twitter" width=3D"27" data-block-id=3D"229">
+</a>
+</td></tr>
+</tbody>
+</table>
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]><td width=3D"27" style=3D"width:27px; padding-right: 0p=
+x;" valign=3D"top"><![endif]-->
+<table aria-label=3D"Instagram icon" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" height=3D"27" role=3D"presentation" style=3D"width: 27px !import=
+ant;height: 27px !important;display: inline-block;border-collapse: collapse=
+;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspa=
+ce: 0pt;vertical-align: top;margin-right: 0px" width=3D"27" data-block-id=
+=3D"230">
+<tbody data-block-id=3D"231">
+<tr style=3D"vertical-align: top" data-block-id=3D"232"><td style=3D"word-b=
+reak: break-word;border-collapse: collapse !important;vertical-align: top" =
+valign=3D"middle" data-block-id=3D"233">
+<a href=3D"https://email.mails.familygokarts.com/c/eJxUj82OrDoMhJ8m2dGKHSCw=
+yOJKrX4NlB8DUZMOCmZa_fZXnJkz0lm66quyHS3NAKaVZMGMGs1oWpSrjaD8PKhBB9M5IvImOjI=
+zRog9BNXKZFFhDwpH0NC1eAsavAc0AOSDIRCtyi5tx212OW2fpTxd5eMWSpabXZn3Q-j_BD4EPt=
+7v9y29DnZLdfkiBD7-SV2Yfpycp6OcNZDQd-8-9FrcQgL7y8gU05mFvtO19UcMLu8uLS-h7yVw8=
+VQbHHlt3F62rTQAKoQmpsqNT09qjr3wlpaVZbWe6rKvaUv7MHSiVctV--f6g0ulqdJsYVQd_szn=
+maIViK3xA40uYg-9QJRsQ_bTl6sT9KobQbLlF0_f0W9TcnXh6fxGU4r2L_ar8Wenq_n3GUT5ZfH=
+_AAAA__9lyo-E" style=3D"text-align: center;" target=3D"_blank" title=3D"Ins=
+tagram" data-block-id=3D"234">
+<img alt=3D"Instagram icon" class=3D"" src=3D"https://img.bayengage.com/soc=
+ial/icons/circle-white/instagram.png" style=3D"outline: none; text-decorati=
+on: none; clear: both; border: medium; height: auto; float: none; margin-le=
+ft: auto; margin-right: auto; display: block !important; max-width: 27px !i=
+mportant;" title=3D"Instagram" width=3D"27" data-block-id=3D"235">
+</a>
+</td></tr>
+</tbody>
+</table>
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"font-family:arial,helvetica,sans-serif;" width=3D"100%" data-bl=
+ock-id=3D"236">
+<tbody data-block-id=3D"237">
+<tr data-block-id=3D"238">
+<td align=3D"left" class=3D"" style=3D"overflow-wrap: break-word; word-brea=
+k: break-word; padding: 10px; font-family: arial, helvetica, sans-serif;" d=
+ata-block-id=3D"239">
+<div style=3D"font-size: 13px; line-height: 1.6; text-align: center; overfl=
+ow-wrap: break-word; color: rgb(148, 163, 184);" class=3D"" data-block-id=
+=3D"240">
+<p style=3D"margin: 0px;" class=3D"" data-block-id=3D"241">800-250-5502 | 3=
+16 W. Broadway, Browns Valley, MN 56219</p>
+<p style=3D"margin: 5px 0px 0px;" class=3D"" data-block-id=3D"242">=C2=A9 2=
+003 - 2026 Backer Wencel, Incorporated. All Rights Reserved.</p>
+<p style=3D"margin: 5px 0px 0px; user-select: text; pointer-events: auto;" =
+class=3D"" data-block-id=3D"243"><span style=3D"color: rgb(148, 163, 184); =
+text-decoration: underline;" class=3D"" data-block-id=3D"244"><a href=3D"ht=
+tps://email.mails.familygokarts.com/c/eJw8j7uOFDEQRb_GHbZc5Vc7cLBo8YKEYEVAQ=
+NKy3TU9Zvol2zNo_x4NyxDW4x6dOzk6ARjZkQNjBRprJHZnp8BGmSI3pIMUAk1KfIrDpIMYuFVT=
+lx1y1MDRggAlsU8CYgQ0ABSTIWCSryEvtT-FNS9v834JpdU-7Wu3uHNrR2XiiaFn6Jdc20prpNK=
+nnaGv11hTyZEY-hS2RAtDDwoHrhh65FpwZaRiwo83Jp6xB4Z6rEw8f5oFDy8vH3_Q688PX2bYfp=
+83v3_9_Ov1u_j2dLs8OvKhKy5SmY9zXvIxDIpJPt99_wrWthcaC50cWK7w33y95skxRGniQDZMq=
+EEzxK65tMbxFsoImisLXXNta-N79P3YtRLSJcSFxjy5x9v_XXs76E5OYT1Cnrc79ebwTwAAAP__=
+Tex8Yg" style=3D"color:rgb(148, 163, 184)">Unsubscribe</a></span>&nbsp;</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if (!mso)&(!IE)]><!-->
+</div>
+<!--<![endif]-->
+</div>
+</div>
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+</div>
+</div>
+</div>
+<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if mso]></div><![endif]-->
+<!--[if IE]></div><![endif]-->
+<img width=3D"1" height=3D"1" alt=3D"" src=3D"https://email.mails.familygok=
+arts.com/o/eJw8jNGSgyAMRb9GHh0SQeQh3-IEiJapVAdpZ_r3O253-5icc08iWQCcUULg_IDO=
+O4PqRmgTgngTIKZJGzs6YT8EAHCWp4gqE2ocQaOHAazBPg4QAqADkBCdQGd04byd_cIlb-91v3N=
+tZx_3oioFqetxy1s-psl2Rq-X-svOtleZqywEXlv8u5_PnKhDNC5M4jnhCGOHqBrFEuYX1xlGbT=
+2oRu3R5s_0A1WrHO8cNplzon_t-2vvQ65y5HJwXh9X9UX4EwAA__-T31Ud"></body>
+</html>
+
+--1a02ddc796edda894d89b2f636b4a01331e5869eb1753af12be1fe681f0f--
